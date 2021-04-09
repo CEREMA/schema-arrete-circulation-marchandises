@@ -441,6 +441,10 @@ http://schema.data.gouv.fr/etalab/schema-lieux-covoiturage/latest.html
 http://schema.data.gouv.fr/etalab/schema-stationnement/latest.html
 http://schema.data.gouv.fr/schemas/etalab/schema-stationnement/0.1.4/schema.json
 
+### OpenDataFrance
+
+https://git.opendatafrance.net/scdl/equipements
+
 
 
 # Guides

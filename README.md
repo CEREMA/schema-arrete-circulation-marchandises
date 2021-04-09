@@ -6,6 +6,8 @@ Voir le tableau pour travailler le standard
 
 Voir le tableschema associé en cours de construction
 
+Voir le tableschema au format markdown (en cours)
+
 Pour la production de ce schéma, le Cerema est en partenariat ave :
 
 - La Région SUD
