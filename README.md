@@ -8,7 +8,7 @@ Ceci est une proposition de schéma sur la réglementation de la circulation en 
 
 Voir le tableschema au format markdown (en cours)
 
-Pour la production de ce schéma, le Cerema est en partenariat ave :
+Pour la production de ce schéma, le Cerema est en partenariat avec :
 
 - La Région SUD
 - OpenDataFrance
