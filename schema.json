@@ -315,7 +315,7 @@
          "title":"Type d'usage",
          "description":"Type d'usage du véhicule",
          "example":"['Bennes à ordures ménagères', 'Véhicules de police']",
-         "type":"string",
+         "type":"array",
          "arrayItem":{
             "type": "string",
             "constraints": {
@@ -351,7 +351,7 @@
          "title":"Type de motorisation",
          "description":"Type de motorisation du véhicule.",
          "example":"['Électrique', 'Hydrogène']",
-         "type":"string",
+         "type":"array",
          "arrayItem":{
             "type": "string",
             "constraints": {
@@ -369,7 +369,7 @@
          "title":"Vignettes crit'air",
          "description":"Vignettes crit'air. Voir la [classification des vignettes Crit'Air](https://www.certificat-air.gouv.fr/docs/tableaux_classement.pdf) sur le site [certificat-air.gouv.fr](https://www.certificat-air.gouv.fr)",
          "example":"['1', '2', '3']",
-         "type":"string",
+         "type":"array",
          "arrayItem":{
             "type": "string",
             "constraints": {
