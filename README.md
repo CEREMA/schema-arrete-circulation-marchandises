@@ -99,7 +99,7 @@ Il peut également être un identifiant propre à une structure ou une base de d
 
 ### `REGL_MODALITE`
 - Titre : Modalité d'interdiction ou d'autorisation de l'arrêté
-- Description : Spécifie si l'arrêté interdit ou autorisé
+- Description : Spécifie si l'arrêté interdit ou autorise
 - Type : Chaîne de caractères
 - Valeurs possibles : 
  
@@ -246,17 +246,15 @@ Il peut également être un identifiant propre à une structure ou une base de d
 ### `INTERV_DUREE`
 - Titre : Durée maximale d'intervention
 - Description : Durée maximale d'intervention (au niveau d'une aire piétonne, par exemple)
-- Type : Chaîne de caractères
-- Pattern : `[0-9]+:[0-9]+`
-- Exemple : `03:00`
+- Type : time
+- Exemple : `03:00:00`
 - Valeur : Facultatif 
 
 ### `INTERV_HMAX`
 - Titre : Heure maximale à laquelle intervenir (au niveau d'une aire piétonne, par exemple)
 - Description : Heure max à laquelle les véhicules doivent quitter l'aire piétonne, exprimée selon le format international ISO8601 (on pourrait prendre une convention plus simple, par hh:mm, 01:30 pour 1 heure 30 minutes?)
-- Type : Chaîne de caractères
-- Pattern : `[0-9]+:[0-9]+`
-- Exemple : `22:00`
+- Type : time
+- Exemple : `03:00:00`
 - Valeur : Facultatif 
 
 ### `SECTION_VOIE`
