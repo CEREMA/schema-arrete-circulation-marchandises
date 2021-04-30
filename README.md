@@ -4,7 +4,6 @@ Ce schéma sur les arrêtés permanents de circulation a été construit en part
 
 [Voir la page relative au schéma sur la page FabLog d'OpenDataFrance](https://opendatafrance.gitbook.io/fablog/territoires/chantiers/partage-des-donnees/standardisation/arretes-de-circulation)  
 
-[Voir le schéma généré automatiquement à un format lisible](schema.md)  
 [Voir le schéma généré automatiquement au format JSON](schema.json)
 
 ### `SECTION_REGL_ID`
@@ -307,3 +306,6 @@ Il peut également être un identifiant propre à une structure ou une base de d
 - Description : Source de la géométrie (OpenStreetMap, IGN,...) 
 - Exemple : BDTOPO IGN 2021
 - Valeur : Facultatif
+
+----
+[Voir le schéma généré automatiquement à un format Page](schema.md)  
