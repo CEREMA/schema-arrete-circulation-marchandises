@@ -1,8 +1,8 @@
 # Schéma sur les arrêtés permanents de circulation
 
-Ce schéma sur les arrêtés permanents de circulation a été construit en partenariat avec la Région Sud et la Fabrique de la Logistique portée par l'association OpenDataFrance.
+Ce schéma sur les arrêtés permanents de circulation a été construit en partenariat avec la Région Sud et l'association OpenDataFrance.
 
-[Voir la page relative au schéma sur la Fabrique de la Logistique d'OpenDataFrance](https://opendatafrance.gitbook.io/fablog/territoires/chantiers/partage-des-donnees/standardisation/arretes-de-circulation)
+[Voir la page relative au schéma sur la page FabLog d'OpenDataFrance](https://opendatafrance.gitbook.io/fablog/territoires/chantiers/partage-des-donnees/standardisation/arretes-de-circulation)
 
 ### `SECTION_REGL_ID`
 - Titre : Identifiant de la section règlementée
@@ -61,28 +61,28 @@ Il peut également être un identifiant propre à une structure ou une base de d
 
 ### `ARR_DATE_CREATION`
 - Titre : Date de création de l'arrêté
-- Description : Date de création ou de mise à jour de l'arrêté, , exprimée selon le format international ISO8601.
+- Description : Date de création ou de mise à jour de l'arrêté, exprimée selon le format international ISO8601.
 - Type : Date
 - Exemple : `2021-04-30`
 - Valeur : Obligatoire
 
 ### `ARR_MAJ`
 - Titre : Arrêté mis à jour ?
-- Description : Mentionne si l'arrêté a été l'objet d'une mise à jour. Dans ce cas, remplir la nouvelle référence de l'arrêté dans `ARR_REF`.
+- Description : Spécifie si l'arrêté a été l'objet d'une mise à jour. Dans ce cas, remplir la nouvelle référence de l'arrêté dans `ARR_REF`.
 - Type : Booléen
 - Exemple : `Vrai`
 - Valeur : Facultatif
 
 ### `ARR_INSEE`
-- Titre : Code INSEE de la commune sur laquelle s'applique l'arrêté
+- Titre : Code INSEE
 - Description : Code INSEE de la commune sur laquelle s'applique l'arrêté
 - Type : number, 5 chiffres
-- Patern : `^[a-zA-Z0-9\-\'\s\d\u00C0-\u00FF]+$`
+- Pattern : `^[a-zA-Z0-9\-\'\s\d\u00C0-\u00FF]+$`
 - Exemple : `13090`
 - Valeur : Obligatoire
 
 ### `REGL_ARTICLE`
-- Titre : Article associé au règlement
+- Titre : Article duu règlement
 - Description : Article associé au règlement lorsqu'il existe
 - Type : Entier
 - Exemple : 1
@@ -97,7 +97,7 @@ Il peut également être un identifiant propre à une structure ou une base de d
 
 ### `REGL_MODALITE`
 - Titre : Modalité d'interdiction ou d'autorisation de l'arrêté
-- Description : Spécifie si l'arrêté interdit ou autorisé
+- Description : Spécifie si l'arrêté interdit ou autoris
 - Type : Chaîne de caractères
 - Valeurs possibles : 
  
@@ -117,7 +117,7 @@ Il peut également être un identifiant propre à une structure ou une base de d
 		Commune entière
 		Quartier
 		Zone à Faible Émission
-		Zone IRIS de l'INSEE
+		Zone IRIS INSEE
 		Zone piétonne
 
 ### `ZONE_REF`
@@ -136,7 +136,7 @@ Il peut également être un identifiant propre à une structure ou une base de d
 - Valeur maximale : 45
 
 ### `VEH_LONG`
-- Titre : Longueur maximale
+- Titre : Longueur
 - Description : Longueur maximale exprimée en mètres
 - Type : Décimal
 - Exemple : 6.5
@@ -153,7 +153,7 @@ Il peut également être un identifiant propre à une structure ou une base de d
 
 ### `VEH_HAUT`
 - Titre : Hauteur
-- Description : Hauteur maximale exprimée en mètres
+- Description : Hauteur maximaleexprimée en mètres
 - Type : Décimal ?
 - Exemple : 3
 - Valeur : Facultatif
@@ -235,7 +235,7 @@ Il peut également être un identifiant propre à une structure ou une base de d
 - Valeur : Facultatif
 
 ### `PERIODE_JH`
-- Titre : Type d'usage
+- Titre : Jours et heures de circulation
 - Description : Jours et heures de circulation autorisés pour la circulation exprimés selon le format OpeningHours d'OpenStreetMap ([https://wiki.openstreetmap.org/wiki/Key:opening_hours](https://wiki.openstreetmap.org/wiki/Key:opening_hours)). Ce format permet d'indiquer aussi les jours fériés (PH pour Public Holidays).
 - Type : Chaîne de caractères
 - Exemple : `Mo-Fr 08:00-12:00,13:00-17:30; Sa 08:00-12:00; PH off`
@@ -250,8 +250,8 @@ Il peut également être un identifiant propre à une structure ou une base de d
 - Valeur : Facultatif 
 
 ### `INTERV_HMAX`
-- Titre : Heure maximale à laquelle intervenir (au niveau d'une aire piétonne, par exemple)
-- Description : Heure max à laquelle les véhicules doivent quitter l'aire piétonne, exprimée selon le format international ISO8601 (on pourrait prendre une convention plus simple, par hh:mm, 01:30 pour 1 heure 30 minutes?)
+- Titre : Heure maximale d'intervention
+- Description : Heure max à partir de laquelle les véhicules doivent quitter l'aire piétonne, exprimée selon le format international ISO8601 (on pourrait prendre une convention plus simple, par hh:mm, 01:30 pour 1 heure 30 minutes?)
 - Type : Chaîne de caractères
 - Pattern : `[0-9]+:[0-9]+`
 - Exemple : `22:00`
@@ -259,7 +259,7 @@ Il peut également être un identifiant propre à une structure ou une base de d
 
 ### `SECTION_VOIE`
 - Titre : Nom de la voie associée à la section règlementée
-- Description : Nom de la voie associée à la section règlementée. 'NC' si application à une commune, une ZFE (etc...). Voir pour cela le champ zoneType.
+- Description : Nom de la voie associée à la section règlementée. 'NC' si application à une commune, une ZFE (etc...). Voir pour cela le champ `ZONE_TYPE`.
 - Type : Chaîne de caractères
 - Exemple : Avenue Jean Dupont
 - Valeur : Obligatoire
@@ -291,7 +291,7 @@ Il peut également être un identifiant propre à une structure ou une base de d
 - Valeur : Facultatif
 
 ### `GEOM_JSON`
- - Titre : Géométrie de la ligne au format GeoJSON 
+ - Titre : Géométrie 
 - Description : Géométrie de la ligne au format GeoJSON (de l'anglais Geographic JSON, signifiant littéralement JSON géographique, est un format ouvert d'encodage d'ensemble de données géospatiales simples utilisant la norme JSON (JavaScript Object Notation).
 - Type : Chaîne de caractères
 - Exemple : 

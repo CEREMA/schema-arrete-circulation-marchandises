@@ -12,3 +12,8 @@ firstup <- function(x) {
 s2 <- strsplit(s, ",") %>% {.[[1]]} %>%  as.character %>% sort %>% trimws() %>% firstup
 
 print(paste(s2, collapse=","))
+
+s3 <- sprintf('[%s]', paste(sprintf('"%s"', s2), collapse=","))
+fileConn<-file("array-veh-usages.txt")
+writeLines(s3, fileConn)
+close(fileConn)

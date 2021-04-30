@@ -20,7 +20,7 @@ http://schema.data.gouv.fr/documentation/schemas-investigation-construction
 - obtenir plein de **retours**
 - éviter redondances
 
-> Toutefois, préciser le nom d’une commune en plus de son code INSEE rend les données plus faciles à lire et à exploiter.
+> Au sujet d'un schéma : préciser le nom d’une commune en plus de son code INSEE rend les données plus faciles à lire et à exploiter.
 
 ### Construction : phase technique
 - **modèle** de départ : https://github.com/etalab/tableschema-template
