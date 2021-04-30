@@ -210,7 +210,7 @@
       {
          "name":"REGL_MODALITE",
          "description":"Modalité",
-         "example":"Spécifie si l'arrêté interdit ou autorise",
+         "example":"Indique si l'arrêté interdit ou autorise",
          "type": "string",
 		      "example": "Autorise",
 		      "constraints": {
@@ -391,6 +391,7 @@
          "description":"Date d'entrée en vigueur des restrictions (en particulier pour les Zones à Faible Émission),, au format ISO 8601 AAAA-MM-DD.",
          "example":"2021-04-30",
          "type":"date",
+	 "format":"%Y-%m-%d",
          "constraints":{
             "required":false
          }
@@ -398,7 +399,7 @@
       {
          "name":"PERIODE_JH",
          "title" : "Jours et heures de circulation",
-         "description":"Jours et heures de circulation autorisés pour la circulation exprimés selon le format OpeningHours d'OpenStreetMap ([https://wiki.openstreetmap.org/wiki/Key:opening_hours](https://wiki.openstreetmap.org/wiki/Key:opening_hours)). Ce format permet d'indiquer aussi les jours fériés (PH pour Public Holidays).",
+         "description":"Jours et heures de circulation autorisés pour la circulation exprimés selon le format OpeningHours d'OpenStreetMap ([https://wiki.openstreetmap.org/wiki/Key:opening_hours](https://wiki.openstreetmap.org/wiki/Key:opening_hours)). Ce format permet d'indiquer les week-ends (we), les jours fériés (PH) et les vacances scolaires (SH). Par exemple `Mo-Fr 09:00-17:00; PH 10:00-12:00; PH Su off` signifie : 'ouverture du lundi au vendredi de 9h à 17h sauf les jours fériés où l'ouverture est de 10h à 12h, à l'exception des jours fériés tombant un dimanche'",
          "example":"Mo-Fr 08:00-12:00,13:00-17:30; Sa 08:00-12:00; PH off",
          "type":"string",
          "constraints":{
