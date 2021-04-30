@@ -106,8 +106,8 @@
       },
       {
          "name":"ARR_URL",
-	       "title": "Adresse internet par laquelle accéder à l'arrêté, et donc au règlement",
-	       "description": "Identifiant du [Système d'Identification du Répertoire des Etablissements](https://fr.wikipedia.org/wiki/Syst%C3%A8me_d%27identification_du_r%C3%A9pertoire_des_%C3%A9tablissements) (SIRET) de la collectivité sur le territoire de laquelle sont situés les équipements collectifs publics répertoriés dans le jeu de données. Il est composé de 9 chiffres SIREN + 5 chiffres NIC d’un seul tenant.",
+	       "title": "URL d'accès de l'arrêté",
+	       "description": "Adresse internet par laquelle accéder à l'arrêté, et donc au règlement.",
 	       "type": "string",
 	       "example": "https://carte.st-paul-les-dax.fr/wp-content/uploads/2020/06/AM-10248.pdf",
 	       "constraints": {
@@ -141,6 +141,7 @@
          "description":"Date de création ou de mise à jour de l'arrêté, au format ISO 8601 AAAA-MM-DD.",
          "example":"2021-04-30",
          "type":"date",
+         "format":"%Y-%m-%d",
          "constraints":{
             "required":true
          }
@@ -150,7 +151,7 @@
          "title" : "Arrêté mis à jour ?",
          "description":"Spécifie si l'arrêté a été l'objet d'une mise à jour. Dans ce cas, remplir la nouvelle référence de l'arrêté dans `ARR_REF`.",
          "example":"TRUE",
-         "type":"Boolean",
+         "type":"boolean",
          "trueValues":[
 	        "true",
 	        "True",
@@ -364,7 +365,7 @@
       {
          "name":"VEH_CQA",
          "title":"Vignettes crit'air",
-         "description":"Vignettes crit'air",
+         "description":"Vignettes crit'air. Voir la [classification des vignettes Crit'Air](https://www.certificat-air.gouv.fr/docs/tableaux_classement.pdf) sur le site [certificat-air.gouv.fr](https://www.certificat-air.gouv.fr)",
          "example":"['1', '2', '3']",
          "type":"string",
          "arrayItem":{
@@ -470,7 +471,7 @@
       {
          "name":"GEOM_JSON",
          "title":"Géométrie",
-         "description":"Géométrie de la ligne au format GeoJSON (de l'anglais Geographic JSON, signifiant littéralement JSON géographique, est un format ouvert d'encodage d'ensemble de données géospatiales simples utilisant la norme JSON (JavaScript Object Notation).",
+         "description":"Géométrie de la ligne au format [GeoJSON](https://fr.wikipedia.org/wiki/GeoJSON) (de l'anglais Geographic JSON, signifiant littéralement JSON géographique, est un format ouvert d'encodage d'ensemble de données géospatiales simples utilisant la norme JSON (JavaScript Object Notation).",
          "type": "geojson",
          "format": "default"
       },
