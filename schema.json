@@ -65,12 +65,18 @@
    "fields":[
       {
          "name":"SECTION_REGL_ID",
-         "description":"Un identifiant unique de l'objet.",
-         "example":"42",
-         "type":"integer",
+         "description":"
+          Identifiant unique de la ligne.  
+          La ligne correspond à la voie ou la section de voie règlementée. Ce peut être une voie entière (la D9) ou une portion de voie (voir champ `SECTION_DEBUT` et `SECTION_FIN`).  
+          L'identifiant peut tout simplement être un identifiant auto-incrémenté (1, 2 ou 3,...).  
+          Si la section est issue d'OpenStreetMap, l'identifiant peut correspondre à la valeur osm_id de la voie règlementée (par exemple, 133). Si la section possède plusieurs règlements, l'identifiant peut être accompagné d'un suffixe incrémenté (par exemple 133-2 pour le second règlement associé à la voie).  
+          Il peut également être un identifiant propre à une structure ou une base de données (identifiant issu de la BDTOPO IGN, par exemple).
+         ",
+         "example":"133-3",
+         "type":"string",
          "constraints":{
             "required":true,
-            "minimum":1
+            "unique":true
          }
       },
       {
@@ -112,7 +118,7 @@
 	       "example": "https://carte.st-paul-les-dax.fr/wp-content/uploads/2020/06/AM-10248.pdf",
 	       "constraints": {
 	         "required": false,
-	         "pattern": "^https?://(?:[a-z0-9\-]+\.)+[a-z]{2,6}(?:/[^/#?]+)+"
+	         "pattern": "^(https|http)?://(?:[a-z0-9\-]+\.)+[a-z]{2,6}(?:/[^/#?]+)+"
 	       }
       },
       {
@@ -181,7 +187,9 @@
 	       "example": "75114",
 	       "constraints": {
 	         "required": true,
-           "pattern": "^[a-zA-Z0-9\-\'\s\d\u00C0-\u00FF]+$"
+           "pattern": "^[a-zA-Z0-9\-\'\s\d\u00C0-\u00FF]+$",
+           "minLength":5,
+           "maxLength":5
            }
       },
       {
@@ -403,22 +411,20 @@
          "name":"INTERV_DUREE",
          "title" : "Durée maximale d'intervention"
          "description":"Durée maximale d'intervention (au niveau d'une aire piétonne, par exemple).",
-         "example":"03:00",
-         "type":"string",
+         "example":"03:00:00",
+         "type":"time",
          "constraints":{
-            "required":false,
-            "pattern" :"[0-9]+:[0-9]+"
+            "required":false
          }
       },
       {
          "name":"INTERV_HMAX",
          "title" : "Heure maximale d'intervention"
          "description":"Heure max à partir de laquelle les véhicules doivent quitter l'aire piétonne.",
-         "example":"03:00",
-         "type":"string",
+         "example":"22:00:00",
+         "type":"time",
          "constraints":{
-            "required":false,
-            "pattern" :"[0-9]+:[0-9]+"
+            "required":false
          }
       },
       {
@@ -434,8 +440,8 @@
       },
       {
          "name":"SECTION_COTE",
-         "description":"Côté de la voie",
-         "example":"Côté de la voie associé à la règlementation. Pair : concerne la circulation le long des adresses à chiffre pair.",
+         "title":"Côté de la voie",
+         "description":"Côté de la voie associé à la règlementation. Pair : concerne la circulation le long des adresses à chiffre pair.",
          "type": "string",
 		      "example": "Deux côtés",
 		      "constraints": {
@@ -449,8 +455,8 @@
       },
       {
          "name":"SECTION_DEBUT",
-         "description":"Début de la section",
-         "example":"Début de la section. Adresse ou coordonnées GPS à partir desquelles la règlementaton commence. Coordonnées GPS conseillées. Si GPS, longitude entre -90 et 90 et latitude entre -180 et 180.",
+         "title":"Début de la section",
+         "description":"Début de la section. Adresse ou coordonnées GPS à partir desquelles la règlementaton commence. Coordonnées GPS conseillées. Si GPS, longitude entre -90 et 90 et latitude entre -180 et 180.",
          "type": "string",
 		      "example": "43.54007,5.44027",
 		      "constraints": {
@@ -459,8 +465,8 @@
       },
       {
          "name":"SECTION_FIN",
-         "description":"Fin de la section",
-         "example":"Fin de la section. Adresse ou coordonnées GPS auxquelles la règlementaton finit. Coordonnées GPS conseillées. Si GPS, longitude entre -90 et 90 et latitude entre -180 et 180.",
+         "title":"Fin de la section",
+         "description":"Fin de la section. Adresse ou coordonnées GPS auxquelles la règlementaton finit. Coordonnées GPS conseillées. Si GPS, longitude entre -90 et 90 et latitude entre -180 et 180.",
          "type": "string",
 		      "example": "43.54007,5.44027",
 		      "constraints": {
@@ -469,21 +475,10 @@
       },
       {
          "name":"GEOM_JSON",
-         "description":"Géométrie",
-         "example":"Géométrie de la ligne au format GeoJSON (de l'anglais Geographic JSON, signifiant littéralement JSON géographique, est un format ouvert d'encodage d'ensemble de données géospatiales simples utilisant la norme JSON (JavaScript Object Notation).",
-         "type": "string",
-		      "example": "
-          {
-            'type': 'Feature', 
-            'geometry': { 
-              'type': 'LineString', 
-              'coordinates': [ [102.0, 0.0], [103.0, 1.0], [104.0, 0.0], [105.0, 1.0] ] 
-             }
-           }
-           ",
-		      "constraints": {
-		        "required": false
-		      }
+         "title":"Géométrie",
+         "description":"Géométrie de la ligne au format GeoJSON (de l'anglais Geographic JSON, signifiant littéralement JSON géographique, est un format ouvert d'encodage d'ensemble de données géospatiales simples utilisant la norme JSON (JavaScript Object Notation).",
+         "type": "geojson",
+         "format": "default"
       },
       {
          "name":"GEOM_SOURCE",
@@ -496,5 +491,14 @@
 		      }
       },
    ],
+   "custom_checks": [
+    {
+      "name": "french-siret-value",
+      "params": {
+        "column": "COLL_SIRET"
+      }
+    }
+  ],
+   "missingValues": ["", "NA", "NaN", "NC", "N/A"]
    "primaryKey":"SECTION_REGL_ID"
 }

@@ -1,3 +1,7 @@
+## Avec relation
+https://git.opendatafrance.net/scdl/menus-collectifs
+https://git.opendatafrance.net/scdl/plats-menus-collectifs
+
 ## Exemples de schémas
 
 http://schema.data.gouv.fr/etalab/schema-irve/latest.html
