@@ -50,6 +50,12 @@
          "role":"author"
       },
       {
+         "title":"Silvio Rousic",
+         "email":"silvio.rousic@cerema.fr",
+         "organisation":"Cerema",
+         "role":"author"
+      },
+      {
          "title":"Jean-Marie Bourgogne",
          "email":"jmbourgogne@opendatafrance.email",
          "organisation":"OpenDataFrance",
