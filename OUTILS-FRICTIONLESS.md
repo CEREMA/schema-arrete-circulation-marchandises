@@ -27,6 +27,9 @@ https://create.frictionlessdata.io/
 ## tableschema2markdown
 Transforme un tableschema en markdown
 https://pypi.org/project/table-schema-to-markdown/
+https://www.npmjs.com/package/@opendataschema/table-schema-to-markdown
+    
+fonction convert_source : choisir le `style` (`page` ou `table`)
 
 ## frictionless framework
 Décrire, extraire, valider et transformer des données
