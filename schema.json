@@ -11,8 +11,8 @@
    ],
    "countryCode":"FR",
    "homepage":"https://github.com/CEREMA/schema-arrete-circulation",
-   "path":"https://github.com/CEREMA/schema-arrete-circulation/raw/vxxx/schema.json",
-   "image":"https://github.com/CEREMA/schema-arrete-circulation/raw/vxxx/irve.png",
+   "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation/master/schema.json",
+   "image":"https://github.com/CEREMA/schema-arrete-circulation/raw/vxxx/circulation.png",
    "licenses":[
       {
          "title":"Etalab Licence Ouverte 2.0",
