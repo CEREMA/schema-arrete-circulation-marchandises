@@ -453,24 +453,44 @@
 		      }
       },
       {
-         "name":"SECTION_DEBUT",
+         "name":"SECTION_DEBUT_POINT",
          "title":"Début de la section",
-         "description":"Début de la section. Adresse ou coordonnées GPS à partir desquelles la règlementaton commence. Coordonnées GPS conseillées. Si GPS, longitude entre -90 et 90 et latitude entre -180 et 180.",
-         "type": "string",
-		      "example": "43.54007,5.44027",
-		      "constraints": {
+         "description":"Point indiquant l'endroit où commence la règlementation sur la voie",
+         "type": "geopoint",
+         "format": "default",
+	 "constraints": {
 		        "required": false
-		      }
+		        }
       },
       {
-         "name":"SECTION_FIN",
-         "title":"Fin de la section",
-         "description":"Fin de la section. Adresse ou coordonnées GPS auxquelles la règlementaton finit. Coordonnées GPS conseillées. Si GPS, longitude entre -90 et 90 et latitude entre -180 et 180.",
+         "name":"SECTION_DEBUT_REF",
+         "title":"Début de la section (texte)",
+         "description":"Indication de l'endroit à partir duquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Par exemple, une adresse ou une indication textuelle : 'au croisement de la rue', 'depuis le rond-point'",
          "type": "string",
-		      "example": "43.54007,5.44027",
-		      "constraints": {
+         "example": "22 avenue Philippe Solari",
+         "constraints": {
 		        "required": false
-		      }
+		        }
+      },
+      {
+         "name":"SECTION_FIN_POINT",
+         "title":"Fin de la section",
+         "description":"Point indiquant l'endroit où commence la règlementation sur la voie",
+         "type": "geopoint",
+         "format": "default",
+	 "constraints": {
+		        "required": false
+		        }
+      },
+      {
+         "name":"SECTION_FIN_REF",
+         "title":"Fin de la section (texte)",
+         "description":"Indication de l'endroit jusqu'auquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Par exemple, une adresse ou une indication textuelle : 'au croisement de la rue', 'depuis le rond-point'",
+         "type": "string",
+         "example": "Croisement avec la rue Gaston de Saporta",
+         "constraints": {
+		        "required": false
+		        }
       },
       {
          "name":"GEOM_JSON",
