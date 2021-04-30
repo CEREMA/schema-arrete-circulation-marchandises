@@ -120,3 +120,104 @@
         "pattern":"^(\\d+|N\/A)$"
       }
     },
+
+### Jours
+
+
+### Disponibilité de l’appareil
+https://schema.data.gouv.fr/arsante/schema-dae/latest/documentation.html
+
+	^(7j/7|lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche|jours fériés|événements){1}(\|(7j/7|lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche|jours fériés|événements))*$
+
+### Dispnibilité de l'appareil horaire
+https://schema.data.gouv.fr/arsante/schema-dae/latest/documentation.html
+
+	^(heures ouvrables|heures de nuit|24h/24){1}(\|(heures ouvrables|heures de nuit|24h/24))*$
+
+### N° de téléphone
+https://schema.data.gouv.fr/arsante/schema-dae/latest/documentation.html
+
+	^(\+33|0|\+262|\+269|\+508|\+590|\+594|\+596|\+681|\+687|\+689)[1-9](\d\d){4}$
+
+### URL de Photo
+https://schema.data.gouv.fr/arsante/schema-dae/latest/documentation.html
+
+	^https?://(?:[a-z0-9\-]+\.)+[a-z]{2,6}(?:/[^/#?]+)+\.(?:jpg|jpeg|gif|png)
+
+### Valeurs séparées par une virgule
+#### Public cible
+	(?:(?:^|,)(Tout public|Allocataires|Demandeurs d'emploi|Étrangers|Familles|Jeunes|Personnes en situation de handicap|Séniors))+$
+
+#### Modalités d'accès
+	(?:(?:^|,)(Accès libre|Sur inscription ou rendez-vous|Public cible|Adhérents))+$
+
+#### Modalités d'accompagnement
+	(?:(?:^|,)(Individuel|Collectif))+$
+
+	(?:(?:^|,)(Gratuit|Adhérent|Payant))+$
+
+## N/A
+https://schema.data.gouv.fr/etalab/schema-stationnement/latest/documentation.html
+
+http://schema.data.gouv.fr/metis-reseaux/infos-travaux/latest.html
+
+	^(\d+|N/A)$
+
+https://git.opendatafrance.net/scdl/adresses/-/blob/master/schema.json
+
+### Nom de la voie
+`"^[a-zA-Z0-9\\-\\'\\s\\d\\u00C0-\\u00FF]+$"`
+
+### Nom de la commune
+`"^[A-Za-z\\s\\-\\u00C0-\\u00FF]+$"`
+
+https://git.opendatafrance.net/scdl/plats-menus-collectifs/-/blob/master/schema.json
+
+### Date de publi d'un plat
+`"^\\d{4}-[01]\\d-[0-3]\\d([+-][0-2]\\d:[0-5]\\dZ?)?$"`
+
+https://git.opendatafrance.net/scdl/marches-publics/-/blob/master/schema.json
+
+
+### UID
+`"^\\d{14}\\d{4}.{1,10}\\d{2}$"`
+
+### Nom de l'acheteur
+`"[A-Za-zÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸàâäçéèêëîïôöùûüÿÆŒæœ \\-']*"`
+
+
+https://git.opendatafrance.net/scdl/menus-collectifs/-/blob/master/schema.json
+datetime
+`"^\\d{4}-[01]\\d-[0-3]\\d([+-][0-2]\\d:[0-5]\\dZ?)?$"`
+
+https://git.opendatafrance.net/scdl/subventions/-/blob/master/schema.json
+période
+`"^[0-9]{4}\\-[0-9]{2}\\-[0-9]{2}(\\/[0-9]{4}\\-[0-9]{2}\\-[0-9]{2})?$"`
+
+### Dates
+https://git.opendatafrance.net/scdl/plats-menus-collectifs/-/blob/master/schema.json
+
+	 "name":  "platPublicationDate",
+	 "title":  "Date de publication de l'enregistrement d'un plat",
+	 "description":  "Lors de la publication ce champ d'horodatage permet d'indiquer la date de publication de la donnée présente dans le fichier.",
+	 "type":  "datetime",
+	 "examples":  "2020-05-11T14:08:32Z",
+	 "constraints":  {
+	 "required":  true,
+	 "pattern":  "^\\d{4}-[01]\\d-[0-3]\\d([+-][0-2]\\d:[0-5]\\dZ?)?$"
+	 }
+	 },
+
+## Dates
+        "dateNotification": {
+          "title": "Date de la notification du marché",
+          "description": "Date à laquelle le marché a été notifié au(x) titulaire(s), au format AAAA-MM-JJ.",
+          "type": "string",
+          "pattern": "^\\d{4}-[01]\\d-[0-3]\\d([+-][0-2]\\d:[0-5]\\dZ?)?$"
+        },
+        "datePublicationDonnees": {
+          "title": "Date de la publication des données essentielles du marché",
+          "description": "Date à laquelle les données essentielles du marché décrit ont été publiées pour la première fois. Cette date n'est donc pas mise à jour en cas de modification du marché.",
+          "type": "string",
+          "pattern": "^\\d{4}-[01]\\d-[0-3]\\d([+-][0-2]\\d:[0-5]\\dZ?)?$"
+        },

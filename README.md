@@ -2,7 +2,7 @@
 
 Ce schéma sur les arrêtés permanents de circulation a été construit en partenariat avec la Région Sud et la Fabrique de la Logistique portée par l'association OpenDataFrance.
 
-[Voir la page sur la Fabrique de la Logistique d'OpenDataFrance](https://opendatafrance.gitbook.io/fablog/territoires/chantiers/partage-des-donnees/standardisation/arretes-de-circulation)
+[Voir la page relative au schéma sur la Fabrique de la Logistique d'OpenDataFrance](https://opendatafrance.gitbook.io/fablog/territoires/chantiers/partage-des-donnees/standardisation/arretes-de-circulation)
 
 ### `SECTION_REGL_ID`
 - Titre : Identifiant de la section règlementée
@@ -58,6 +58,13 @@ Il peut également être un identifiant propre à une structure ou une base de d
 - Type : Chaîne de caractères
 - Exemple : `Considérant la dangerosité que représente le trafic des PL aux abords des groupes scolaires`
 - Valeur : Facultatif
+
+### `ARR_DATE_CREATION`
+- Titre : Date de création de l'arrêté
+- Description : Date de création ou de mise à jour de l'arrêté, , exprimée selon le format international ISO8601.
+- Type : Date
+- Exemple : `2021-04-30`
+- Valeur : Obligatoire
 
 ### `ARR_MAJ`
 - Titre : Arrêté mis à jour ?
@@ -158,7 +165,7 @@ Il peut également être un identifiant propre à une structure ou une base de d
 - Type : Chaîne de caractères
 - Valeurs possibles : 
 
-		Poids Lourds
+		Poids lourds
 		Véhicules Utilitaires Légers 
 - Exemple : `Poids Lourds`
 - Valeur : Facultatif
@@ -191,6 +198,18 @@ Il peut également être un identifiant propre à une structure ou une base de d
 		Véhicules munis d'une autorisation
 		Voitures de Transport avec Chauffeur
 - Exemple : `Bennes à ordures ménagères`
+- Valeur : Facultatif
+
+### `VEH_MOTOR`
+- Titre : Type de motorisation du véhicule
+- Description : Type de motorisation du véhicule
+- Type : Array (sélection multiple)
+- Valeurs possibles : 
+
+		Électrique
+		Gaz Naturel pour Véhicules
+		Hydrogène
+- Exemple : `Électrique`
 - Valeur : Facultatif
 
 ### `VEH_CQA`
@@ -259,14 +278,14 @@ Il peut également être un identifiant propre à une structure ou une base de d
 
 ### `SECTION_DEBUT`
 - Titre : Début de la section. 
-- Description : Début de la section. Adresse ou coordonnées GPS depuis lesquelles la section règlementée commence. Coordonnées GPS conseillées
+- Description : Début de la section. Adresse ou coordonnées GPS depuis lesquelles la section règlementée commence. Coordonnées GPS conseillées. Si GPS, longitude entre -90 et 90 et latitude entre -180 et 180.
 - Type : Chaîne de caractères
 - Exemple : `43.54007,5.44027`
 - Valeur : Facultatif
 
 ### `SECTION_FIN`
 - Titre : Fin de la section. 
-- Description : Fin de la section. Adresse ou coordonnées GPS depuis lesquelles la section règlementée commence. Coordonnées GPS conseillées
+- Description : Fin de la section. Adresse ou coordonnées GPS depuis lesquelles la section règlementée commence. Coordonnées GPS conseillées.   Si ongitude entre -90 et 90 et latitude entre -180 et 180.
 - Type : Chaîne de caractères
 - Exemple : `42 bis avenue Jean Dupont`
 - Valeur : Facultatif
