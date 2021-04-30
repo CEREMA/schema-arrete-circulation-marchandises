@@ -2,7 +2,7 @@ from table_schema_to_markdown import convert_source
 
 # Generate a Markdown documentation from a JSON file
 table_schema = '..\schema.json'
-with open('..\schema.md', 'w') as out:
+with open('..\schema-table.md', 'w') as out:
     convert_source(table_schema, out)
 
 # Generate Markdown documentation in a string
