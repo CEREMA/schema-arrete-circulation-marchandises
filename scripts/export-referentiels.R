@@ -1,3 +1,5 @@
+# Se connecte à la base de données GPKG et en exporte les tables référentielles
+
 library(RSQLite)
 library(sf)
 
