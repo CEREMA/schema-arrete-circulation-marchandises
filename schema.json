@@ -232,9 +232,9 @@
 		        "enum": [
 		          "Arrondissement",
 		          "Commune entière",
-              "Zone à Faible Émission",
-              "Zone IRIS INSEE",
-              "Zone piétonne"
+              		  "Zone à Faible Émission",
+                          "Zone IRIS INSEE",
+                          "Zone piétonne"
 		        ]
 		      }
       },
@@ -448,7 +448,7 @@
 		        "enum": [
 		          "Pair",
 		          "Impair",
-              "Deux côtés"
+                          "Deux côtés"
 		        ]
 		      }
       },
@@ -487,8 +487,8 @@
          "description":"Source de la géométrie",
          "example":"Source de la donnée depuis laquelle la donnée a été extraite (OpenStreetMap, IGN,...).",
          "type": "string",
-		      "example": "BDTOPO IGN 2021",
-		      "constraints": {
+         "example": "BDTOPO IGN 2021",
+	 "constraints": {
 		        "required": false
 		      }
       }
