@@ -65,7 +65,13 @@
    "fields":[
       {
          "name":"SECTION_REGL_ID",
-         "description":"Identifiant unique de la ligne. La ligne correspond à la voie ou la section de voie règlementée. Ce peut être une voie entière (la D9) ou une portion de voie (voir champ `SECTION_DEBUT` et `SECTION_FIN`). L'identifiant peut tout simplement être un identifiant auto-incrémenté (1, 2 ou 3,...). Si la section est issue d'OpenStreetMap, l'identifiant peut correspondre à la valeur osm_id de la voie règlementée (par exemple, 133). Si la section possède plusieurs règlements, l'identifiant peut être accompagné d'un suffixe incrémenté (par exemple 133-2 pour le second règlement associé à la voie). Il peut également être un identifiant propre à une structure ou une base de données (identifiant issu de la BDTOPO IGN, par exemple).",
+         "description":"
+          Identifiant unique de la ligne.  
+          La ligne correspond à la voie ou la section de voie règlementée. Ce peut être une voie entière (la D9) ou une portion de voie (voir champ `SECTION_DEBUT` et `SECTION_FIN`).  
+          L'identifiant peut tout simplement être un identifiant auto-incrémenté (1, 2 ou 3,...).  
+          Si la section est issue d'OpenStreetMap, l'identifiant peut correspondre à la valeur osm_id de la voie règlementée (par exemple, 133). Si la section possède plusieurs règlements, l'identifiant peut être accompagné d'un suffixe incrémenté (par exemple 133-2 pour le second règlement associé à la voie).  
+          Il peut également être un identifiant propre à une structure ou une base de données (identifiant issu de la BDTOPO IGN, par exemple).
+         ",
          "example":"133-3",
          "type":"string",
          "constraints":{
@@ -112,7 +118,7 @@
 	       "example": "https://carte.st-paul-les-dax.fr/wp-content/uploads/2020/06/AM-10248.pdf",
 	       "constraints": {
 	         "required": false,
-	         "pattern": "^(https|http)?://(?:[a-z0-9\\-]+\\.)+[a-z]{2,6}(?:/[^/#?]+)+"
+	         "pattern": "^(https|http)?://(?:[a-z0-9\-]+\.)+[a-z]{2,6}(?:/[^/#?]+)+"
 	       }
       },
       {
@@ -137,7 +143,7 @@
       },
       {
          "name":"ARR_DATE_CREATION",
-         "title" : "Date de création de l'arrêté",
+         "title" : "Date de création de l'arrêté"
          "description":"Date de création ou de mise à jour de l'arrêté, au format ISO 8601 AAAA-MM-DD.",
          "example":"2021-04-30",
          "type":"date",
@@ -147,7 +153,7 @@
       },
       {
          "name":"ARR_MAJ",
-         "title" : "Arrêté mis à jour ?",
+         "title" : "Arrêté mis à jour ?"
          "description":"Spécifie si l'arrêté a été l'objet d'une mise à jour. Dans ce cas, remplir la nouvelle référence de l'arrêté dans `ARR_REF`.",
          "example":"TRUE",
          "type":"Boolean",
@@ -181,12 +187,12 @@
 	       "example": "75114",
 	       "constraints": {
 	         "required": true,
-           "pattern": "^[a-zA-Z0-9\\-\\'\\s\\d\\u00C0-\\u00FF]+$",
+           "pattern": "^[a-zA-Z0-9\-\'\s\d\u00C0-\u00FF]+$",
            "minLength":5,
            "maxLength":5
            }
       },
-   {
+      {
          "name":"REGL_ARTICLE",
 	       "title": "Article du règlement",
 	       "description": "N° de l'article associé au règlement lorsqu'il existe",
@@ -233,7 +239,7 @@
 		          "Commune entière",
               "Zone à Faible Émission",
               "Zone IRIS INSEE",
-              "Zone piétonne"
+              "Zone piétonne",
 		        ]
 		      }
       },
@@ -247,7 +253,7 @@
 	         "required": false
            }
       },
-   {
+      {
          "name":"VEH_PTAC",
 	       "title": "Poids total autorisé en charge",
 	       "description": "Poids total autorisé en charge, exprimé en tonnes.",
@@ -344,7 +350,7 @@
             }
          }
       },
-   {
+      {
          "name":"VEH_MOTOR",
          "title":"Type de motorisation",
          "description":"Type de motorisation du véhicule.",
@@ -383,7 +389,7 @@
       },
       {
          "name":"PERIODE_DEBUT",
-         "title" : "Date d'entrée en vigueur des restrictions",
+         "title" : "Date d'entrée en vigueur des restrictions"
          "description":"Date d'entrée en vigueur des restrictions (en particulier pour les Zones à Faible Émission),, au format ISO 8601 AAAA-MM-DD.",
          "example":"2021-04-30",
          "type":"date",
@@ -393,7 +399,7 @@
       },
       {
          "name":"PERIODE_JH",
-         "title" : "Jours et heures de circulation",
+         "title" : "Jours et heures de circulation"
          "description":"Jours et heures de circulation autorisés pour la circulation exprimés selon le format OpeningHours d'OpenStreetMap ([https://wiki.openstreetmap.org/wiki/Key:opening_hours](https://wiki.openstreetmap.org/wiki/Key:opening_hours)). Ce format permet d'indiquer aussi les jours fériés (PH pour Public Holidays).",
          "example":"Mo-Fr 08:00-12:00,13:00-17:30; Sa 08:00-12:00; PH off",
          "type":"string",
@@ -401,9 +407,9 @@
             "required":false
          }
       },
-    {
+      {
          "name":"INTERV_DUREE",
-         "title" : "Durée maximale d'intervention",
+         "title" : "Durée maximale d'intervention"
          "description":"Durée maximale d'intervention (au niveau d'une aire piétonne, par exemple).",
          "example":"03:00:00",
          "type":"time",
@@ -413,7 +419,7 @@
       },
       {
          "name":"INTERV_HMAX",
-         "title" : "Heure maximale d'intervention",
+         "title" : "Heure maximale d'intervention"
          "description":"Heure max à partir de laquelle les véhicules doivent quitter l'aire piétonne.",
          "example":"22:00:00",
          "type":"time",
@@ -423,7 +429,7 @@
       },
       {
          "name":"SECTION_VOIE",
-         "title" : "Nom de la voie",
+         "title" : "Nom de la voie"
          "description":"Nom de la voie associée à la section règlementée. 'NC' si application à une commune, une ZFE (etc...). Voir pour cela le champ `ZONE_TYPE`..",
          "example":"Avenue Philippe Solari",
          "type":"string",
@@ -483,7 +489,7 @@
 		      "constraints": {
 		        "required": false
 		      }
-      }
+      },
    ],
    "custom_checks": [
     {
@@ -493,6 +499,6 @@
       }
     }
   ],
-   "missingValues": ["", "NA", "NaN", "NC", "N/A"],
+   "missingValues": ["", "NA", "NaN", "NC", "N/A"]
    "primaryKey":"SECTION_REGL_ID"
 }
