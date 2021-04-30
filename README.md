@@ -59,6 +59,13 @@ Il peut également être un identifiant propre à une structure ou une base de d
 - Exemple : `Considérant la dangerosité que représente le trafic des PL aux abords des groupes scolaires`
 - Valeur : Facultatif
 
+### `ARR_DATE_CREATION`
+- Titre : Date de création de l'arrêté
+- Description : Date de création ou de mise à jour de l'arrêté, , exprimée selon le format international ISO8601.
+- Type : Date
+- Exemple : `2021-04-30`
+- Valeur : Obligatoire
+
 ### `ARR_MAJ`
 - Titre : Arrêté mis à jour ?
 - Description : Mentionne si l'arrêté a été l'objet d'une mise à jour. Dans ce cas, remplir la nouvelle référence de l'arrêté dans `ARR_REF`.
