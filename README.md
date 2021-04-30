@@ -308,4 +308,5 @@ Il peut également être un identifiant propre à une structure ou une base de d
 - Valeur : Facultatif
 
 ----
-[Voir le schéma généré automatiquement depuis le fichier schema.json](schema.md)  
+[Voir le schéma généré automatiquement depuis le fichier schema.json (format tableau)](schema-table.md)  
+[Voir le schéma généré automatiquement depuis le fichier schema.json (format page)](schema-page.md)  
