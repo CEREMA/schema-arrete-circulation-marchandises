@@ -47,19 +47,19 @@
          "title":"Cédric Bariou",
          "email":"cedric.bariou@cerema.fr",
          "organisation":"Cerema",
-         "role":"author"
-      },
-      {
-         "title":"Silvio Rousic",
-         "email":"silvio.rousic@cerema.fr",
-         "organisation":"Cerema",
-         "role":"author"
+         "role":"contributor"
       },
       {
          "title":"Jean-Marie Bourgogne",
          "email":"jmbourgogne@opendatafrance.email",
          "organisation":"OpenDataFrance",
-         "role":"author"
+         "role":"contributor"
+      },
+      {
+         "title":"Silvio Rousic",
+         "email":"silvio.rousic@cerema.fr",
+         "organisation":"Cerema",
+         "role":"contributor"
       }
    ],
    "fields":[
