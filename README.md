@@ -4,8 +4,6 @@ Ce schéma sur les arrêtés permanents de circulation a été construit en part
 
 [Voir la page sur la Fabrique de la Logistique d'OpenDataFrance](https://opendatafrance.gitbook.io/fablog/territoires/chantiers/partage-des-donnees/standardisation/arretes-de-circulation)
 
-## Schéma
-
 ### `SECTION_REGL_ID`
 - Titre : Identifiant de la section règlementée
 - Description : Identifiant unique de la ligne.  
