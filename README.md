@@ -278,14 +278,14 @@ Il peut également être un identifiant propre à une structure ou une base de d
 
 ### `SECTION_DEBUT`
 - Titre : Début de la section. 
-- Description : Début de la section. Adresse ou coordonnées GPS depuis lesquelles la section règlementée commence. Coordonnées GPS conseillées
+- Description : Début de la section. Adresse ou coordonnées GPS depuis lesquelles la section règlementée commence. Coordonnées GPS conseillées. Si GPS, longitude entre -90 et 90 et latitude entre -180 et 180.
 - Type : Chaîne de caractères
 - Exemple : `43.54007,5.44027`
 - Valeur : Facultatif
 
 ### `SECTION_FIN`
 - Titre : Fin de la section. 
-- Description : Fin de la section. Adresse ou coordonnées GPS depuis lesquelles la section règlementée commence. Coordonnées GPS conseillées
+- Description : Fin de la section. Adresse ou coordonnées GPS depuis lesquelles la section règlementée commence. Coordonnées GPS conseillées.   Si ongitude entre -90 et 90 et latitude entre -180 et 180.
 - Type : Chaîne de caractères
 - Exemple : `42 bis avenue Jean Dupont`
 - Valeur : Facultatif
