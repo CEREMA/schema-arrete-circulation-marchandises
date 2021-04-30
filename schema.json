@@ -99,7 +99,7 @@
 	       "title": "Référence de l'arrêté",
 	       "description": "Référence ou numéro de l'arrêté auquel se réfère la règlementation. Si l'arrêté a été mis à jour, la référence doit être celle de l'arrêté mis à jour et non celle de l'arrêté originel.",
 	       "type": "string",
-	       "example": "`AP-13090-12`",
+	       "example": "AP-13090-12",
 	       "constraints": {
 	         "required": true
 	       }
@@ -122,7 +122,7 @@
 	       "type": "string",
 	       "example": "Arrêté règlementant la circulation dans le quartier Mazarin et du palais de Justice",
 	       "constraints": {
-	         "required": false
+	         "required": true
            }
       },
       {
@@ -319,6 +319,7 @@
          "arrayItem":{
             "type": "string",
             "constraints": {
+               "required": false,
                "enum": [
                  "Convois funéraires",
                  "Bennes à ordures ménagères",
@@ -354,6 +355,7 @@
          "arrayItem":{
             "type": "string",
             "constraints": {
+               "required": false,
                "enum": [
                  "Électrique",
                  "Gaz Naturel pour Véhicules",
@@ -371,6 +373,7 @@
          "arrayItem":{
             "type": "string",
             "constraints": {
+               "required": false,
                "enum": [
                  "1",
                  "2",
@@ -473,7 +476,10 @@
          "title":"Géométrie",
          "description":"Géométrie de la ligne au format [GeoJSON](https://fr.wikipedia.org/wiki/GeoJSON) (de l'anglais Geographic JSON, signifiant littéralement JSON géographique, est un format ouvert d'encodage d'ensemble de données géospatiales simples utilisant la norme JSON (JavaScript Object Notation).",
          "type": "geojson",
-         "format": "default"
+         "format": "default",
+         "constraints": {
+		        "required": false
+		      }
       },
       {
          "name":"GEOM_SOURCE",

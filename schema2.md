@@ -22,7 +22,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 | [COLL_SIRET](#code-siret-de-la-collectivité---propriété-coll_siret) | chaîne de caractères  | Oui |
 | [ARR_REF](#référence-de-l'arrêté---propriété-arr_ref) | chaîne de caractères  | Oui |
 | [ARR_URL](#url-d'accès-de-l'arrêté---propriété-arr_url) | chaîne de caractères  | Non |
-| [ARR_OBJET](#objet-de-l'arrêté---propriété-arr_objet) | chaîne de caractères  | Oui |
+| [ARR_OBJET](#objet-de-l'arrêté---propriété-arr_objet) | chaîne de caractères  | Non |
 | [ARR_CONSIDERANT](#considérant-de-l'arrêté---propriété-arr_considerant) | chaîne de caractères  | Non |
 | [ARR_DATE_CREATION](#date-de-création-de-l'arrêté---propriété-arr_date_creation) | date (format `%Y-%m-%d`) | Oui |
 | [ARR_MAJ](#arrêté-mis-à-jour-?---propriété-arr_maj) | booléen  | Oui |
@@ -72,7 +72,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 
 #### Référence de l'arrêté - Propriété `ARR_REF`
 
-> *Description : Référence ou numéro de l'arrêté auquel se réfère la règlementation. Si l'arrêté a été mis à jour, la référence doit être celle de l'arrêté mis à jour et non celle de l'arrêté originel.<br/>Ex : AP-13090-12*
+> *Description : Référence ou numéro de l'arrêté auquel se réfère la règlementation. Si l'arrêté a été mis à jour, la référence doit être celle de l'arrêté mis à jour et non celle de l'arrêté originel.<br/>Ex : `AP-13090-12`*
 - Valeur obligatoire
 - Type : chaîne de caractères
 
@@ -86,7 +86,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 #### Objet de l'arrêté - Propriété `ARR_OBJET`
 
 > *Description : Objet ou titre de l'arrêté<br/>Ex : Arrêté règlementant la circulation dans le quartier Mazarin et du palais de Justice*
-- Valeur obligatoire
+- Valeur optionnelle
 - Type : chaîne de caractères
 
 #### Considérant de l'arrêté - Propriété `ARR_CONSIDERANT`
