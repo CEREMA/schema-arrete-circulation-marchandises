@@ -165,7 +165,7 @@ Il peut également être un identifiant propre à une structure ou une base de d
 - Type : Chaîne de caractères
 - Valeurs possibles : 
 
-		Poids Lourds
+		Poids lourds
 		Véhicules Utilitaires Légers 
 - Exemple : `Poids Lourds`
 - Valeur : Facultatif
@@ -198,6 +198,18 @@ Il peut également être un identifiant propre à une structure ou une base de d
 		Véhicules munis d'une autorisation
 		Voitures de Transport avec Chauffeur
 - Exemple : `Bennes à ordures ménagères`
+- Valeur : Facultatif
+
+### `VEH_MOTOR`
+- Titre : Type de motorisation du véhicule
+- Description : Type de motorisation du véhicule
+- Type : Array (sélection multiple)
+- Valeurs possibles : 
+
+		Électrique
+		Gaz Naturel pour Véhicules
+		Hydrogène
+- Exemple : `Électrique`
 - Valeur : Facultatif
 
 ### `VEH_CQA`
