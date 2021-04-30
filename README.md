@@ -2,7 +2,7 @@
 
 Ce schéma sur les arrêtés permanents de circulation a été construit en partenariat avec la Région Sud et la Fabrique de la Logistique portée par l'association OpenDataFrance.
 
-[Voir la page sur la Fabrique de la Logistique d'OpenDataFrance](https://opendatafrance.gitbook.io/fablog/territoires/chantiers/partage-des-donnees/standardisation/arretes-de-circulation)
+[Voir la page relative au schéma sur la Fabrique de la Logistique d'OpenDataFrance](https://opendatafrance.gitbook.io/fablog/territoires/chantiers/partage-des-donnees/standardisation/arretes-de-circulation)
 
 ### `SECTION_REGL_ID`
 - Titre : Identifiant de la section règlementée
