@@ -5,9 +5,11 @@
    "description":"Spécification du fichier d'échange relatif aux arrêtés permanents de circulation gérés par les collectivités.",
    "keywords":[
       "mobility",
+      "city",
       "smartcity",
+      "car",
       "traffic",
-      "restrictions"
+      "regulation"
    ],
    "countryCode":"FR",
    "homepage":"https://github.com/CEREMA/schema-arrete-circulation",
