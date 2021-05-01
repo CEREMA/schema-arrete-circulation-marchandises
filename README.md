@@ -8,9 +8,9 @@ Ce schéma sur les arrêtés permanents de circulation a été construit en part
 
 [Page du schéma sur le FabLog d'OpenDataFrance](https://opendatafrance.gitbook.io/fablog/territoires/chantiers/partage-des-donnees/standardisation/arretes-de-circulation)  
 
-[schema.json](schema.json)
+[Fichier schema.json](schema.json)
 
-[visualisation du schéma](arrete-pernanent-circulation.png)
+[Visualisation du schéma](https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation/master/arrete-permanent-circulation.png)
 
 ### `SECTION_REGL_ID`
 - Titre : Identifiant de la section règlementée
