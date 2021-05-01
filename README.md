@@ -2,7 +2,9 @@
 
 Ce schéma sur les arrêtés permanents de circulation a été construit en partenariat avec la Région Sud et l'association OpenDataFrance.
 
-<img src=https://gblobscdn.gitbook.com/spaces%2F-M8umwbbnQtktzDT0-5_%2Favatar-rectangle-1591200295956.png?alt=media></img>
+<p align=center>
+<img src=https://gblobscdn.gitbook.com/spaces%2F-M8umwbbnQtktzDT0-5_%2Favatar-rectangle-1591200295956.png?alt=media>
+</p>
 [Voir la page relative au schéma sur la page FabLog d'OpenDataFrance](https://opendatafrance.gitbook.io/fablog/territoires/chantiers/partage-des-donnees/standardisation/arretes-de-circulation)  
 
 [Voir le schéma au format JSON](schema.json)
