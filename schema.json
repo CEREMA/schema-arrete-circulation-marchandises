@@ -179,7 +179,7 @@
 	       "title": "Code INSEE",
 	       "description": "Code INSEE de la commune sur laquelle s'applique l'arrêté",
 	       "type": "string",
-	       "example": "75114",
+	       "example": "13090",
 	       "constraints": {
 	         "required": true,
            "pattern": "^[a-zA-Z0-9\\-\\'\\s\\d\\u00C0-\\u00FF]+$",
