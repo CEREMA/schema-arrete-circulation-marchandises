@@ -429,7 +429,7 @@
       {
          "name":"SECTION_VOIE",
          "title" : "Nom de la voie",
-         "description":"Nom de la voie associée à la section règlementée. 'NC' si application à une commune, une ZFE (etc...). Voir pour cela le champ `ZONE_TYPE`..",
+         "description":"Nom de la voie associée à la section règlementée. 'NC' si application à une commune, une ZFE (etc...). Voir pour cela le champ `ZONE_TYPE`.",
          "example":"Avenue Philippe Solari",
          "type":"string",
          "constraints":{
@@ -455,7 +455,7 @@
       {
          "name":"SECTION_DEBUT_POINT",
          "title":"Début de la section",
-         "description":"Coordonnées du point indiquant l'endroit où commence la règlementation sur la voie. A noter sous la forme 'long, lat', par exemple '43.53591,5.42101' ou '43.53591, 5.42101'.",
+         "description":"Coordonnées du point indiquant l'endroit où commence la règlementation sur la voie. A noter sous la forme 'long, lat', par exemple '43.53591,5.42101' ou '43.53591, 5.42101'. 5 ou 6 décimales sont conseillées.",
          "type": "geopoint",
          "format": "default",
 	 "constraints": {
@@ -475,7 +475,7 @@
       {
          "name":"SECTION_FIN_POINT",
          "title":"Fin de la section",
-         "description":"Point indiquant l'endroit où commence la règlementation sur la voie. A noter sous la forme 'long, lat', par exemple '43.53591,5.42101' ou '43.53591, 5.42101'.",
+         "description":"Point indiquant l'endroit où commence la règlementation sur la voie. A noter sous la forme 'long, lat', par exemple '43.53591,5.42101' ou '43.53591, 5.42101'. 5 ou 6 décimales sont conseillées.",
          "type": "geopoint",
          "format": "default",
 	 "constraints": {
