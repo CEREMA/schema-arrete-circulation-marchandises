@@ -455,7 +455,7 @@
       {
          "name":"SECTION_DEBUT_POINT",
          "title":"Début de la section",
-         "description":"Point indiquant l'endroit où commence la règlementation sur la voie",
+         "description":"Coordonnées du point indiquant l'endroit où commence la règlementation sur la voie. A noter sous la forme 'long, lat', par exemple '43.53591,5.42101' ou '43.53591, 5.42101'.",
          "type": "geopoint",
          "format": "default",
 	 "constraints": {
@@ -465,7 +465,7 @@
       {
          "name":"SECTION_DEBUT_REF",
          "title":"Début de la section (texte)",
-         "description":"Indication de l'endroit à partir duquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Par exemple, une adresse ou une indication textuelle : 'au croisement de la rue', 'depuis le rond-point'",
+         "description":"Indication de l'endroit à partir duquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Par exemple, une adresse ou une indication textuelle : 'au croisement de la rue', 'depuis le rond-point'. Les coordonnées GPS, elles, doivent être indiquées dans le champ `SECTION_DEBUT_POINT`.",
          "type": "string",
          "example": "22 avenue Philippe Solari",
          "constraints": {
@@ -475,7 +475,7 @@
       {
          "name":"SECTION_FIN_POINT",
          "title":"Fin de la section",
-         "description":"Point indiquant l'endroit où commence la règlementation sur la voie",
+         "description":"Point indiquant l'endroit où commence la règlementation sur la voie. A noter sous la forme 'long, lat', par exemple '43.53591,5.42101' ou '43.53591, 5.42101'.",
          "type": "geopoint",
          "format": "default",
 	 "constraints": {
@@ -485,7 +485,7 @@
       {
          "name":"SECTION_FIN_REF",
          "title":"Fin de la section (texte)",
-         "description":"Indication de l'endroit jusqu'auquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Par exemple, une adresse ou une indication textuelle : 'au croisement de la rue', 'depuis le rond-point'",
+         "description":"Indication de l'endroit jusqu'auquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Par exemple, une adresse ou une indication textuelle : 'au croisement de la rue', 'depuis le rond-point'. Les coordonnées GPS, elles, doivent être indiquées dans le champ `SECTION_DEBUT_POINT`.",
          "type": "string",
          "example": "Croisement avec la rue Gaston de Saporta",
          "constraints": {
