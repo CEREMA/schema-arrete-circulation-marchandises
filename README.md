@@ -7,9 +7,7 @@ Ce schéma sur les arrêtés permanents de circulation a été construit en part
 </p>
 
 [Page du schéma sur le FabLog d'OpenDataFrance](https://opendatafrance.gitbook.io/fablog/territoires/chantiers/partage-des-donnees/standardisation/arretes-de-circulation)  
-
-[Fichier schema.json](schema.json)
-
+[Fichier schema.json](schema.json)  
 [Visualisation du schéma](https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation/master/arrete-permanent-circulation.png)
 
 ### `SECTION_REGL_ID`
