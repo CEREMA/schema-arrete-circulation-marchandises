@@ -10,6 +10,8 @@ Ce schéma sur les arrêtés permanents de circulation a été construit en part
 
 [schema.json](schema.json)
 
+[visualisation du schéma](arrete-pernanent-circulation.png)
+
 ### `SECTION_REGL_ID`
 - Titre : Identifiant de la section règlementée
 - Description : Identifiant unique de la ligne.  
