@@ -149,7 +149,7 @@
          }
       },
       {
-         "name":"ARR_MAJ",
+         "name":"ARR_EST_MAJ",
          "title" : "Arrêté mis à jour ?",
          "description":"Spécifie si l'arrêté a été l'objet d'une mise à jour. Dans ce cas, remplir la nouvelle référence de l'arrêté dans `ARR_REF`.",
          "example":"TRUE",
