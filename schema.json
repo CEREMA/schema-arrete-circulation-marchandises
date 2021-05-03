@@ -5,14 +5,16 @@
    "description":"Spécification du fichier d'échange relatif aux arrêtés permanents de circulation gérés par les collectivités.",
    "keywords":[
       "mobility",
+      "city",
       "smartcity",
+      "car",
       "traffic",
-      "restrictions"
+      "regulation"
    ],
    "countryCode":"FR",
    "homepage":"https://github.com/CEREMA/schema-arrete-circulation",
-   "path":"https://github.com/CEREMA/schema-arrete-circulation/raw/vxxx/schema.json",
-   "image":"https://github.com/CEREMA/schema-arrete-circulation/raw/vxxx/irve.png",
+   "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation/master/schema.json",
+   "image":"https://github.com/CEREMA/schema-arrete-circulation/raw/vxxx/circulation.png",
    "licenses":[
       {
          "title":"Etalab Licence Ouverte 2.0",
@@ -47,18 +49,18 @@
          "title":"Cédric Bariou",
          "email":"cedric.bariou@cerema.fr",
          "organisation":"Cerema",
-         "role":"author"
+         "role":"contributor"
       },
       {
          "title":"Jean-Marie Bourgogne",
          "email":"jmbourgogne@opendatafrance.email",
          "organisation":"OpenDataFrance",
-         "role":"author"
+         "role":"contributor"
       },
       {
-         "title":"Nicolas Berthelot",
-         "email":"nicolas.berthelot.beta.gouv@gmail.com",
-         "organisation":"transport.data.gouv.fr",
+         "title":"Silvio Rousic",
+         "email":"silvio.rousic@cerema.fr",
+         "organisation":"Cerema",
          "role":"contributor"
       }
    ],
@@ -147,7 +149,7 @@
          }
       },
       {
-         "name":"ARR_MAJ",
+         "name":"ARR_EST_MAJ",
          "title" : "Arrêté mis à jour ?",
          "description":"Spécifie si l'arrêté a été l'objet d'une mise à jour. Dans ce cas, remplir la nouvelle référence de l'arrêté dans `ARR_REF`.",
          "example":"TRUE",
@@ -179,7 +181,7 @@
 	       "title": "Code INSEE",
 	       "description": "Code INSEE de la commune sur laquelle s'applique l'arrêté",
 	       "type": "string",
-	       "example": "75114",
+	       "example": "13090",
 	       "constraints": {
 	         "required": true,
            "pattern": "^[a-zA-Z0-9\\-\\'\\s\\d\\u00C0-\\u00FF]+$",
@@ -210,7 +212,7 @@
       {
          "name":"REGL_MODALITE",
          "description":"Modalité",
-         "example":"Spécifie si l'arrêté interdit ou autorise",
+         "example":"Indique si l'arrêté interdit ou autorise",
          "type": "string",
 		      "example": "Autorise",
 		      "constraints": {
@@ -232,9 +234,9 @@
 		        "enum": [
 		          "Arrondissement",
 		          "Commune entière",
-              "Zone à Faible Émission",
-              "Zone IRIS INSEE",
-              "Zone piétonne"
+              		  "Zone à Faible Émission",
+                          "Zone IRIS INSEE",
+                          "Zone piétonne"
 		        ]
 		      }
       },
@@ -315,7 +317,7 @@
          "title":"Type d'usage",
          "description":"Type d'usage du véhicule",
          "example":"['Bennes à ordures ménagères', 'Véhicules de police']",
-         "type":"string",
+         "type":"array",
          "arrayItem":{
             "type": "string",
             "constraints": {
@@ -351,7 +353,7 @@
          "title":"Type de motorisation",
          "description":"Type de motorisation du véhicule.",
          "example":"['Électrique', 'Hydrogène']",
-         "type":"string",
+         "type":"array",
          "arrayItem":{
             "type": "string",
             "constraints": {
@@ -369,7 +371,7 @@
          "title":"Vignettes crit'air",
          "description":"Vignettes crit'air. Voir la [classification des vignettes Crit'Air](https://www.certificat-air.gouv.fr/docs/tableaux_classement.pdf) sur le site [certificat-air.gouv.fr](https://www.certificat-air.gouv.fr)",
          "example":"['1', '2', '3']",
-         "type":"string",
+         "type":"array",
          "arrayItem":{
             "type": "string",
             "constraints": {
@@ -391,6 +393,7 @@
          "description":"Date d'entrée en vigueur des restrictions (en particulier pour les Zones à Faible Émission),, au format ISO 8601 AAAA-MM-DD.",
          "example":"2021-04-30",
          "type":"date",
+	 "format":"%Y-%m-%d",
          "constraints":{
             "required":false
          }
@@ -398,7 +401,7 @@
       {
          "name":"PERIODE_JH",
          "title" : "Jours et heures de circulation",
-         "description":"Jours et heures de circulation autorisés pour la circulation exprimés selon le format OpeningHours d'OpenStreetMap ([https://wiki.openstreetmap.org/wiki/Key:opening_hours](https://wiki.openstreetmap.org/wiki/Key:opening_hours)). Ce format permet d'indiquer aussi les jours fériés (PH pour Public Holidays).",
+         "description":"Jours et heures de circulation autorisés pour la circulation exprimés selon le format OpeningHours d'OpenStreetMap ([https://wiki.openstreetmap.org/wiki/Key:opening_hours](https://wiki.openstreetmap.org/wiki/Key:opening_hours)). Ce format permet d'indiquer les week-ends (we), les jours fériés (PH) et les vacances scolaires (SH). Par exemple `Mo-Fr 09:00-17:00; PH 10:00-12:00; PH Su off` signifie : 'ouverture du lundi au vendredi de 9h à 17h sauf les jours fériés où l'ouverture est de 10h à 12h, à l'exception des jours fériés tombant un dimanche'",
          "example":"Mo-Fr 08:00-12:00,13:00-17:30; Sa 08:00-12:00; PH off",
          "type":"string",
          "constraints":{
@@ -428,7 +431,7 @@
       {
          "name":"SECTION_VOIE",
          "title" : "Nom de la voie",
-         "description":"Nom de la voie associée à la section règlementée. 'NC' si application à une commune, une ZFE (etc...). Voir pour cela le champ `ZONE_TYPE`..",
+         "description":"Nom de la voie associée à la section règlementée. 'NC' si application à une commune, une ZFE (etc...). Voir pour cela le champ `ZONE_TYPE`.",
          "example":"Avenue Philippe Solari",
          "type":"string",
          "constraints":{
@@ -447,36 +450,67 @@
 		        "enum": [
 		          "Pair",
 		          "Impair",
-              "Deux côtés"
+                          "Deux côtés"
 		        ]
 		      }
       },
       {
-         "name":"SECTION_DEBUT",
+         "name":"SECTION_DEBUT_POINT",
          "title":"Début de la section",
-         "description":"Début de la section. Adresse ou coordonnées GPS à partir desquelles la règlementaton commence. Coordonnées GPS conseillées. Si GPS, longitude entre -90 et 90 et latitude entre -180 et 180.",
-         "type": "string",
-		      "example": "43.54007,5.44027",
-		      "constraints": {
+         "description":"Coordonnées du point indiquant l'endroit où commence la règlementation sur la voie. A noter sous la forme 'long, lat', par exemple '43.53591,5.42101' ou '43.53591, 5.42101'. 5 ou 6 décimales sont conseillées.",
+         "type": "geopoint",
+         "format": "default",
+	 "constraints": {
 		        "required": false
-		      }
+		        }
       },
       {
-         "name":"SECTION_FIN",
-         "title":"Fin de la section",
-         "description":"Fin de la section. Adresse ou coordonnées GPS auxquelles la règlementaton finit. Coordonnées GPS conseillées. Si GPS, longitude entre -90 et 90 et latitude entre -180 et 180.",
+         "name":"SECTION_DEBUT_REF",
+         "title":"Début de la section (texte)",
+         "description":"Indication de l'endroit à partir duquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Par exemple, une adresse ou une indication textuelle : 'au croisement de la rue', 'depuis le rond-point'. Les coordonnées GPS, elles, doivent être indiquées dans le champ `SECTION_DEBUT_POINT`.",
          "type": "string",
-		      "example": "43.54007,5.44027",
-		      "constraints": {
+         "example": "22 avenue Philippe Solari",
+         "constraints": {
 		        "required": false
-		      }
+		        }
+      },
+      {
+         "name":"SECTION_FIN_POINT",
+         "title":"Fin de la section",
+         "description":"Point indiquant l'endroit où commence la règlementation sur la voie. A noter sous la forme 'long, lat', par exemple '43.53591,5.42101' ou '43.53591, 5.42101'. 5 ou 6 décimales sont conseillées.",
+         "type": "geopoint",
+         "format": "default",
+	 "constraints": {
+		        "required": false
+		        }
+      },
+      {
+         "name":"SECTION_FIN_REF",
+         "title":"Fin de la section (texte)",
+         "description":"Indication de l'endroit jusqu'auquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Par exemple, une adresse ou une indication textuelle : 'au croisement de la rue', 'depuis le rond-point'. Les coordonnées GPS, elles, doivent être indiquées dans le champ `SECTION_DEBUT_POINT`.",
+         "type": "string",
+         "example": "Croisement avec la rue Gaston de Saporta",
+         "constraints": {
+		        "required": false
+		        }
       },
       {
          "name":"GEOM_JSON",
-         "title":"Géométrie",
-         "description":"Géométrie de la ligne au format [GeoJSON](https://fr.wikipedia.org/wiki/GeoJSON) (de l'anglais Geographic JSON, signifiant littéralement JSON géographique, est un format ouvert d'encodage d'ensemble de données géospatiales simples utilisant la norme JSON (JavaScript Object Notation).",
+         "title":"Géométrie au format GeoJSON",
+         "description":"Géométrie de la ligne exprimée au format [GeoJSON](https://fr.wikipedia.org/wiki/GeoJSON)  sous le système de projection WGS84 (EPSG:4326). Le GeoJSON, de l'anglais Geographic JSON, signifiant littéralement JSON géographique, est un format ouvert d'encodage d'ensemble de données géospatiales simples utilisant la norme JSON (JavaScript Object Notation). Objet de type `LineString` souhaité. Sous PostGIS, on peut retrouver le GeoJSON d'une géométrie grâce à la fonction [ST_AsGeoJSON](https://postgis.net/docs/ST_AsGeoJSON.html). Vous avez aussi le choix de renseigner la géométrie au format WKT grâce au champ `GEOM_WKT`.",
          "type": "geojson",
+	 "example": "{ \"type\": \"Feature\", \"geometry\": { \"type\": \"LineString\", \"coordinates\": [ [102.0, 0.0], [103.0, 1.0], [104.0, 0.0], [105.0, 1.0] ] }",
          "format": "default",
+         "constraints": {
+		        "required": false
+		      }
+      },
+      {
+         "name":"GEOM_WKT",
+         "title":"Géométrie au format WKT",
+         "description":"Géométrie de la ligne exprimée au format [WKT (Well Know Text](https://fr.wikipedia.org/wiki/Well-known_text) sous le système de projection WGS84 (EPSG:4326). Sous QGIS ou PostGIS, il est particulièrement aisé de retrouver le WKT d'une géométrie (fonction `geom_to_wkt` sous QGIS et fonction [`ST_As_Text`](https://postgis.net/docs/ST_AsText.html) sous PostGIS). Vous avez aussi le choix de renseigner la géométrie au format GeoJSON grâce au champ `GEOM_JSON`.",
+         "type": "string",
+	 "example":"LineString (5.39340184 45.56538751, 5.41017215 45.56722934, 5.42510063 45.5679079)",
          "constraints": {
 		        "required": false
 		      }
@@ -486,8 +520,8 @@
          "description":"Source de la géométrie",
          "example":"Source de la donnée depuis laquelle la donnée a été extraite (OpenStreetMap, IGN,...).",
          "type": "string",
-		      "example": "BDTOPO IGN 2021",
-		      "constraints": {
+         "example": "BDTOPO IGN 2021",
+	 "constraints": {
 		        "required": false
 		      }
       }

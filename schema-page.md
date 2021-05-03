@@ -25,7 +25,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 | [ARR_OBJET](#objet-de-l'arrêté---propriété-arr_objet) | chaîne de caractères  | Oui |
 | [ARR_CONSIDERANT](#considérant-de-l'arrêté---propriété-arr_considerant) | chaîne de caractères  | Non |
 | [ARR_DATE_CREATION](#date-de-création-de-l'arrêté---propriété-arr_date_creation) | date (format `%Y-%m-%d`) | Oui |
-| [ARR_MAJ](#arrêté-mis-à-jour-?---propriété-arr_maj) | booléen  | Oui |
+| [ARR_EST_MAJ](#arrêté-mis-à-jour-?---propriété-arr_est_maj) | booléen  | Oui |
 | [ARR_INSEE](#code-insee---propriété-arr_insee) | chaîne de caractères  | Oui |
 | [REGL_ARTICLE](#article-du-règlement---propriété-regl_article) | nombre entier  | Non |
 | [REGL_SOUS_ARTICLE](#sous-article-du-règlement---propriété-regl_sous_article) | chaîne de caractères  | Non |
@@ -37,18 +37,21 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 | [VEH_LARG](#largeur-du-largeur---propriété-veh_larg) | nombre réel  | Non |
 | [VEH_HAUT](#largeur-du-largeur---propriété-veh_haut) | nombre réel  | Non |
 | [VEH_TYPE](#propriété-veh_type) | chaîne de caractères  | Non |
-| [VEH_USAGE](#type-d'usage---propriété-veh_usage) | chaîne de caractères  | Non |
-| [VEH_MOTOR](#type-de-motorisation---propriété-veh_motor) | chaîne de caractères  | Non |
-| [VEH_CQA](#vignettes-crit'air---propriété-veh_cqa) | chaîne de caractères  | Non |
-| [PERIODE_DEBUT](#date-d'entrée-en-vigueur-des-restrictions---propriété-periode_debut) | date  | Non |
+| [VEH_USAGE](#type-d'usage---propriété-veh_usage) | liste  | Non |
+| [VEH_MOTOR](#type-de-motorisation---propriété-veh_motor) | liste  | Non |
+| [VEH_CQA](#vignettes-crit'air---propriété-veh_cqa) | liste  | Non |
+| [PERIODE_DEBUT](#date-d'entrée-en-vigueur-des-restrictions---propriété-periode_debut) | date (format `%Y-%m-%d`) | Non |
 | [PERIODE_JH](#jours-et-heures-de-circulation---propriété-periode_jh) | chaîne de caractères  | Non |
 | [INTERV_DUREE](#durée-maximale-d'intervention---propriété-interv_duree) | heure  | Non |
 | [INTERV_HMAX](#heure-maximale-d'intervention---propriété-interv_hmax) | heure  | Non |
 | [SECTION_VOIE](#nom-de-la-voie---propriété-section_voie) | chaîne de caractères  | Oui |
 | [SECTION_COTE](#côté-de-la-voie---propriété-section_cote) | chaîne de caractères  | Non |
-| [SECTION_DEBUT](#début-de-la-section---propriété-section_debut) | chaîne de caractères  | Non |
-| [SECTION_FIN](#fin-de-la-section---propriété-section_fin) | chaîne de caractères  | Non |
-| [GEOM_JSON](#géométrie---propriété-geom_json) | GéoJSON (format `default`) | Non |
+| [SECTION_DEBUT_POINT](#début-de-la-section---propriété-section_debut_point) | point géographique (format `default`) | Non |
+| [SECTION_DEBUT_REF](#début-de-la-section-(texte)---propriété-section_debut_ref) | chaîne de caractères  | Non |
+| [SECTION_FIN_POINT](#fin-de-la-section---propriété-section_fin_point) | point géographique (format `default`) | Non |
+| [SECTION_FIN_REF](#fin-de-la-section-(texte)---propriété-section_fin_ref) | chaîne de caractères  | Non |
+| [GEOM_JSON](#géométrie-au-format-geojson---propriété-geom_json) | GéoJSON (format `default`) | Non |
+| [GEOM_WKT](#géométrie-au-format-wkt---propriété-geom_wkt) | chaîne de caractères  | Non |
 | [GEOM_SOURCE](#propriété-geom_source) | chaîne de caractères  | Non |
 
 #### Propriété `SECTION_REGL_ID`
@@ -101,7 +104,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 - Valeur obligatoire
 - Type : date (format `%Y-%m-%d`)
 
-#### Arrêté mis à jour ? - Propriété `ARR_MAJ`
+#### Arrêté mis à jour ? - Propriété `ARR_EST_MAJ`
 
 > *Description : Spécifie si l'arrêté a été l'objet d'une mise à jour. Dans ce cas, remplir la nouvelle référence de l'arrêté dans `ARR_REF`.<br/>Ex : TRUE*
 - Valeur obligatoire
@@ -109,7 +112,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 
 #### Code INSEE - Propriété `ARR_INSEE`
 
-> *Description : Code INSEE de la commune sur laquelle s'applique l'arrêté<br/>Ex : 75114*
+> *Description : Code INSEE de la commune sur laquelle s'applique l'arrêté<br/>Ex : 13090*
 - Valeur obligatoire
 - Type : chaîne de caractères
 - Entre 5 et 5 caractères
@@ -195,29 +198,29 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 
 > *Description : Type d'usage du véhicule<br/>Ex : ['Bennes à ordures ménagères', 'Véhicules de police']*
 - Valeur optionnelle
-- Type : chaîne de caractères
+- Type : liste
 
 #### Type de motorisation - Propriété `VEH_MOTOR`
 
 > *Description : Type de motorisation du véhicule.<br/>Ex : ['Électrique', 'Hydrogène']*
 - Valeur optionnelle
-- Type : chaîne de caractères
+- Type : liste
 
 #### Vignettes crit'air - Propriété `VEH_CQA`
 
 > *Description : Vignettes crit'air. Voir la [classification des vignettes Crit'Air](https://www.certificat-air.gouv.fr/docs/tableaux_classement.pdf) sur le site [certificat-air.gouv.fr](https://www.certificat-air.gouv.fr)<br/>Ex : ['1', '2', '3']*
 - Valeur optionnelle
-- Type : chaîne de caractères
+- Type : liste
 
 #### Date d'entrée en vigueur des restrictions - Propriété `PERIODE_DEBUT`
 
 > *Description : Date d'entrée en vigueur des restrictions (en particulier pour les Zones à Faible Émission),, au format ISO 8601 AAAA-MM-DD.<br/>Ex : 2021-04-30*
 - Valeur optionnelle
-- Type : date
+- Type : date (format `%Y-%m-%d`)
 
 #### Jours et heures de circulation - Propriété `PERIODE_JH`
 
-> *Description : Jours et heures de circulation autorisés pour la circulation exprimés selon le format OpeningHours d'OpenStreetMap ([https://wiki.openstreetmap.org/wiki/Key:opening_hours](https://wiki.openstreetmap.org/wiki/Key:opening_hours)). Ce format permet d'indiquer aussi les jours fériés (PH pour Public Holidays).<br/>Ex : Mo-Fr 08:00-12:00,13:00-17:30; Sa 08:00-12:00; PH off*
+> *Description : Jours et heures de circulation autorisés pour la circulation exprimés selon le format OpeningHours d'OpenStreetMap ([https://wiki.openstreetmap.org/wiki/Key:opening_hours](https://wiki.openstreetmap.org/wiki/Key:opening_hours)). Ce format permet d'indiquer les week-ends (we), les jours fériés (PH) et les vacances scolaires (SH). Par exemple `Mo-Fr 09:00-17:00; PH 10:00-12:00; PH Su off` signifie : 'ouverture du lundi au vendredi de 9h à 17h sauf les jours fériés où l'ouverture est de 10h à 12h, à l'exception des jours fériés tombant un dimanche'<br/>Ex : Mo-Fr 08:00-12:00,13:00-17:30; Sa 08:00-12:00; PH off*
 - Valeur optionnelle
 - Type : chaîne de caractères
 
@@ -235,7 +238,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 
 #### Nom de la voie - Propriété `SECTION_VOIE`
 
-> *Description : Nom de la voie associée à la section règlementée. 'NC' si application à une commune, une ZFE (etc...). Voir pour cela le champ `ZONE_TYPE`..<br/>Ex : Avenue Philippe Solari*
+> *Description : Nom de la voie associée à la section règlementée. 'NC' si application à une commune, une ZFE (etc...). Voir pour cela le champ `ZONE_TYPE`.<br/>Ex : Avenue Philippe Solari*
 - Valeur obligatoire
 - Type : chaîne de caractères
 - Motif : `^[a-zA-Z0-9\-\'\s\d\u00C0-\u00FF]+$`
@@ -250,23 +253,41 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
     - Impair
     - Deux côtés
 
-#### Début de la section - Propriété `SECTION_DEBUT`
+#### Début de la section - Propriété `SECTION_DEBUT_POINT`
 
-> *Description : Début de la section. Adresse ou coordonnées GPS à partir desquelles la règlementaton commence. Coordonnées GPS conseillées. Si GPS, longitude entre -90 et 90 et latitude entre -180 et 180.<br/>Ex : 43.54007,5.44027*
+> *Description : Coordonnées du point indiquant l'endroit où commence la règlementation sur la voie. A noter sous la forme 'long, lat', par exemple '43.53591,5.42101' ou '43.53591, 5.42101'. 5 ou 6 décimales sont conseillées.<br/>Ex : None*
+- Valeur optionnelle
+- Type : point géographique (format `default`)
+
+#### Début de la section (texte) - Propriété `SECTION_DEBUT_REF`
+
+> *Description : Indication de l'endroit à partir duquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Par exemple, une adresse ou une indication textuelle : 'au croisement de la rue', 'depuis le rond-point'. Les coordonnées GPS, elles, doivent être indiquées dans le champ `SECTION_DEBUT_POINT`.<br/>Ex : 22 avenue Philippe Solari*
 - Valeur optionnelle
 - Type : chaîne de caractères
 
-#### Fin de la section - Propriété `SECTION_FIN`
+#### Fin de la section - Propriété `SECTION_FIN_POINT`
 
-> *Description : Fin de la section. Adresse ou coordonnées GPS auxquelles la règlementaton finit. Coordonnées GPS conseillées. Si GPS, longitude entre -90 et 90 et latitude entre -180 et 180.<br/>Ex : 43.54007,5.44027*
+> *Description : Point indiquant l'endroit où commence la règlementation sur la voie. A noter sous la forme 'long, lat', par exemple '43.53591,5.42101' ou '43.53591, 5.42101'. 5 ou 6 décimales sont conseillées.<br/>Ex : None*
+- Valeur optionnelle
+- Type : point géographique (format `default`)
+
+#### Fin de la section (texte) - Propriété `SECTION_FIN_REF`
+
+> *Description : Indication de l'endroit jusqu'auquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Par exemple, une adresse ou une indication textuelle : 'au croisement de la rue', 'depuis le rond-point'. Les coordonnées GPS, elles, doivent être indiquées dans le champ `SECTION_DEBUT_POINT`.<br/>Ex : Croisement avec la rue Gaston de Saporta*
 - Valeur optionnelle
 - Type : chaîne de caractères
 
-#### Géométrie - Propriété `GEOM_JSON`
+#### Géométrie au format GeoJSON - Propriété `GEOM_JSON`
 
-> *Description : Géométrie de la ligne au format [GeoJSON](https://fr.wikipedia.org/wiki/GeoJSON) (de l'anglais Geographic JSON, signifiant littéralement JSON géographique, est un format ouvert d'encodage d'ensemble de données géospatiales simples utilisant la norme JSON (JavaScript Object Notation).<br/>Ex : None*
+> *Description : Géométrie de la ligne exprimée au format [GeoJSON](https://fr.wikipedia.org/wiki/GeoJSON)  sous le système de projection WGS84 (EPSG:4326). Le GeoJSON, de l'anglais Geographic JSON, signifiant littéralement JSON géographique, est un format ouvert d'encodage d'ensemble de données géospatiales simples utilisant la norme JSON (JavaScript Object Notation). Objet de type `LineString` souhaité. Sous PostGIS, on peut retrouver le GeoJSON d'une géométrie grâce à la fonction [ST_AsGeoJSON](https://postgis.net/docs/ST_AsGeoJSON.html). Vous avez aussi le choix de renseigner la géométrie au format WKT grâce au champ `GEOM_WKT`.<br/>Ex : { "type": "Feature", "geometry": { "type": "LineString", "coordinates": [ [102.0, 0.0], [103.0, 1.0], [104.0, 0.0], [105.0, 1.0] ] }*
 - Valeur optionnelle
 - Type : GéoJSON (format `default`)
+
+#### Géométrie au format WKT - Propriété `GEOM_WKT`
+
+> *Description : Géométrie de la ligne exprimée au format [WKT (Well Know Text](https://fr.wikipedia.org/wiki/Well-known_text) sous le système de projection WGS84 (EPSG:4326). Sous QGIS ou PostGIS, il est particulièrement aisé de retrouver le WKT d'une géométrie (fonction `geom_to_wkt` sous QGIS et fonction [`ST_As_Text`](https://postgis.net/docs/ST_AsText.html) sous PostGIS). Vous avez aussi le choix de renseigner la géométrie au format GeoJSON grâce au champ `GEOM_JSON`.<br/>Ex : LineString (5.39340184 45.56538751, 5.41017215 45.56722934, 5.42510063 45.5679079)*
+- Valeur optionnelle
+- Type : chaîne de caractères
 
 #### Propriété `GEOM_SOURCE`
 
