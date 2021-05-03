@@ -2,7 +2,7 @@
 
 ## 0.3.0
 
-Publication sur schema.data.gouv.fr
+Publication sur le repo github du Cerema en vue de [schema.data.gouv.fr](http://schema.data.gouv.fr/)
 
 - Modification des types des champs `VEH_USAGE`, `VEH_MOTOR`, `VEH_CQA` de **array** vers **string** avec regex pattern 'Séparation par caractère `|`' car questionnement sur prise en charge du type **array** par la plateforme de publication et de validation des données d'Etalab
 - Ajout de champ `SECTION_DEBUT_POINT`
