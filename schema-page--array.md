@@ -37,9 +37,9 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 | [VEH_LARG](#largeur-du-largeur---propriété-veh_larg) | nombre réel  | Non |
 | [VEH_HAUT](#largeur-du-largeur---propriété-veh_haut) | nombre réel  | Non |
 | [VEH_TYPE](#propriété-veh_type) | chaîne de caractères  | Non |
-| [VEH_USAGE](#type-d'usage---propriété-veh_usage) | chaîne de caractères  | Non |
-| [VEH_MOTOR](#type-de-motorisation---propriété-veh_motor) | chaîne de caractères  | Non |
-| [VEH_CQA](#vignettes-crit'air---propriété-veh_cqa) | chaîne de caractères  | Non |
+| [VEH_USAGE](#type-d'usage---propriété-veh_usage) | liste  | Non |
+| [VEH_MOTOR](#type-de-motorisation---propriété-veh_motor) | liste  | Non |
+| [VEH_CQA](#vignettes-crit'air---propriété-veh_cqa) | liste  | Non |
 | [PERIODE_DEBUT](#date-d'entrée-en-vigueur-des-restrictions---propriété-periode_debut) | date (format `%Y-%m-%d`) | Non |
 | [PERIODE_JH](#jours-et-heures-de-circulation---propriété-periode_jh) | chaîne de caractères  | Non |
 | [INTERV_DUREE](#durée-maximale-d'intervention---propriété-interv_duree) | heure  | Non |
@@ -196,24 +196,21 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 
 #### Type d'usage - Propriété `VEH_USAGE`
 
-> *Description : Type d'usage du véhicule. Séparer les valeurs par le caractère '|'.<br/>Ex : Bennes à ordures ménagères|Véhicules de police*
+> *Description : Type d'usage du véhicule<br/>Ex : ['Bennes à ordures ménagères', 'Véhicules de police']*
 - Valeur optionnelle
-- Type : chaîne de caractères
-- Motif : `^(Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules de police|Véhicules de secours|Véhicules municipaux|Véhicules munis d'une autorisation|Voitures de Transport avec Chauffeur){1}(\|(Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules de police|Véhicules de secours|Véhicules municipaux|Véhicules munis d'une autorisation|Voitures de Transport avec Chauffeur)))*$`
+- Type : liste
 
 #### Type de motorisation - Propriété `VEH_MOTOR`
 
-> *Description : Type de motorisation du véhicule. Séparer les valeurs par le caractère '|'.<br/>Ex : Électrique|Hydrogène*
+> *Description : Type de motorisation du véhicule.<br/>Ex : ['Électrique', 'Hydrogène']*
 - Valeur optionnelle
-- Type : chaîne de caractères
-- Motif : `^(Électrique|Gaz Naturel pour Véhicules|Hydrogène){1}(\|(Électrique|Gaz Naturel pour Véhicules|Hydrogène))*$`
+- Type : liste
 
 #### Vignettes crit'air - Propriété `VEH_CQA`
 
-> *Description : Vignettes crit'air. Voir la [classification des vignettes Crit'Air](https://www.certificat-air.gouv.fr/docs/tableaux_classement.pdf) sur le site [certificat-air.gouv.fr](https://www.certificat-air.gouv.fr). Séparer les étiquettes CQA par le caractère '|'. 'NC' signifie que la valeur n'a pas été renseignée.<br/>Ex : 1|2|3*
+> *Description : Vignettes crit'air. Voir la [classification des vignettes Crit'Air](https://www.certificat-air.gouv.fr/docs/tableaux_classement.pdf) sur le site [certificat-air.gouv.fr](https://www.certificat-air.gouv.fr)<br/>Ex : ['1', '2', '3']*
 - Valeur optionnelle
-- Type : chaîne de caractères
-- Motif : `^(1|2|3|4|5|NC){1}(\|(1|2|3|4|5|NC))*$`
+- Type : liste
 
 #### Date d'entrée en vigueur des restrictions - Propriété `PERIODE_DEBUT`
 

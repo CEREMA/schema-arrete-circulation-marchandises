@@ -1,0 +1,1 @@
+^(Électrique|Gaz Naturel pour Véhicules|Hydrogène){1}(\\|(Électrique|Gaz Naturel pour Véhicules|Hydrogène))*$
