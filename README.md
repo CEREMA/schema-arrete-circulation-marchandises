@@ -11,6 +11,6 @@ Ce schéma sur les arrêtés permanents de circulation a été construit en part
 [Voir le schéma (format TableSchema)](schema.json)  
 [Voir le schéma (diagramme)](https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation/master/arrete-permanent-circulation.png) 
 
-[Voir la proposition sur Etalab](https://github.com/etalab/schema.data.gouv.fr/issues/157) 
-
+## Liens
+[Voir la proposition sur le github d'Etalab](https://github.com/etalab/schema.data.gouv.fr/issues/157)  
 [Voir la proposition sur le gitbook d'OpenDataFrance](https://opendatafrance.gitbook.io/fablog/territoires/chantiers/partage-des-donnees/standardisation/arretes-de-circulation)  
