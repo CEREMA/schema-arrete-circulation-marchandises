@@ -29,4 +29,4 @@ Intégration du schéma sur le gitbook d'OpenDataFrance et revue par Jean-Marie 
 [Voir sur OpenDataFrance](https://opendatafrance.gitbook.io/fablog/territoires/chantiers/partage-des-donnees/standardisation/arretes-de-circulation#changelog)
 
 ## 0.1.0
-- [Première proposition du schéma sur framapad](https://lite.framacalc.org/9ms6-schema-circulation)
+[Première proposition du schéma sur framapad](https://lite.framacalc.org/9ms6-schema-circulation)
