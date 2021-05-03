@@ -315,76 +315,34 @@
       {
          "name":"VEH_USAGE",
          "title":"Type d'usage",
-         "description":"Type d'usage du véhicule",
-         "example":"['Bennes à ordures ménagères', 'Véhicules de police']",
-         "type":"array",
-         "arrayItem":{
-            "type": "string",
-            "constraints": {
-               "required": false,
-               "enum": [
-                 "Convois funéraires",
-                 "Bennes à ordures ménagères",
-                 "Commerçant nomade",
-                 "Commerçant sédentaire",
-                 "Desserte locale : déménageur",
-                 "Livraison",
-                 "Poids lourds d'urgence",
-                 "Professions médicales",
-                 "Riverains",
-                 "Services publics",
-                 "Taxis",
-                 "Transport de carburant",
-                 "Transport de fonds",
-                 "Transport de gaz",
-                 "Transport de matières dangereuses",
-                 "Transports en commun",
-                 "Véhicules de police",
-                 "Véhicules de secours",
-                 "Véhicules municipaux",
-                 "Véhicules munis d'une autorisation",
-                 "Voitures de Transport avec Chauffeur"
-               ]
-            }
+         "description":"Type d'usage du véhicule. Séparer les valeurs par le caractère '|'.",
+         "example":"Bennes à ordures ménagères|Véhicules de police",
+         "type":"string",
+         "constraints":{
+            "required": false,
+            "pattern": "^(Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules de police|Véhicules de secours|Véhicules municipaux|Véhicules munis d'une autorisation|Voitures de Transport avec Chauffeur){1}(\\|(Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules de police|Véhicules de secours|Véhicules municipaux|Véhicules munis d'une autorisation|Voitures de Transport avec Chauffeur)))*$"
          }
       },
    {
          "name":"VEH_MOTOR",
          "title":"Type de motorisation",
-         "description":"Type de motorisation du véhicule.",
-         "example":"['Électrique', 'Hydrogène']",
-         "type":"array",
-         "arrayItem":{
-            "type": "string",
-            "constraints": {
-               "required": false,
-               "enum": [
-                 "Électrique",
-                 "Gaz Naturel pour Véhicules",
-                 "Hydrogène"
-               ]
-            }
+         "description":"Type de motorisation du véhicule. Séparer les valeurs par le caractère '|'.",
+         "example":"Électrique|Hydrogène",
+         "type":"string",
+         "constraints":{
+            "required": false,
+            "pattern" : "^(Électrique|Gaz Naturel pour Véhicules|Hydrogène){1}(\\|(Électrique|Gaz Naturel pour Véhicules|Hydrogène))*$"
          }
       },
       {
          "name":"VEH_CQA",
          "title":"Vignettes crit'air",
-         "description":"Vignettes crit'air. Voir la [classification des vignettes Crit'Air](https://www.certificat-air.gouv.fr/docs/tableaux_classement.pdf) sur le site [certificat-air.gouv.fr](https://www.certificat-air.gouv.fr)",
-         "example":"['1', '2', '3']",
-         "type":"array",
-         "arrayItem":{
-            "type": "string",
-            "constraints": {
-               "required": false,
-               "enum": [
-                 "1",
-                 "2",
-                 "3",
-                 "4",
-                 "5",
-                 "NC"
-               ]
-            }
+         "description":"Vignettes crit'air. Voir la [classification des vignettes Crit'Air](https://www.certificat-air.gouv.fr/docs/tableaux_classement.pdf) sur le site [certificat-air.gouv.fr](https://www.certificat-air.gouv.fr). Séparer les étiquettes CQA par le caractère '|'. 'NC' signifie que la valeur n'a pas été renseignée.",
+         "example":"1|2|3",
+         "type":"string",
+         "constraints":{
+            "required": false,
+            "pattern": "^(1|2|3|4|5|NC){1}(\\|(1|2|3|4|5|NC))*$"
          }
       },
       {
@@ -393,7 +351,7 @@
          "description":"Date d'entrée en vigueur des restrictions (en particulier pour les Zones à Faible Émission),, au format ISO 8601 AAAA-MM-DD.",
          "example":"2021-04-30",
          "type":"date",
-	 "format":"%Y-%m-%d",
+         "format":"%Y-%m-%d",
          "constraints":{
             "required":false
          }
