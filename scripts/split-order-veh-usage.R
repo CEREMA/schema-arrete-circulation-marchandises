@@ -22,11 +22,17 @@ fileConn<-file("array-veh-usages-liste.txt")
 writeLines(s3, fileConn)
 close(fileConn)
 
+## Liste
+s4 <- paste(sprintf('"%s"', s2), collapse="\n")
+fileConn<-file("array-veh-usages-liste2.txt")
+writeLines(s4, fileConn)
+close(fileConn)
+
 ## Regex Array
 # ^(7j/7|lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche|jours fériés|événements){1}(\|(7j/7|lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche|jours fériés|événements))*$
-s4 <- sprintf("^(%s){1}(\\\\|(%s)))*$", paste(s2, collapse="|"), paste(s2, collapse="|"))
+s5 <- sprintf("^(%s){1}(\\\\|(%s)))*$", paste(s2, collapse="|"), paste(s2, collapse="|"))
 fileConn<-file("array-veh-usages-regex.txt")
-writeLines(s4, fileConn)
+writeLines(s5, fileConn)
 close(fileConn)
 
 # VEH_MOTOR ----
