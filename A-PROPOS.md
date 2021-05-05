@@ -6,7 +6,7 @@ Dans ce schéma, les champs sont écrits en majuscules. Le préfixe indique la f
 ## Autorisation ou Interdiction
 Dans certains cas, un arrêté peut autoriser la circulation de véhicules d'un certain type dans certaines plages horaires. Dans d'autres cas, il peut interdire. Afin de résoudre cette problématique autorisation/interdiction, le schéma propose un champ [`REGL_MODALITE`](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#propri%C3%A9t%C3%A9-regl_modalite) prenant comme valeurs `Autorise` ou `Interdit`
 
-Si un règlement interdit sur une voie la circulation des poids lourds de plus de 3.5T, sauf les véhicules d'urgence et de livraison, alors nous devrons créer deux lignes (une d'interdiction et une d'autorisation pour es exceptions) :
+Si un règlement interdit sur une voie la circulation des poids lourds de plus de 3.5T, sauf les véhicules d'urgence et de livraison, alors nous devrons créer deux lignes (une d'interdiction et une d'autorisation pour les exceptions) :
 
 REGL_MODALITE | VEH_TYPE | VEH_PTAC | VEH_USAGE |
  -- | -- | -- | -- |
