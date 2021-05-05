@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.1
+- Champ `SECTION_REGL_ID` renommé en `ID`
+- Ajout de Véhicules de travaux dans `VEH_USAGE`
+- Réordonnancement des champs `ARR_*`
+
 ## 0.3.0
 
 Publication sur le repo github du Cerema en vue de [schema.data.gouv.fr](http://schema.data.gouv.fr/)
