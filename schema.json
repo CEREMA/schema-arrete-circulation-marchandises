@@ -107,17 +107,6 @@
 	       }
       },
       {
-         "name":"ARR_URL",
-	       "title": "URL d'accès de l'arrêté",
-	       "description": "Adresse internet par laquelle accéder à l'arrêté, et donc au règlement.",
-	       "type": "string",
-	       "example": "https://carte.st-paul-les-dax.fr/wp-content/uploads/2020/06/AM-10248.pdf",
-	       "constraints": {
-	         "required": false,
-	         "pattern": "^(https|http)?://(?:[a-z0-9\\-]+\\.)+[a-z]{2,6}(?:/[^/#?]+)+"
-	       }
-      },
-      {
          "name":"ARR_OBJET",
 	       "title": "Objet de l'arrêté",
 	       "description": "Objet ou titre de l'arrêté",
@@ -188,6 +177,17 @@
            "minLength":5,
            "maxLength":5
            }
+      },
+      {
+         "name":"ARR_URL",
+	       "title": "URL d'accès de l'arrêté",
+	       "description": "Adresse internet par laquelle accéder à l'arrêté, et donc au règlement.",
+	       "type": "string",
+	       "example": "https://carte.st-paul-les-dax.fr/wp-content/uploads/2020/06/AM-10248.pdf",
+	       "constraints": {
+	         "required": false,
+	         "pattern": "^(https|http)?://(?:[a-z0-9\\-]+\\.)+[a-z]{2,6}(?:/[^/#?]+)+"
+	       }
       },
    {
          "name":"REGL_ARTICLE",
@@ -320,7 +320,7 @@
          "type":"string",
          "constraints":{
             "required": false,
-            "pattern": "^(Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules de police|Véhicules de secours|Véhicules municipaux|Véhicules munis d'une autorisation|Voitures de Transport avec Chauffeur){1}(\\|(Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules de police|Véhicules de secours|Véhicules municipaux|Véhicules munis d'une autorisation|Voitures de Transport avec Chauffeur)))*$"
+            "pattern": "^(Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules de police|Véhicules de secours|Véhicules de travaux|Véhicules municipaux|Véhicules munis d'une autorisation|Voitures de Transport avec Chauffeur){1}(\\|(Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules de police|Véhicules de secours|Véhicules de travaux|Véhicules municipaux|Véhicules munis d'une autorisation|Voitures de Transport avec Chauffeur)))*$"
          }
       },
    {
