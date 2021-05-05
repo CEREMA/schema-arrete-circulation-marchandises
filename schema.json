@@ -66,8 +66,8 @@
    ],
    "fields":[
       {
-         "name":"SECTION_REGL_ID",
-         "description":"Identifiant unique de la ligne. La ligne correspond à la voie ou la section de voie règlementée. Ce peut être une voie entière (la D9) ou une portion de voie (voir champ `SECTION_DEBUT` et `SECTION_FIN`). L'identifiant peut tout simplement être un identifiant auto-incrémenté (1, 2 ou 3,...). Si la section est issue d'OpenStreetMap, l'identifiant peut correspondre à la valeur osm_id de la voie règlementée (par exemple, 133). Si la section possède plusieurs règlements, l'identifiant peut être accompagné d'un suffixe incrémenté (par exemple 133-2 pour le second règlement associé à la voie). Il peut également être un identifiant propre à une structure ou une base de données (identifiant issu de la BDTOPO IGN, par exemple).",
+         "name":"ID",
+         "description":"Identifiant unique de l'entité (ligne du tableau). L'entité élémentaire correspond à une voie entière (par ex. `Avenue Philippe Solari`) ou une portion de voie (section) règlementée (voir les champs `SECTION_DEBUT` et `SECTION_FIN`). L'identifiant peut tout simplement être un identifiant auto-incrémenté (1, 2 ou 3,...). Si la section est issue d'OpenStreetMap, l'identifiant peut correspondre à la valeur `osm_id` de la voie règlementée (par exemple, `133`). Si la section possède plusieurs règlements, l'identifiant peut être accompagné d'un suffixe incrémenté (par exemple 133-2 pour le second règlement associé à la voie). Il peut également être un identifiant propre à une structure ou une base de données (identifiant issu de la BDTOPO IGN, par exemple).",
          "example":"133-3",
          "type":"string",
          "constraints":{
