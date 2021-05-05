@@ -11,7 +11,7 @@ Si un règlement interdit sur une voie la circulation des poids lourds de plus d
 REGL_MODALITE | VEH_TYPE | VEH_PTAC | VEH_USAGE |
  -- | -- | -- | -- |
  Interdit | Poids lourds | 3.5 |  |
- Autorise | Poids lourds | 3.5 | `Livraison|Poids lourds d'urgence`  |
+ Autorise | Poids lourds | 3.5 | Livraison\|Poids lourds d'urgence |
 
 ## Jours et horaires
 Les jours et horaires sont formalisés dans un champ [`PERIODE_JH`](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#jours-et-heures-de-circulation---propri%C3%A9t%C3%A9-periode_jh) au format [Opening Hours](https://wiki.openstreetmap.org/wiki/Key:opening_hours) d'OpenStreetMap.
