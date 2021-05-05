@@ -13,7 +13,7 @@ Ce schéma sur les arrêtés permanents de circulation a été construit en part
 
 [Voir des exemples de données saisies selon le schéma](EXEMPLES.md)
 
-[A propos de ce schéma (conventions de nommage, etc...)](A-PROPOS.md)
+[A propos de ce schéma (conventions,...)](A-PROPOS.md)
 
 ## Liens
 [Voir la proposition sur le github d'Etalab](https://github.com/etalab/schema.data.gouv.fr/issues/157)  
