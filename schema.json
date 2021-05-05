@@ -66,8 +66,8 @@
    ],
    "fields":[
       {
-         "name":"SECTION_REGL_ID",
-         "description":"Identifiant unique de la ligne. La ligne correspond à la voie ou la section de voie règlementée. Ce peut être une voie entière (la D9) ou une portion de voie (voir champ `SECTION_DEBUT` et `SECTION_FIN`). L'identifiant peut tout simplement être un identifiant auto-incrémenté (1, 2 ou 3,...). Si la section est issue d'OpenStreetMap, l'identifiant peut correspondre à la valeur osm_id de la voie règlementée (par exemple, 133). Si la section possède plusieurs règlements, l'identifiant peut être accompagné d'un suffixe incrémenté (par exemple 133-2 pour le second règlement associé à la voie). Il peut également être un identifiant propre à une structure ou une base de données (identifiant issu de la BDTOPO IGN, par exemple).",
+         "name":"ID",
+         "description":"Identifiant unique de l'entité (ligne du tableau). L'entité élémentaire correspond à une voie entière (par ex. `Avenue Philippe Solari`) ou une portion de voie (section) règlementée (voir les champs `SECTION_DEBUT` et `SECTION_FIN`). L'identifiant peut tout simplement être un identifiant auto-incrémenté (1, 2 ou 3,...). Si la section est issue d'OpenStreetMap, l'identifiant peut correspondre à la valeur `osm_id` de la voie règlementée (par exemple, `133`). Si la section possède plusieurs règlements, l'identifiant peut être accompagné d'un suffixe incrémenté (par exemple 133-2 pour le second règlement associé à la voie). Il peut également être un identifiant propre à une structure ou une base de données (identifiant issu de la BDTOPO IGN, par exemple).",
          "example":"133-3",
          "type":"string",
          "constraints":{
@@ -104,17 +104,6 @@
 	       "example": "AP-13090-12",
 	       "constraints": {
 	         "required": true
-	       }
-      },
-      {
-         "name":"ARR_URL",
-	       "title": "URL d'accès de l'arrêté",
-	       "description": "Adresse internet par laquelle accéder à l'arrêté, et donc au règlement.",
-	       "type": "string",
-	       "example": "https://carte.st-paul-les-dax.fr/wp-content/uploads/2020/06/AM-10248.pdf",
-	       "constraints": {
-	         "required": false,
-	         "pattern": "^(https|http)?://(?:[a-z0-9\\-]+\\.)+[a-z]{2,6}(?:/[^/#?]+)+"
 	       }
       },
       {
@@ -188,6 +177,17 @@
            "minLength":5,
            "maxLength":5
            }
+      },
+      {
+         "name":"ARR_URL",
+	       "title": "URL d'accès de l'arrêté",
+	       "description": "Adresse internet par laquelle accéder à l'arrêté, et donc au règlement.",
+	       "type": "string",
+	       "example": "https://carte.st-paul-les-dax.fr/wp-content/uploads/2020/06/AM-10248.pdf",
+	       "constraints": {
+	         "required": false,
+	         "pattern": "^(https|http)?://(?:[a-z0-9\\-]+\\.)+[a-z]{2,6}(?:/[^/#?]+)+"
+	       }
       },
    {
          "name":"REGL_ARTICLE",
@@ -320,7 +320,7 @@
          "type":"string",
          "constraints":{
             "required": false,
-            "pattern": "^(Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules de police|Véhicules de secours|Véhicules municipaux|Véhicules munis d'une autorisation|Voitures de Transport avec Chauffeur){1}(\\|(Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules de police|Véhicules de secours|Véhicules municipaux|Véhicules munis d'une autorisation|Voitures de Transport avec Chauffeur)))*$"
+            "pattern": "^(Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules de police|Véhicules de secours|Véhicules de travaux|Véhicules municipaux|Véhicules munis d'une autorisation|Voitures de Transport avec Chauffeur){1}(\\|(Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules de police|Véhicules de secours|Véhicules de travaux|Véhicules municipaux|Véhicules munis d'une autorisation|Voitures de Transport avec Chauffeur)))*$"
          }
       },
    {

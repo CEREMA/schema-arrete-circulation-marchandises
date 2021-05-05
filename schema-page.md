@@ -17,16 +17,16 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 
 | Propriété | Type | Obligatoire |
 | -- | -- | -- |
-| [SECTION_REGL_ID](#propriété-section_regl_id) | chaîne de caractères  | Oui |
+| [ID](#propriété-id) | chaîne de caractères  | Oui |
 | [COLL_NOM](#nom-de-la-collectivité---propriété-coll_nom) | chaîne de caractères  | Oui |
 | [COLL_SIRET](#code-siret-de-la-collectivité---propriété-coll_siret) | chaîne de caractères  | Oui |
 | [ARR_REF](#référence-de-l'arrêté---propriété-arr_ref) | chaîne de caractères  | Oui |
-| [ARR_URL](#url-d'accès-de-l'arrêté---propriété-arr_url) | chaîne de caractères  | Non |
 | [ARR_OBJET](#objet-de-l'arrêté---propriété-arr_objet) | chaîne de caractères  | Oui |
 | [ARR_CONSIDERANT](#considérant-de-l'arrêté---propriété-arr_considerant) | chaîne de caractères  | Non |
 | [ARR_DATE_CREATION](#date-de-création-de-l'arrêté---propriété-arr_date_creation) | date (format `%Y-%m-%d`) | Oui |
 | [ARR_EST_MAJ](#arrêté-mis-à-jour-?---propriété-arr_est_maj) | booléen  | Oui |
 | [ARR_INSEE](#code-insee---propriété-arr_insee) | chaîne de caractères  | Oui |
+| [ARR_URL](#url-d'accès-de-l'arrêté---propriété-arr_url) | chaîne de caractères  | Non |
 | [REGL_ARTICLE](#article-du-règlement---propriété-regl_article) | nombre entier  | Non |
 | [REGL_SOUS_ARTICLE](#sous-article-du-règlement---propriété-regl_sous_article) | chaîne de caractères  | Non |
 | [REGL_MODALITE](#propriété-regl_modalite) | chaîne de caractères  | Oui |
@@ -54,9 +54,9 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 | [GEOM_WKT](#géométrie-au-format-wkt---propriété-geom_wkt) | chaîne de caractères  | Non |
 | [GEOM_SOURCE](#propriété-geom_source) | chaîne de caractères  | Non |
 
-#### Propriété `SECTION_REGL_ID`
+#### Propriété `ID`
 
-> *Description : Identifiant unique de la ligne. La ligne correspond à la voie ou la section de voie règlementée. Ce peut être une voie entière (la D9) ou une portion de voie (voir champ `SECTION_DEBUT` et `SECTION_FIN`). L'identifiant peut tout simplement être un identifiant auto-incrémenté (1, 2 ou 3,...). Si la section est issue d'OpenStreetMap, l'identifiant peut correspondre à la valeur osm_id de la voie règlementée (par exemple, 133). Si la section possède plusieurs règlements, l'identifiant peut être accompagné d'un suffixe incrémenté (par exemple 133-2 pour le second règlement associé à la voie). Il peut également être un identifiant propre à une structure ou une base de données (identifiant issu de la BDTOPO IGN, par exemple).<br/>Ex : 133-3*
+> *Description : Identifiant unique de l'entité (ligne du tableau). L'entité élémentaire correspond à une voie entière (par ex. `Avenue Philippe Solari`) ou une portion de voie (section) règlementée (voir les champs `SECTION_DEBUT` et `SECTION_FIN`). L'identifiant peut tout simplement être un identifiant auto-incrémenté (1, 2 ou 3,...). Si la section est issue d'OpenStreetMap, l'identifiant peut correspondre à la valeur `osm_id` de la voie règlementée (par exemple, `133`). Si la section possède plusieurs règlements, l'identifiant peut être accompagné d'un suffixe incrémenté (par exemple 133-2 pour le second règlement associé à la voie). Il peut également être un identifiant propre à une structure ou une base de données (identifiant issu de la BDTOPO IGN, par exemple).<br/>Ex : 133-3*
 - Valeur obligatoire
 - Type : chaîne de caractères
 
@@ -78,13 +78,6 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 > *Description : Référence ou numéro de l'arrêté auquel se réfère la règlementation. Si l'arrêté a été mis à jour, la référence doit être celle de l'arrêté mis à jour et non celle de l'arrêté originel.<br/>Ex : AP-13090-12*
 - Valeur obligatoire
 - Type : chaîne de caractères
-
-#### URL d'accès de l'arrêté - Propriété `ARR_URL`
-
-> *Description : Adresse internet par laquelle accéder à l'arrêté, et donc au règlement.<br/>Ex : https://carte.st-paul-les-dax.fr/wp-content/uploads/2020/06/AM-10248.pdf*
-- Valeur optionnelle
-- Type : chaîne de caractères
-- Motif : `^(https|http)?://(?:[a-z0-9\-]+\.)+[a-z]{2,6}(?:/[^/#?]+)+`
 
 #### Objet de l'arrêté - Propriété `ARR_OBJET`
 
@@ -117,6 +110,13 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 - Type : chaîne de caractères
 - Entre 5 et 5 caractères
 - Motif : `^[a-zA-Z0-9\-\'\s\d\u00C0-\u00FF]+$`
+
+#### URL d'accès de l'arrêté - Propriété `ARR_URL`
+
+> *Description : Adresse internet par laquelle accéder à l'arrêté, et donc au règlement.<br/>Ex : https://carte.st-paul-les-dax.fr/wp-content/uploads/2020/06/AM-10248.pdf*
+- Valeur optionnelle
+- Type : chaîne de caractères
+- Motif : `^(https|http)?://(?:[a-z0-9\-]+\.)+[a-z]{2,6}(?:/[^/#?]+)+`
 
 #### Article du règlement - Propriété `REGL_ARTICLE`
 
@@ -199,7 +199,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 > *Description : Type d'usage du véhicule. Séparer les valeurs par le caractère '|'.<br/>Ex : Bennes à ordures ménagères|Véhicules de police*
 - Valeur optionnelle
 - Type : chaîne de caractères
-- Motif : `^(Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules de police|Véhicules de secours|Véhicules municipaux|Véhicules munis d'une autorisation|Voitures de Transport avec Chauffeur){1}(\|(Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules de police|Véhicules de secours|Véhicules municipaux|Véhicules munis d'une autorisation|Voitures de Transport avec Chauffeur)))*$`
+- Motif : `^(Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules de police|Véhicules de secours|Véhicules de travaux|Véhicules municipaux|Véhicules munis d'une autorisation|Voitures de Transport avec Chauffeur){1}(\|(Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules de police|Véhicules de secours|Véhicules de travaux|Véhicules municipaux|Véhicules munis d'une autorisation|Voitures de Transport avec Chauffeur)))*$`
 
 #### Type de motorisation - Propriété `VEH_MOTOR`
 
