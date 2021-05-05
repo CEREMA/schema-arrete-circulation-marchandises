@@ -16,6 +16,9 @@ firstup <- function(x) {
 s2 <- strsplit(s, ",") %>% {.[[1]]} %>%  as.character %>% sort %>% trimws() %>% firstup
 print(paste(s2, collapse=","))
 
+## Référentiel
+write.table(s2, "array-veh-usage-ref.txt", row.names = FALSE, col.names = FALSE, quote = FALSE)
+
 ## Liste
 s3 <- sprintf('[%s]', paste(sprintf('"%s"', s2), collapse=","))
 fileConn<-file("array-veh-usages-liste.txt")
@@ -38,6 +41,9 @@ close(fileConn)
 # VEH_MOTOR ----
 
 s2 <- c("Électrique","Gaz Naturel pour Véhicules","Hydrogène")
+
+## Référentiel
+write.table(s2, "array-veh-motor-ref.txt", row.names = FALSE, col.names = FALSE, quote = FALSE)
 
 ## Liste
 s3 <- sprintf('[%s]', paste(sprintf('"%s"', s2), collapse=","))
