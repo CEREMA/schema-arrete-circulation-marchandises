@@ -26,22 +26,22 @@
       {
          "title":"Fichier valide pour la commune de Saint-Victoret (CSV)",
          "name":"exemple-st-victoret-valide-csv",
-         "path":"https://github.com/CEREMA/schema-arrete-circulation/raw/vxxx/exemple-valide.csv"
+         "path":"https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/examples/exemple-st-victoret-valide.csv"
       },
       {
          "title":"Fichier valide pour la commune du Rove (CSV)",
-         "name":"exemple-rove-valide-csv",
-         "path":"https://github.com/CEREMA/schema-arrete-circulation/raw/vxxx/exemple-valide.csv"
+         "name":"exemple-le-rove-valide-csv",
+         "path":"https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/examples/exemple-le-rove-valide.csv"
       },
       {
          "title":"Fichier valide pour la commune de Septèmes-Les-Vallons (CSV)",
          "name":"exemple-septemes-valide-csv",
-         "path":"https://github.com/CEREMA/schema-arrete-circulation/raw/vxxx/exemple-valide.csv"
+         "path":"https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/examples/exemple-septemes-valide.csv"
       },
       {
          "title":"Fichier valide pour la commune de Gignac-La-Nerthe (CSV)",
          "name":"exemple-gignac-valide-csv",
-         "path":"https://github.com/CEREMA/schema-arrete-circulation/raw/vxxx/exemple-valide.csv"
+         "path":"https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/examples/exemple-gignac-valide.csv"
       }
    ],
    "sources":[
