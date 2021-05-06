@@ -1,0 +1,2 @@
+- champ GEOM_REF ?
+- Valeur Autocars, Autobus dans les usages ? Ptet pas Autobus car existence de Transports en commun
