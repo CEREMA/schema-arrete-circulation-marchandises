@@ -1,2 +1,3 @@
 - champ GEOM_REF ?
 - Valeur Autocars, Autobus dans les usages ? Ptet pas Autobus car existence de Transports en commun
+- Champ ID de type integer. Simplifier la description.
