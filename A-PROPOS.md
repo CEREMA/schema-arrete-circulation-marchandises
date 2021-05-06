@@ -21,11 +21,3 @@ Dans ce schéma, les champs [GEOM_JSON](https://github.com/CEREMA/schema-arrete-
 
 ### Début et fin
 Des champs [SECTION_DEBUT_POINT](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#d%C3%A9but-de-la-section---propri%C3%A9t%C3%A9-section_debut_point) et [SECTION_FIN_POINT](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#fin-de-la-section---propri%C3%A9t%C3%A9-section_fin_point) permettent de signaler les début et fin de chaque section règlementée sur la voie.
-
-----
-
-Mon schéma est :
-
-- [ ] **en investigation :** il est envisagé de créer un schéma pour modéliser une situation
-- [x] **en cours d'élaboration :** ce schéma fait l'objet de discussions auprès de multiples partenaires
-- [ ] **en construction
