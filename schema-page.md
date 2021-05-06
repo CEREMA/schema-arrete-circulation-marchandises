@@ -32,11 +32,11 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 | [REGL_MODALITE](#propriété-regl_modalite) | chaîne de caractères  | Oui |
 | [ZONE_TYPE](#propriété-zone_type) | chaîne de caractères  | Non |
 | [ZONE_REF](#nom-ou-identifiant-de-la-zone-associée-à-la-règlementation---propriété-zone_ref) | chaîne de caractères  | Non |
+| [VEH_TYPE](#propriété-veh_type) | chaîne de caractères  | Non |
 | [VEH_PTAC](#poids-total-autorisé-en-charge---propriété-veh_ptac) | nombre réel  | Non |
 | [VEH_LONG](#longueur-du-véhicule---propriété-veh_long) | nombre réel  | Non |
 | [VEH_LARG](#largeur-du-largeur---propriété-veh_larg) | nombre réel  | Non |
 | [VEH_HAUT](#largeur-du-largeur---propriété-veh_haut) | nombre réel  | Non |
-| [VEH_TYPE](#propriété-veh_type) | chaîne de caractères  | Non |
 | [VEH_USAGE](#type-d'usage---propriété-veh_usage) | chaîne de caractères  | Non |
 | [VEH_MOTOR](#type-de-motorisation---propriété-veh_motor) | chaîne de caractères  | Non |
 | [VEH_CQA](#vignettes-crit'air---propriété-veh_cqa) | chaîne de caractères  | Non |
@@ -75,7 +75,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 
 #### Référence de l'arrêté - Propriété `ARR_REF`
 
-> *Description : Référence ou numéro de l'arrêté auquel se réfère la règlementation. Si l'arrêté a été mis à jour, la référence doit être celle de l'arrêté mis à jour et non celle de l'arrêté originel.<br/>Ex : AP-13090-12*
+> *Description : Référence ou numéro de l'arrêté auquel se réfère la règlementation. Si l'arrêté a été mis à jour, la référence doit être celle de l'arrêté mis à jour et non celle de l'arrêté originel. Si l'arrêté ne possède pas de référence, mettre le code INSEE accompagné du mois et de l'année de l'arrêté, par ex. `13090-03/1979`<br/>Ex : AP-13090-12*
 - Valeur obligatoire
 - Type : chaîne de caractères
 
@@ -157,6 +157,16 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 - Valeur optionnelle
 - Type : chaîne de caractères
 
+#### Propriété `VEH_TYPE`
+
+> *Description : Type de véhicule<br/>Ex : Poids lourds*
+- Valeur optionnelle
+- Type : chaîne de caractères
+- Valeurs autorisées : 
+    - Poids lourds
+    - Véhicules utilitaires légers
+    - Tous véhicules
+
 #### Poids total autorisé en charge - Propriété `VEH_PTAC`
 
 > *Description : Poids total autorisé en charge, exprimé en tonnes.<br/>Ex : 7.5*
@@ -185,21 +195,12 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 - Type : nombre réel
 - Valeur entre 0 et 6
 
-#### Propriété `VEH_TYPE`
-
-> *Description : Type de véhicule<br/>Ex : Poids lourds*
-- Valeur optionnelle
-- Type : chaîne de caractères
-- Valeurs autorisées : 
-    - Poids lourds
-    - Véhicules utilitaires légers
-
 #### Type d'usage - Propriété `VEH_USAGE`
 
 > *Description : Type d'usage du véhicule. Séparer les valeurs par le caractère '|'.<br/>Ex : Bennes à ordures ménagères|Véhicules de police*
 - Valeur optionnelle
 - Type : chaîne de caractères
-- Motif : `^(Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules de police|Véhicules de secours|Véhicules de travaux|Véhicules municipaux|Véhicules munis d'une autorisation|Voitures de Transport avec Chauffeur){1}(\|(Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules de police|Véhicules de secours|Véhicules de travaux|Véhicules municipaux|Véhicules munis d'une autorisation|Voitures de Transport avec Chauffeur)))*$`
+- Motif : `^(Autocars|Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de denrées animales ou végétales|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules de police|Véhicules de secours|Véhicules de travaux|Véhicules municipaux|Véhicules munis d'une autorisation|Voitures de transport avec chauffeur){1}(\|(Autocars|Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de denrées animales ou végétales|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules de police|Véhicules de secours|Véhicules de travaux|Véhicules municipaux|Véhicules munis d'une autorisation|Voitures de transport avec chauffeur)))*$`
 
 #### Type de motorisation - Propriété `VEH_MOTOR`
 
