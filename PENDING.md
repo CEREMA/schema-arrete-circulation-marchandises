@@ -6,3 +6,4 @@
 - Champ ID de type integer. Simplifier la description
 - dans les exemples, remplacer les valeurs xxx correspondant aux infos manquantes : références ou date d'arrêté
 - rajouter des géométries sur septèmes
+- mettre les images des arrêtés dans EXEMPLES.md ?
