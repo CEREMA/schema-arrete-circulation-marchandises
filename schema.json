@@ -271,7 +271,22 @@
 	         "required": false
            }
       },
-   {
+      {
+         "name":"VEH_TYPE",
+         "description":"Type de véhicule",
+         "example":"Type de véhicule",
+         "type": "string",
+		      "example": "Poids lourds",
+		      "constraints": {
+		        "required": false,
+		        "enum": [
+		          "Poids lourds",
+		          "Véhicules utilitaires légers",
+              "Tous véhicules"
+		        ]
+		      }
+      },
+      {
          "name":"VEH_PTAC",
 	       "title": "Poids total autorisé en charge",
 	       "description": "Poids total autorisé en charge, exprimé en tonnes.",
@@ -318,21 +333,6 @@
            "minimum" : 0,
            "maximum" : 6
            }
-      },
-      {
-         "name":"VEH_TYPE",
-         "description":"Type de véhicule",
-         "example":"Type de véhicule",
-         "type": "string",
-		      "example": "Poids lourds",
-		      "constraints": {
-		        "required": false,
-		        "enum": [
-		          "Poids lourds",
-		          "Véhicules utilitaires légers",
-              "Tous véhicules"
-		        ]
-		      }
       },
       {
          "name":"VEH_USAGE",
