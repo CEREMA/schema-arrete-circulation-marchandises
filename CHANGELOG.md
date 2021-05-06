@@ -2,7 +2,6 @@
 
 ## 0.3.2
 - Ajout de valeur `Autocars` dans `VEH_USAGE`
-- Ajout de valeur `Véhicules de travaux` dans `VEH_USAGE`
 - Ajout de valeur `Transport de denrées animales ou végétales` dans `VEH_USAGE`
 
 ## 0.3.1
