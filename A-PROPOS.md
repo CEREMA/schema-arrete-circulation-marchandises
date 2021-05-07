@@ -12,10 +12,19 @@ REGL_MODALITE | VEH_TYPE | VEH_PTAC | VEH_USAGE |
  -- | -- | -- | -- |
  Interdit | Poids lourds | 3.5 |  |
  Autorise | Poids lourds | 3.5 | Livraison\|Poids lourds d'urgence |
+ 
+ [Voir l'exemple de la commune de Septèmes-les-Vallons]
+(https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/examples/exemple-septemes-valide.csv)
+ 
+ 
+[Voir l'exemple de la Commune du Rove
+](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/EXEMPLES.md#commune-de-gignac-la-nerthe)
 
 ## Jours et horaires
 Les jours et horaires sont formalisés dans un champ [`PERIODE_JH`](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#jours-et-heures-de-circulation---propri%C3%A9t%C3%A9-periode_jh) au format [Opening Hours](https://wiki.openstreetmap.org/wiki/Key:opening_hours) d'OpenStreetMap.
 
+[Voir l'exemple de la Commune du Rove
+](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/EXEMPLES.md#commune-de-gignac-la-nerthe)
 ## Géométrie
 Dans ce schéma, les champs [GEOM_JSON](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#g%C3%A9om%C3%A9trie-au-format-geojson---propri%C3%A9t%C3%A9-geom_json) et [GEOM_WKT](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#g%C3%A9om%C3%A9trie-au-format-wkt---propri%C3%A9t%C3%A9-geom_wkt) permettent, au choix, d'intégrer la géométrie de la voie, ou de la portion de voie réglementée. Le support du WKT (Well Known Text) a été autorisé car ce dernier est plus familier dans les services SIG que le JSON.
 
