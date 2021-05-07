@@ -365,7 +365,7 @@
          "type":"string",
          "constraints":{
             "required": false,
-            "pattern": "^(1|2|3|4|5|Non classé){1}(\\|(1|2|3|4|5|Non classé))*$"
+            "pattern": "^(100% électrique et Véhicules à hydrogène|1|2|3|4|5|Véhicule non classé){1}(\\|(100% électrique et Véhicules à hydrogène|1|2|3|4|5|Véhicule non classé))*$"
          }
       },
       {
