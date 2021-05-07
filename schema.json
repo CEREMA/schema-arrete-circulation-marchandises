@@ -280,9 +280,10 @@
 		      "constraints": {
 		        "required": false,
 		        "enum": [
+			  "Vélo-cargos",
 		          "Poids lourds",
 		          "Véhicules utilitaires légers",
-              "Tous véhicules"
+                          "Tous véhicules"
 		        ]
 		      }
       },
