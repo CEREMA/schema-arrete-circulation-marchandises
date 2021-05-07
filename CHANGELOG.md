@@ -1,11 +1,20 @@
 # Changelog
 
+## 0.3.3
+- Ajout de ressources (`sources`)
+- Ajout de Julie Raffaillac dans les contributeurs
+- Ajout de Vélo-cargos dans `VEH_TYPE`
+- Ajout d'usages dans `VEH_USAGE`
+- Ajout de valeurs dans `VEH_CQA`
+- Renommage de `SECTION_COTE` en `SECTION_SENS`
+- Ajout de Nord, Sud, Est, Ouest dans `SECTION_SENS`
+
 ## 0.3.2
 - Ajout de valeur `Autocars` dans `VEH_USAGE`
 - Ajout de valeur `Transport de denrées animales ou végétales` dans `VEH_USAGE`
 
 ## 0.3.1
-- Champ `SECTION_REGL_ID` renommé en `ID`
+- Renommage de `SECTION_REGL_ID` renommé en `ID`
 - Ajout de Véhicules de travaux dans `VEH_USAGE`
 - Réordonnancement des champs `ARR_*`
 
