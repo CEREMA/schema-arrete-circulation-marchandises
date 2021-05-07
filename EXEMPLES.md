@@ -2,6 +2,7 @@
 
 
 ### Commune de Gignac-La-Nerthe
+Règlementation sur toute l'agglomération de 6h30 à 11h30
 [Donnée CSV](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/examples/exemple-gignac-valide.csv) | [📜 Arrêté](examples/gignac-la-nerthe.png)
 
 ### Commune de Septèmes-Les-Vallons
