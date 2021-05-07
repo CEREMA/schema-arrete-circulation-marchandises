@@ -45,7 +45,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 | [INTERV_DUREE](#durée-maximale-d'intervention---propriété-interv_duree) | heure  | Non |
 | [INTERV_HMAX](#heure-maximale-d'intervention---propriété-interv_hmax) | heure  | Non |
 | [SECTION_VOIE](#nom-de-la-voie---propriété-section_voie) | chaîne de caractères  | Oui |
-| [SECTION_COTE](#côté-de-la-voie---propriété-section_cote) | chaîne de caractères  | Non |
+| [SECTION_SENS](#direction-ou-sens-de-circulation---propriété-section_sens) | chaîne de caractères  | Non |
 | [SECTION_DEBUT_POINT](#début-de-la-section---propriété-section_debut_point) | point géographique (format `default`) | Non |
 | [SECTION_DEBUT_REF](#début-de-la-section-(texte)---propriété-section_debut_ref) | chaîne de caractères  | Non |
 | [SECTION_FIN_POINT](#fin-de-la-section---propriété-section_fin_point) | point géographique (format `default`) | Non |
@@ -75,7 +75,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 
 #### Référence de l'arrêté - Propriété `ARR_REF`
 
-> *Description : Référence ou numéro de l'arrêté auquel se réfère la règlementation. Si l'arrêté a été mis à jour, la référence doit être celle de l'arrêté mis à jour et non celle de l'arrêté originel. Si l'arrêté ne possède pas de référence, mettre le code INSEE accompagné du mois et de l'année de l'arrêté, par ex. `13090-03/1979`<br/>Ex : AP-13090-12*
+> *Description : Référence ou numéro de l'arrêté auquel se réfère la règlementation. Si l'arrêté a été mis à jour, la référence doit être celle de l'arrêté mis à jour et non celle de l'arrêté originel. Si l'arrêté ne possède pas de référence, mettre la valeur `N/C`<br/>Ex : AP-13090-12*
 - Valeur obligatoire
 - Type : chaîne de caractères
 
@@ -201,7 +201,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 > *Description : Type d'usage du véhicule. Séparer les valeurs par le caractère '|'.<br/>Ex : Bennes à ordures ménagères|Véhicules de police*
 - Valeur optionnelle
 - Type : chaîne de caractères
-- Motif : `^(Autocars|Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de denrées animales ou végétales|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules de police|Véhicules de secours|Véhicules de travaux|Véhicules municipaux|Véhicules munis d'une autorisation|Voitures de transport avec chauffeur){1}(\|(Autocars|Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de denrées animales ou végétales|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules de police|Véhicules de secours|Véhicules de travaux|Véhicules municipaux|Véhicules munis d'une autorisation|Voitures de transport avec chauffeur)))*$`
+- Motif : `^(Autocars|Convois funéraires|Bennes à ordures ménagères|Citernes|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de denrées animales ou végétales|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules d'approvisionnement des marchés|Véhicules effectuant du transport exceptionnel au sens de l'article R.433-1 du code de la route et munis d'une autorisation préfectorale|Véhicules de police|Véhicules de secours|Véhicules de transport de matériaux|Véhicules de travaux|Véhicules municipaux|Véhicules munis d'une autorisation|Véhicules porte-voitures|Voitures de transport avec chauffeur){1}(\|(Autocars|Citernes|Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de denrées animales ou végétales|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules d'approvisionnement des marchés|Véhicules effectuant du transport exceptionnel au sens de l'article R.433-1 du code de la route et munis d'une autorisation préfectorale|Véhicules de police|Véhicules de secours|Véhicules de transport de matériaux|Véhicules de travaux|Véhicules municipaux|Véhicules munis d'une autorisation|Véhicules porte-voitures|Voitures de transport avec chauffeur)))*$`
 
 #### Type de motorisation - Propriété `VEH_MOTOR`
 
@@ -248,15 +248,19 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 - Type : chaîne de caractères
 - Motif : `^[a-zA-Z0-9\-\'\s\d\u00C0-\u00FF]+$`
 
-#### Côté de la voie - Propriété `SECTION_COTE`
+#### Direction ou sens de circulation - Propriété `SECTION_SENS`
 
-> *Description : Côté de la voie associé à la règlementation. Pair : concerne la circulation le long des adresses à chiffre pair.<br/>Ex : Deux côtés*
+> *Description : Direction ou sens de circulation associé à la règlementation. Pair : concerne la circulation le long des adresses à chiffre pair. `Nord` signifie vers le Nord, soit "vers le haut".<br/>Ex : Deux côtés*
 - Valeur optionnelle
 - Type : chaîne de caractères
 - Valeurs autorisées : 
     - Pair
     - Impair
-    - Deux côtés
+    - Nord
+    - Sud
+    - Est
+    - Ouest
+    - Deux sens
 
 #### Début de la section - Propriété `SECTION_DEBUT_POINT`
 
