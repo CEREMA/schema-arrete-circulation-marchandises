@@ -163,6 +163,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 - Valeur optionnelle
 - Type : chaîne de caractères
 - Valeurs autorisées : 
+    - Vélo-cargos
     - Poids lourds
     - Véhicules utilitaires légers
     - Tous véhicules
@@ -214,7 +215,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 > *Description : Vignettes crit'air. Voir la [classification des vignettes Crit'Air](https://www.certificat-air.gouv.fr/docs/tableaux_classement.pdf) sur le site [certificat-air.gouv.fr](https://www.certificat-air.gouv.fr). Séparer les étiquettes CQA par le caractère '|'. 'NC' signifie que la valeur n'a pas été renseignée.<br/>Ex : 1|2|3*
 - Valeur optionnelle
 - Type : chaîne de caractères
-- Motif : `^(1|2|3|4|5|NC){1}(\|(1|2|3|4|5|NC))*$`
+- Motif : `^(100% électrique et Véhicules à hydrogène|1|2|3|4|5|Véhicule non classé){1}(\|(100% électrique et Véhicules à hydrogène|1|2|3|4|5|Véhicule non classé))*$`
 
 #### Date d'entrée en vigueur des restrictions - Propriété `PERIODE_DEBUT`
 
