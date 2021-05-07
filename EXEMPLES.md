@@ -2,20 +2,16 @@
 
 
 ### Commune de Gignac-La-Nerthe
-[Donnée CSV](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/examples/exemple-gignac-valide.csv)  
-[📜 voir l'arrêté](examples/gignac-la-nerthe.png)
+[Donnée CSV](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/examples/exemple-gignac-valide.csv) | [📜 voir l'arrêté](examples/gignac-la-nerthe.png)
 
 ### Commune de Septèmes-Les-Vallons
-[Donnée CSV](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/examples/exemple-septemes-valide.csv)  
-[📜 voir l'arrêté](examples/septemes-les-vallons.png)
+[Donnée CSV](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/examples/exemple-septemes-valide.csv) | [📜 voir l'arrêté](examples/septemes-les-vallons.png)
 
 ### Commune du Rove
-[Donnée CSV](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/examples/exemple-le-rove-valide.csv)  
-[📜 voir l'arrêté](examples/le-rove.jpg)
+[Donnée CSV](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/examples/exemple-le-rove-valide.csv) | [📜 voir l'arrêté](examples/le-rove.jpg)
 
 ### Commune de Saint-Victoret
-[Donnée CSV](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/examples/exemple-st-victoret-valide.csv) 
-[📜 voir l'arrêté](examples/st-victoret.png)
+[Donnée CSV](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/examples/exemple-st-victoret-valide.csv) | [📜 voir l'arrêté](examples/st-victoret.png)
 
 
 
