@@ -435,9 +435,9 @@
          }
       },
       {
-         "name":"SECTION_COTE",
-         "title":"Côté de la voie",
-         "description":"Côté de la voie associé à la règlementation. Pair : concerne la circulation le long des adresses à chiffre pair.",
+         "name":"SECTION_SENS",
+         "title":"Sens de circulation",
+         "description":"Sens de circulation associé à la règlementation. Pair : concerne la circulation le long des adresses à chiffre pair.",
          "type": "string",
 		      "example": "Deux côtés",
 		      "constraints": {
@@ -445,6 +445,10 @@
 		        "enum": [
 		          "Pair",
 		          "Impair",
+			  "Nord",
+			  "Sud",
+			  "Est",
+		          "Ouest",
                           "Deux côtés"
 		        ]
 		      }
