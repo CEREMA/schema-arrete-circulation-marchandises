@@ -45,13 +45,21 @@
       }
    ],
    "sources":[
-      {
-         "title":"Arrêté du xxx",
+     {
+         "title":"texte règlementaire xxxx",
          "path":"https://xxx"
+      },
+      {
+         "title":"Démarche \"Harmoniser les règlementations de transport de marchandises\"",
+         "path":"https://www.metropolegrandparis.fr/sites/default/files/2021-02/Me%CC%81mo%202%20%2B%20guide%20pratique.pdf"
+      },
+      {
+         "title":"Guide d'harmonisation des règlementations des livraisons en région Provence-Alpes-Côte-d'Azur",
+         "path":"https://www"
       }
    ],
    "created":"2021-04-30",
-   "lastModified":"2021-04-30",
+   "lastModified":"2021-05-07",
    "version":"0.1.1",
    "contributors":[
       {
