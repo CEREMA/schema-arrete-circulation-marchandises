@@ -4,7 +4,13 @@
 - Ajout de ressources (`sources`)
 - Ajout de Julie Raffaillac dans les contributeurs
 - Ajout de Vélo-cargos dans `VEH_TYPE`
-- Ajout d'usages dans `VEH_USAGE`
+- Ajout de valeurs dans `VEH_USAGE`
+
+		- Citernes                                                                                                   
+		- Véhicules d'approvisionnement des marchés                                                                                               
+		- Véhicules effectuant du transport exceptionnel au sens de l'article R.433-1 du code de la route et munis d'une autorisation préfectorale
+		- Véhicules de transport de matériaux                                                                                                     
+Véhicules porte-voitures
 - Ajout de valeurs dans `VEH_CQA`
 - Renommage de `SECTION_COTE` en `SECTION_SENS`
 - Ajout de Nord, Sud, Est, Ouest dans `SECTION_SENS`
