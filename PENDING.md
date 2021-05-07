@@ -8,6 +8,6 @@
 - [ ] rajouter des géométries sur septèmes
 - [x] mettre les images des arrêtés dans EXEMPLES.md ?
 - [ ] mettre plusieurs exemples dans le schema.json
-- [ ] Ajouter champ VITESSE (cf Fuveau)
+- [x] Ajouter champ VITESSE (cf Fuveau) -> ne pas mettre
 - [ ] Valeur 'Véhicules destinés à l'entretien de la voirie ou à la collecte des déchets' dans VEH_USAGE ?
 - [ ] Supprimer INTERV_HMAX et INTERV_DUREE car ils sont surtout pour les arrêtés de livraison (aires et stationnement)
