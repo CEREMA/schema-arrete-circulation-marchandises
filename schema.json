@@ -435,9 +435,9 @@
          }
       },
       {
-         "name":"SECTION_COTE",
-         "title":"Côté de la voie",
-         "description":"Côté de la voie associé à la règlementation. Pair : concerne la circulation le long des adresses à chiffre pair.",
+         "name":"SECTION_SENS",
+         "title":"Direction ou sens de circulation",
+         "description":"Direction ou sens de circulation associé à la règlementation. Pair : concerne la circulation le long des adresses à chiffre pair. `Nord` signifie vers le Nord, soit \"vers le haut\".",
          "type": "string",
 		      "example": "Deux côtés",
 		      "constraints": {
@@ -445,7 +445,11 @@
 		        "enum": [
 		          "Pair",
 		          "Impair",
-                          "Deux côtés"
+			  "Nord",
+			  "Sud",
+			  "Est",
+		          "Ouest",
+                          "Deux sens"
 		        ]
 		      }
       },
