@@ -365,7 +365,7 @@
          "type":"string",
          "constraints":{
             "required": false,
-            "pattern": "^(1|2|3|4|5|NC){1}(\\|(1|2|3|4|5|NC))*$"
+            "pattern": "^(1|2|3|4|5|Non classé){1}(\\|(1|2|3|4|5|Non classé))*$"
          }
       },
       {
