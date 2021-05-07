@@ -1,4 +1,4 @@
-> ⚠ Note importante : les arrêtés proposés ci-dessus sont pris à titre d'exemples dont on ne garantit qu'ils ne sont pas les plus à jour pour les communes concernées.
+> Les arrêtés proposés ci-dessus sont pris à titre d'exemples dont on ne garantit qu'ils ne sont pas les plus à jour pour les communes concernées.
 
 
 ### Commune de Gignac-La-Nerthe
