@@ -1,5 +1,8 @@
 > Les arrêtés proposés ci-dessous sont pris à titre d'exemples dont on ne garantit qu'ils ne sont pas les plus à jour pour les communes concernées.
 
+### Commune de Saint-Victoret
+Sur toute la commune, pour les poids lourds > 3.5 T sauf les véhicules de livraison, de travaux et d'urgence  
+[Donnée CSV](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/examples/exemple-st-victoret-valide.csv) | [📜 Arrêté](examples/st-victoret.png)
 
 ### Commune de Gignac-La-Nerthe
 Règlementation sur toute l'agglomération de 6h30 à 11h30  
@@ -12,9 +15,6 @@ Voie règlementée avec spécifictions des points de début et de fin
 ### Commune de Septèmes-Les-Vallons
 Poids lourds, tonnage, voie règlementée et points de début et de fin (intersections de rues)    
 [Donnée CSV](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/examples/exemple-septemes-valide.csv) | [📜 Arrêté](examples/septemes-les-vallons.png)
-
-### Commune de Saint-Victoret
-[Donnée CSV](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/examples/exemple-st-victoret-valide.csv) | [📜 Arrêté](examples/st-victoret.png)
 
 ### Commune de Vence
 Cas de plusieurs arrêtés pour une commune  
