@@ -10,4 +10,4 @@
 - [ ] mettre plusieurs exemples dans le schema.json
 - [ ] Ajouter champ VITESSE (cf Fuveau)
 - [ ] Valeur 'Véhicules destinés à l'entretien de la voirie ou à la collecte des déchets' dans VEH_USAGE ?
-- [ ] INTERV_HMAX et INTERV_DUREE surtout pour les arrêtés de livraison (aires et stationnement)
+- [ ] Supprimer INTERV_HMAX et INTERV_DUREE car ils sont surtout pour les arrêtés de livraison (aires et stationnement)
