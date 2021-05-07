@@ -12,7 +12,7 @@ Ce schéma sur les arrêtés permanents de circulation a été construit en part
 [Voir le schéma (format TableSchema)](schema.json)  
 [Voir le schéma (diagramme)](https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation/master/arrete-permanent-circulation.png) 
 
-## Utiliser ce schéma
+## Utiliser le schéma
 [A propos de ce schéma (conventions,...)](A-PROPOS.md)  
 [Voir des exemples de données saisies selon le schéma](EXEMPLES.md)
 
