@@ -290,16 +290,11 @@
          "description":"Type de véhicule",
          "example":"Type de véhicule",
          "type": "string",
-		      "example": "Poids lourds",
-		      "constraints": {
-		        "required": false,
-		        "enum": [
-			        "Vélo-cargos",
-		          "Poids lourds",
-		          "Véhicules utilitaires légers",
-                          "Tous véhicules"
-		        ]
-		      }
+	 "example": "Poids lourds|Véhicules utilitaires légers",
+	 "constraints":{
+            "required": false,
+            "pattern" : "^(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules){1}(\\|(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules))*$"
+         }
       },
       {
          "name":"VEH_PTAC",
@@ -403,26 +398,6 @@
             "required":false
          }
       },
-    {
-         "name":"INTERV_DUREE",
-         "title" : "Durée maximale d'intervention",
-         "description":"Durée maximale d'intervention (au niveau d'une aire piétonne, par exemple).",
-         "example":"03:00:00",
-         "type":"time",
-         "constraints":{
-            "required":false
-         }
-      },
-      {
-         "name":"INTERV_HMAX",
-         "title" : "Heure maximale d'intervention",
-         "description":"Heure max à partir de laquelle les véhicules doivent quitter l'aire piétonne.",
-         "example":"22:00:00",
-         "type":"time",
-         "constraints":{
-            "required":false
-         }
-      },
       {
          "name":"SECTION_VOIE",
          "title" : "Nom de la voie",
@@ -492,6 +467,26 @@
          "constraints": {
 		        "required": false
 		        }
+      },
+	   {
+         "name":"INTERV_DUREE",
+         "title" : "Durée maximale d'intervention",
+         "description":"Durée maximale d'intervention (au niveau d'une aire piétonne, par exemple).",
+         "example":"03:00:00",
+         "type":"time",
+         "constraints":{
+            "required":false
+         }
+      },
+      {
+         "name":"INTERV_HMAX",
+         "title" : "Heure maximale d'intervention",
+         "description":"Heure max à partir de laquelle les véhicules doivent quitter l'aire piétonne.",
+         "example":"22:00:00",
+         "type":"time",
+         "constraints":{
+            "required":false
+         }
       },
       {
          "name":"GEOM_JSON",
