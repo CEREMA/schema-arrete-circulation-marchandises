@@ -19,7 +19,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 | -- | -- | -- |
 | [ID](#propriété-id) | chaîne de caractères  | Oui |
 | [COLL_NOM](#nom-de-la-collectivité---propriété-coll_nom) | chaîne de caractères  | Oui |
-| [COLL_SIRET](#code-siret-de-la-collectivité---propriété-coll_siret) | chaîne de caractères  | Oui |
+| [COLL_SIRET](#code-siret-de-la-collectivité---propriété-coll_siret) | chaîne de caractères  | Non |
 | [ARR_REF](#référence-de-l'arrêté---propriété-arr_ref) | chaîne de caractères  | Oui |
 | [ARR_OBJET](#objet-de-l'arrêté---propriété-arr_objet) | chaîne de caractères  | Oui |
 | [ARR_CONSIDERANT](#considérant-de-l'arrêté---propriété-arr_considerant) | chaîne de caractères  | Non |
@@ -42,14 +42,14 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 | [VEH_CQA](#vignettes-crit'air---propriété-veh_cqa) | chaîne de caractères  | Non |
 | [PERIODE_DEBUT](#date-d'entrée-en-vigueur-des-restrictions---propriété-periode_debut) | date (format `%Y-%m-%d`) | Non |
 | [PERIODE_JH](#jours-et-heures-de-circulation---propriété-periode_jh) | chaîne de caractères  | Non |
-| [INTERV_DUREE](#durée-maximale-d'intervention---propriété-interv_duree) | heure  | Non |
-| [INTERV_HMAX](#heure-maximale-d'intervention---propriété-interv_hmax) | heure  | Non |
 | [SECTION_VOIE](#nom-de-la-voie---propriété-section_voie) | chaîne de caractères  | Oui |
 | [SECTION_SENS](#direction-ou-sens-de-circulation---propriété-section_sens) | chaîne de caractères  | Non |
 | [SECTION_DEBUT_POINT](#début-de-la-section---propriété-section_debut_point) | point géographique (format `default`) | Non |
 | [SECTION_DEBUT_REF](#début-de-la-section-(texte)---propriété-section_debut_ref) | chaîne de caractères  | Non |
 | [SECTION_FIN_POINT](#fin-de-la-section---propriété-section_fin_point) | point géographique (format `default`) | Non |
 | [SECTION_FIN_REF](#fin-de-la-section-(texte)---propriété-section_fin_ref) | chaîne de caractères  | Non |
+| [INTERV_DUREE](#durée-maximale-d'intervention---propriété-interv_duree) | heure  | Non |
+| [INTERV_HMAX](#heure-maximale-d'intervention---propriété-interv_hmax) | heure  | Non |
 | [GEOM_JSON](#géométrie-au-format-geojson---propriété-geom_json) | GéoJSON (format `default`) | Non |
 | [GEOM_WKT](#géométrie-au-format-wkt---propriété-geom_wkt) | chaîne de caractères  | Non |
 | [GEOM_SOURCE](#propriété-geom_source) | chaîne de caractères  | Non |
@@ -69,7 +69,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 #### Code SIRET de la collectivité - Propriété `COLL_SIRET`
 
 > *Description : Identifiant du [Système d'Identification du Répertoire des Etablissements](https://fr.wikipedia.org/wiki/Syst%C3%A8me_d%27identification_du_r%C3%A9pertoire_des_%C3%A9tablissements) (SIRET) de la collectivité sur le territoire de laquelle sont situés les équipements collectifs publics répertoriés dans le jeu de données. Il est composé de 9 chiffres SIREN + 5 chiffres NIC d’un seul tenant.<br/>Ex : 22940028800010*
-- Valeur obligatoire
+- Valeur optionnelle
 - Type : chaîne de caractères
 - Motif : `^\d{14}$`
 
@@ -81,7 +81,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 
 #### Objet de l'arrêté - Propriété `ARR_OBJET`
 
-> *Description : Objet ou titre de l'arrêté<br/>Ex : Arrêté règlementant la circulation dans le quartier Mazarin et du palais de Justice*
+> *Description : Objet ou titre de l'arrêté. Mettre `N/C` si l'arrêté ne comprend pas d'objet.<br/>Ex : Arrêté règlementant la circulation dans le quartier Mazarin et du palais de Justice*
 - Valeur obligatoire
 - Type : chaîne de caractères
 
@@ -109,7 +109,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 - Valeur obligatoire
 - Type : chaîne de caractères
 - Entre 5 et 5 caractères
-- Motif : `^[a-zA-Z0-9\-\'\s\d\u00C0-\u00FF]+$`
+- Motif : `[013-9]\d|2[AB1-9])\d{3}$`
 
 #### URL d'accès de l'arrêté - Propriété `ARR_URL`
 
@@ -149,7 +149,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
     - Commune entière
     - Zone à Faible Émission
     - Zone IRIS INSEE
-    - Zone piétonne
+    - Aire piétonne
 
 #### Nom ou identifiant de la zone associée à la règlementation - Propriété `ZONE_REF`
 
@@ -159,14 +159,10 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 
 #### Propriété `VEH_TYPE`
 
-> *Description : Type de véhicule<br/>Ex : Poids lourds*
+> *Description : Type de véhicule<br/>Ex : Poids lourds|Véhicules utilitaires légers*
 - Valeur optionnelle
 - Type : chaîne de caractères
-- Valeurs autorisées : 
-    - Vélo-cargos
-    - Poids lourds
-    - Véhicules utilitaires légers
-    - Tous véhicules
+- Motif : `^(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules){1}(\|(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules))*$`
 
 #### Poids total autorisé en charge - Propriété `VEH_PTAC`
 
@@ -229,18 +225,6 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 - Valeur optionnelle
 - Type : chaîne de caractères
 
-#### Durée maximale d'intervention - Propriété `INTERV_DUREE`
-
-> *Description : Durée maximale d'intervention (au niveau d'une aire piétonne, par exemple).<br/>Ex : 03:00:00*
-- Valeur optionnelle
-- Type : heure
-
-#### Heure maximale d'intervention - Propriété `INTERV_HMAX`
-
-> *Description : Heure max à partir de laquelle les véhicules doivent quitter l'aire piétonne.<br/>Ex : 22:00:00*
-- Valeur optionnelle
-- Type : heure
-
 #### Nom de la voie - Propriété `SECTION_VOIE`
 
 > *Description : Nom de la voie associée à la section règlementée. 'NC' si application à une commune, une ZFE (etc...). Voir pour cela le champ `ZONE_TYPE`.<br/>Ex : Avenue Philippe Solari*
@@ -285,6 +269,18 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 > *Description : Indication de l'endroit jusqu'auquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Par exemple, une adresse ou une indication textuelle : 'au croisement de la rue', 'depuis le rond-point'. Les coordonnées GPS, elles, doivent être indiquées dans le champ `SECTION_DEBUT_POINT`.<br/>Ex : Croisement avec la rue Gaston de Saporta*
 - Valeur optionnelle
 - Type : chaîne de caractères
+
+#### Durée maximale d'intervention - Propriété `INTERV_DUREE`
+
+> *Description : Durée maximale d'intervention (au niveau d'une aire piétonne, par exemple).<br/>Ex : 03:00:00*
+- Valeur optionnelle
+- Type : heure
+
+#### Heure maximale d'intervention - Propriété `INTERV_HMAX`
+
+> *Description : Heure max à partir de laquelle les véhicules doivent quitter l'aire piétonne.<br/>Ex : 22:00:00*
+- Valeur optionnelle
+- Type : heure
 
 #### Géométrie au format GeoJSON - Propriété `GEOM_JSON`
 
