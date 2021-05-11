@@ -144,7 +144,7 @@
       {
          "name":"ARR_OBJET",
 	       "title": "Objet de l'arrêté",
-	       "description": "Objet ou titre de l'arrêté",
+	       "description": "Objet ou titre de l'arrêté. Mettre `N/C` si l'arrêté ne comprend pas d'objet.",
 	       "type": "string",
 	       "example": "Arrêté règlementant la circulation dans le quartier Mazarin et du palais de Justice",
 	       "constraints": {
