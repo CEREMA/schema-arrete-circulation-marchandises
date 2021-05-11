@@ -221,7 +221,7 @@
 	       "example": "https://carte.st-paul-les-dax.fr/wp-content/uploads/2020/06/AM-10248.pdf",
 	       "constraints": {
 	         "required": false,
-	         "pattern": "^(https|http)?://(?:[a-z0-9\\-]+\\.)+[a-z]{2,6}(?:/[^/#?]+)+"
+	         "pattern": "https?://(?:[a-z0-9\\-]+\\.)+[a-z]{2,6}(?:/[^/#?]+)+"
 	       }
       },
    {
