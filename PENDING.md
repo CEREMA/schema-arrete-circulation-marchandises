@@ -11,5 +11,5 @@
 - [x] Ajouter champ VITESSE (cf Fuveau) -> ne pas mettre
 - [ ] Valeur 'Véhicules destinés à l'entretien de la voirie ou à la collecte des déchets' dans VEH_USAGE ?
 - [ ] Supprimer INTERV_HMAX et INTERV_DUREE car ils sont surtout pour les arrêtés de livraison (aires et stationnement)
-- [ ] Changer le pattern de l'URL `ARR_URL`
+- [x] Changer le pattern de l'URL `ARR_URL`
 - [ ] Supprimer le champ `ID` ?
