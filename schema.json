@@ -127,7 +127,7 @@
 	       "type": "string",
 	       "example": "22940028800010",
 	       "constraints": {
-	         "required": true,
+	         "required": false,
 	         "pattern": "^\\d{14}$"
 	       }
       },
