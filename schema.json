@@ -127,7 +127,7 @@
 	       "type": "string",
 	       "example": "22940028800010",
 	       "constraints": {
-	         "required": true,
+	         "required": false,
 	         "pattern": "^\\d{14}$"
 	       }
       },
@@ -144,7 +144,7 @@
       {
          "name":"ARR_OBJET",
 	       "title": "Objet de l'arrêté",
-	       "description": "Objet ou titre de l'arrêté",
+	       "description": "Objet ou titre de l'arrêté. Mettre `N/C` si l'arrêté ne comprend pas d'objet.",
 	       "type": "string",
 	       "example": "Arrêté règlementant la circulation dans le quartier Mazarin et du palais de Justice",
 	       "constraints": {
@@ -208,7 +208,7 @@
 	       "example": "13090",
 	       "constraints": {
 	         "required": true,
-           "pattern": "^[a-zA-Z0-9\\-\\'\\s\\d\\u00C0-\\u00FF]+$",
+           "pattern": "[013-9]\\d|2[AB1-9])\\d{3}$",
            "minLength":5,
            "maxLength":5
            }
@@ -271,7 +271,7 @@
 		          "Commune entière",
               		  "Zone à Faible Émission",
                           "Zone IRIS INSEE",
-                          "Zone piétonne"
+                          "Aire piétonne"
 		        ]
 		      }
       },
@@ -290,16 +290,11 @@
          "description":"Type de véhicule",
          "example":"Type de véhicule",
          "type": "string",
-		      "example": "Poids lourds",
-		      "constraints": {
-		        "required": false,
-		        "enum": [
-			        "Vélo-cargos",
-		          "Poids lourds",
-		          "Véhicules utilitaires légers",
-                          "Tous véhicules"
-		        ]
-		      }
+	 "example": "Poids lourds|Véhicules utilitaires légers",
+	 "constraints":{
+            "required": false,
+            "pattern" : "^(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules){1}(\\|(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules))*$"
+         }
       },
       {
          "name":"VEH_PTAC",
@@ -403,26 +398,6 @@
             "required":false
          }
       },
-    {
-         "name":"INTERV_DUREE",
-         "title" : "Durée maximale d'intervention",
-         "description":"Durée maximale d'intervention (au niveau d'une aire piétonne, par exemple).",
-         "example":"03:00:00",
-         "type":"time",
-         "constraints":{
-            "required":false
-         }
-      },
-      {
-         "name":"INTERV_HMAX",
-         "title" : "Heure maximale d'intervention",
-         "description":"Heure max à partir de laquelle les véhicules doivent quitter l'aire piétonne.",
-         "example":"22:00:00",
-         "type":"time",
-         "constraints":{
-            "required":false
-         }
-      },
       {
          "name":"SECTION_VOIE",
          "title" : "Nom de la voie",
@@ -492,6 +467,26 @@
          "constraints": {
 		        "required": false
 		        }
+      },
+	   {
+         "name":"INTERV_DUREE",
+         "title" : "Durée maximale d'intervention",
+         "description":"Durée maximale d'intervention (au niveau d'une aire piétonne, par exemple).",
+         "example":"03:00:00",
+         "type":"time",
+         "constraints":{
+            "required":false
+         }
+      },
+      {
+         "name":"INTERV_HMAX",
+         "title" : "Heure maximale d'intervention",
+         "description":"Heure max à partir de laquelle les véhicules doivent quitter l'aire piétonne.",
+         "example":"22:00:00",
+         "type":"time",
+         "constraints":{
+            "required":false
+         }
       },
       {
          "name":"GEOM_JSON",
