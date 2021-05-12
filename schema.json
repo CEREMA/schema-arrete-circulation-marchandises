@@ -22,12 +22,19 @@
          "path":"https://spdx.org/licenses/etalab-2.0.html"
       }
    ],
-   "resources":[
+   "resources":
+      [
+      {
+         "title":"Fichier valide",
+         "name":"exemple-valide-csv",
+         "path":"https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/exemple-valide.csv"
+      },
       {
          "title":"Fichier valide pour la commune de Saint-Victoret (CSV)",
          "name":"exemple-st-victoret-valide-csv",
          "path":"https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/examples/exemple-st-victoret-valide.csv"
       },
+      
       {
          "title":"Fichier valide pour la commune du Rove (CSV)",
          "name":"exemple-le-rove-valide-csv",
@@ -102,7 +109,8 @@
    "fields":[
       {
          "name":"ID",
-         "description":"Identifiant unique de l'entité (ligne du tableau). L'entité élémentaire correspond à une voie entière (par ex. `Avenue Philippe Solari`) ou une portion de voie (section) règlementée (voir les champs `SECTION_DEBUT` et `SECTION_FIN`). L'identifiant peut tout simplement être un identifiant auto-incrémenté (1, 2 ou 3,...). Si la section est issue d'OpenStreetMap, l'identifiant peut correspondre à la valeur `osm_id` de la voie règlementée (par exemple, `133`). Si la section possède plusieurs règlements, l'identifiant peut être accompagné d'un suffixe incrémenté (par exemple 133-2 pour le second règlement associé à la voie). Il peut également être un identifiant propre à une structure ou une base de données (identifiant issu de la BDTOPO IGN, par exemple).",
+         "title": "Identifiant de l'entité",
+         "description":"Il s'agit de l'identifiant de l'entité (ou ligne du tableau). Ce dernier doit être unique. L'entité élémentaire correspond à une voie entière règlementée (par ex. `Avenue Philippe Solari`) ou une portion de celle-ci (voir les champs `SECTION_DEBUT` et `SECTION_FIN`). L'identifiant peut tout simplement être auto-incrémenté (1, 2 ou 3,...). Il peut correspondre à la valeur `osm_id` de la voie règlementée (par exemple, `133`). Il peut également être un identifiant propre à une structure ou à une autre base de données (identifiant issu de la BDTOPO IGN, par exemple). [Si vous ne savez pas quel identifiant attribuer à la ligne, vous pouvez utiliser l'application Heidi d'Etalab pour en créer](https://heidi.app.etalab.studio/).",
          "example":"133-3",
          "type":"string",
          "constraints":{
@@ -218,10 +226,11 @@
 	       "title": "URL d'accès de l'arrêté",
 	       "description": "Adresse internet par laquelle accéder à l'arrêté, et donc au règlement.",
 	       "type": "string",
+         "format":"uri",
 	       "example": "https://carte.st-paul-les-dax.fr/wp-content/uploads/2020/06/AM-10248.pdf",
 	       "constraints": {
 	         "required": false,
-	         "pattern": "^(https|http)?://(?:[a-z0-9\\-]+\\.)+[a-z]{2,6}(?:/[^/#?]+)+"
+	         "pattern": "https?://(?:[a-z0-9\\-]+\\.)+[a-z]{2,6}(?:/[^/#?]+)+"
 	       }
       },
    {
@@ -395,7 +404,8 @@
          "example":"Mo-Fr 08:00-12:00,13:00-17:30; Sa 08:00-12:00; PH off",
          "type":"string",
          "constraints":{
-            "required":false
+            "required":false,
+            "pattern":"(.*?)((\\d{1,2}:\\d{2})-(\\d{1,2}:\\d{2})|24/7)"
          }
       },
       {
@@ -529,5 +539,5 @@
     }
   ],
    "missingValues": ["", "NA", "NaN", "NC", "N/A"],
-   "primaryKey":"SECTION_REGL_ID"
+   "primaryKey":"ID"
 }
