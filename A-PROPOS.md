@@ -25,3 +25,17 @@ Dans ce schéma, les champs [GEOM_JSON](https://github.com/CEREMA/schema-arrete-
 
 ### Début et fin
 Des champs [SECTION_DEBUT_POINT](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#d%C3%A9but-de-la-section---propri%C3%A9t%C3%A9-section_debut_point) et [SECTION_FIN_POINT](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#fin-de-la-section---propri%C3%A9t%C3%A9-section_fin_point) permettent de signaler les début et fin de chaque section règlementée sur la voie.
+
+## Duplication
+Dans ce schéma, chaque entité (ligne du tableau) concerne une voie et un règlement associé. 
+
+Sachant qu'un règlement peut concerner plusieurs voies et qu'une voie peut posséder plusieurs règlements, et , la donnée finale prendra la forme d'une donnée "aplatie" avec une duplication des lignes le long des multiples voies associées à un règlement, et le long des multiples règlements associés à une voie.
+
+Schématiquement, cela donne dans le tableau de données :
+Voie | Règlement |
+ -- | -- |
+ Voie 1 | Regl1 |
+ Voie 2| Regl1 |
+ Voie 3| Regl1 |
+ Voie 3| Regl2 |
+
