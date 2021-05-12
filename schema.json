@@ -22,7 +22,12 @@
          "path":"https://spdx.org/licenses/etalab-2.0.html"
       }
    ],
-   "resources":[
+   "resources":
+      {
+         "title":"Fichier valide",
+         "name":"exemple-valide-csv",
+         "path":"https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/exemple-valide.csv"
+      },[
       {
          "title":"Fichier valide pour la commune de Saint-Victoret (CSV)",
          "name":"exemple-st-victoret-valide-csv",
@@ -529,5 +534,5 @@
     }
   ],
    "missingValues": ["", "NA", "NaN", "NC", "N/A"],
-   "primaryKey":"SECTION_REGL_ID"
+   "primaryKey":"ID"
 }
