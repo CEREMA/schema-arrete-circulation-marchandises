@@ -16,8 +16,7 @@ Ce schéma sur les arrêtés permanents de circulation a été construit en part
 [Voir des exemples de données saisies selon le schéma](EXEMPLES.md)
 
 ## Contribuez au schéma
-[Un appel à contributions (Google Forms) vise à enrichir et consolider le référentiel des valeurs utilisées dans différentes listes de remplissage (types de véhicules, d'usages, de motorisations,...)
-](https://forms.gle/vUALzEDQqRsY2NgG9)
+[Un appel à contributions (Google Forms) vise à enrichir et consolider le référentiel des valeurs utilisées dans différentes listes de remplissage (types de véhicules, d'usages, de motorisations,...)](https://forms.gle/vUALzEDQqRsY2NgG9)
 
 ## Liens
 [Voir la proposition sur le github d'Etalab](https://github.com/etalab/schema.data.gouv.fr/issues/157)  
