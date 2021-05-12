@@ -8,7 +8,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 - Site web : https://github.com/CEREMA/schema-arrete-circulation
 - Version : 0.1.1
 - Valeurs manquantes : `""`, `"NA"`, `"NaN"`, `"NC"`, `"N/A"`
-- Clé primaire : `SECTION_REGL_ID`
+- Clé primaire : `ID`
 
 ### Modèle de données
 
@@ -17,7 +17,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 
 | Propriété | Type | Obligatoire |
 | -- | -- | -- |
-| [ID](#propriété-id) | chaîne de caractères  | Oui |
+| [ID](#identifiant-de-l'entité---propriété-id) | chaîne de caractères  | Oui |
 | [COLL_NOM](#nom-de-la-collectivité---propriété-coll_nom) | chaîne de caractères  | Oui |
 | [COLL_SIRET](#code-siret-de-la-collectivité---propriété-coll_siret) | chaîne de caractères  | Non |
 | [ARR_REF](#référence-de-l'arrêté---propriété-arr_ref) | chaîne de caractères  | Oui |
@@ -26,7 +26,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 | [ARR_DATE_CREATION](#date-de-création-de-l'arrêté---propriété-arr_date_creation) | date (format `%Y-%m-%d`) | Oui |
 | [ARR_EST_MAJ](#arrêté-mis-à-jour-?---propriété-arr_est_maj) | booléen  | Oui |
 | [ARR_INSEE](#code-insee---propriété-arr_insee) | chaîne de caractères  | Oui |
-| [ARR_URL](#url-d'accès-de-l'arrêté---propriété-arr_url) | chaîne de caractères  | Non |
+| [ARR_URL](#url-d'accès-de-l'arrêté---propriété-arr_url) | chaîne de caractères (format `uri`) | Non |
 | [REGL_ARTICLE](#article-du-règlement---propriété-regl_article) | nombre entier  | Non |
 | [REGL_SOUS_ARTICLE](#sous-article-du-règlement---propriété-regl_sous_article) | chaîne de caractères  | Non |
 | [REGL_MODALITE](#propriété-regl_modalite) | chaîne de caractères  | Oui |
@@ -54,9 +54,9 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 | [GEOM_WKT](#géométrie-au-format-wkt---propriété-geom_wkt) | chaîne de caractères  | Non |
 | [GEOM_SOURCE](#propriété-geom_source) | chaîne de caractères  | Non |
 
-#### Propriété `ID`
+#### Identifiant de l'entité - Propriété `ID`
 
-> *Description : Identifiant unique de l'entité (ligne du tableau). L'entité élémentaire correspond à une voie entière (par ex. `Avenue Philippe Solari`) ou une portion de voie (section) règlementée (voir les champs `SECTION_DEBUT` et `SECTION_FIN`). L'identifiant peut tout simplement être un identifiant auto-incrémenté (1, 2 ou 3,...). Si la section est issue d'OpenStreetMap, l'identifiant peut correspondre à la valeur `osm_id` de la voie règlementée (par exemple, `133`). Si la section possède plusieurs règlements, l'identifiant peut être accompagné d'un suffixe incrémenté (par exemple 133-2 pour le second règlement associé à la voie). Il peut également être un identifiant propre à une structure ou une base de données (identifiant issu de la BDTOPO IGN, par exemple).<br/>Ex : 133-3*
+> *Description : Il s'agit de l'identifiant de l'entité (ou ligne du tableau). Ce dernier doit être unique. L'entité élémentaire correspond à une voie entière règlementée (par ex. `Avenue Philippe Solari`) ou une portion de celle-ci (voir les champs `SECTION_DEBUT` et `SECTION_FIN`). L'identifiant peut tout simplement être auto-incrémenté (1, 2 ou 3,...). Il peut correspondre à la valeur `osm_id` de la voie règlementée (par exemple, `133`). Il peut également être un identifiant propre à une structure ou à une autre base de données (identifiant issu de la BDTOPO IGN, par exemple). [Si vous ne savez pas quel identifiant attribuer à la ligne, vous pouvez utiliser l'application Heidi d'Etalab pour en créer](https://heidi.app.etalab.studio/).<br/>Ex : 133-3*
 - Valeur obligatoire
 - Type : chaîne de caractères
 
@@ -115,8 +115,8 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 
 > *Description : Adresse internet par laquelle accéder à l'arrêté, et donc au règlement.<br/>Ex : https://carte.st-paul-les-dax.fr/wp-content/uploads/2020/06/AM-10248.pdf*
 - Valeur optionnelle
-- Type : chaîne de caractères
-- Motif : `^(https|http)?://(?:[a-z0-9\-]+\.)+[a-z]{2,6}(?:/[^/#?]+)+`
+- Type : chaîne de caractères (format `uri`)
+- Motif : `https?://(?:[a-z0-9\-]+\.)+[a-z]{2,6}(?:/[^/#?]+)+`
 
 #### Article du règlement - Propriété `REGL_ARTICLE`
 
@@ -224,6 +224,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 > *Description : Jours et heures de circulation autorisés pour la circulation exprimés selon le format OpeningHours d'OpenStreetMap ([https://wiki.openstreetmap.org/wiki/Key:opening_hours](https://wiki.openstreetmap.org/wiki/Key:opening_hours)). Ce format permet d'indiquer les week-ends (we), les jours fériés (PH) et les vacances scolaires (SH). Par exemple `Mo-Fr 09:00-17:00; PH 10:00-12:00; PH Su off` signifie : 'ouverture du lundi au vendredi de 9h à 17h sauf les jours fériés où l'ouverture est de 10h à 12h, à l'exception des jours fériés tombant un dimanche'<br/>Ex : Mo-Fr 08:00-12:00,13:00-17:30; Sa 08:00-12:00; PH off*
 - Valeur optionnelle
 - Type : chaîne de caractères
+- Motif : `(.*?)((\d{1,2}:\d{2})-(\d{1,2}:\d{2})|24/7)`
 
 #### Nom de la voie - Propriété `SECTION_VOIE`
 
