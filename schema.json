@@ -135,7 +135,8 @@
 	       "type": "string",
 	       "example": "22940028800010",
 	       "constraints": {
-	         "required": false
+	         "required": false,
+		 "pattern": "^\\d{14}$"
 	       }
       },
       {
