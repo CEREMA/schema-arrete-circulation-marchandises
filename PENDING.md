@@ -1,15 +1,8 @@
-- [ ] Ajouter champ GEOM_REF ?
+- [ ] Mettre séparateur virgule pour les valeurs multiples. Enlever virgules dans VEH_USAGE
 - [ ] Valeur Autocars, Autobus dans les usages ? Ptet pas Autobus car existence de Transports en commun
-- [ ] Valeur Véhicules de travaux
-- [ ] Valeur Transport de denrées animales ou végétales ?
-- [ ] Véhicules de service = Services publics ?
 - [x] Champ ID de type integer. Simplifier la description
-- [ ] dans les exemples, remplacer les valeurs xxx correspondant aux infos manquantes : références ou date d'arrêté
 - [ ] rajouter des géométries sur septèmes
 - [x] mettre les images des arrêtés dans EXEMPLES.md ?
-- [ ] mettre plusieurs exemples dans le schema.json
 - [x] Ajouter champ VITESSE (cf Fuveau) -> ne pas mettre
 - [ ] Valeur 'Véhicules destinés à l'entretien de la voirie ou à la collecte des déchets' dans VEH_USAGE ?
-- [ ] Supprimer INTERV_HMAX et INTERV_DUREE car ils sont surtout pour les arrêtés de livraison (aires et stationnement)
 - [x] Changer le pattern de l'URL `ARR_URL`
-- [ ] Supprimer le champ `ID` ?
