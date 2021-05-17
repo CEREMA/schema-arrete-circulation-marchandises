@@ -3,7 +3,7 @@
 ## v0.4.1 (en cours)
 - Regex SIRET
 
-## v0.4.0
+## v0.4.0 (corrections Etalab)
 - Corrections apportées par Geoffrey Aldebert sur les regexes du schema.json
 - Ajout d'un exemple valide dans resources
 - Intégration continue OK
@@ -14,7 +14,7 @@
 - Ajout de pattern pour `PERIODE_JH` : `(.*?)((\\d{1,2}:\\d{2})-(\\d{1,2}:\\d{2})|24/7)`
 - `ID` Primary Key
 
-## v0.3.3
+## v0.3.3 (enrichissement des usages)
 - Ajout de ressources (`sources`)
 - Ajout de Julie Raffaillac dans les contributeurs
 - Ajout de Vélo-cargos dans `VEH_TYPE`
