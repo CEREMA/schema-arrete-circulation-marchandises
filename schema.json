@@ -301,7 +301,7 @@
 	 "example": "Poids lourds|Véhicules utilitaires légers",
 	 "constraints":{
             "required": false,
-            "pattern" : "(?:(?:^|,)^(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules))+$"
+            "pattern" : "(?:(?:^|\|)^(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules))+$"
             }
       },
       {
@@ -360,7 +360,7 @@
          "type":"string",
          "constraints":{
             "required": false,
-            "pattern": "(?:(?:^|,)(Autocars|Citernes|Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de denrées animales ou végétales|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules d'approvisionnement des marchés|Véhicules effectuant du transport exceptionnel au sens de l'article R.433-1 du code de la route et munis d'une autorisation préfectorale|Véhicules de police|Véhicules de secours|Véhicules de transport de matériaux|Véhicules de travaux|Véhicules municipaux|Véhicules munis d'une autorisation|Véhicules porte-voitures|Voitures de transport avec chauffeur))+$"
+            "pattern": "(?:(?:^|\|)(Autocars|Citernes|Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de denrées animales ou végétales|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules d'approvisionnement des marchés|Véhicules effectuant du transport exceptionnel au sens de l'article R.433-1 du code de la route et munis d'une autorisation préfectorale|Véhicules de police|Véhicules de secours|Véhicules de transport de matériaux|Véhicules de travaux|Véhicules municipaux|Véhicules munis d'une autorisation|Véhicules porte-voitures|Voitures de transport avec chauffeur))+$"
          }
       },
    {
@@ -371,7 +371,7 @@
          "type":"string",
          "constraints":{
             "required": false,
-            "pattern" : "(?:(?:^|,)(Electrique|Gaz Naturel pour Véhicules|Hydrogène))+$"
+            "pattern" : "(?:(?:^|\|)(Electrique|Gaz Naturel pour Véhicules|Hydrogène))+$"
          }
       },
       {
@@ -382,7 +382,7 @@
          "type":"string",
          "constraints":{
             "required": false,
-            "pattern": "(?:(?:^|,)(100% électrique et Véhicules à hydrogène|1|2|3|4|5|Véhicule non classé))+$"
+            "pattern": "(?:(?:^|\|)(100% électrique et Véhicules à hydrogène|1|2|3|4|5|Véhicule non classé))+$"
          }
       },
       {
