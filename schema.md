@@ -108,7 +108,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 - Valeur obligatoire
 - Type : chaîne de caractères
 - Entre 5 et 5 caractères
-- Motif : `([013-9]\d|2[AB1-9])\d{3}$`
+- Motif : `^([013-9]\d|2[AB1-9])\d{3}$`
 
 #### URL d'accès de l'arrêté - Propriété `ARR_URL`
 
@@ -160,7 +160,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 > *Description : Type de véhicule<br/>Ex : Poids lourds|Véhicules utilitaires légers*
 - Valeur optionnelle
 - Type : chaîne de caractères
-- Motif : `^(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules){1}(\|(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules))*$`
+- Motif : `(?:(?:^|,)^(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules))+$`
 
 #### Poids total autorisé en charge - Propriété `VEH_PTAC`
 
@@ -195,21 +195,21 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 > *Description : Type d'usage du véhicule. Séparer les valeurs par le caractère '|'.<br/>Ex : Bennes à ordures ménagères|Véhicules de police*
 - Valeur optionnelle
 - Type : chaîne de caractères
-- Motif : `^(Autocars|Convois funéraires|Bennes à ordures ménagères|Citernes|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de denrées animales ou végétales|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules d'approvisionnement des marchés|Véhicules effectuant du transport exceptionnel au sens de l'article R.433-1 du code de la route et munis d'une autorisation préfectorale|Véhicules de police|Véhicules de secours|Véhicules de transport de matériaux|Véhicules de travaux|Véhicules municipaux|Véhicules munis d'une autorisation|Véhicules porte-voitures|Voitures de transport avec chauffeur){1}(\|(Autocars|Citernes|Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de denrées animales ou végétales|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules d'approvisionnement des marchés|Véhicules effectuant du transport exceptionnel au sens de l'article R.433-1 du code de la route et munis d'une autorisation préfectorale|Véhicules de police|Véhicules de secours|Véhicules de transport de matériaux|Véhicules de travaux|Véhicules municipaux|Véhicules munis d'une autorisation|Véhicules porte-voitures|Voitures de transport avec chauffeur))*$`
+- Motif : `(?:(?:^|,)(Autocars|Citernes|Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de denrées animales ou végétales|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules d'approvisionnement des marchés|Véhicules effectuant du transport exceptionnel au sens de l'article R.433-1 du code de la route et munis d'une autorisation préfectorale|Véhicules de police|Véhicules de secours|Véhicules de transport de matériaux|Véhicules de travaux|Véhicules municipaux|Véhicules munis d'une autorisation|Véhicules porte-voitures|Voitures de transport avec chauffeur))+$`
 
 #### Type de motorisation - Propriété `VEH_MOTOR`
 
 > *Description : Type de motorisation du véhicule. Séparer les valeurs par le caractère '|'.<br/>Ex : Électrique|Hydrogène*
 - Valeur optionnelle
 - Type : chaîne de caractères
-- Motif : `^(Électrique|Gaz Naturel pour Véhicules|Hydrogène){1}(\|(Électrique|Gaz Naturel pour Véhicules|Hydrogène))*$`
+- Motif : `(?:(?:^|,)(Electrique|Gaz Naturel pour Véhicules|Hydrogène))+$`
 
 #### Vignettes crit'air - Propriété `VEH_CQA`
 
 > *Description : Vignettes crit'air. Voir la [classification des vignettes Crit'Air](https://www.certificat-air.gouv.fr/docs/tableaux_classement.pdf) sur le site [certificat-air.gouv.fr](https://www.certificat-air.gouv.fr). Séparer les étiquettes CQA par le caractère '|'. 'NC' signifie que la valeur n'a pas été renseignée.<br/>Ex : 1|2|3*
 - Valeur optionnelle
 - Type : chaîne de caractères
-- Motif : `^(100% électrique et Véhicules à hydrogène|1|2|3|4|5|Véhicule non classé){1}(\|(100% électrique et Véhicules à hydrogène|1|2|3|4|5|Véhicule non classé))*$`
+- Motif : `(?:(?:^|,)(100% électrique et Véhicules à hydrogène|1|2|3|4|5|Véhicule non classé))+$`
 
 #### Date d'entrée en vigueur des restrictions - Propriété `PERIODE_DEBUT`
 

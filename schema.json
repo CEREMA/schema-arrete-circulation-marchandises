@@ -215,7 +215,7 @@
 	       "example": "13090",
 	       "constraints": {
 	         "required": true,
-           "pattern": "([013-9]\\d|2[AB1-9])\\d{3}$",
+           "pattern": "^([013-9]\\d|2[AB1-9])\\d{3}$",
            "minLength":5,
            "maxLength":5
            }
@@ -300,7 +300,7 @@
 	 "example": "Poids lourds|Véhicules utilitaires légers",
 	 "constraints":{
             "required": false,
-            "pattern" : "^(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules){1}(\\|(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules))*$"
+            "pattern" : "(?:(?:^|,)^(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules))+$"
             }
       },
       {
@@ -359,8 +359,8 @@
          "type":"string",
          "constraints":{
             "required": false,
-            "pattern": "^(Autocars|Convois funéraires|Bennes à ordures ménagères|Citernes|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de denrées animales ou végétales|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules d'approvisionnement des marchés|Véhicules effectuant du transport exceptionnel au sens de l'article R.433-1 du code de la route et munis d'une autorisation préfectorale|Véhicules de police|Véhicules de secours|Véhicules de transport de matériaux|Véhicules de travaux|Véhicules municipaux|Véhicules munis d'une autorisation|Véhicules porte-voitures|Voitures de transport avec chauffeur){1}(\\|(Autocars|Citernes|Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de denrées animales ou végétales|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules d'approvisionnement des marchés|Véhicules effectuant du transport exceptionnel au sens de l'article R.433-1 du code de la route et munis d'une autorisation préfectorale|Véhicules de police|Véhicules de secours|Véhicules de transport de matériaux|Véhicules de travaux|Véhicules municipaux|Véhicules munis d'une autorisation|Véhicules porte-voitures|Voitures de transport avec chauffeur))*$"
-            }
+            "pattern": "(?:(?:^|,)(Autocars|Citernes|Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de denrées animales ou végétales|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules d'approvisionnement des marchés|Véhicules effectuant du transport exceptionnel au sens de l'article R.433-1 du code de la route et munis d'une autorisation préfectorale|Véhicules de police|Véhicules de secours|Véhicules de transport de matériaux|Véhicules de travaux|Véhicules municipaux|Véhicules munis d'une autorisation|Véhicules porte-voitures|Voitures de transport avec chauffeur))+$"
+         }
       },
    {
          "name":"VEH_MOTOR",
@@ -370,7 +370,7 @@
          "type":"string",
          "constraints":{
             "required": false,
-            "pattern" : "^(Électrique|Gaz Naturel pour Véhicules|Hydrogène){1}(\\|(Électrique|Gaz Naturel pour Véhicules|Hydrogène))*$"
+            "pattern" : "(?:(?:^|,)(Electrique|Gaz Naturel pour Véhicules|Hydrogène))+$"
          }
       },
       {
@@ -381,7 +381,7 @@
          "type":"string",
          "constraints":{
             "required": false,
-            "pattern": "^(100% électrique et Véhicules à hydrogène|1|2|3|4|5|Véhicule non classé){1}(\\|(100% électrique et Véhicules à hydrogène|1|2|3|4|5|Véhicule non classé))*$"
+            "pattern": "(?:(?:^|,)(100% électrique et Véhicules à hydrogène|1|2|3|4|5|Véhicule non classé))+$"
          }
       },
       {
