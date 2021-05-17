@@ -52,11 +52,11 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 | [INTERV_HMAX](#heure-maximale-d'intervention---propriété-interv_hmax) | heure  | Non |
 | [GEOM_JSON](#géométrie-au-format-geojson---propriété-geom_json) | GéoJSON (format `default`) | Non |
 | [GEOM_WKT](#géométrie-au-format-wkt---propriété-geom_wkt) | chaîne de caractères  | Non |
-| [GEOM_SOURCE](#propriété-geom_source) | chaîne de caractères  | Non |
+| [GEOM_SOURCE](#source-de-la-géométrie---propriété-geom_source) | chaîne de caractères  | Non |
 
 #### Identifiant de l'entité - Propriété `ID`
 
-> *Description : Il s'agit de l'identifiant de l'entité (ou ligne du tableau). Ce dernier doit être unique. L'entité élémentaire correspond à une voie entière règlementée (par ex. `Avenue Philippe Solari`) ou une portion de celle-ci (voir les champs `SECTION_DEBUT` et `SECTION_FIN`). L'identifiant peut tout simplement être auto-incrémenté (1, 2 ou 3,...). Il peut correspondre à la valeur `osm_id` de la voie règlementée (par exemple, `133`). Il peut également être un identifiant propre à une structure ou à une autre base de données (identifiant issu de la BDTOPO IGN, par exemple). [Si vous ne savez pas quel identifiant attribuer à la ligne, vous pouvez utiliser l'application Heidi d'Etalab pour en créer](https://heidi.app.etalab.studio/).<br/>Ex : 133-3*
+> *Description : Il s'agit de l'identifiant de l'entité (ou ligne du tableau). Ce dernier doit être unique. L'entité élémentaire correspond à une voie entière règlementée (par ex. `Avenue Philippe Solari`) ou une portion de celle-ci (voir les champs `SECTION_DEBUT` et `SECTION_FIN`). L'identifiant peut tout simplement être auto-incrémenté (1, 2 ou 3,...). Il peut correspondre à la valeur `osm_id` de la voie règlementée (par exemple, `133`). Il peut également être un identifiant propre à une structure ou à une autre base de données (identifiant issu de la BDTOPO IGN, par exemple). [Vous pouvez créer des identifiants grâce à l'application Heidi d'Etalab](https://heidi.app.etalab.studio/).<br/>Ex : 133-3*
 - Valeur obligatoire
 - Type : chaîne de caractères
 
@@ -71,7 +71,6 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 > *Description : Identifiant du [Système d'Identification du Répertoire des Etablissements](https://fr.wikipedia.org/wiki/Syst%C3%A8me_d%27identification_du_r%C3%A9pertoire_des_%C3%A9tablissements) (SIRET) de la collectivité sur le territoire de laquelle sont situés les équipements collectifs publics répertoriés dans le jeu de données. Il est composé de 9 chiffres SIREN + 5 chiffres NIC d’un seul tenant.<br/>Ex : 22940028800010*
 - Valeur optionnelle
 - Type : chaîne de caractères
-- Motif : `^\d{14}$`
 
 #### Référence de l'arrêté - Propriété `ARR_REF`
 
@@ -109,14 +108,13 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 - Valeur obligatoire
 - Type : chaîne de caractères
 - Entre 5 et 5 caractères
-- Motif : `[013-9]\d|2[AB1-9])\d{3}$`
+- Motif : `([013-9]\d|2[AB1-9])\d{3}$`
 
 #### URL d'accès de l'arrêté - Propriété `ARR_URL`
 
 > *Description : Adresse internet par laquelle accéder à l'arrêté, et donc au règlement.<br/>Ex : https://carte.st-paul-les-dax.fr/wp-content/uploads/2020/06/AM-10248.pdf*
 - Valeur optionnelle
 - Type : chaîne de caractères (format `uri`)
-- Motif : `https?://(?:[a-z0-9\-]+\.)+[a-z]{2,6}(?:/[^/#?]+)+`
 
 #### Article du règlement - Propriété `REGL_ARTICLE`
 
@@ -197,7 +195,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 > *Description : Type d'usage du véhicule. Séparer les valeurs par le caractère '|'.<br/>Ex : Bennes à ordures ménagères|Véhicules de police*
 - Valeur optionnelle
 - Type : chaîne de caractères
-- Motif : `^(Autocars|Convois funéraires|Bennes à ordures ménagères|Citernes|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de denrées animales ou végétales|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules d'approvisionnement des marchés|Véhicules effectuant du transport exceptionnel au sens de l'article R.433-1 du code de la route et munis d'une autorisation préfectorale|Véhicules de police|Véhicules de secours|Véhicules de transport de matériaux|Véhicules de travaux|Véhicules municipaux|Véhicules munis d'une autorisation|Véhicules porte-voitures|Voitures de transport avec chauffeur){1}(\|(Autocars|Citernes|Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de denrées animales ou végétales|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules d'approvisionnement des marchés|Véhicules effectuant du transport exceptionnel au sens de l'article R.433-1 du code de la route et munis d'une autorisation préfectorale|Véhicules de police|Véhicules de secours|Véhicules de transport de matériaux|Véhicules de travaux|Véhicules municipaux|Véhicules munis d'une autorisation|Véhicules porte-voitures|Voitures de transport avec chauffeur)))*$`
+- Motif : `^(Autocars|Convois funéraires|Bennes à ordures ménagères|Citernes|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de denrées animales ou végétales|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules d'approvisionnement des marchés|Véhicules effectuant du transport exceptionnel au sens de l'article R.433-1 du code de la route et munis d'une autorisation préfectorale|Véhicules de police|Véhicules de secours|Véhicules de transport de matériaux|Véhicules de travaux|Véhicules municipaux|Véhicules munis d'une autorisation|Véhicules porte-voitures|Voitures de transport avec chauffeur){1}(\|(Autocars|Citernes|Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de denrées animales ou végétales|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules d'approvisionnement des marchés|Véhicules effectuant du transport exceptionnel au sens de l'article R.433-1 du code de la route et munis d'une autorisation préfectorale|Véhicules de police|Véhicules de secours|Véhicules de transport de matériaux|Véhicules de travaux|Véhicules municipaux|Véhicules munis d'une autorisation|Véhicules porte-voitures|Voitures de transport avec chauffeur))*$`
 
 #### Type de motorisation - Propriété `VEH_MOTOR`
 
@@ -295,7 +293,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 - Valeur optionnelle
 - Type : chaîne de caractères
 
-#### Propriété `GEOM_SOURCE`
+#### Source de la géométrie - Propriété `GEOM_SOURCE`
 
 > *Description : Source de la géométrie<br/>Ex : BDTOPO IGN 2021*
 - Valeur optionnelle

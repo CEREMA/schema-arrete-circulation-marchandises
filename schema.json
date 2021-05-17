@@ -135,8 +135,7 @@
 	       "type": "string",
 	       "example": "22940028800010",
 	       "constraints": {
-	         "required": false,
-	         "pattern": "^\\d{14}$"
+	         "required": false
 	       }
       },
       {
@@ -302,7 +301,7 @@
 	 "constraints":{
             "required": false,
             "pattern" : "^(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules){1}(\\|(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules))*$"
-         }
+            }
       },
       {
          "name":"VEH_PTAC",
@@ -429,11 +428,11 @@
 		        "enum": [
 		          "Pair",
 		          "Impair",
-			  "Nord",
-			  "Sud",
-			  "Est",
+		          "Nord",
+              "Sud",
+              "Est",
 		          "Ouest",
-                          "Deux sens"
+              "Deux sens"
 		        ]
 		      }
       },
@@ -502,7 +501,7 @@
          "title":"Géométrie au format GeoJSON",
          "description":"Géométrie de la ligne exprimée au format [GeoJSON](https://fr.wikipedia.org/wiki/GeoJSON)  sous le système de projection WGS84 (EPSG:4326). Le GeoJSON, de l'anglais Geographic JSON, signifiant littéralement JSON géographique, est un format ouvert d'encodage d'ensemble de données géospatiales simples utilisant la norme JSON (JavaScript Object Notation). Objet de type `LineString` souhaité. Sous PostGIS, on peut retrouver le GeoJSON d'une géométrie grâce à la fonction [ST_AsGeoJSON](https://postgis.net/docs/ST_AsGeoJSON.html). Vous avez aussi le choix de renseigner la géométrie au format WKT grâce au champ `GEOM_WKT`.",
          "type": "geojson",
-	 "example": "{ \"type\": \"Feature\", \"geometry\": { \"type\": \"LineString\", \"coordinates\": [ [102.0, 0.0], [103.0, 1.0], [104.0, 0.0], [105.0, 1.0] ] }",
+	       "example": "{ \"type\": \"Feature\", \"geometry\": { \"type\": \"LineString\", \"coordinates\": [ [102.0, 0.0], [103.0, 1.0], [104.0, 0.0], [105.0, 1.0] ] }",
          "format": "default",
          "constraints": {
 		        "required": false
@@ -520,6 +519,7 @@
       },
       {
          "name":"GEOM_SOURCE",
+         "title":"Source de la géométrie",
          "description":"Source de la géométrie",
          "example":"Source de la donnée depuis laquelle la donnée a été extraite (OpenStreetMap, IGN,...).",
          "type": "string",
