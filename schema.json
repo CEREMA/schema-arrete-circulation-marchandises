@@ -398,7 +398,7 @@
       {
          "name":"PERIODE_JH",
          "title" : "Jours et heures de circulation",
-         "description":"Jours et heures de circulation autorisés pour la circulation exprimés selon le format OpeningHours d'OpenStreetMap ([https://wiki.openstreetmap.org/wiki/Key:opening_hours](https://wiki.openstreetmap.org/wiki/Key:opening_hours)). Ce format permet d'indiquer les week-ends (we), les jours fériés (PH) et les vacances scolaires (SH). Par exemple `Mo-Fr 09:00-17:00; PH 10:00-12:00; PH Su off` signifie : 'ouverture du lundi au vendredi de 9h à 17h sauf les jours fériés où l'ouverture est de 10h à 12h, à l'exception des jours fériés tombant un dimanche'",
+         "description":"Jours et heures de circulation autorisés pour la circulation exprimés selon le format OpeningHours d'OpenStreetMap ([https://wiki.openstreetmap.org/wiki/Key:opening_hours](https://wiki.openstreetmap.org/wiki/Key:opening_hours)). Ce format permet d'indiquer les week-ends (we), les jours fériés (PH) et les vacances scolaires (SH). Par exemple `Mo-Fr 09:00-17:00; PH 10:00-12:00; PH Su off` signifie : 'Du lundi au vendredi de 9h à 17h sauf les jours fériés où l'ouverture est de 10h à 12h, à l'exception des jours fériés tombant un dimanche'. `24/7` indique `Tous les jours`.",
          "example":"Mo-Fr 08:00-12:00,13:00-17:30; Sa 08:00-12:00; PH off",
          "type":"string",
          "constraints":{
@@ -479,7 +479,7 @@
 	   {
          "name":"INTERV_DUREE",
          "title" : "Durée maximale d'intervention",
-         "description":"Durée maximale d'intervention (au niveau d'une aire piétonne, par exemple).",
+         "description":"Durée maximale d'intervention (au niveau d'une aire piétonne, par exemple). L'entrée et la sortie dans une zone peuvent être horodatées à la délivrance d'un ticket lors de la traversée d'une borne de passage.",
          "example":"03:00:00",
          "type":"time",
          "constraints":{
