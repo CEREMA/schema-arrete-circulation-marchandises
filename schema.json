@@ -300,7 +300,7 @@
 	 "example": "Poids lourds|Véhicules utilitaires légers",
 	 "constraints":{
             "required": false,
-            "pattern" : "^(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules){1}(\\|(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules))*$"
+            "pattern" : "(?:(?:^|,)^(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules))+$"
             }
       },
       {
@@ -370,7 +370,7 @@
          "type":"string",
          "constraints":{
             "required": false,
-            "pattern" : "^(Electrique|Gaz Naturel pour Véhicules|Hydrogène){1}(\\|(Électrique|Gaz Naturel pour Véhicules|Hydrogène))*$"
+            "pattern" : "(?:(?:^|,)(Electrique|Gaz Naturel pour Véhicules|Hydrogène))+$"
          }
       },
       {
@@ -381,7 +381,7 @@
          "type":"string",
          "constraints":{
             "required": false,
-            "pattern": "^(100% électrique et Véhicules à hydrogène|1|2|3|4|5|Véhicule non classé){1}(\\|(100% électrique et Véhicules à hydrogène|1|2|3|4|5|Véhicule non classé))*$"
+            "pattern": "(?:(?:^|,)(100% électrique et Véhicules à hydrogène|1|2|3|4|5|Véhicule non classé))+$"
          }
       },
       {
