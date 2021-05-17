@@ -1,7 +1,8 @@
 # Changelog
 
 ## v0.4.0
-- Corrections apportées par Geoffrey Aldebert sur les regexes du schema.json + ajout d'un exemple valide.  
+- Corrections apportées par Geoffrey Aldebert sur les regexes du schema.json
+- Ajout d'un exemple valide.  
 - Intégration continue OK  
 
 ## v0.3.3
