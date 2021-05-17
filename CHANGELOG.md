@@ -1,9 +1,18 @@
 # Changelog
 
+## v0.4.1 (en cours)
+- Regex SIRET
+
 ## v0.4.0
 - Corrections apportées par Geoffrey Aldebert sur les regexes du schema.json
-- Ajout d'un exemple valide.  
-- Intégration continue OK  
+- Ajout d'un exemple valide dans resources
+- Intégration continue OK
+- Regex pour `ARR_INSEE`
+- Format `uri` pour `ARR_URL`
+- Regex multivalues sur le modèle de `(?:(?:^|,)^(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules))+$`
+- Nouveaux usages pour `VEH_USAGE`
+- Ajout de pattern pour `PERIODE_JH` : `(.*?)((\\d{1,2}:\\d{2})-(\\d{1,2}:\\d{2})|24/7)`
+- `ID` Primary Key
 
 ## v0.3.3
 - Ajout de ressources (`sources`)
