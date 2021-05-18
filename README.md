@@ -7,20 +7,20 @@ Ce schéma sur les arrêtés permanents de circulation a été construit en part
 </p>
 
 ## Explorez le schéma
-[Voir le schéma](schema.md)  
-[Voir le schéma (format TableSchema)](schema.json)  
-[Voir les champs du schéma (diagramme)](https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation/master/arrete-permanent-circulation.png) 
+[Documentation](schema.md)  
+[TableSchema](schema.json)  
+[Champs](diagramme)](https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation/master/arrete-permanent-circulation.png) 
 
 ## Utilisez le schéma
 [Conventions](A-PROPOS.md)  
-[Guide pour utiliser le schéma](GUIDE.md)  
-[Voir des exemples de données saisies selon le schéma](EXEMPLES.md)
+[Guide](GUIDE.md)  
+[Exemples](EXEMPLES.md)
 
 ## Contribuez au schéma
-[Un appel à contributions (Google Forms) vise à enrichir et consolider le référentiel des valeurs utilisées dans différentes listes de remplissage (types de véhicules, d'usages, de motorisations,...)](https://forms.gle/vUALzEDQqRsY2NgG9)
+[Appel à contributions (Google Forms) pour enrichir et consolider le référentiel des valeurs utilisées dans différentes listes de remplissage (types de véhicules, d'usages, de motorisations,...)](https://forms.gle/vUALzEDQqRsY2NgG9)
 
 ## Liens
-[Voir la proposition sur le github d'Etalab](https://github.com/etalab/schema.data.gouv.fr/issues/157)  
-[Voir la proposition sur le gitbook d'OpenDataFrance](https://opendatafrance.gitbook.io/fablog/territoires/chantiers/partage-des-donnees/standardisation/arretes-de-circulation)  
+[Proposition sur le github d'Etalab](https://github.com/etalab/schema.data.gouv.fr/issues/157)  
+[Proposition sur le gitbook d'OpenDataFrance](https://opendatafrance.gitbook.io/fablog/territoires/chantiers/partage-des-donnees/standardisation/arretes-de-circulation)  
 ## Changelog
 [Voir les évolutions du schéma](CHANGELOG.md)
