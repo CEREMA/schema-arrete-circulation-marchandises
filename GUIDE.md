@@ -16,6 +16,24 @@ REGL_MODALITE | VEH_TYPE | VEH_PTAC | VEH_USAGE |
  
  \> [Voir l'exemple de Septèmes-les-Vallons](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/EXEMPLES.md#commune-de-sept%C3%A8mes-les-vallons)
  
+## Commune entière
+Dans certains cas, le règlement s'applique à une commune entière.
+
+Voici un exemple :
+> La circulation est interdite sur toute la commune d'Aix-en-Provence
+
+REGL_MODALITE | ZONE_TYPE | ZONE_REF | SECTION_VOIE |
+ -- | -- | -- | -- |
+ Interdit | Commune entière | Aix-en-Provence | NC  |
+ 
+ Il est important de bien mettre la valeur `NC` dans la colonne `SECTION_VOIE` car cette colonne ne doit pas être laissée vide.
+ 
+ Il peut être plus approprié de mettre le code INSEE de la commune plutôt que son libellé.
+ 
+ REGL_MODALITE | ZONE_TYPE | ZONE_REF | SECTION_VOIE |
+ -- | -- | -- | -- |
+ Interdit | Commune entière | 13090 | NC  |
+ 
 ## Jours et horaires
 Les jours et horaires sont formalisés dans un champ [`PERIODE_JH`](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#jours-et-heures-de-circulation---propri%C3%A9t%C3%A9-periode_jh) au format [Opening Hours](https://wiki.openstreetmap.org/wiki/Key:opening_hours) d'OpenStreetMap.
 
