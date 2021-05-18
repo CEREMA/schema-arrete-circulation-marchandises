@@ -377,7 +377,7 @@
       {
          "name":"VEH_CQA",
          "title":"Vignettes crit'air",
-         "description":"Vignettes crit'air. Voir la [classification des vignettes Crit'Air](https://www.certificat-air.gouv.fr/docs/tableaux_classement.pdf) sur le site [certificat-air.gouv.fr](https://www.certificat-air.gouv.fr). Séparer les étiquettes CQA par le caractère '|'. 'NC' signifie que la valeur n'a pas été renseignée.",
+         "description":"Vignettes crit'air. Voir la [classification des vignettes Crit'Air](https://www.certificat-air.gouv.fr/docs/tableaux_classement.pdf) sur le site [certificat-air.gouv.fr](https://www.certificat-air.gouv.fr). Séparer les étiquettes CQA par le caractère '|'.",
          "example":"1|2|3",
          "type":"string",
          "constraints":{
@@ -410,12 +410,12 @@
       {
          "name":"SECTION_VOIE",
          "title" : "Nom de la voie",
-         "description":"Nom de la voie associée à la section règlementée. 'NC' si application à une commune, une ZFE (etc...). Voir pour cela le champ `ZONE_TYPE`.",
+         "description":"Nom de la voie associée à la section règlementée. Mettre `NC` si application à une commune, une ZFE (etc...). Voir pour cela le champ `ZONE_TYPE`.",
          "example":"Avenue Philippe Solari",
          "type":"string",
          "constraints":{
             "required":true,
-            "pattern" :"^[a-zA-Z0-9\\-\\'\\s\\d\\u00C0-\\u00FF]+$"
+            "pattern" :"^[a-zA-Z0-9\\-\\–\\'\\’\\s\\d\\u00C0-\\u00FF\\(\\)]+$"
          }
       },
       {
@@ -538,6 +538,6 @@
       }
     }
   ],
-   "missingValues": ["", "NA", "NaN", "NC", "N/A"],
+   "missingValues": ["", "NA", "NaN", "N/A"],
    "primaryKey":"ID"
 }
