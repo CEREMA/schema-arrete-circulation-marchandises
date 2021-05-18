@@ -58,3 +58,9 @@ Si vous avez les coordonnées, c'est encore mieux. Vous pouvez les mettre dans l
 REGL_MODALITE | VEH_TYPE | PTAC | SECTION_VOIE | SECTION_DEBUT_POINT | SECTION_FIN_POINT |
  -- | -- | -- | -- | -- | -- |
  Interdit | Poids lourds | 7.5 | avenue Nelson Mandela (RD59c) | 5.37229, 43.41060 | 5.36585, 43.40828 |
+ 
+Donner la géométrie de la rue règlementée est sans doute le plus utile. Si vous avez la géométrie de la portion de voie règlementée, alors vous pouvez l'intégrer dans le champ `GEOM_WKT` ou `GEOM_JSON`
+ 
+ REGL_MODALITE | VEH_TYPE | PTAC | GEOM_WKT |
+ -- | -- | -- | -- |
+ Interdit | Poids lourds | 7.5 |  LINESTRING(5.364190559467414 43.40726403502167,5.365317087253669 43.40776287238391,5.365896444400886 43.40825391140007,5.366218309482673 43.40833964796295,5.367977838596443 43.409150242196034,5.368761043628791 43.40969582836029,5.372162084659675 43.41060772569154) |
