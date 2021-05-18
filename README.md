@@ -12,7 +12,8 @@ Ce schéma sur les arrêtés permanents de circulation a été construit en part
 [Voir les champs du schéma (diagramme)](https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation/master/arrete-permanent-circulation.png) 
 
 ## Utilisez le schéma
-[A propos de ce schéma (conventions,...)](A-PROPOS.md)  
+[Conventions](A-PROPOS.md)  
+[Guide pour utiliser le schéma](GUIDE.md)  
 [Voir des exemples de données saisies selon le schéma](EXEMPLES.md)
 
 ## Contribuez au schéma
