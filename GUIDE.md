@@ -3,6 +3,8 @@ Dans certains cas, un arrêté peut autoriser la circulation de véhicules d'un 
 
 Afin de résoudre cette problématique autorisation/interdiction, le schéma propose un champ [`REGL_MODALITE`](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#propri%C3%A9t%C3%A9-regl_modalite) prenant comme valeurs `Autorise` ou `Interdit`
 
+Voici un exemple :
+
 > La circulation des poids lourds de plus de 3.5T est interdite, sauf les véhicules d'urgence et de livraison
 
 Nous créons deux lignes (une d'interdiction et une d'autorisation pour les exceptions) :
