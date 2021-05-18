@@ -1,5 +1,7 @@
 ### Autorisation ou Interdiction
-Dans certains cas, un arrêté peut autoriser la circulation de véhicules d'un certain type dans certaines plages horaires. Dans d'autres cas, il peut interdire. Afin de résoudre cette problématique autorisation/interdiction, le schéma propose un champ [`REGL_MODALITE`](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#propri%C3%A9t%C3%A9-regl_modalite) prenant comme valeurs `Autorise` ou `Interdit`
+Dans certains cas, un arrêté peut autoriser la circulation de véhicules d'un certain type. Dans d'autres cas, il peut interdire. Aussi, un arrêté peut autoriser un certain type de véhicules à l'exception de certains types. 
+
+Afin de résoudre cette problématique autorisation/interdiction, le schéma propose un champ [`REGL_MODALITE`](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#propri%C3%A9t%C3%A9-regl_modalite) prenant comme valeurs `Autorise` ou `Interdit`
 
 > La circulation des poids lourds de plus de 3.5T est interdite, sauf les véhicules d'urgence et de livraison
 
