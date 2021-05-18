@@ -53,7 +53,7 @@ REGL_MODALITE | VEH_TYPE | PTAC | SECTION_VOIE | SECTION_DEBUT_REF | SECTION_FIN
  -- | -- | -- | -- | -- | -- |
  Interdit | Poids lourds | 7.5 | avenue Nelson Mandela (RD59c) | intersection de la RD8n (Avenue du 8 mai 1945) | intersection de la route de Calas (RD 543) |
 
-Si vous avez les coordonnées, c'est encore mieux. Vous pouvez les mettre dans les champs `SECTION_DEBUT_POINT` et `SECTION_FIN_POINT`. Le format est `longitude, latitude`
+Si vous avez les coordonnées, c'est encore mieux. Vous pouvez les mettre dans les champs `SECTION_DEBUT_POINT` et `SECTION_FIN_POINT`. Le format est `longitude, latitude`. 5 décimales suffisent.
 
 REGL_MODALITE | VEH_TYPE | PTAC | SECTION_VOIE | SECTION_DEBUT_POINT | SECTION_FIN_POINT |
  -- | -- | -- | -- | -- | -- |
