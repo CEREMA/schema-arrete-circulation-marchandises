@@ -6,17 +6,17 @@ Ce schéma sur les arrêtés permanents de circulation a été construit en part
 <img src=https://gblobscdn.gitbook.com/spaces%2F-M8umwbbnQtktzDT0-5_%2Favatar-rectangle-1591200295956.png?alt=media width='30%'>
 </p>
 
-## Explorez le schéma
+## Explorez
 [Documentation](schema.md)  
 [TableSchema](schema.json)  
 [Champs (diagramme)](https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation/master/arrete-permanent-circulation.png) 
 
-## Utilisez le schéma
+## Utilisez
 [Conventions](A-PROPOS.md)  
 [Guide](GUIDE.md)  
 [Exemples](EXEMPLES.md)
 
-## Contribuez au schéma
+## Contribuez
 [Appel à contributions (types de véhicules, d'usages, de motorisations,...)](https://forms.gle/vUALzEDQqRsY2NgG9)
 
 ## Liens
