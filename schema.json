@@ -142,7 +142,7 @@
       {
          "name":"ARR_REF",
 	       "title": "Référence de l'arrêté",
-	       "description": "Référence ou numéro de l'arrêté auquel se réfère la règlementation. Si l'arrêté a été mis à jour, la référence doit être celle de l'arrêté mis à jour et non celle de l'arrêté originel. Si l'arrêté ne possède pas de référence, mettre la valeur `N/C`",
+	       "description": "Référence ou numéro de l'arrêté auquel se réfère la règlementation. Si l'arrêté a été mis à jour, la référence doit être celle de l'arrêté mis à jour et non celle de l'arrêté originel. Si l'arrêté ne possède pas de référence, mettre la valeur `NC`",
 	       "type": "string",
 	       "example": "AP-13090-12",
 	       "constraints": {
@@ -152,7 +152,7 @@
       {
          "name":"ARR_OBJET",
 	       "title": "Objet de l'arrêté",
-	       "description": "Objet ou titre de l'arrêté. Mettre `N/C` si l'arrêté ne comprend pas d'objet.",
+	       "description": "Objet ou titre de l'arrêté. Mettre `NC` si l'arrêté ne comprend pas d'objet.",
 	       "type": "string",
 	       "example": "Arrêté règlementant la circulation dans le quartier Mazarin et du palais de Justice",
 	       "constraints": {
