@@ -1,7 +1,8 @@
 ### Autorisation ou Interdiction
 Dans certains cas, un arrêté peut autoriser la circulation de véhicules d'un certain type dans certaines plages horaires. Dans d'autres cas, il peut interdire. Afin de résoudre cette problématique autorisation/interdiction, le schéma propose un champ [`REGL_MODALITE`](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#propri%C3%A9t%C3%A9-regl_modalite) prenant comme valeurs `Autorise` ou `Interdit`
 
-#### La circulation des poids lourds de plus de 3.5T est interdite, sauf les véhicules d'urgence et de livraison
+> La circulation des poids lourds de plus de 3.5T est interdite, sauf les véhicules d'urgence et de livraison
+
 Nous créons deux lignes (une d'interdiction et une d'autorisation pour les exceptions) :
 
 REGL_MODALITE | VEH_TYPE | VEH_PTAC | VEH_USAGE |
@@ -14,19 +15,25 @@ REGL_MODALITE | VEH_TYPE | VEH_PTAC | VEH_USAGE |
 ### Jours et horaires
 Les jours et horaires sont formalisés dans un champ [`PERIODE_JH`](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#jours-et-heures-de-circulation---propri%C3%A9t%C3%A9-periode_jh) au format [Opening Hours](https://wiki.openstreetmap.org/wiki/Key:opening_hours) d'OpenStreetMap.
 
-Voici quelques exemples de données : 
+Voici quelques exemples : 
 
-_Les véhicules d'urgence sont autorisés à circuler tous les jours_
+
+> Les véhicules d'urgence sont autorisés à circuler tous les jours
+
 REGL_MODALITE | VEH_USAGE | PERIODE_JH |
  -- | -- | -- |
  Autorise | Livraison | 24/7 |
 
-_Les véhicules d'approvisionnement des marchés sont autorisés à circuler le week-end de 9h à 12h et les jours fériés de 8h à 12h30_
+
+> Les véhicules d'approvisionnement des marchés sont autorisés à circuler le week-end de 9h à 12h et les jours fériés de 8h à 12h30
+
 REGL_MODALITE | VEH_USAGE | PERIODE_JH |
  -- | -- | -- |
  Autorise | Véhicules d'approvisionnement des marchés | Sa,Su 09:00-12:00;PH 08:00-12:30 |
  
-_Les véhicules transportant des matières dangereuses sont autorisés à circuler tous les jours sauf le week-end, de 10h à 12h, puis de 14h à 18h, mais pas pendant les vacances scolaires_
+ 
+> Les véhicules transportant des matières dangereuses sont autorisés à circuler tous les jours sauf le week-end, de 10h à 12h, puis de 14h à 18h, mais pas pendant les vacances scolaires
+
 REGL_MODALITE | VEH_USAGE | PERIODE_JH |
  -- | -- | -- |
  Autorise | Transport de matières dangereuses | Mo-Fr 10:00-12:00,14:00-18h;SH off |
@@ -34,5 +41,20 @@ REGL_MODALITE | VEH_USAGE | PERIODE_JH |
 \> [Voir l'exemple de Gignac-la-Nerthe
 ](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/EXEMPLES.md#commune-de-gignac-la-nerthe)
 
-### Début et fin
-Des champs [SECTION_DEBUT_POINT](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#d%C3%A9but-de-la-section---propri%C3%A9t%C3%A9-section_debut_point) et [SECTION_FIN_POINT](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#fin-de-la-section---propri%C3%A9t%C3%A9-section_fin_point) permettent de signaler les début et fin de chaque section règlementée sur la voie.
+### Début et fin de rue
+Les champs [SECTION_DEBUT_POINT](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#d%C3%A9but-de-la-section---propri%C3%A9t%C3%A9-section_debut_point) et [SECTION_FIN_POINT](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#fin-de-la-section---propri%C3%A9t%C3%A9-section_fin_point) permettent de signaler les début et fin de chaque section règlementée sur la voie.
+
+Voici quelques exemples : 
+
+
+> La circulation des véhicules de plus de 7,5T est interdite sur l'avenue Nelson Mandela (RD59c) de l'intersection de la RD8n (Avenue du 8 mai 1945) jusqu'à l'intersection de la route de Calas (RD 543)
+
+REGL_MODALITE | VEH_TYPE | PTAC | SECTION_VOIE | SECTION_DEBUT_REF | SECTION_FIN_REF |
+ -- | -- | -- | -- | -- | -- |
+ Interdit | Poids lourds | 7.5 | avenue Nelson Mandela (RD59c) | intersection de la RD8n (Avenue du 8 mai 1945) | intersection de la route de Calas (RD 543) |
+
+Si vous avez les coordonnées, c'est encore mieux. Vous pouvez les mettre dans les champs `SECTION_DEBUT_POINT` et `SECTION_FIN_POINT`. Le format est `longitude, latitude`
+
+REGL_MODALITE | VEH_TYPE | PTAC | SECTION_VOIE | SECTION_DEBUT_POINT | SECTION_FIN_POINT |
+ -- | -- | -- | -- | -- | -- |
+ Interdit | Poids lourds | 7.5 | avenue Nelson Mandela (RD59c) | 5.37229, 43.41060 | 5.36585, 43.40828 |
