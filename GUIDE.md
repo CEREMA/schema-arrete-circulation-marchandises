@@ -1,6 +1,6 @@
 Ce guide est là pour vous aider à renseigner les bases de données des arrêtés permanents de circulation.
 
-## Autorisation ou Interdiction
+## Autorisation, Interdiction et Interdiction sauf
 Dans certains cas, un arrêté peut autoriser la circulation de véhicules d'un certain type. Dans d'autres cas, il peut interdire. 
 Aussi, un arrêté peut interdire le passage d'un certain type de véhicules à l'exception de certains types. 
 
@@ -19,7 +19,7 @@ REGL_MODALITE | VEH_TYPE | VEH_PTAC | VEH_USAGE |
  
  \> [Voir l'exemple de Septèmes-les-Vallons](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/EXEMPLES.md#commune-de-sept%C3%A8mes-les-vallons)
  
-## Commune entière
+## Règlement appliqué à une commune entière
 Dans certains cas, le règlement s'applique à une commune entière.
 
 Voici un exemple :
@@ -37,7 +37,7 @@ REGL_MODALITE | ZONE_TYPE | ZONE_REF | SECTION_VOIE |
  -- | -- | -- | -- |
  Interdit | Commune entière | 13090 | NC  |
  
-## Jours et horaires
+## Renseigner les jours et horaires de circulation
 Les jours et horaires sont formalisés dans un champ [`PERIODE_JH`](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#jours-et-heures-de-circulation---propri%C3%A9t%C3%A9-periode_jh) au format [Opening Hours](https://wiki.openstreetmap.org/wiki/Key:opening_hours) d'OpenStreetMap.
 
 Voici quelques exemples : 
@@ -66,7 +66,7 @@ REGL_MODALITE | VEH_USAGE | PERIODE_JH |
 \> [Voir l'exemple de Gignac-la-Nerthe
 ](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/EXEMPLES.md#commune-de-gignac-la-nerthe)
 
-## Début et fin de rue
+## Une partie de la rue seulement est règlementée, pas toute la rue
 Si le champ [SECTION_VOIE](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema.md#nom-de-la-voie---propri%C3%A9t%C3%A9-section_voie) intègre le nom de la rue, les champs [SECTION_DEBUT_POINT](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#d%C3%A9but-de-la-section---propri%C3%A9t%C3%A9-section_debut_point) et [SECTION_FIN_POINT](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#fin-de-la-section---propri%C3%A9t%C3%A9-section_fin_point) permettent de signaler les début et fin de chaque section règlementée car dans certains cas, ce n'est pas toute la rue qui est règlementée, mais une partie comprise entre deux giratoires ou entre deux intersections, par exemple
 
 ### Libellés de voies et d'intersections
