@@ -11,7 +11,7 @@ Dans ce schéma, chaque entité (ligne du tableau) concerne une voie et un règl
 
 Sachant qu'un règlement peut concerner plusieurs voies et qu'une voie peut posséder plusieurs règlements, la donnée finale prendra la forme d'une donnée "aplatie" avec une duplication des lignes le long des multiples voies associées à un règlement, et le long des multiples règlements associés à une voie.
 
-Ci-dessous, un règlement, le règlement 1 s'applique à deux voies : les voies 1 et 2. Et 2 règlements s'appliquent à la voie 3.
+> Ci-dessous, le règlement 1 s'applique à deux voies : les voies 1 et 2. Et 2 règlements s'appliquent à la voie 3.
 
 Voie | Règlement |
  -- | -- |
