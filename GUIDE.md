@@ -93,4 +93,4 @@ Donner la géométrie de la rue règlementée est sans doute le plus utile. Si v
  ----
  
 [ Vous pouvez voir des exemples de saisies de données ici. Les images des arrêtés y sont également fournies.
-](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/GUIDE.md)
+](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/EXEMPLES.md)
