@@ -9,9 +9,10 @@ Dans ce schéma, les champs [GEOM_JSON](https://github.com/CEREMA/schema-arrete-
 ## Duplication
 Dans ce schéma, chaque entité (ligne du tableau) concerne une voie et un règlement associé. 
 
-Sachant qu'un règlement peut concerner plusieurs voies et qu'une voie peut posséder plusieurs règlements, et , la donnée finale prendra la forme d'une donnée "aplatie" avec une duplication des lignes le long des multiples voies associées à un règlement, et le long des multiples règlements associés à une voie.
+Sachant qu'un règlement peut concerner plusieurs voies et qu'une voie peut posséder plusieurs règlements, la donnée finale prendra la forme d'une donnée "aplatie" avec une duplication des lignes le long des multiples voies associées à un règlement, et le long des multiples règlements associés à une voie.
 
-Schématiquement, cela donne dans le tableau de données :
+Ci-dessous, un règlement, le règlement 1 s'applique à deux voies : les voies 1 et 2. Et 2 règlements s'appliquent à la voie 3.
+
 Voie | Règlement |
  -- | -- |
  Voie 1 | Regl1 |
