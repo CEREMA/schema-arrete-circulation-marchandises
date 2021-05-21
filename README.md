@@ -6,6 +6,8 @@ Ce schéma sur les arrêtés permanents de circulation a été construit en part
 <img src=https://gblobscdn.gitbook.com/spaces%2F-M8umwbbnQtktzDT0-5_%2Favatar-rectangle-1591200295956.png?alt=media width='30%'>
 </p>
 
+[Contexte](CONTEXTE.md)
+
 ## Explorez
 [Documentation](schema.md)  
 [TableSchema](schema.json)  
