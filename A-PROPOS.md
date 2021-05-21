@@ -4,14 +4,14 @@ Dans ce schéma, les champs sont écrits en majuscules. Le préfixe indique la f
 ![](https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation/master/arrete-permanent-circulation.png)
 
 ## Arrêtés, règlements et articles
-Un arrêté comprend plusieurs articles. Voire il arrive que des sous-articles soient compris dans un article. On peut ainsi voir l'article 4 et le sous-article 4 bis. Le règlement est contenu, soit dans l'article, soit dans le sous-article quand ce dernier existe.
+Un arrêté comprend plusieurs articles. Voire il arrive que des sous-articles soient compris dans un article. On peut ainsi voir l'article 4 et le sous-article 4 bis. Le règlement est contenu, soit dans l'article, soit dans le sous-article si ce dernier existe.
 
 Dans le schéma :
 
 - les infos relatives à l'**arrêté** (référence, date de création,...) sont dans les champs de préfixe `ARR_`.  
 - Les infos relatives au **règlement** (article ou sous-article qui le contient, autorisation ou interdiction) sont les champs de préfixe `REGL_`. 
 
-Le **considérant** (`ARR_CONSIDERANT`) d'un arrêté est la justification, la considération selon laquelle la règlementation s'applique (limitation du bruit à certaines heures, heures de marché,...). Ce dernier apparaît explicitement sous la forme _Considérant (...)_
+Le **considérant** (`ARR_CONSIDERANT`) d'un arrêté est la justification, la considération selon laquelle la règlementation s'applique (limitation du bruit à certaines heures, heures de marché,...). Ce dernier apparaît explicitement dans un arrêté sous la forme _Considérant (...)_
 
 ## Géométrie
 Dans ce schéma, les champs [GEOM_JSON](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#g%C3%A9om%C3%A9trie-au-format-geojson---propri%C3%A9t%C3%A9-geom_json) et [GEOM_WKT](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#g%C3%A9om%C3%A9trie-au-format-wkt---propri%C3%A9t%C3%A9-geom_wkt) permettent, au choix, d'intégrer la géométrie de la voie, ou de la portion de voie réglementée. Le support du WKT (Well Known Text) a été autorisé car ce dernier est plus familier dans les services SIG que le JSON.
