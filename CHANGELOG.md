@@ -8,7 +8,7 @@
 - Supprime `NC` des `missingValues`
 - Ajoute la regex `((?:(?:^|;\s?)(((((Mo|Tu|We|Th|Fr|Sa|Su|PH|SH)|(?:(?:|,)(Mo|Tu|We|Th|Fr|Sa|Su))+|((Mo|Tu|We|Th|Fr|Sa|Su)-(Mo|Tu|We|Th|Fr|Sa|Su))))\s((([0-1][0-9]|2[0-4]):([0-5][0-9]))-(([0-1][0-9]|2[0-4]):([0-5][0-9]))(,(([0-1][0-9]|2[0-4]):([0-5][0-9]))-(([0-1][0-9]|2[0-4]):([0-5][0-9])))?))|((Mo|Tu|We|Th|Fr|Sa|Su|PH|SH) off)|(sunrise-sunset)))+$|(24\/7))` pour le format Opening Hours utilisé dans le champ `PERIODE_JH`
 
-## v0.4.0 (corrections Etalab)
+## v0.4.0 (version Etalab)
 - Corrections apportées par Geoffrey Aldebert sur les regexes du schema.json
 - Ajout d'un exemple valide dans resources
 - Intégration continue OK
