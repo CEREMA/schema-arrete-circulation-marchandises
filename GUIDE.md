@@ -90,5 +90,7 @@ Donner la géométrie de la rue règlementée est sans doute le plus utile. Si v
  -- | -- | -- | -- |
  Interdit | Poids lourds | 7.5 |  LINESTRING(5.364190559467414 43.40726403502167,5.365317087253669 43.40776287238391,5.365896444400886 43.40825391140007,5.366218309482673 43.40833964796295,5.367977838596443 43.409150242196034,5.368761043628791 43.40969582836029,5.372162084659675 43.41060772569154) |
  
+ ----
+ 
 [ Vous pouvez voir des exemples de saisies de données ici. Les images des arrêtés y sont également fournies.
 ](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/GUIDE.md)
