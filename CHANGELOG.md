@@ -1,7 +1,12 @@
 # Changelog
 
 ## v0.4.1 (en cours)
-- Regex SIRET
+- Ajoute la regex SIRET
+- Remplace la valeur `N/C` par la valeur `NC`, plus simple, si pas de valeur
+- Choix du délimiteur `|` pour séparer des valeurs. Ex : `"(?:(?:^|\\|)^(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules))+$"`
+- Modifie la regex de `SECTION_VOIE` pour inclure les parenthèses (par ex. `Avenue Nelson Mandela (RD59c)`)
+- Supprime `NC` des `missingValues`
+- Ajoute la regex `((?:(?:^|;\s?)(((((Mo|Tu|We|Th|Fr|Sa|Su|PH|SH)|(?:(?:|,)(Mo|Tu|We|Th|Fr|Sa|Su))+|((Mo|Tu|We|Th|Fr|Sa|Su)-(Mo|Tu|We|Th|Fr|Sa|Su))))\s((([0-1][0-9]|2[0-4]):([0-5][0-9]))-(([0-1][0-9]|2[0-4]):([0-5][0-9]))(,(([0-1][0-9]|2[0-4]):([0-5][0-9]))-(([0-1][0-9]|2[0-4]):([0-5][0-9])))?))|((Mo|Tu|We|Th|Fr|Sa|Su|PH|SH) off)|(sunrise-sunset)))+$|(24\/7))` pour le format Opening Hours utilisé dans le champ `PERIODE_JH`
 
 ## v0.4.0 (corrections Etalab)
 - Corrections apportées par Geoffrey Aldebert sur les regexes du schema.json
