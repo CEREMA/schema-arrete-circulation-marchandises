@@ -69,8 +69,6 @@ REGL_MODALITE | VEH_USAGE | PERIODE_JH |
 ## Début et fin de rue
 Si le champ [SECTION_VOIE](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema.md#nom-de-la-voie---propri%C3%A9t%C3%A9-section_voie) intègre le nom de la rue, les champs [SECTION_DEBUT_POINT](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#d%C3%A9but-de-la-section---propri%C3%A9t%C3%A9-section_debut_point) et [SECTION_FIN_POINT](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#fin-de-la-section---propri%C3%A9t%C3%A9-section_fin_point) permettent de signaler les début et fin de chaque section règlementée car dans certains cas, ce n'est pas toute la rue qui est règlementée, mais une partie comprise entre deux giratoires ou entre deux intersections, par exemple
 
-Voici quelques exemples : 
-
 ### Libellés de voies et d'intersections
 > La circulation des véhicules de plus de 7,5T est interdite sur l'avenue Nelson Mandela (RD59c) de l'intersection de la RD8n (Avenue du 8 mai 1945) jusqu'à l'intersection de la route de Calas (RD 543)
 
@@ -91,3 +89,6 @@ Donner la géométrie de la rue règlementée est sans doute le plus utile. Si v
  REGL_MODALITE | VEH_TYPE | PTAC | GEOM_WKT |
  -- | -- | -- | -- |
  Interdit | Poids lourds | 7.5 |  LINESTRING(5.364190559467414 43.40726403502167,5.365317087253669 43.40776287238391,5.365896444400886 43.40825391140007,5.366218309482673 43.40833964796295,5.367977838596443 43.409150242196034,5.368761043628791 43.40969582836029,5.372162084659675 43.41060772569154) |
+ 
+[ Vous pouvez voir des exemples de saisies de données ici. Les images des arrêtés y sont également fournies.
+](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/GUIDE.md)
