@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.4.1 (en cours)
+## v0.4.1
 - Ajoute la regex SIRET
 - Remplace la valeur `N/C` par la valeur `NC`, plus simple, si pas de valeur
 - Choix du délimiteur `|` pour séparer des valeurs. Ex : `"(?:(?:^|\\|)^(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules))+$"`
