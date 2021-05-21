@@ -1,7 +1,8 @@
 Ce guide est là pour vous aider à renseigner les bases de données des arrêtés permanents de circulation.
 
 ## Autorisation ou Interdiction
-Dans certains cas, un arrêté peut autoriser la circulation de véhicules d'un certain type. Dans d'autres cas, il peut interdire. Aussi, un arrêté peut autoriser un certain type de véhicules à l'exception de certains types. 
+Dans certains cas, un arrêté peut autoriser la circulation de véhicules d'un certain type. Dans d'autres cas, il peut interdire. 
+Aussi, un arrêté peut interdire le passage d'un certain type de véhicules à l'exception de certains types. 
 
 Afin de résoudre cette problématique autorisation/interdiction, le schéma propose un champ [`REGL_MODALITE`](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#propri%C3%A9t%C3%A9-regl_modalite) prenant comme valeurs `Autorise` ou `Interdit`
 
