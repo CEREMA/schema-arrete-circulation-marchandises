@@ -21,8 +21,8 @@ Cas de plusieurs arrêtés pour une commune
 [📜 Arrêté 1](examples/vence1.png) | [📜 Arrêté 2](examples/vence2.png) | [Donnée CSV](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/examples/exemple-vence-valide.csv)
 
 ### Commune de Carros
-[📜 Arrêté](examples/carros.png) | Arrêté avec règlement associé à un certain nombre de rues (toutes les rues n'ont pas été transcrites dans le fichier CSV)  
-[Donnée CSV](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/examples/exemple-carros-valide.csv)
+Arrêté avec règlement associé à un certain nombre de rues (toutes les rues n'ont pas été transcrites dans le fichier CSV)   
+[📜 Arrêté](examples/carros.png) | [Donnée CSV](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/examples/exemple-carros-valide.csv)
 
 ### Commune de Fuveau
 Règlementation les jours de marché avec sens uniques de circulation  
