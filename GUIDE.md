@@ -66,7 +66,7 @@ REGL_MODALITE | VEH_USAGE | PERIODE_JH |
 \> [Voir l'exemple de Gignac-la-Nerthe
 ](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/EXEMPLES.md#commune-de-gignac-la-nerthe)
 
-## Une partie de la rue seulement est règlementée, pas toute la rue
+## Une portion de la rue est règlementée, pas toute la rue
 Si le champ [SECTION_VOIE](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema.md#nom-de-la-voie---propri%C3%A9t%C3%A9-section_voie) intègre le nom de la rue, les champs [SECTION_DEBUT_POINT](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#d%C3%A9but-de-la-section---propri%C3%A9t%C3%A9-section_debut_point) et [SECTION_FIN_POINT](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#fin-de-la-section---propri%C3%A9t%C3%A9-section_fin_point) permettent de signaler les début et fin de chaque section règlementée car dans certains cas, ce n'est pas toute la rue qui est règlementée, mais une partie comprise entre deux giratoires ou entre deux intersections, par exemple
 
 ### Libellés de voies et d'intersections
