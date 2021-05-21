@@ -1,7 +1,7 @@
 # Changelog
 
 ## v0.4.1
-- Ajoute la regex SIRET
+- Ajoute la regex pour `COLL_SIRET`
 - Remplace la valeur `N/C` par la valeur `NC`, plus simple, si pas de valeur
 - Choix du délimiteur `|` pour séparer des valeurs. Ex : `"(?:(?:^|\\|)^(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules))+$"`
 - Modifie la regex de `SECTION_VOIE` pour inclure les parenthèses (par ex. `Avenue Nelson Mandela (RD59c)`)
