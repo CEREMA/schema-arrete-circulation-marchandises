@@ -516,7 +516,7 @@
 	 "example":"LineString (5.39340184 45.56538751, 5.41017215 45.56722934, 5.42510063 45.5679079)",
          "constraints": {
 		        "required": false,
-		 "pattern": "(MULTI)?LINESTRING\(([0-9]|\.|-|,|\s|\(|\))*\)"
+		 "pattern": "(MULTI|multi)?(LINESTRING|linestring)\(((|,\\s?)\(((|,\\s?)(-?[0-9](\.[0-9]+)?\\s-?[0-9](\.[0-9]+)?))+\))+\)"
 		      }
       },
       {
