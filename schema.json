@@ -301,7 +301,7 @@
 	 "example": "Poids lourds|Véhicules utilitaires légers",
 	 "constraints":{
             "required": false,
-            "pattern" : "(?:(?:^|\\|)^(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules))+$"
+            "pattern" : "(?:(?:^|\\|)(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules))+$"
             }
       },
       {
