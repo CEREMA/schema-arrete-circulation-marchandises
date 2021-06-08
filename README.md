@@ -18,6 +18,10 @@ Ce schéma sur les arrêtés permanents de circulation a été construit en part
 [Guide](GUIDE.md)  
 [Exemples](EXEMPLES.md)
 
+## Assistant
+[Un assistant en ligne a été développé afin d'aider au remplissage de certains champs
+](https://cerema-med.shinyapps.io/assistant-arretes-alpha/)
+
 ## Contribuez
 [Appel à contributions (types de véhicules, d'usages, de motorisations,...)](https://forms.gle/vUALzEDQqRsY2NgG9)
 
