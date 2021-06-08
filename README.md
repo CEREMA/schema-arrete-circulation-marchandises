@@ -20,7 +20,7 @@ Ce schéma sur les arrêtés permanents de circulation a été construit en part
 
 ## Assistant
 [Un assistant en ligne a été développé afin d'aider au remplissage de certains champs
-](https://cerema-med.shinyapps.io/assistant-arretes-alpha/)
+](https://cerema-med.shinyapps.io/assistant-arretes-alpha/)  
 _Ce dernier est encore en phase de Preuve de Concept_
 
 ## Contribuez
