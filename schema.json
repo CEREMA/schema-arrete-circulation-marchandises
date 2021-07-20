@@ -1,8 +1,8 @@
 {
    "$schema":"https://specs.frictionlessdata.io/schemas/table-schema.json",
-   "name":"arrete-permanent-circulation",
-   "title":"Schéma des arrêtés permanents de circulation",
-   "description":"Spécification du fichier d'échange relatif aux arrêtés permanents de circulation gérés par les collectivités.",
+   "name":"arrete-circulation-marchandises",
+   "title":"Schéma des arrêtés permanents de circulation pour le transport de marchandises",
+   "description":"Spécification du fichier d'échange relatif aux arrêtés permanents de circulation pour le transport de marchandises gérés par les collectivités.",
    "keywords":[
       "mobility",
       "city",
@@ -170,40 +170,12 @@
            }
       },
       {
-         "name":"ARR_DATE_CREATION",
-         "title" : "Date de création de l'arrêté",
+         "name":"ARR_DATE",
+         "title" : "Date de l'arrêté",
          "description":"Date de création ou de mise à jour de l'arrêté, au format ISO 8601 AAAA-MM-DD.",
          "example":"2021-04-30",
          "type":"date",
          "format":"%Y-%m-%d",
-         "constraints":{
-            "required":true
-         }
-      },
-      {
-         "name":"ARR_EST_MAJ",
-         "title" : "Arrêté mis à jour ?",
-         "description":"Spécifie si l'arrêté a été l'objet d'une mise à jour. Dans ce cas, remplir la nouvelle référence de l'arrêté dans `ARR_REF`.",
-         "example":"TRUE",
-         "type":"boolean",
-         "trueValues":[
-	        "true",
-	        "True",
-	        "TRUE",
-	        "1",
-	        "vrai",
-	        "Vrai",
-	        "VRAI"
-	      ],
-	      "falseValues":[
-	        "false",
-	        "False",
-	        "FALSE",
-	        "0",
-	        "faux",
-	        "Faux",
-	        "FAUX"
-	      ],
          "constraints":{
             "required":true
          }
@@ -265,33 +237,6 @@
 		          "Interdit"
 		        ]
 		      }
-      },
-      {
-         "name":"ZONE_TYPE",
-         "description":"Type de zone",
-         "example":"Type de zone associé à la règlementation. Si la zone est une commune (valeur 'Commune'), alors le règlement s'applique à toute la commune.",
-         "type": "string",
-		      "example": "Quartier",
-		      "constraints": {
-		        "required": false,
-		        "enum": [
-		          "Arrondissement",
-		          "Commune entière",
-              		  "Zone à Faible Émission",
-                          "Zone IRIS INSEE",
-                          "Aire piétonne"
-		        ]
-		      }
-      },
-      {
-         "name":"ZONE_REF",
-	       "title": "Nom ou identifiant de la zone associée à la règlementation",
-	       "description": "Nom ou identifiant de la zone associée à la règlementation (nom du quartier, arrondissement, identifiant ZFE, identifiant IRIS...).",
-	       "type": "string",
-	       "example": "Quartier Mazarin",
-	       "constraints": {
-	         "required": false
-           }
       },
       {
          "name":"VEH_TYPE",
@@ -359,8 +304,7 @@
          "example":"Bennes à ordures ménagères|Véhicules de police",
          "type":"string",
          "constraints":{
-            "required": false,
-            "pattern": "(?:(?:^|\\|)(Autocars|Citernes|Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Riverains|Services publics|Taxis|Transport de carburant|Transport de denrées animales ou végétales|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Transports en commun|Véhicules d'approvisionnement des marchés|Véhicules effectuant du transport exceptionnel au sens de l'article R.433-1 du code de la route et munis d'une autorisation préfectorale|Véhicules de police|Véhicules de secours|Véhicules destinés à l'entretien de la voirie ou à la collecte des déchets|Véhicules de transport de matériaux|Véhicules de travaux|Véhicules municipaux|Véhicules munis d'une autorisation|Véhicules porte-voitures|Voitures de transport avec chauffeur))+$"
+            "required": false
          }
       },
    {
@@ -408,7 +352,7 @@
          }
       },
       {
-         "name":"SECTION_VOIE",
+         "name":"EMPRISE_DESIGNATION",
          "title" : "Nom de la voie",
          "description":"Nom de la voie associée à la section règlementée. Mettre `NC` si application à une commune, une ZFE (etc...). Voir pour cela le champ `ZONE_TYPE`.",
          "example":"Avenue Philippe Solari",
@@ -419,7 +363,7 @@
          }
       },
       {
-         "name":"SECTION_SENS",
+         "name":"EMPRISE_SENS",
          "title":"Direction ou sens de circulation",
          "description":"Direction ou sens de circulation associé à la règlementation. Pair : concerne la circulation le long des adresses à chiffre pair. `Nord` signifie vers le Nord, soit \"vers le haut\".",
          "type": "string",
@@ -438,44 +382,24 @@
 		      }
       },
       {
-         "name":"SECTION_DEBUT_POINT",
+         "name":"EMPRISE_DEBUT",
          "title":"Début de la section",
-         "description":"Coordonnées du point indiquant l'endroit où commence la règlementation sur la voie. A noter sous la forme 'long, lat', par exemple '43.53591,5.42101' ou '43.53591, 5.42101'. 5 ou 6 décimales sont conseillées.",
-         "type": "geopoint",
-         "format": "default",
-	 "constraints": {
-		        "required": false
-		        }
-      },
-      {
-         "name":"SECTION_DEBUT_REF",
-         "title":"Début de la section (texte)",
-         "description":"Indication de l'endroit à partir duquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Par exemple, une adresse ou une indication textuelle : 'au croisement de la rue', 'depuis le rond-point'. Les coordonnées GPS, elles, doivent être indiquées dans le champ `SECTION_DEBUT_POINT`.",
+         "description":"Indication de l'endroit à partir duquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Par exemple, une adresse ou une indication textuelle : 'au croisement de la rue', 'depuis le rond-point'.Ou bien coordonnées du point de l'endroit où commence la règlementation sur la voie. A noter sous la forme 'long, lat', par exemple '43.53591,5.42101' ou '43.53591, 5.42101'. 5 ou 6 décimales sont conseillées.",
          "type": "string",
-         "example": "22 avenue Philippe Solari",
+         "example" : "22 avenue Philippe Solari, Croisement de l'avenue Philippe Solari avec la rue Gaston de Saporta",
          "constraints": {
-		        "required": false
-		        }
+           "required": false
+          }
       },
       {
-         "name":"SECTION_FIN_POINT",
+         "name":"EMPRISE_FIN",
          "title":"Fin de la section",
-         "description":"Point indiquant l'endroit où commence la règlementation sur la voie. A noter sous la forme 'long, lat', par exemple '43.53591,5.42101' ou '43.53591, 5.42101'. 5 ou 6 décimales sont conseillées.",
-         "type": "geopoint",
-         "format": "default",
-	 "constraints": {
-		        "required": false
-		        }
-      },
-      {
-         "name":"SECTION_FIN_REF",
-         "title":"Fin de la section (texte)",
-         "description":"Indication de l'endroit jusqu'auquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Par exemple, une adresse ou une indication textuelle : 'au croisement de la rue', 'depuis le rond-point'. Les coordonnées GPS, elles, doivent être indiquées dans le champ `SECTION_DEBUT_POINT`.",
+         "description":"Indication de l'endroit jusqu'auquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Par exemple, une adresse ou une indication textuelle : 'au croisement de la rue', 'depuis le rond-point'.Ou bien coordonnées du point de l'endroit où finit la règlementation sur la voie. A noter sous la forme 'long, lat', par exemple '43.53591,5.42101' ou '43.53591, 5.42101'. 5 ou 6 décimales sont conseillées.",
          "type": "string",
-         "example": "Croisement avec la rue Gaston de Saporta",
+         "example" : "22 avenue Philippe Solari, Croisement de l'avenue Philippe Solari avec la rue Gaston de Saporta",
          "constraints": {
-		        "required": false
-		        }
+           "required": false
+         }
       },
 	   {
          "name":"INTERV_DUREE",
@@ -498,25 +422,14 @@
          }
       },
       {
-         "name":"GEOM_JSON",
-         "title":"Géométrie au format GeoJSON",
-         "description":"Géométrie de la ligne exprimée au format [GeoJSON](https://fr.wikipedia.org/wiki/GeoJSON)  sous le système de projection WGS84 (EPSG:4326). Le GeoJSON, de l'anglais Geographic JSON, signifiant littéralement JSON géographique, est un format ouvert d'encodage d'ensemble de données géospatiales simples utilisant la norme JSON (JavaScript Object Notation). Objet de type `LineString` souhaité. Sous PostGIS, on peut retrouver le GeoJSON d'une géométrie grâce à la fonction [ST_AsGeoJSON](https://postgis.net/docs/ST_AsGeoJSON.html). Vous avez aussi le choix de renseigner la géométrie au format WKT grâce au champ `GEOM_WKT`.",
-         "type": "geojson",
-	       "example": "{ \"type\": \"Feature\", \"geometry\": { \"type\": \"LineString\", \"coordinates\": [ [102.0, 0.0], [103.0, 1.0], [104.0, 0.0], [105.0, 1.0] ] }",
-         "format": "default",
-         "constraints": {
-		        "required": false
-		      }
-      },
-      {
          "name":"GEOM_WKT",
          "title":"Géométrie au format WKT",
          "description":"Géométrie de la ligne exprimée au format [WKT (Well Know Text](https://fr.wikipedia.org/wiki/Well-known_text) sous le système de projection WGS84 (EPSG:4326). Sous QGIS ou PostGIS, il est particulièrement aisé de retrouver le WKT d'une géométrie (fonction `geom_to_wkt` sous QGIS et fonction [`ST_As_Text`](https://postgis.net/docs/ST_AsText.html) sous PostGIS). Vous avez aussi le choix de renseigner la géométrie au format GeoJSON grâce au champ `GEOM_JSON`.",
          "type": "string",
-	 "example":"LineString (5.39340184 45.56538751, 5.41017215 45.56722934, 5.42510063 45.5679079)",
+         "example":"LineString (5.39340184 45.56538751, 5.41017215 45.56722934, 5.42510063 45.5679079)",
          "constraints": {
-		        "required": false
-		      }
+          "required": false
+        }
       },
       {
          "name":"GEOM_SOURCE",
@@ -525,9 +438,9 @@
          "example":"Source de la donnée depuis laquelle la donnée a été extraite (OpenStreetMap, IGN,...).",
          "type": "string",
          "example": "BDTOPO IGN 2021",
-	 "constraints": {
-		        "required": false
-		      }
+         "constraints": {
+           "required": false
+         }
       }
    ],
    "custom_checks": [
