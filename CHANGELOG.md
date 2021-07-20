@@ -1,14 +1,29 @@
 # Changelog
 
+## v0.5.0
+- Renommage du schéma en arrete-circulation-marchandises
+- `ARR_DATE_CREATION` devient ARR_DATE
+- Suppression de `ARR_DATE_MAJ`
+- Suppression de `ZONE_TYPE`
+- Suppression de `ZONE_REF`
+- Correction de la regex de `VEH_TYPE`
+- Suppression de la regex pattern de `VEH_USAGE`
+- `SECTION_VOIE` devient `EMPRISE_DESIGNATION` (englobe les voies et les communes entières)
+- `SECTION_SENS` devient `EMPRISE_SENS`
+- `SECTION_DEBUT_*` devient `EMPRISE_DEBUT`
+- `SECTION_FIN_*` devient `EMPRISE_FIN`
+- Suppression de `GEOM_JSON`
+- Regex pattern pour `GEOM_WKT`
+
 ## v0.4.1
-- Ajoute la regex pour `COLL_SIRET`
+- Ajoute la regex SIRET
 - Remplace la valeur `N/C` par la valeur `NC`, plus simple, si pas de valeur
 - Choix du délimiteur `|` pour séparer des valeurs. Ex : `"(?:(?:^|\\|)^(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules))+$"`
 - Modifie la regex de `SECTION_VOIE` pour inclure les parenthèses (par ex. `Avenue Nelson Mandela (RD59c)`)
 - Supprime `NC` des `missingValues`
 - Ajoute la regex `((?:(?:^|;\s?)(((((Mo|Tu|We|Th|Fr|Sa|Su|PH|SH)|(?:(?:|,)(Mo|Tu|We|Th|Fr|Sa|Su))+|((Mo|Tu|We|Th|Fr|Sa|Su)-(Mo|Tu|We|Th|Fr|Sa|Su))))\s((([0-1][0-9]|2[0-4]):([0-5][0-9]))-(([0-1][0-9]|2[0-4]):([0-5][0-9]))(,(([0-1][0-9]|2[0-4]):([0-5][0-9]))-(([0-1][0-9]|2[0-4]):([0-5][0-9])))?))|((Mo|Tu|We|Th|Fr|Sa|Su|PH|SH) off)|(sunrise-sunset)))+$|(24\/7))` pour le format Opening Hours utilisé dans le champ `PERIODE_JH`
 
-## v0.4.0 (version Etalab)
+## v0.4.0 (corrections Etalab)
 - Corrections apportées par Geoffrey Aldebert sur les regexes du schema.json
 - Ajout d'un exemple valide dans resources
 - Intégration continue OK
