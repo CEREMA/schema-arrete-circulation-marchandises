@@ -359,8 +359,8 @@
       {
          "name":"EMPRISE_DESIGNATION",
          "title" : "Nom de la voie",
-         "description":"Nom de la voie associée à la section règlementée. Mettre `NC` si application à une commune, une ZFE (etc...). Voir pour cela le champ `ZONE_TYPE`.",
-         "example":"Avenue Philippe Solari",
+         "description":"Nom de la voie, ou de la zone associée à la section règlementée.",
+         "example":"Avenue Philippe Solari, Commune d'Aix-en-Provence, Quartier Mazarin",
          "type":"string",
          "constraints":{
             "required":true,
