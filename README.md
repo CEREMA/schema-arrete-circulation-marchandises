@@ -18,6 +18,9 @@ Ce schéma sur les arrêtés permanents de circulation en ville pour le transpor
 [Guide](GUIDE.md)  
 [Exemples](EXEMPLES.md)
 
+## Référentiels de valeurs
+[Usages de véhicules (VEH_USAGES)](référentiels/VEH_USAGES.csv)
+
 <!--
 ## Assistant
 [Un assistant en ligne a été développé afin d'aider au remplissage de certains champs
