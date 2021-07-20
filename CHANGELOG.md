@@ -2,7 +2,7 @@
 
 ## v0.5.0
 - Renommage du schéma en arrete-circulation-marchandises
-- `ARR_DATE_CREATION` devient ARR_DATE
+- `ARR_DATE_CREATION` devient `ARR_DATE`
 - Suppression de `ARR_DATE_MAJ`
 - Suppression de `ZONE_TYPE`
 - Suppression de `ZONE_REF`
