@@ -246,7 +246,7 @@
 	 "example": "Poids lourds|Véhicules utilitaires légers",
 	 "constraints":{
             "required": false,
-            "pattern" : "(?:(?:^|\\|)^(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules))+$"
+            "pattern" : "(?:(?:^|\\|)(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules))+$"
             }
       },
       {
@@ -304,7 +304,12 @@
          "example":"Bennes à ordures ménagères|Véhicules de police",
          "type":"string",
          "constraints":{
+<<<<<<< HEAD
             "required": false
+=======
+            "required": false,
+            "pattern": "(?:(?:^|\\|)(Citernes|Convois funéraires|Bennes à ordures ménagères|Commerçant nomade|Commerçant sédentaire|Desserte locale : déménageur|Livraison|Poids lourds d'urgence|Professions médicales|Services publics|Transport de carburant|Transport de denrées animales ou végétales|Transport de fonds|Transport de gaz|Transport de matières dangereuses|Véhicules d'approvisionnement des marchés|Véhicules effectuant du transport exceptionnel au sens de l'article R.433-1 du code de la route et munis d'une autorisation préfectorale|Véhicules de police|Véhicules de secours|Véhicules destinés à l'entretien de la voirie ou à la collecte des déchets|Véhicules de transport de matériaux|Véhicules de travaux|Véhicules municipaux|Véhicules munis d'une autorisation|Véhicules porte-voitures))+$"
+>>>>>>> c7afae8ab2abdac17659dd28cfdcf414a07c7030
          }
       },
    {
@@ -428,8 +433,14 @@
          "type": "string",
          "example":"LineString (5.39340184 45.56538751, 5.41017215 45.56722934, 5.42510063 45.5679079)",
          "constraints": {
+<<<<<<< HEAD
           "required": false
         }
+=======
+		        "required": false,
+		 "pattern": "(MULTI|multi)?(LINESTRING|linestring)\\(((|,\\s?)\\(((|,\\s?)(-?[0-9](\\.[0-9]+)?\\s-?[0-9](\\.[0-9]+)?))+\\))+\\)"
+		      }
+>>>>>>> c7afae8ab2abdac17659dd28cfdcf414a07c7030
       },
       {
          "name":"GEOM_SOURCE",
