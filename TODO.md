@@ -1,11 +1,12 @@
+### 20 Juillet 2021
+- [ ] Parler du formatage UTF-8
+- [ ] Parler de la création du CSV et du délimiteur utilisé
+- [ ] Revoir le contenu de VEH_USAGES.csv
+
 ### schema.json
 - [x] créer un exemple valide
 - demander la nomination d'une ressource de type arrêté, une description du schéma
 - [x] demander si Nicolas Berthelot souhaite être inclus dans la liste
-
-### 20 Juillet 2021
-- [ ] Parler du formatage UTF-8
-- [ ] Parler de la création du CSV et du délimiteur utilisé
 
 ### Fields
 - Mettre des points à la fin ?
