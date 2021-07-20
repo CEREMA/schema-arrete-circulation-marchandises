@@ -239,12 +239,12 @@
 		      }
       },
       {
-         "name":"VEH_TYPE",
-         "description":"Type de véhicule",
-         "example":"Type de véhicule",
+         "name":"VEH_TYPES",
+         "description":"Types de véhicule",
+         "example":"Types de véhicule",
          "type": "string",
-	 "example": "Poids lourds|Véhicules utilitaires légers",
-	 "constraints":{
+         "example": "Poids lourds|Véhicules utilitaires légers",
+         "constraints":{
             "required": false,
             "pattern" : "(?:(?:^|\\|)(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules))+$"
             }
@@ -298,9 +298,9 @@
            }
       },
       {
-         "name":"VEH_USAGE",
-         "title":"Type d'usage",
-         "description":"Type d'usage du véhicule. Séparer les valeurs par le caractère '|'.",
+         "name":"VEH_USAGES",
+         "title":"Types d'usage",
+         "description":"Types d'usage de véhicule. Séparer les valeurs par le caractère '|'.",
          "example":"Bennes à ordures ménagères|Véhicules de police",
          "type":"string",
          "constraints":{
@@ -308,9 +308,9 @@
          }
       },
    {
-         "name":"VEH_MOTOR",
-         "title":"Type de motorisation",
-         "description":"Type de motorisation du véhicule. Séparer les valeurs par le caractère '|'.",
+         "name":"VEH_MOTORS",
+         "title":"Types de motorisation",
+         "description":"Types de motorisation. Séparer les valeurs par le caractère '|'.",
          "example":"Électrique|Hydrogène",
          "type":"string",
          "constraints":{
@@ -319,7 +319,7 @@
          }
       },
       {
-         "name":"VEH_CQA",
+         "name":"VEH_CQAS",
          "title":"Vignettes crit'air",
          "description":"Vignettes crit'air. Voir la [classification des vignettes Crit'Air](https://www.certificat-air.gouv.fr/docs/tableaux_classement.pdf) sur le site [certificat-air.gouv.fr](https://www.certificat-air.gouv.fr). Séparer les étiquettes CQA par le caractère '|'.",
          "example":"1|2|3",

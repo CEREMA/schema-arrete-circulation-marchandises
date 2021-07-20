@@ -14,6 +14,10 @@
 - `SECTION_FIN_*` devient `EMPRISE_FIN`
 - Suppression de `GEOM_JSON`
 - Regex pattern pour `GEOM_WKT`
+- `VEH_TYPE` devient `VEH_TYPES`
+- `VEH_MOTOR` devient `VEH_MOTORS`
+- `VEH_USAGE` devient `VEH_USAGES`
+- `VEH_CQA` devient `VEH_CQAS`
 
 ## v0.4.1
 - Ajoute la regex SIRET

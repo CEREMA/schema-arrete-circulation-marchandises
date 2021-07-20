@@ -1,5 +1,5 @@
 :: exemple générique
-C:\Python39\Scripts\frictionless validate --schema schema.json examples\exemple-valide.csv
+C:\Python39\Scripts\frictionless validate --schema schema.json exemple-valide.csv
 
 :: exemples
 C:\Python39\Scripts\frictionless validate --schema schema.json examples\exemple-carros-valide.csv
