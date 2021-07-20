@@ -6,13 +6,13 @@
 
 ### schema.json
 - [x] créer un exemple valide
-- demander la nomination d'une ressource de type arrêté, une description du schéma
+- [ ] demander la nomination d'une ressource de type arrêté, une description du schéma
 - [x] demander si Nicolas Berthelot souhaite être inclus dans la liste
 
 ### Fields
-- Mettre des points à la fin ?
+- [ ] Mettre des points à la fin ?
 - [x] Voir le regex des URLs
-- Obligé de mettre constraint required si false ?
+- [ ] Obligé de mettre constraint required si false ?
 - [x] Voir les autres contraintes (clé primaire, etc...)
 - [x] Voir les valeurs par défaut => n'existe pas dans le table schema
 - [x] number ou integer
