@@ -14,7 +14,9 @@ Dans le schéma :
 Le **considérant** (`ARR_CONSIDERANT`) d'un arrêté est la justification, la considération selon laquelle la règlementation s'applique (limitation du bruit à certaines heures, heures de marché,...). Ce dernier apparaît explicitement dans un arrêté sous la forme _Considérant (...)_
 
 ## Géométrie
-Dans ce schéma, les champs [GEOM_JSON](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#g%C3%A9om%C3%A9trie-au-format-geojson---propri%C3%A9t%C3%A9-geom_json) et [GEOM_WKT](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#g%C3%A9om%C3%A9trie-au-format-wkt---propri%C3%A9t%C3%A9-geom_wkt) permettent, au choix, d'intégrer la géométrie de la voie, ou de la portion de voie réglementée. Le support du WKT (Well Known Text) a été autorisé car ce dernier est plus familier dans les services SIG que le JSON.
+Dans ce schéma, le champ [GEOM_WKT](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#g%C3%A9om%C3%A9trie-au-format-wkt---propri%C3%A9t%C3%A9-geom_wkt) permet d'intégrer la géométrie de la voie, ou de la portion de voie réglementée au format WKT. Le support du WKT (Well Known Text) a été préféré au JSON car davantage utilisé dans les services SIG et de digitalisation.
+
+On peut utiliser [l'assistant](https://cerema-med.shinyapps.io/assistant-arretes-alpha/) pour géoréférencer des rues et en récupérer la géométrie WKT (disponible que sur PACA pour le moment).
 
 ## Duplication
 Dans ce schéma, chaque entité (ligne du tableau) concerne une voie et un règlement associé. 
