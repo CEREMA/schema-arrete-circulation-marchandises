@@ -9,7 +9,7 @@ Ce schéma sur les arrêtés permanents de circulation en ville pour le transpor
 ## Explorez le schéma
 [Documentation](schema-page.md)  
 [TableSchema](schema.json)  
-[Champs (diagramme)](https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation/master/arrete-permanent-circulation.png) 
+[Champs (diagramme)](https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation/master/mindmaps/arrete-permanent-circulation.png) 
 
 ## À propos du schéma
 [Contexte](CONTEXTE.md)  
