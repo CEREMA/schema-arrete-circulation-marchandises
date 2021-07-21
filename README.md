@@ -6,15 +6,17 @@ Ce schéma sur les arrêtés permanents de circulation en ville pour le transpor
 <img src=https://gblobscdn.gitbook.com/spaces%2F-M8umwbbnQtktzDT0-5_%2Favatar-rectangle-1591200295956.png?alt=media width='30%'>
 </p>
 
-[Contexte](CONTEXTE.md)
-
-## Explorez
+## Explorez le schéma
 [Documentation](schema-page.md)  
 [TableSchema](schema.json)  
 [Champs (diagramme)](https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation/master/arrete-permanent-circulation.png) 
 
-## Utilisez
-[Conventions](A-PROPOS.md)  
+## À propos du schéma
+[Contexte](CONTEXTE.md)  
+[Conventions utilisées](A-PROPOS.md)  
+[Format de fichier et recommandations](FORMAT.md)
+
+## Produisez des données selon le schéma
 [Guide](GUIDE.md)
 
 ## Référentiels de valeurs
