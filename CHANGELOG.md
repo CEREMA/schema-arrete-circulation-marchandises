@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.5.0
+## v0.5.0 (retour enquête + réunion, simplification du schéma)
 - Renommage du schéma en arrete-circulation-marchandises
 - `ARR_DATE_CREATION` devient `ARR_DATE`
 - Suppression de `ARR_DATE_MAJ`
