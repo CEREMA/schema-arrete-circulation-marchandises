@@ -129,17 +129,6 @@
          }
       },
       {
-         "name":"COLL_SIRET",
-	       "title": "Code SIRET de la collectivité",
-	       "description": "Identifiant du [Système d'Identification du Répertoire des Etablissements](https://fr.wikipedia.org/wiki/Syst%C3%A8me_d%27identification_du_r%C3%A9pertoire_des_%C3%A9tablissements) (SIRET) de la collectivité sur le territoire de laquelle sont situés les équipements collectifs publics répertoriés dans le jeu de données. Il est composé de 9 chiffres SIREN + 5 chiffres NIC d’un seul tenant.",
-	       "type": "string",
-	       "example": "22940028800010",
-	       "constraints": {
-	         "required": false,
-		 "pattern": "^\\d{14}$"
-	       }
-      },
-      {
          "name":"ARR_REF",
 	       "title": "Référence de l'arrêté",
 	       "description": "Référence ou numéro de l'arrêté auquel se réfère la règlementation. Si l'arrêté a été mis à jour, la référence doit être celle de l'arrêté mis à jour et non celle de l'arrêté originel. Si l'arrêté ne possède pas de référence, mettre la valeur `NC`",
@@ -444,14 +433,6 @@
          }
       }
    ],
-   "custom_checks": [
-    {
-      "name": "french-siret-value",
-      "params": {
-        "column": "COLL_SIRET"
-      }
-    }
-  ],
    "missingValues": ["", "NA", "NaN", "N/A"],
    "primaryKey":"ID"
 }

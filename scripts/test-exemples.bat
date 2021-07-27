@@ -1,3 +1,6 @@
+:: schéma seul
+C:\Python39\Scripts\frictionless validate --type schema ..\schema.json
+
 :: exemple générique
 C:\Python39\Scripts\frictionless validate --schema ../schema.json ../exemple-valide.csv
 
