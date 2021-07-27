@@ -354,8 +354,8 @@
       {
          "name":"EMPRISE_DESIGNATION",
          "title" : "Nom de la voie",
-         "description":"Nom de la voie, ou de la zone associée à la section règlementée.",
-         "example":"Avenue Philippe Solari, Commune d'Aix-en-Provence, Quartier Mazarin",
+         "description":"Nom de la voie, ou de la zone associée à la section règlementée. La zone peut être une aire piétonne, un quartier, une zone ZFE ([voir le schéma des ZFE](https://schema.data.gouv.fr/etalab/schema-zfe/latest.html)",
+         "example":"Avenue Philippe Solari, Commune d'Aix-en-Provence, Quartier Mazarin, 200046977-ZFE-001",
          "type":"string",
          "constraints":{
             "required":true,
