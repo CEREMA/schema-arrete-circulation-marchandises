@@ -7,25 +7,24 @@ Ce schéma sur les arrêtés permanents de circulation en ville pour le transpor
 </p>
 
 ## Explorez le schéma
-[Documentation](documentation/schema-page.md)  
-[TableSchema](schema.json)  
-[Champs (diagramme)](https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation/master/mindmaps/arrete-permanent-circulation.png) 
+[Documentation lisible du schéma](documentation/schema-page.md)  
+[TableSchema (schema.json)](schema.json)  
+[Diagramme des champs sous forme de carte mentale](https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation/master/mindmaps/arrete-permanent-circulation.png) 
 
 ## À propos du schéma
-[Contexte](CONTEXTE.md)  
-[Conventions utilisées](A-PROPOS.md)  
+[Contexte entourant le schéma](CONTEXTE.md)  
+[Conventions utilisées pour créer le schéma](A-PROPOS.md)  
 [Format de fichier et recommandations](FORMAT.md)
 
 ## Produisez des données selon le schéma
-[Guide](GUIDE.md)  
-[Un assistant, en phase beta, a été développé afin d'aider au remplissage de certains champs
-](https://cerema-med.shinyapps.io/assistant-arretes-alpha/)
+[Guide pour produire des données d'arrêtés](GUIDE.md)  
+[Assistant aidant au remplissage de certains champs (expérimental)](https://cerema-med.shinyapps.io/assistant-arretes-alpha/)
 
 ## Référentiels de valeurs
-[Usages de véhicules (VEH_USAGES)](referentiels/VEH_USAGES.csv)
+[Valeurs pour les usages de véhicules (VEH_USAGES)](referentiels/VEH_USAGES.csv)
 
 ## Contribuez
-[Appel à contributions (types de véhicules, d'usages, de motorisations,...)](https://forms.gle/vUALzEDQqRsY2NgG9)
+[Appel à contributions pour participer à l'élaboration du schéma (types de véhicules, d'usages, de motorisations,...)](https://forms.gle/vUALzEDQqRsY2NgG9)
 
 ## Liens
 [Proposition sur le github d'Etalab](https://github.com/etalab/schema.data.gouv.fr/issues/157)  
