@@ -14,7 +14,7 @@ Ce schéma sur les arrêtés permanents de circulation en ville pour le transpor
 ## À propos du schéma
 [Contexte entourant le schéma](CONTEXTE.md)  
 [Conventions utilisées pour créer le schéma](A-PROPOS.md)  
-[Format de fichier et recommandations](FORMAT.md)
+[Recommandations pour le format des fichiers et leur nommage](FORMAT.md)
 
 ## Produisez des données selon le schéma
 [Guide pour produire des données d'arrêtés](GUIDE.md)  
