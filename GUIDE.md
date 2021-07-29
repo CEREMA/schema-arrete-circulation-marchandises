@@ -1,7 +1,8 @@
 Ce guide est là pour vous aider à renseigner les bases de données des arrêtés permanents de circulation.
 
 ## Autorisation, Interdiction et Interdiction sauf
-Dans certains cas, un arrêté peut autoriser la circulation de véhicules d'un certain type. Dans d'autres cas, il peut interdire. 
+Dans certains cas, un arrêté peut autoriser la circulation de véhicules d'un certain type. Dans d'autres cas, il peut linterdire.
+
 Aussi, un arrêté peut interdire le passage d'un certain type de véhicules à l'exception de certains types. 
 
 Afin de résoudre cette problématique autorisation/interdiction, le schéma propose un champ [`REGL_MODALITE`](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#propri%C3%A9t%C3%A9-regl_modalite) prenant comme valeurs `Autorise` ou `Interdit`
@@ -28,6 +29,16 @@ Voici un exemple :
 REGL_MODALITE | EMPRISE_DESIGNATION |
  -- | -- |
  Interdit | Commune d'Aix-en-Provence 
+ 
+ ## Règlement appliqué à une ZFE
+ Quand le règlement s'applique à une ZFE, il est préférable de la référencer par son nom et son identifiant quand il existe.
+
+Voici un exemple :
+> La circulation est interdite sur la ZFE du Bois de Vincennes, d'identifiant 75112-3
+
+REGL_MODALITE | EMPRISE_DESIGNATION |
+ -- | -- |
+ Interdit | ZFE du bois de Boulogne (75112-3) 
 
  
 ## Renseigner les jours et horaires de circulation
