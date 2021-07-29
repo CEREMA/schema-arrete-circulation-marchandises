@@ -29,9 +29,10 @@ Les fichiers doivent, sauf exception et autant que possible, respecter les règl
 
 * DATE : Date de création du fichier (ex. 20210721)
 * ARR_INSEE : Code INSEE relatif à l'arrêté (ex. 13090)
-* ARR_DATE : Date de création de l'arrêté (ex. 20010412)
+* COLL_NOM : Nom de la commune associée
+* ARR_DATE : Date de l'arrêté (ex. 20010412)
 
-> Exemple : `20210721-arrete-circulation-marchandises-13090-20010412.csv`
+> Exemple : `20210721-arrete-circulation-marchandises-13090-Aix-en-Provence-20010412.csv`
 
 ## Mise en conformité
 
