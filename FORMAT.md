@@ -1,7 +1,7 @@
 <!-- Inspiré de : https://github.com/Archivistes75/registre_entrees/blob/master/README.md -->
 
 ## Format de fichier
-Le format de fichier retenu pour la publication des données est le CSV (Comma Separated Values, valeurs séparées par des virgules).
+Le format de fichier retenu pour la publication des données est le **CSV** (Comma Separated Values, valeurs séparées par des virgules).
 
 Les fichiers doivent, sauf exception et autant que possible, respecter les règles de formatage suivantes :
 
