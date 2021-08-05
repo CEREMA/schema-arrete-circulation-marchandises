@@ -25,14 +25,13 @@ Les fichiers doivent, sauf exception et autant que possible, respecter les règl
 
 Les fichiers doivent, sauf exception et autant que possible, respecter les règles de nommage suivantes :
 
-`ARR_INSEE-COLL_NOM-ARR_DATE-arrete-circulation-marchandises-DATE.csv`
+`arreteCirculationMarchandises-<ARR_INSEE>_<COLL_NOM>_<ARR_DATE>.csv`
 
 * ARR_INSEE : Code INSEE relatif à l'arrêté (ex. 13001)
 * COLL_NOM : Nom de la commune associée (ex. Aix-en-Provence)
 * ARR_DATE : Date de l'arrêté (ex. 2001-04-12)
-* DATE : Date de création du fichier (ex. 2021-07-21)
 
-> Exemple : `13001-Aix-en-Provence-2001-04-12-arrete-circulation-marchandises-2021-07-21.csv`
+> Exemple : `arreteCirculationMarchandises-13001_Aix-en-Provence_2001-04-12.csv`
 
 ## Mise en conformité
 
