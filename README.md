@@ -14,16 +14,14 @@ Ce schéma sur les arrêtés permanents de circulation en ville pour le transpor
 ## À propos du schéma
 [Contexte entourant le schéma](CONTEXTE.md)  
 [Conventions utilisées pour créer le schéma](A-PROPOS.md)  
-[Recommandations pour le format des fichiers et leur nommage](FORMAT.md)
 
 ## Produisez des données selon le schéma
 [Guide pour produire des données d'arrêtés](GUIDE.md)  
 [Assistant aidant au remplissage de certains champs (expérimental)](https://cerema-med.shinyapps.io/assistant-arretes-alpha/)
-
-## S'inspirer de référentiels de valeurs
+[Recommandations pour le format des fichiers et leur nommage](FORMAT.md)  
 [Valeurs pour les usages de véhicules (VEH_USAGES)](referentiels/VEH_USAGES.csv)
 
-## Contribuez
+## Contribuez aux réflexions
 [Appel à contributions pour participer à l'élaboration du schéma (types de véhicules, d'usages, de motorisations,...)](https://forms.gle/vUALzEDQqRsY2NgG9)
 
 ## Liens
