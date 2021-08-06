@@ -1,6 +1,8 @@
 @echo off
 
-C:\python39\python schema-to-md-page.py
-C:\python39\python schema-to-md-table.py
+call setenv.bat
+
+%python% schema-to-md-page.py
+%python% schema-to-md-table.py
 
 pause
