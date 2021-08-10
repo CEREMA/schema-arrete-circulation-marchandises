@@ -25,7 +25,7 @@ Ce schéma a été construit en partenariat avec la Région Sud et l'association
 [Tutoriels et exemples](EXEMPLES.md)  
 [Guide de saisie](GUIDE.md)  
 ### En complément
-[Assistant aidant à la production des données (expérimental)](https://cerema-med.shinyapps.io/groom-groom/)  
+[Assistant à la production des données (expérimental)](https://cerema-med.shinyapps.io/groom-groom/)  
 [Recommandations pour le format des fichiers et leur nommage](FORMAT.md)  
 
 ## Autres
