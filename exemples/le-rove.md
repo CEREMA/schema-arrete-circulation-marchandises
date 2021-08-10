@@ -48,4 +48,4 @@ REGL_ARTICLE | REGL_MODALITE | VEH_TYPES | VEH_PTAC | VEH_USAGES | EMPRISE_DESIG
 | -- | -- | -- | -- | -- |
 2 | Autorise | Poids lourds | 3.5 | Livraison\|Transport de gaz\|Transport de carburant | Commune du Rove
 
-[Voir l'arrêté final de la commune du Rove en CSV](exemple-le-rove-valide.csv)
+[Voir l'arrêté final de la commune du Rove en CSV](le-rove.csv)

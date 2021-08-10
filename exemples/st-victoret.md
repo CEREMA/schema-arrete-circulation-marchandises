@@ -50,5 +50,5 @@ On le traduit de la sorte :
 | 2 | Interdit | Poids lourds | 3.5 || Commune de Saint-Victoret
 | 2 | Autorise | Poids lourds | 3.5 |Livraison\|Poids lourds d'urgence\|Véhicules de travaux| Commune de Saint-Victoret
 
-[Voir l'arrêté final de la commune de Saint Victoret en CSV](exemple-st-victoret-valide.csv)
+[Voir l'arrêté final de la commune de Saint Victoret en CSV](st-victoret.csv)
 
