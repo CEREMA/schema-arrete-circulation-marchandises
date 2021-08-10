@@ -1,3 +1,7 @@
+### 10 Août
+- [ ] Mettre EMPRISE_SENS après EMPRISE_FIN
+- [ ] Mettre ARR_DATE en required:false
+
 ### 20 Juillet 2021
 - [ ] Parler du formatage UTF-8
 - [ ] Parler de la création du CSV et du délimiteur utilisé
