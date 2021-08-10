@@ -55,3 +55,6 @@ Ce règlement s'applique à toute la commune. Nous introduisons la modalité d'a
 | 2 | Autorise | Poids lourds | 3.5 | Livraison\|Transport de gaz\|Transport de carburant | Commune du Rove
 
 [Voir l'arrêté final de la commune du Rove en CSV](le-rove.csv)
+
+Pour synthétiser, voici une interprétation de l'arrêté sous la forme de champs :
+![](le-rove-radio.jpg)
