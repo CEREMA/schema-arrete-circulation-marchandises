@@ -18,7 +18,7 @@ Ce schéma sur les arrêtés permanents de circulation en ville pour le transpor
 ## Produisez des données selon le schéma
 ### Pour commencer
 [Tutoriels et exemples](EXEMPLES.md)  
-[Guide](GUIDE.md)  
+[Guide de saisie](GUIDE.md)  
 ### En complément
 [Assistant aidant à la production des données (expérimental)](https://cerema-med.shinyapps.io/assistant-arretes-alpha/)  
 [Recommandations pour le format des fichiers et leur nommage](FORMAT.md)  
