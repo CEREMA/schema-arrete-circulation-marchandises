@@ -9,6 +9,8 @@ Nous avons créé des tutoriels expliquant, pas à pas, comment saisir certains 
 ### Commune du Rove
 > Voie règlementée avec spécifications des rues de début et de fin  
 
+[Voir une "radiographie" de l'arrêté sous forme de champs
+](exemples/le-rove-radio.md)  
 [Voir le tutoriel de création de l'arrêté du Rove](exemples/le-rove.md)
 
 [📜 Arrêté](examples/le-rove.jpg) | [Donnée CSV](exemples/le-rove.csv)
