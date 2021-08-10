@@ -1,6 +1,12 @@
 # Schéma sur les arrêtés permanents de circulation en ville pour le transport de marchandises
 
-Ce schéma sur les arrêtés permanents de circulation en ville pour le transport de marchandises a été construit en partenariat avec la Région Sud et l'association OpenDataFrance.
+Ce schéma sur les arrêtés permanents de circulation en ville pour le transport de marchandises vise à proposer [un canevas, une structure](documentation/schema-page.md) selon laquelle dématérialiser les arrêtés de circulation relatifs au transport de marchandises, c'est-à-dire saisir les informations contenues dans ces arrêtés.
+
+Le schéma proposé se veut volontairement assez simple afin de faciliter la production de données d'arrêtés et leur diffusion.
+
+Il permet à un opérateur (travaillant en Collectivité, par exemple) de renseigner les informations relatives aux véhicules (types, usages, dimensions), à la voirie, aux jours et horaires de circulation, à leurs dimensions dans un seul tableau ([voir quelques exemples de données saisies](EXEMPLES.md)).
+
+Ce schéma a été construit en partenariat avec la Région Sud et l'association OpenDataFrance.
 <br>
 <p align=center>
 <img src=https://gblobscdn.gitbook.com/spaces%2F-M8umwbbnQtktzDT0-5_%2Favatar-rectangle-1591200295956.png?alt=media width='30%'>
