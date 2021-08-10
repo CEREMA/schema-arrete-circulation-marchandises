@@ -1,4 +1,4 @@
-L'image ci-dessous "radiographie" l'arrêté sous la forme des champs utilisés dans le schélma.
+L'image ci-dessous "radiographie" l'arrêté sous la forme des champs du schéma à saisir dans le tableau de données.
 
 ![](le-rove-radio.jpg)
 
