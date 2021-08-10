@@ -1,6 +1,6 @@
 # Schéma sur les arrêtés permanents de circulation en ville pour le transport de marchandises
 
-Ce schéma sur les arrêtés permanents de circulation en ville pour le transport de marchandises vise à proposer [un canevas, une structure](documentation/schema-page.md) selon laquelle dématérialiser les arrêtés de circulation relatifs au transport de marchandises, c'est-à-dire saisir les informations contenues dans ces arrêtés.
+Ce schéma sur les arrêtés permanents de circulation en ville pour le transport de marchandises, aussi appelé standard de données, vise à proposer un canevas, [une structure](documentation/schema-page.md) selon laquelle dématérialiser les arrêtés de circulation relatifs au transport de marchandises, c'est-à-dire saisir les informations contenues dans ces arrêtés dans un tableau de données.
 
 Le schéma proposé se veut volontairement assez simple afin de faciliter la production de données d'arrêtés et leur diffusion.
 
