@@ -6,7 +6,7 @@ Le schéma proposé se veut volontairement assez simple afin de faciliter la pro
 
 Il permet à un opérateur (travaillant en Collectivité, par exemple) de renseigner les informations relatives aux véhicules (types, usages, dimensions), à la voirie, aux jours et horaires de circulation dans un seul tableau. [Voir à ce titre des exemples de données saisies](EXEMPLES.md).
 
-Ce schéma a été construit en partenariat avec la Région Sud et l'association OpenDataFrance.
+Ce schéma a été construit en partenariat avec la Région Sud et l'association OpenDataFrance dans le cadre de la Fabrique de la Logistique.
 <br>
 <p align=center>
 <img src=https://gblobscdn.gitbook.com/spaces%2F-M8umwbbnQtktzDT0-5_%2Favatar-rectangle-1591200295956.png?alt=media width='30%'>
