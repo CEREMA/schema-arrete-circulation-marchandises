@@ -1,6 +1,6 @@
-[Soit l'arrêté de Saint Victoret](st-victoret.jpg)
+[Voir l'arrêté scanné de Saint Victoret](st-victoret.jpg)
 
-Son code INSEE est 13102
+Le code INSEE de la commune est 13102
 
 
 | COLL_NOM | ARR_INSEE
