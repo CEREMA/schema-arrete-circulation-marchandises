@@ -9,7 +9,7 @@ Son code INSEE est 13102
 
 Nous trouvons dessus la référence de l'arrêté
 
-![](files/st-victoret/arr_ref.png)
+![](st-victoret/arr_ref.png)
 
 | ARR_REF |
 | -- |
@@ -33,7 +33,7 @@ Ainsi que le considérant
 
 Ainsi que la date. Attention, il ne faut pas prendre la date de l'arrêté initial, à savoir celui que cet arrêté remplace.
 
-![](files/st-victoret/arr_date.png)
+![](st-victoret/arr_date.png)
 
 | ARR_OBJET |
 | -- |
@@ -41,12 +41,12 @@ Ainsi que la date. Attention, il ne faut pas prendre la date de l'arrêté initi
 
 C'est l'article 2 qu'il faut prendre en compte :
 
-![](files/st-victoret/article2.png)
+![](st-victoret/article2.png)
 
 On le traduit de la sorte :
 
 | REGL_ARTICLE | REGL_MODALITE | VEH_TYPES | VEH_PTAC | VEH_USAGES | EMPRISE_DESIGNATION |
-| -- | -- | -- | -- | -- | -- | -- | -- |
+| -- | -- | -- | -- | -- | -- |
 | 2 | Interdit | Poids lourds | 3.5 || Commune de Saint-Victoret
 | 2 | Autorise | Poids lourds | 3.5 |Livraison\|Poids lourds d'urgence\|Véhicules de travaux| Commune de Saint-Victoret
 
