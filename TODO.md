@@ -3,10 +3,10 @@
 - [ ] Mettre ARR_DATE en required:false
 
 ### 20 Juillet 2021
-- [ ] Parler du formatage UTF-8
-- [ ] Parler de la création du CSV et du délimiteur utilisé
-- [ ] Revoir le contenu de VEH_USAGES.csv
-- [ ] Réorganiser le repo avec des sous-dossiers pour faciliter la lecture
+- [x] Parler du formatage UTF-8
+- [x] Parler de la création du CSV et du délimiteur utilisé
+- [x] Revoir le contenu de VEH_USAGES.csv
+- [x] Réorganiser le repo avec des sous-dossiers pour faciliter la lecture
 
 ### schema.json
 - [x] créer un exemple valide
@@ -14,9 +14,9 @@
 - [x] demander si Nicolas Berthelot souhaite être inclus dans la liste
 
 ### Fields
-- [ ] Mettre des points à la fin ?
+- [x] Mettre des points à la fin ?
 - [x] Voir le regex des URLs
-- [ ] Obligé de mettre constraint required si false ?
+- [x] Obligé de mettre constraint required si false ?
 - [x] Voir les autres contraintes (clé primaire, etc...)
 - [x] Voir les valeurs par défaut => n'existe pas dans le table schema
 - [x] number ou integer
