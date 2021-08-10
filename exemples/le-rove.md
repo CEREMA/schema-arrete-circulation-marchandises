@@ -45,7 +45,7 @@ L'article 2 stipule, lui :
 Ainsi, nous introduisons la modalité d'autorisation de la façon suivante :
 
 REGL_ARTICLE | REGL_MODALITE | VEH_TYPES | VEH_PTAC | VEH_USAGES | EMPRISE_DESIGNATION |
-| -- | -- | -- | -- | -- |
+| -- | -- | -- | -- | -- | -- |
 2 | Autorise | Poids lourds | 3.5 | Livraison\|Transport de gaz\|Transport de carburant | Commune du Rove
 
 [Voir l'arrêté final de la commune du Rove en CSV](le-rove.csv)
