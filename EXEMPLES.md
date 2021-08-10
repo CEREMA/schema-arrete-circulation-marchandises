@@ -11,7 +11,7 @@ Nous avons créé des tutoriels expliquant, pas à pas, comment saisir certains 
 
 [Voir le tutoriel de création de l'arrêté du Rove](exemples/le-rove.md)
 
-[📜 Arrêté](examples/le-rove.jpg) | [Donnée CSV](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/exemples/exemple-le-rove-valide.csv)
+[📜 Arrêté](examples/le-rove.jpg) | [Donnée CSV](exemples/exemple-le-rove-valide.csv)
 
 
 ### Commune de Saint-Victoret
@@ -19,34 +19,34 @@ Nous avons créé des tutoriels expliquant, pas à pas, comment saisir certains 
 
 [Voir le tutoriel de création de l'arrêté de Saint-Victoret](exemples/le-rove.md)
 
-[📜 Arrêté](examples/st-victoret.png) | [Donnée CSV](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/exemples/exemple-st-victoret-valide.csv)
+[📜 Arrêté](examples/st-victoret.png) | [Donnée CSV](exemples/exemple-st-victoret-valide.csv)
 
 ### Commune de Gignac-La-Nerthe
 > Règlementation sur toute l'agglomération de 6h30 à 11h30  
 
-[📜 Arrêté](examples/gignac-la-nerthe.png) | [Donnée CSV](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/exemples/exemple-gignac-valide.csv)
+[📜 Arrêté](examples/gignac-la-nerthe.png) | [Donnée CSV](exemples/exemple-gignac-valide.csv)
 
 
 ### Commune de Vence
 > Cas de plusieurs arrêtés pour une commune  
 
-[📜 Arrêté 1](examples/vence1.png) | [📜 Arrêté 2](examples/vence2.png) | [Donnée CSV](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/exemples/exemple-vence-valide.csv)
+[📜 Arrêté 1](examples/vence1.png) | [📜 Arrêté 2](examples/vence2.png) | [Donnée CSV](exemples/exemple-vence-valide.csv)
 
 ### Commune de Septèmes-Les-Vallons
 > Poids lourds, tonnage, voie règlementée et points de début et de fin (intersections de rues)   
 
-[📜 Arrêté](examples/septemes-les-vallons.png) | [Donnée CSV](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/exemples/exemple-septemes-valide.csv)
+[📜 Arrêté](examples/septemes-les-vallons.png) | [Donnée CSV](exemples/exemple-septemes-les-vallons-valide.csv)
 
 ### Commune de Carros
 > Arrêté avec règlement associé à un certain nombre de rues (toutes les rues n'ont pas été transcrites dans le fichier CSV) 
 
-[📜 Arrêté](examples/carros.png) | [Donnée CSV](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/examples/exemple-carros-valide.csv)
+[📜 Arrêté](examples/carros.png) | [Donnée CSV](exemples/exemple-carros-valide.csv)
 
 <!--
 ### Commune de Fuveau
 > Règlementation les jours de marché avec sens uniques de circulation  
 
-[📜 Arrêté](http://www.mairiedefuveau.fr/index.php/documents-a-telecharger/actualites/1937-2018-10-17-arrete-general-de-circulation-dans-le-centre-ville/file) | [Donnée CSV](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/exemples/exemple-fuveau-valide.csv)
+[📜 Arrêté](http://www.mairiedefuveau.fr/index.php/documents-a-telecharger/actualites/1937-2018-10-17-arrete-general-de-circulation-dans-le-centre-ville/file) | [Donnée CSV](exemples/exemple-fuveau-valide.csv)
 -->
 
 
