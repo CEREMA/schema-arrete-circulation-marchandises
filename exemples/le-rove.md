@@ -32,12 +32,16 @@ Par contre, nous trouvons une mention pour ARR_CONSIDERANT qui donne la justific
 L'article 1 stipule la chose suivante :
 ![](le-rove/article1.png)
 
+Le premier cas semble concerner les poids lourds > 3.5 T tandis que dans le second, cela semble concerner tous les véhicules transportant des carburants (quel que soit leur tonnage).
+
+L'indication de rue est assez vague (Traversée du village), mais les début et fin de l'emprise pourraient donner des indications.
+
 Nous rajoutons donc deux lignes dans notre tableau :
 
 | REGL_ARTICLE | REGL_MODALITE | VEH_TYPES | VEH_PTAC | VEH_USAGES | EMPRISE_DESIGNATION | EMPRISE_DEBUT | EMPRISE_FIN
 | -- | -- | -- | -- | -- | -- | -- | -- |
 | 1 | Interdit | Poids lourds | 3.5 | | Traversée du village | RN568B Entrée Est par l'avenue Jean Jaures	| Rue du Douard à l'Ouest
-| 1 | Interdit | Tous véhicules | 3.5 | Transport de matières dangereuses | Traversée du village | RN568B Entrée Est par l'avenue Jean Jaures	| Rue du Douard à l'Ouest
+| 1 | Interdit | Tous véhicules | | Transport de matières dangereuses | Traversée du village | RN568B Entrée Est par l'avenue Jean Jaures	| Rue du Douard à l'Ouest
 
 L'article 2 stipule, lui :
 ![](le-rove/article2.png)
