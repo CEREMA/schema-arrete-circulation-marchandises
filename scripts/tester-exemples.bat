@@ -9,11 +9,11 @@ call setenv.bat
 %frictionless%  validate --schema ../schema.json ../exemple-valide.csv
 
 :: exemples
-%frictionless%  validate --schema ../schema.json ../examples\exemple-carros-valide.csv
-%frictionless%  validate --schema ../schema.json ../examples\exemple-fuveau-valide.csv
-%frictionless%  validate --schema ../schema.json ../examples\exemple-gignac-valide.csv
-%frictionless%  validate --schema ../schema.json ../examples\exemple-le-rove-valide.csv
-%frictionless%  validate --schema ../schema.json ../examples\exemple-st-victoret-valide.csv
-%frictionless%  validate --schema ../schema.json ../examples\exemple-vence-valide.csv
+%frictionless%  validate --schema ../schema.json ../exemples/carros.csv
+%frictionless%  validate --schema ../schema.json ../exemples/fuveau.csv
+%frictionless%  validate --schema ../schema.json ../exemples/gignac.csv
+%frictionless%  validate --schema ../schema.json ../exemples/le-rove.csv
+%frictionless%  validate --schema ../schema.json ../exemples/st-victoret.csv
+%frictionless%  validate --schema ../schema.json ../exemples/vence.csv
 
 pause
