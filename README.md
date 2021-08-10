@@ -16,7 +16,6 @@ Ce schéma sur les arrêtés permanents de circulation en ville pour le transpor
 [Conventions utilisées pour créer le schéma](A-PROPOS.md)  
 
 ## Produisez des données selon le schéma
-### Pour commencer
 [Tutoriels et exemples](EXEMPLES.md)  
 [Guide de saisie](GUIDE.md)  
 ### En complément
