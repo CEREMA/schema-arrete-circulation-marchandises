@@ -36,7 +36,7 @@ L'article 1 stipule la chose suivante :
 
 Le premier cas semble concerner les poids lourds > 3.5 T tandis que dans le second semble concerner tous les véhicules transportant des carburants (quel que soit leur tonnage).
 
-L'indication de rue est assez vague (Traversée du village), mais les début et fin de l'emprise donnent des indications. En allant sur OpenStreetMap, nous déduisons que la rue en question est l'avenue Joliot Curie
+L'indication de rue est assez vague (Traversée du village), mais les début et fin de l'emprise donnent des indications. [En allant sur OpenStreetMap](https://www.openstreetmap.org/way/40458355), nous déduisons que la rue en question est l'avenue Joliot Curie
 
 Nous rajoutons donc deux lignes dans notre tableau :
 
