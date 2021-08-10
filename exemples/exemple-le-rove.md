@@ -6,9 +6,12 @@ Nous pouvons déjà remplir les colonnes :
 | -- |
 | Commune du Rove |
 
-La date de l'arrêté apparaît en signature
+La date de l'arrêté apparaît en signature.
+![](files/le-rove/arr_date.png)
 
-|ARR_DATE |
+Nous pouvons la mettre dans la colonne ARR_DATE :
+
+| ARR_DATE |
 | -- |
 | 1979-01-11 |
 
