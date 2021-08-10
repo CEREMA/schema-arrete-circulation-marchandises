@@ -4,7 +4,7 @@ Les arrêtés proposés ci-dessous sont pris à titre d'exemples. Nous ne garant
 Nous avons créé des tutoriels expliquant, pas à pas, comment saisir certains arrêtés. Vous pourrez vous en inspirer.
 
 [Voir le tutoriel de création de l'arrêté du Rove](exemples/le-rove.md)  
-[Voir le tutoriel de création de l'arrêté de Saint-Victoret](exemples/le-rove.md)
+[Voir le tutoriel de création de l'arrêté de Saint-Victoret](exemples/st-victoret.md)
 
 ### Commune du Rove
 > Voie règlementée avec spécifications des rues de début et de fin  
