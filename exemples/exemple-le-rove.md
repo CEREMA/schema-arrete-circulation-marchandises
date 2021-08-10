@@ -1,6 +1,4 @@
-Soit l'arrêté du Rove :
-
-![](le-rove.jpg)
+[Soit l'arrêté du Rove](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/dev-210810-exemples/exemples/le-rove.jpg)
 
 Nous pouvons déjà remplir les colonnes :
 
@@ -32,20 +30,19 @@ L'article 1 stipule la chose suivante :
 ![](files/le-rove/article1.png)
 
 Nous rajoutons donc deux lignes dans notre tableau :
-REGL_ARTICLE | REGL_MODALITE | VEH_TYPES | VEH_PTAC | VEH_USAGES | EMPRISE_DESIGNATION | EMPRISE_DEBUT | EMPRISE_FIN
-| -- | -- | -- | -- | -- | -- | -- |
-| 1 | Interdit | Poids lourds | 3.5 | | Traversée du village | RN568B Entrée Est par l'avenue Jean Jaures	| Rue du Douard à l'Ouest
 
-| 1 | Interdit | Tous véhicules | 3.5 | Transport de matières dangereuses | Traversée du village
+| REGL_ARTICLE | REGL_MODALITE | VEH_TYPES | VEH_PTAC | VEH_USAGES | EMPRISE_DESIGNATION | EMPRISE_DEBUT | EMPRISE_FIN
+| -- | -- | -- | -- | -- | -- | -- | -- |
+| 1 | Interdit | Poids lourds | 3.5 | | Traversée du village | RN568B Entrée Est par l'avenue Jean Jaures	| Rue du Douard à l'Ouest
+| 1 | Interdit | Tous véhicules | 3.5 | Transport de matières dangereuses | Traversée du village | RN568B Entrée Est par l'avenue Jean Jaures	| Rue du Douard à l'Ouest
 
 L'article 2 stipule, lui :
 ![](files/le-rove/article2.png)
 
 Ainsi, nous introduisons la modalité d'autorisation de la façon suivante :
+
 | REGL_MODALITE | VEH_TYPES | VEH_PTAC | VEH_USAGES | EMPRISE_DESIGNATION |
-| -- | -- | -- | -- | -- | -- |
-| Autorise | Poids lourds | 3.5 | Livraison\|Transport de gaz\|Transport de carburant
- | Commune du Rove
+| -- | -- | -- | -- | -- |
+| Autorise | Poids lourds | 3.5 | Livraison\|Transport de gaz\|Transport de carburant | Commune du Rove
 
 Au final, voici à quoi ressemble notre donnée : [Arrêté de la commune du Rove en CSV](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/examples/exemple-le-rove-valide.csv)
-
