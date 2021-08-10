@@ -33,6 +33,7 @@ Sachant qu'un règlement peut concerner plusieurs voies et qu'une voie peut poss
  > Ci-dessous, 2 règlements s'appliquent à la voie 3. Cela peut être le cas si un premier règlement interdit les poids lourds, et un autre autorise ceux de livraison.
 
  Voie | Réglement |
+ -- | -- |
  Voie 3| Regl1 |
  Voie 3| Regl2 |
 
