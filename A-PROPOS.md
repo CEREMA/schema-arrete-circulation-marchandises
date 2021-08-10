@@ -22,13 +22,17 @@ On peut utiliser [l'assistant](https://cerema-med.shinyapps.io/assistant-arretes
 Dans ce schéma, chaque entité (ligne du tableau) concerne une voie et un règlement associé. 
 
 Sachant qu'un règlement peut concerner plusieurs voies et qu'une voie peut posséder plusieurs règlements, la donnée finale prendra la forme d'une donnée "aplatie" avec une duplication des lignes le long des multiples voies associées à un règlement, et le long des multiples règlements associés à une voie.
-
-> Ci-dessous, le règlement 1 s'applique à deux voies : les voies 1 et 2. Et 2 règlements s'appliquent à la voie 3.
-
-Voie | Règlement |
+ 
+  > Ci-dessous, le règlement 1 s'applique à deux voies : les voies 1 et 2. Cela peut être le cas si un règlement s'applique à une aire piétonne (celle-ci étant définie par ses voies)
+ 
+ Voie | Réglement |
  -- | -- |
  Voie 1 | Regl1 |
  Voie 2| Regl1 |
+ 
+ > Ci-dessous, 2 règlements s'appliquent à la voie 3. Cela peut être le cas si un premier règlement interdit les poids lourds, et un autre autorise ceux de livraison.
+
+ Voie | Réglement |
  Voie 3| Regl1 |
  Voie 3| Regl2 |
 
