@@ -4,9 +4,7 @@ Ce schéma sur les arrêtés permanents de circulation en ville pour le transpor
 
 Le schéma proposé se veut volontairement assez simple afin de faciliter la production de données d'arrêtés et leur diffusion.
 
-Il permet à un opérateur (travaillant en Collectivité, par exemple) de renseigner les informations relatives aux véhicules (types, usages, dimensions), à la voirie, aux jours et horaires de circulation dans un seul tableau
-
-[Voir quelques exemples de données saisies](EXEMPLES.md)).
+Il permet à un opérateur (travaillant en Collectivité, par exemple) de renseigner les informations relatives aux véhicules (types, usages, dimensions), à la voirie, aux jours et horaires de circulation dans un seul tableau. [Voir à ce titre des exemples de données saisies](EXEMPLES.md).
 
 Ce schéma a été construit en partenariat avec la Région Sud et l'association OpenDataFrance.
 <br>
