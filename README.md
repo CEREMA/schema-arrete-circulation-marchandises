@@ -24,7 +24,7 @@ Ce schéma sur les arrêtés permanents de circulation en ville pour le transpor
 [Recommandations pour le format des fichiers et leur nommage](FORMAT.md)  
 
 ## Autres
-[Appel à contributions pour participer à l'élaboration du schéma (types de véhicules, d'usages, de motorisations,...)](https://forms.gle/vUALzEDQqRsY2NgG9)  
+[Appel à contributions](https://forms.gle/vUALzEDQqRsY2NgG9)  
 [Référentiel de valeurs pour le champ `VEH_USAGES`](referentiels/VEH_USAGES.csv)  
 [Proposition sur le github d'Etalab](https://github.com/etalab/schema.data.gouv.fr/issues/157)  
 [Proposition sur le gitbook d'OpenDataFrance](https://opendatafrance.gitbook.io/fablog/territoires/chantiers/partage-des-donnees/standardisation/arretes-de-circulation)  
