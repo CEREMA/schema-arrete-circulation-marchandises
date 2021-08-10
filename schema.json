@@ -110,7 +110,7 @@
       {
          "name":"ID",
          "title": "Identifiant de l'entité",
-         "description":"Il s'agit de l'identifiant de l'entité (ou ligne du tableau). Ce dernier doit être unique. L'entité élémentaire correspond à une voie entière règlementée (par ex. `Avenue Philippe Solari`) ou une portion de celle-ci (voir les champs `SECTION_DEBUT` et `SECTION_FIN`). L'identifiant peut tout simplement être auto-incrémenté (1, 2 ou 3,...). Il peut correspondre à la valeur `osm_id` de la voie règlementée (par exemple, `133`). Il peut également être un identifiant propre à une structure ou à une autre base de données (identifiant issu de la BDTOPO IGN, par exemple). [Vous pouvez créer des identifiants grâce à l'application Heidi d'Etalab](https://heidi.app.etalab.studio/).",
+         "description":"Il s'agit de l'identifiant de l'entité (ou ligne du tableau). Ce dernier doit être unique. L'entité correspond à une voie et son règlement associé. L'identifiant peut tout simplement être auto-incrémenté (1, 2 ou 3,...). [Vous pouvez créer des identifiants grâce à l'application Heidi d'Etalab](https://heidi.app.etalab.studio/).",
          "example":"133-3",
          "type":"string",
          "constraints":{
@@ -166,7 +166,7 @@
          "type":"date",
          "format":"%Y-%m-%d",
          "constraints":{
-            "required":true
+            "required":false
          }
       },
       {
@@ -185,7 +185,7 @@
       {
          "name":"ARR_URL",
 	       "title": "URL d'accès de l'arrêté",
-	       "description": "Adresse internet par laquelle accéder à l'arrêté, et donc au règlement.",
+	       "description": "URL ou adresse web par laquelle accéder à l'arrêté, et donc au règlement.",
 	       "type": "string",
          "format":"uri",
 	       "example": "https://carte.st-paul-les-dax.fr/wp-content/uploads/2020/06/AM-10248.pdf",
@@ -198,7 +198,7 @@
 	       "title": "Article du règlement",
 	       "description": "N° de l'article associé au règlement lorsqu'il existe",
 	       "type": "integer",
-	       "example": "4",
+	       "example": "4 pour Article 4",
 	       "constraints": {
 	         "required": false
            }
@@ -215,10 +215,10 @@
       },
       {
          "name":"REGL_MODALITE",
-         "description":"Modalité",
-         "example":"Indique si l'arrêté interdit ou autorise",
+	      "title":"Modalité",
+         "description":"Modalité. La clause du règlement autorise-t-elle ou interdit-elle ? Par exemple, mettre la valeur 'Interdit' si la clause indique 'La circulation des poids lourds de plus de 3.5 T est interdite (...)'",
          "type": "string",
-		      "example": "Autorise",
+		      "example": "Iterdit",
 		      "constraints": {
 		        "required": true,
 		        "enum": [
@@ -229,6 +229,7 @@
       },
       {
          "name":"VEH_TYPES",
+	      "title":"Types de véhicules",
          "description":"Types de véhicules. Séparer les valeurs par le caractère '|'  [Aidez-vous de groom-groom pour remplir ce champ](https://cerema-med.shinyapps.io/groom-groom?action=champs_multiples)",
          "example":"Types de véhicule",
          "type": "string",
@@ -288,8 +289,8 @@
       },
       {
          "name":"VEH_USAGES",
-         "title":"Types d'usage",
-         "description":"Types d'usage de véhicule. Séparer les valeurs par le caractère '|' [Aidez-vous de groom-groom pour remplir ce champ](https://cerema-med.shinyapps.io/groom-groom?action=champs_multiples)",
+         "title":"Usages",
+         "description":"Usages du véhicule. Séparer les valeurs par le caractère '|' [Aidez-vous de groom-groom pour remplir ce champ](https://cerema-med.shinyapps.io/groom-groom?action=champs_multiples)",
          "example":"Bennes à ordures ménagères|Véhicules de police",
          "type":"string",
          "constraints":{
@@ -298,8 +299,8 @@
       },
    {
          "name":"VEH_MOTORS",
-         "title":"Types de motorisation",
-         "description":"Types de motorisation. Séparer les valeurs par le caractère '|' [Aidez-vous de groom-groom pour remplir ce champ](https://cerema-med.shinyapps.io/groom-groom?action=champs_multiples)",
+         "title":"Motorisations",
+         "description":"Motorisations. Séparer les valeurs par le caractère '|' [Aidez-vous de groom-groom pour remplir ce champ](https://cerema-med.shinyapps.io/groom-groom?action=champs_multiples)",
          "example":"Électrique|Hydrogène",
          "type":"string",
          "constraints":{
@@ -332,7 +333,7 @@
       {
          "name":"PERIODE_JH",
          "title" : "Jours et heures de circulation",
-         "description":"Jours et heures de circulation autorisés pour la circulation exprimés selon le format OpeningHours d'OpenStreetMap ([https://wiki.openstreetmap.org/wiki/Key:opening_hours](https://wiki.openstreetmap.org/wiki/Key:opening_hours)). Ce format permet d'indiquer les week-ends (we), les jours fériés (PH) et les vacances scolaires (SH). Par exemple `Mo-Fr 09:00-17:00; PH 10:00-12:00; PH Su off` signifie : 'Du lundi au vendredi de 9h à 17h sauf les jours fériés où l'ouverture est de 10h à 12h, à l'exception des jours fériés tombant un dimanche'. `24/7` indique `Tous les jours`. [Utiliser groom-groom pour récupérer les jours et heures de circulation](https://cerema-med.shinyapps.io/groom-groom?action=opening_hours)",
+         "description":"Jours et heures de circulation autorisés pour la circulation exprimés selon le format OpeningHours d'OpenStreetMap ([https://wiki.openstreetmap.org/wiki/Key:opening_hours](https://wiki.openstreetmap.org/wiki/Key:opening_hours)). [Utiliser groom-groom pour récupérer les jours et heures de circulation](https://cerema-med.shinyapps.io/groom-groom?action=opening_hours)",
          "example":"Mo-Fr 08:00-12:00,13:00-17:30; Sa 08:00-12:00; PH off",
          "type":"string",
          "constraints":{
@@ -353,7 +354,7 @@
       },
       {
          "name":"EMPRISE_SENS",
-         "title":"Direction ou sens de circulation",
+         "title":"Sens de circulation",
          "description":"Direction ou sens de circulation associé à la règlementation. Pair : concerne la circulation le long des adresses à chiffre pair. `Nord` signifie vers le Nord, soit \"vers le haut\".",
          "type": "string",
 		      "example": "Deux côtés",
@@ -372,10 +373,10 @@
       },
       {
          "name":"EMPRISE_DEBUT",
-         "title":"Début de la section",
+         "title":"Début de l'emprise",
          "description":"Indication de l'endroit à partir duquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Par exemple, une adresse ou une indication textuelle : 'au croisement de la rue', 'depuis le rond-point'.Ou bien coordonnées du point de l'endroit où commence la règlementation sur la voie. A noter sous la forme 'long, lat', par exemple '43.53591,5.42101' ou '43.53591, 5.42101'. 5 ou 6 décimales sont conseillées.",
          "type": "string",
-         "example" : "22 avenue Philippe Solari, Croisement de l'avenue Philippe Solari avec la rue Gaston de Saporta",
+         "example" : "22 avenue Philippe Solari",
          "constraints": {
            "required": false
           }
@@ -385,7 +386,7 @@
          "title":"Fin de la section",
          "description":"Indication de l'endroit jusqu'auquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Par exemple, une adresse ou une indication textuelle : 'au croisement de la rue', 'depuis le rond-point'.Ou bien coordonnées du point de l'endroit où finit la règlementation sur la voie. A noter sous la forme 'long, lat', par exemple '43.53591,5.42101' ou '43.53591, 5.42101'. 5 ou 6 décimales sont conseillées.",
          "type": "string",
-         "example" : "22 avenue Philippe Solari, Croisement de l'avenue Philippe Solari avec la rue Gaston de Saporta",
+         "example" : "Croisement de l'avenue Philippe Solari avec la rue Gaston de Saporta",
          "constraints": {
            "required": false
          }
@@ -413,7 +414,7 @@
       {
          "name":"GEOM_WKT",
          "title":"Géométrie au format WKT",
-         "description":"Géométrie de la ligne exprimée au format [WKT (Well Know Text](https://fr.wikipedia.org/wiki/Well-known_text) sous le système de projection WGS84 (EPSG:4326) [Utiliser groom-groom pour trouver la géométrie d'une rue](https://cerema-med.shinyapps.io/groom-groom?action=trouver_rue)",
+         "description":"Géométrie de la ligne exprimée au format [WKT (Well Know Text)](https://fr.wikipedia.org/wiki/Well-known_text) sous le système de projection WGS84 (EPSG:4326) [Utiliser groom-groom pour trouver la géométrie d'une rue](https://cerema-med.shinyapps.io/groom-groom?action=trouver_rue)",
          "type": "string",
          "example":"LineString (5.39340184 45.56538751, 5.41017215 45.56722934, 5.42510063 45.5679079)",
          "constraints": {
