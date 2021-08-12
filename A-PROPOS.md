@@ -38,3 +38,4 @@ Ci-dessous, le règlement 1 s'applique à deux voies : les voies 1 et 2. Cela pe
  Voie 3| Regl1 |
  Voie 3| Regl2 |
 
+> Il se peut que vous deviez dupliquer certaines informations dans votre tableau lorsque vous saisirez des données. Cela est dû au fait que nous avons souhaité que tout un chacun puisse produire les données d'arrêtés. Un modèle de données relationnel, avec plusieurs tableaux de saisie aurait évité cette duplication, mais rendu la saisie plus difficile.
