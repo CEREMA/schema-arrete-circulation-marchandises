@@ -33,5 +33,5 @@ Ce schéma a été construit en partenariat avec la Région Sud et l'association
 [Référentiel de valeurs pour le champ `VEH_USAGES`](referentiels/VEH_USAGES.csv)  
 [Proposition sur le github d'Etalab](https://github.com/etalab/schema.data.gouv.fr/issues/157)  
 [Proposition sur le gitbook d'OpenDataFrance](https://opendatafrance.gitbook.io/fablog/territoires/chantiers/partage-des-donnees/standardisation/arretes-de-circulation)  
-[Projet BAC IDF (Base d'Arrêtés de Circulation Île-de-France](https://bac-idf.fr/)  
+[Projet BAC IDF (Base d'Arrêtés de Circulation Île-de-France)](https://bac-idf.fr/)  
 [Evolutions du schéma (CHANGELOG)](CHANGELOG.md)
