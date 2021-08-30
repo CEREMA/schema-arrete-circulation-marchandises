@@ -86,7 +86,7 @@ REGL_MODALITE | VEH_TYPE | PTAC | EMPRISE_DESIGNATION | EMPRISE_DEBUT | EMPRISE_
  -- | -- | -- | -- | -- | -- |
  Interdit | Poids lourds | 7.5 | avenue Nelson Mandela (RD59c) | 5.37229, 43.41060 | 5.36585, 43.40828 |
  
-### Géométrie de la rue
+## Géométrie de la rue
 Donner la géométrie de la rue règlementée est sans doute le plus utile. Si vous avez la géométrie de la portion de voie règlementée, alors vous pouvez l'intégrer dans le champ `GEOM_WKT`
  
  REGL_MODALITE | VEH_TYPE | PTAC | GEOM_WKT |

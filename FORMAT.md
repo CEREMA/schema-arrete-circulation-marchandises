@@ -4,13 +4,13 @@
 
 Les fichiers doivent, autant que possible, respecter les règles de nommage suivantes :
 
-`arreteCirculationMarchandises-<ARR_INSEE>_<COLL_NOM>_<ARR_DATE>.csv`
+    <ARR_INSEE>_<COLL_NOM>_<ARR_DATE>.csv
 
 * ARR_INSEE : Code INSEE relatif à l'arrêté (ex. 13001)
 * COLL_NOM : Nom de la commune associée (ex. Aix-en-Provence)
 * ARR_DATE : Date de l'arrêté (ex. 2001-04-12)
 
-> Exemple : `arreteCirculationMarchandises-13001_Aix-en-Provence_2001-04-12.csv`
+> Exemple : `13001_Aix-en-Provence_2001-04-12.csv`
 > 
 ## Format de fichier
 Le format de fichier retenu pour la publication des données est le **CSV** (Comma Separated Values, valeurs séparées par des virgules).
