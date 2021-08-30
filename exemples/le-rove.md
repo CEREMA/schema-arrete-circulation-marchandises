@@ -1,5 +1,7 @@
-[Voir l'arrêté scanné du Rove](le-rove.jpg)
+# Arrêté du Rove
+<img width='100%' src=https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/master/exemples/le-rove.jpg>
 
+### `COLL_NOM`
 Le code INSEE de la commune est 13088
 
 Nous pouvons déjà remplir les colonnes :
@@ -8,6 +10,7 @@ Nous pouvons déjà remplir les colonnes :
 | -- | --
 | Commune du Rove | 13088
 
+### `ARR_DATE`
 La date de l'arrêté apparaît en signature.
 ![](le-rove/arr_date.png)
 
@@ -17,13 +20,14 @@ Nous pouvons la mettre dans la colonne ARR_DATE :
 | -- |
 | 1979-01-11 |
 
+### `ARR_OBJET`, `ARR_REF` 
 Nous ne trouvons par contre par de référence pour l'arrêté, ni même d'objet. Nous attribuons la valeur NC
 
 | ARR_OBJET | ARR_REF |
 | -- | -- |
 | NC | NC |
 
-
+### `ARR_CONSIDERANT` 
 Par contre, nous trouvons une mention pour ARR_CONSIDERANT qui donne la justification pour appliquer l'arrêté :
 ![](le-rove/arr_considerant.png)
 
@@ -31,6 +35,7 @@ Par contre, nous trouvons une mention pour ARR_CONSIDERANT qui donne la justific
 | -- |
 | Considérant que l'intérêt majeur de la sécurité et de la tranquillité publique justifie pleinement la limitation ainsi apportée au libvre usage de l'agglomération aux véhicules de plus de 3.5 T ainsi que ceux transportant des matières dangereuses |
 
+### `REGL_ARTICLE`, `REGL_MODALITE` , `VEH_TYPES` , `VEH_PTAC` , `VEH_USAGES`, `EMPRISE_DESIGNATION`, `EMPRISE_DEBUT`, `EMPRISE_FIN`
 L'article 1 stipule la chose suivante :
 ![](le-rove/article1.png)
 
@@ -56,5 +61,6 @@ Ce règlement s'applique à toute la commune. Nous introduisons la modalité d'a
 
 [Voir l'arrêté final de la commune du Rove en CSV](le-rove.csv)
 
+----
 Pour synthétiser, voici une interprétation de l'arrêté sous la forme de champs :
 ![](le-rove-radio.jpg)
