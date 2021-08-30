@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.6.0
+- Suppression du champ `COLL_SIRET`
+- Ajout de lien vers l'assistant pour le champ `PERIODE_JH` vers https://cerema-med.shinyapps.io/groom-groom
+- Mention du schéma sur les ZFE pour le champ `EMPRISE_DESIGNATION`
+- Description simplifiée pour le champ `GEOM_WKT`
+
 ## v0.5.0 (retour enquête + réunion, simplification du schéma)
 - Renommage du schéma en arrete-circulation-marchandises
 - `ARR_DATE_CREATION` devient `ARR_DATE`

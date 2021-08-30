@@ -229,7 +229,7 @@
       },
       {
          "name":"VEH_TYPES",
-         "description":"Types de véhicules. Séparer les valeurs par le caractère '|'  [Aidez-vous de groom-groom pour remplir ce champ](https://cerema-med.shinyapps.io/groom-groom?action=champs_multiples)",
+         "description":"Types de véhicules. Séparer les valeurs par le caractère '|'",
          "example":"Types de véhicule",
          "type": "string",
          "example": "Poids lourds|Véhicules utilitaires légers",
@@ -289,7 +289,7 @@
       {
          "name":"VEH_USAGES",
          "title":"Types d'usage",
-         "description":"Types d'usage de véhicule. Séparer les valeurs par le caractère '|' [Aidez-vous de groom-groom pour remplir ce champ](https://cerema-med.shinyapps.io/groom-groom?action=champs_multiples)",
+         "description":"Types d'usage de véhicule. Séparer les valeurs par le caractère '|'",
          "example":"Bennes à ordures ménagères|Véhicules de police",
          "type":"string",
          "constraints":{
@@ -299,7 +299,7 @@
    {
          "name":"VEH_MOTORS",
          "title":"Types de motorisation",
-         "description":"Types de motorisation. Séparer les valeurs par le caractère '|' [Aidez-vous de groom-groom pour remplir ce champ](https://cerema-med.shinyapps.io/groom-groom?action=champs_multiples)",
+         "description":"Types de motorisation. Séparer les valeurs par le caractère '|'",
          "example":"Électrique|Hydrogène",
          "type":"string",
          "constraints":{
@@ -310,7 +310,7 @@
       {
          "name":"VEH_CQAS",
          "title":"Vignettes crit'air",
-         "description":"Vignettes crit'air. Voir la [classification des vignettes Crit'Air](https://www.certificat-air.gouv.fr/docs/tableaux_classement.pdf) sur le site [certificat-air.gouv.fr](https://www.certificat-air.gouv.fr). Séparer les étiquettes CQA par le caractère '|' [Aidez-vous de groom-groom pour remplir ce champ](https://cerema-med.shinyapps.io/groom-groom?action=champs_multiples)",
+         "description":"Vignettes crit'air. Voir la [classification des vignettes Crit'Air](https://www.certificat-air.gouv.fr/docs/tableaux_classement.pdf) sur le site [certificat-air.gouv.fr](https://www.certificat-air.gouv.fr). Séparer les étiquettes CQA par le caractère '|'",
          "example":"1|2|3",
          "type":"string",
          "constraints":{
@@ -413,7 +413,7 @@
       {
          "name":"GEOM_WKT",
          "title":"Géométrie au format WKT",
-         "description":"Géométrie de la ligne exprimée au format [WKT (Well Know Text](https://fr.wikipedia.org/wiki/Well-known_text) sous le système de projection WGS84 (EPSG:4326) [Utiliser groom-groom pour trouver la géométrie d'une rue](https://cerema-med.shinyapps.io/groom-groom?action=trouver_rue)",
+         "description":"Géométrie de la ligne exprimée au format [WKT (Well Know Text](https://fr.wikipedia.org/wiki/Well-known_text) sous le système de projection WGS84 (EPSG:4326)",
          "type": "string",
          "example":"LineString (5.39340184 45.56538751, 5.41017215 45.56722934, 5.42510063 45.5679079)",
          "constraints": {
