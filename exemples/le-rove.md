@@ -1,5 +1,5 @@
 # Arrêté du Rove
-<img width='100%' src=https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/master/exemples/le-rove.jpg>
+<img width='60%' src=https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/master/exemples/le-rove.jpg>
 
 ### `COLL_NOM`
 Le code INSEE de la commune est 13088
@@ -59,6 +59,7 @@ Ce règlement s'applique à toute la commune. Nous introduisons la modalité d'a
 | -- | -- | -- | -- | -- | -- |
 | 2 | Autorise | Poids lourds | 3.5 | Livraison\|Transport de gaz\|Transport de carburant | Commune du Rove
 
+----
 [Voir l'arrêté final de la commune du Rove en CSV](le-rove.csv)
 
 ----
