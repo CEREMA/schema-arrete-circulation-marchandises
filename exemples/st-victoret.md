@@ -1,5 +1,5 @@
 # Arrêté de Saint-Victoret
-<img src=https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/master/exemples/st-victoret.png width='100%'>
+<img src=https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/master/exemples/st-victoret.png width='60%'>
 
 ### `ARR_INSEE`
 Le code INSEE de la commune est 13102
