@@ -1,5 +1,6 @@
 - page contexte et readme
 - faire des essais sur publier avant production et publication
 - quelle communication ?
-- article : mcd, mpd théorique
-- création du schéma : required, NC, ordre des champs, S pour les champs multiples, majuscules, expressions régulières, séparateurs
+- article : mcd, mpd thÃ©orique
+- crÃ©ation du schÃ©ma : required, NC, ordre des champs, S pour les champs multiples, majuscules, expressions rÃ©guliÃ¨res, sÃ©parateurs
+- Majuscules

@@ -127,7 +127,7 @@
          }
       },
       {
-         "name":"ARR_INSEE",
+         "name":"COLL_INSEE",
          "title":"Code INSEE",
          "description":"Code INSEE de la commune sur laquelle s'applique l'arrêté",
          "type":"string",
@@ -237,9 +237,9 @@
          }
       },
       {
-         "name":"VEH_PTAC",
-         "title":"Poids total autorisé en charge",
-         "description":"Poids total autorisé en charge, exprimé en tonnes.",
+         "name":"VEH_TONNAGE",
+         "title":"Tonnage ou poids total autorisé en charge",
+         "description":"Tonnage ou poids total autorisé en charge, exprimé en tonnes.",
          "type":"number",
          "example":"7.5",
          "constraints":{
