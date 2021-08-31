@@ -19,11 +19,11 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 | -- | -- | -- |
 | [ID](#identifiant-de-l'entité---propriété-id) | chaîne de caractères  | Oui |
 | [COLL_NOM](#nom-de-la-collectivité-à-l'origine-de-l'arrêté---propriété-coll_nom) | chaîne de caractères  | Oui |
+| [ARR_INSEE](#code-insee---propriété-arr_insee) | chaîne de caractères  | Oui |
+| [ARR_DATE](#date-de-l'arrêté---propriété-arr_date) | date (format `%Y-%m-%d`) | Oui |
 | [ARR_REF](#référence-de-l'arrêté---propriété-arr_ref) | chaîne de caractères  | Oui |
 | [ARR_OBJET](#objet-de-l'arrêté---propriété-arr_objet) | chaîne de caractères  | Oui |
 | [ARR_CONSIDERANT](#considérant-de-l'arrêté---propriété-arr_considerant) | chaîne de caractères  | Non |
-| [ARR_DATE](#date-de-l'arrêté---propriété-arr_date) | date (format `%Y-%m-%d`) | Oui |
-| [ARR_INSEE](#code-insee---propriété-arr_insee) | chaîne de caractères  | Oui |
 | [ARR_URL](#adresse-internet-de-l'arrêté---propriété-arr_url) | chaîne de caractères (format `uri`) | Non |
 | [REGL_ARTICLE](#article-du-règlement---propriété-regl_article) | nombre entier  | Non |
 | [REGL_SOUS_ARTICLE](#sous-article-du-règlement---propriété-regl_sous_article) | chaîne de caractères  | Non |
@@ -39,9 +39,9 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 | [PERIODE_DEBUT](#date-d'entrée-en-vigueur-des-restrictions---propriété-periode_debut) | date (format `%Y-%m-%d`) | Non |
 | [PERIODE_JH](#jours-et-heures-de-circulation---propriété-periode_jh) | chaîne de caractères  | Non |
 | [EMPRISE_DESIGNATION](#nom-de-la-voie---propriété-emprise_designation) | chaîne de caractères  | Oui |
-| [EMPRISE_SENS](#direction-ou-sens-de-circulation---propriété-emprise_sens) | chaîne de caractères  | Non |
 | [EMPRISE_DEBUT](#début-de-la-section---propriété-emprise_debut) | chaîne de caractères  | Non |
 | [EMPRISE_FIN](#fin-de-la-section---propriété-emprise_fin) | chaîne de caractères  | Non |
+| [EMPRISE_SENS](#direction-ou-sens-de-circulation---propriété-emprise_sens) | chaîne de caractères  | Non |
 | [INTERV_DUREE](#durée-maximale-d'intervention---propriété-interv_duree) | heure  | Non |
 | [INTERV_HMAX](#heure-maximale-d'intervention---propriété-interv_hmax) | heure  | Non |
 | [GEOM_WKT](#géométrie-au-format-wkt---propriété-geom_wkt) | chaîne de caractères  | Non |
@@ -58,6 +58,20 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 > *Description : Nom de la collectivité.<br/>Ex : Commune d'Aix-en-Provence*
 - Valeur obligatoire
 - Type : chaîne de caractères
+
+#### Code INSEE - Propriété `ARR_INSEE`
+
+> *Description : Code INSEE de la commune sur laquelle s'applique l'arrêté<br/>Ex : 13090*
+- Valeur obligatoire
+- Type : chaîne de caractères
+- Entre 5 et 5 caractères
+- Motif : `^([013-9]\d|2[AB1-9])\d{3}$`
+
+#### Date de l'arrêté - Propriété `ARR_DATE`
+
+> *Description : Date de création ou de mise à jour de l'arrêté, au format ISO 8601 AAAA-MM-DD. Mettre `NC` si pas d'indication dans l'arrêté<br/>Ex : 2021-04-30*
+- Valeur obligatoire
+- Type : date (format `%Y-%m-%d`)
 
 #### Référence de l'arrêté - Propriété `ARR_REF`
 
@@ -76,20 +90,6 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 > *Description : Considérant est le justificatif de la mise en place de la règlementation<br/>Ex : Considérant la dangerosité que représente le trafic des PL aux abords des groupes scolaires*
 - Valeur optionnelle
 - Type : chaîne de caractères
-
-#### Date de l'arrêté - Propriété `ARR_DATE`
-
-> *Description : Date de création ou de mise à jour de l'arrêté, au format ISO 8601 AAAA-MM-DD.<br/>Ex : 2021-04-30*
-- Valeur obligatoire
-- Type : date (format `%Y-%m-%d`)
-
-#### Code INSEE - Propriété `ARR_INSEE`
-
-> *Description : Code INSEE de la commune sur laquelle s'applique l'arrêté<br/>Ex : 13090*
-- Valeur obligatoire
-- Type : chaîne de caractères
-- Entre 5 et 5 caractères
-- Motif : `^([013-9]\d|2[AB1-9])\d{3}$`
 
 #### Adresse internet de l'arrêté - Propriété `ARR_URL`
 
@@ -193,6 +193,18 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 - Type : chaîne de caractères
 - Motif : `^[a-zA-Z0-9\-\–\'\’\s\d\u00C0-\u00FF\(\)]+$`
 
+#### Début de la section - Propriété `EMPRISE_DEBUT`
+
+> *Description : Indication de l'endroit à partir duquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Ou bien coordonnées GPS de l'endroit, à noter sous la forme 'long, lat' (5 ou 6 décimales sont conseillées).<br/>Ex : 22 avenue Philippe Solari, Croisement de l'avenue Philippe Solari avec la rue Gaston de Saporta, 43.53591,5.42101*
+- Valeur optionnelle
+- Type : chaîne de caractères
+
+#### Fin de la section - Propriété `EMPRISE_FIN`
+
+> *Description : Indication de l'endroit au bout duquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Ou bien coordonnées GPS de l'endroit, à noter sous la forme 'long, lat' (5 ou 6 décimales sont conseillées).<br/>Ex : 22 avenue Philippe Solari, Croisement de l'avenue Philippe Solari avec la rue Gaston de Saporta*
+- Valeur optionnelle
+- Type : chaîne de caractères
+
 #### Direction ou sens de circulation - Propriété `EMPRISE_SENS`
 
 > *Description : Direction ou sens de circulation associé à la règlementation. Pair : concerne la circulation le long des adresses à chiffre pair. `Nord` signifie vers le Nord, soit "vers le haut".<br/>Ex : Deux sens, Impair, Nord*
@@ -206,18 +218,6 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
     - Est
     - Ouest
     - Deux sens
-
-#### Début de la section - Propriété `EMPRISE_DEBUT`
-
-> *Description : Indication de l'endroit à partir duquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Ou bien coordonnées GPS de l'endroit, à noter sous la forme 'long, lat' (5 ou 6 décimales sont conseillées).<br/>Ex : 22 avenue Philippe Solari, Croisement de l'avenue Philippe Solari avec la rue Gaston de Saporta, 43.53591,5.42101*
-- Valeur optionnelle
-- Type : chaîne de caractères
-
-#### Fin de la section - Propriété `EMPRISE_FIN`
-
-> *Description : Indication de l'endroit au bout duquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Ou bien coordonnées GPS de l'endroit, à noter sous la forme 'long, lat' (5 ou 6 décimales sont conseillées).<br/>Ex : 22 avenue Philippe Solari, Croisement de l'avenue Philippe Solari avec la rue Gaston de Saporta*
-- Valeur optionnelle
-- Type : chaîne de caractères
 
 #### Durée maximale d'intervention - Propriété `INTERV_DUREE`
 
