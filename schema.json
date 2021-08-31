@@ -118,7 +118,7 @@
       },
       {
          "name":"COLL_NOM",
-         "title":"Nom de la collectivité",
+         "title":"Nom de la collectivité à l'origine de l'arrêté",
          "description":"Nom de la collectivité.",
          "example":"Commune d'Aix-en-Provence",
          "type":"string",
@@ -182,7 +182,7 @@
       },
       {
          "name":"ARR_URL",
-         "title":"URL d'accès de l'arrêté",
+         "title":"Adresse internet de l'arrêté",
          "description":"Adresse internet par laquelle accéder à l'arrêté, et donc au règlement.",
          "type":"string",
          "format":"uri",
@@ -213,6 +213,7 @@
       },
       {
          "name":"REGL_MODALITE",
+         "title":"Modalité du règlement",
          "description":"Indique si l'arrêté interdit ou autorise",
          "type":"string",
          "example":"Autorise",
@@ -226,6 +227,7 @@
       },
       {
          "name":"VEH_TYPES",
+         "title":"Types de véhicules",
          "description":"Types de véhicules. Séparer les valeurs par le caractère '|'",
          "type":"string",
          "example":"Poids lourds|Véhicules utilitaires légers",
@@ -260,7 +262,7 @@
       },
       {
          "name":"VEH_LARG",
-         "title":"Largeur du Largeur",
+         "title":"Largeur du véhicule",
          "description":"Longueur maximale exprimée en mètres.",
          "type":"number",
          "example":"3.5",
@@ -272,7 +274,7 @@
       },
       {
          "name":"VEH_HAUT",
-         "title":"Largeur du Largeur",
+         "title":"Hauteur du véhicule",
          "description":"Longueur maximale exprimée en mètres.",
          "type":"number",
          "example":"2.5",
@@ -339,7 +341,7 @@
       {
          "name":"EMPRISE_DESIGNATION",
          "title":"Nom de la voie",
-         "description":"Nom de la voie, ou de la zone associée à la section règlementée. La zone peut être une aire piétonne, un quartier, une zone ZFE ([voir le schéma des ZFE](https://schema.data.gouv.fr/etalab/schema-zfe/latest.html)",
+         "description":"Nom de la voie, ou de la zone associée à la section règlementée. La zone peut être une aire piétonne, un quartier, une zone ZFE ([voir le schéma des ZFE](https://schema.data.gouv.fr/etalab/schema-zfe/latest.html))",
          "example":"Avenue Philippe Solari, Commune d'Aix-en-Provence, Quartier Mazarin, 200046977-ZFE-001",
          "type":"string",
          "constraints":{
@@ -352,7 +354,7 @@
          "title":"Direction ou sens de circulation",
          "description":"Direction ou sens de circulation associé à la règlementation. Pair : concerne la circulation le long des adresses à chiffre pair. `Nord` signifie vers le Nord, soit \"vers le haut\".",
          "type":"string",
-         "example":"Deux côtés",
+         "example":"Deux sens, Impair, Nord",
          "constraints":{
             "required":false,
             "enum":[
@@ -369,9 +371,9 @@
       {
          "name":"EMPRISE_DEBUT",
          "title":"Début de la section",
-         "description":"Indication de l'endroit à partir duquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Par exemple, une adresse ou une indication textuelle : 'au croisement de la rue', 'depuis le rond-point'.Ou bien coordonnées du point de l'endroit où commence la règlementation sur la voie. A noter sous la forme 'long, lat', par exemple '43.53591,5.42101' ou '43.53591, 5.42101'. 5 ou 6 décimales sont conseillées.",
+         "description":"Indication de l'endroit à partir duquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Ou bien coordonnées GPS de l'endroit, à noter sous la forme 'long, lat' (5 ou 6 décimales sont conseillées).",
          "type":"string",
-         "example":"22 avenue Philippe Solari, Croisement de l'avenue Philippe Solari avec la rue Gaston de Saporta",
+         "example":"22 avenue Philippe Solari, Croisement de l'avenue Philippe Solari avec la rue Gaston de Saporta, 43.53591,5.42101",
          "constraints":{
             "required":false
          }
@@ -379,7 +381,7 @@
       {
          "name":"EMPRISE_FIN",
          "title":"Fin de la section",
-         "description":"Indication de l'endroit jusqu'auquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Par exemple, une adresse ou une indication textuelle : 'au croisement de la rue', 'depuis le rond-point'.Ou bien coordonnées du point de l'endroit où finit la règlementation sur la voie. A noter sous la forme 'long, lat', par exemple '43.53591,5.42101' ou '43.53591, 5.42101'. 5 ou 6 décimales sont conseillées.",
+         "description":"Indication de l'endroit au bout duquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Ou bien coordonnées GPS de l'endroit, à noter sous la forme 'long, lat' (5 ou 6 décimales sont conseillées).",
          "type":"string",
          "example":"22 avenue Philippe Solari, Croisement de l'avenue Philippe Solari avec la rue Gaston de Saporta",
          "constraints":{

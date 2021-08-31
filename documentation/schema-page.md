@@ -18,21 +18,21 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 | Propriété | Type | Obligatoire |
 | -- | -- | -- |
 | [ID](#identifiant-de-l'entité---propriété-id) | chaîne de caractères  | Oui |
-| [COLL_NOM](#nom-de-la-collectivité---propriété-coll_nom) | chaîne de caractères  | Oui |
+| [COLL_NOM](#nom-de-la-collectivité-à-l'origine-de-l'arrêté---propriété-coll_nom) | chaîne de caractères  | Oui |
 | [ARR_REF](#référence-de-l'arrêté---propriété-arr_ref) | chaîne de caractères  | Oui |
 | [ARR_OBJET](#objet-de-l'arrêté---propriété-arr_objet) | chaîne de caractères  | Oui |
 | [ARR_CONSIDERANT](#considérant-de-l'arrêté---propriété-arr_considerant) | chaîne de caractères  | Non |
 | [ARR_DATE](#date-de-l'arrêté---propriété-arr_date) | date (format `%Y-%m-%d`) | Oui |
 | [ARR_INSEE](#code-insee---propriété-arr_insee) | chaîne de caractères  | Oui |
-| [ARR_URL](#url-d'accès-de-l'arrêté---propriété-arr_url) | chaîne de caractères (format `uri`) | Non |
+| [ARR_URL](#adresse-internet-de-l'arrêté---propriété-arr_url) | chaîne de caractères (format `uri`) | Non |
 | [REGL_ARTICLE](#article-du-règlement---propriété-regl_article) | nombre entier  | Non |
 | [REGL_SOUS_ARTICLE](#sous-article-du-règlement---propriété-regl_sous_article) | chaîne de caractères  | Non |
-| [REGL_MODALITE](#propriété-regl_modalite) | chaîne de caractères  | Oui |
-| [VEH_TYPES](#propriété-veh_types) | chaîne de caractères  | Non |
+| [REGL_MODALITE](#modalité-du-règlement---propriété-regl_modalite) | chaîne de caractères  | Oui |
+| [VEH_TYPES](#types-de-véhicules---propriété-veh_types) | chaîne de caractères  | Non |
 | [VEH_PTAC](#poids-total-autorisé-en-charge---propriété-veh_ptac) | nombre réel  | Non |
 | [VEH_LONG](#longueur-du-véhicule---propriété-veh_long) | nombre réel  | Non |
-| [VEH_LARG](#largeur-du-largeur---propriété-veh_larg) | nombre réel  | Non |
-| [VEH_HAUT](#largeur-du-largeur---propriété-veh_haut) | nombre réel  | Non |
+| [VEH_LARG](#largeur-du-véhicule---propriété-veh_larg) | nombre réel  | Non |
+| [VEH_HAUT](#hauteur-du-véhicule---propriété-veh_haut) | nombre réel  | Non |
 | [VEH_USAGES](#types-d'usage---propriété-veh_usages) | chaîne de caractères  | Non |
 | [VEH_MOTORS](#types-de-motorisation---propriété-veh_motors) | chaîne de caractères  | Non |
 | [VEH_CQAS](#vignettes-crit'air---propriété-veh_cqas) | chaîne de caractères  | Non |
@@ -53,7 +53,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 - Valeur obligatoire
 - Type : chaîne de caractères
 
-#### Nom de la collectivité - Propriété `COLL_NOM`
+#### Nom de la collectivité à l'origine de l'arrêté - Propriété `COLL_NOM`
 
 > *Description : Nom de la collectivité.<br/>Ex : Commune d'Aix-en-Provence*
 - Valeur obligatoire
@@ -91,7 +91,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 - Entre 5 et 5 caractères
 - Motif : `^([013-9]\d|2[AB1-9])\d{3}$`
 
-#### URL d'accès de l'arrêté - Propriété `ARR_URL`
+#### Adresse internet de l'arrêté - Propriété `ARR_URL`
 
 > *Description : Adresse internet par laquelle accéder à l'arrêté, et donc au règlement.<br/>Ex : https://carte.st-paul-les-dax.fr/wp-content/uploads/2020/06/AM-10248.pdf*
 - Valeur optionnelle
@@ -109,7 +109,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 - Valeur optionnelle
 - Type : chaîne de caractères
 
-#### Propriété `REGL_MODALITE`
+#### Modalité du règlement - Propriété `REGL_MODALITE`
 
 > *Description : Indique si l'arrêté interdit ou autorise<br/>Ex : Autorise*
 - Valeur obligatoire
@@ -118,7 +118,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
     - Autorise
     - Interdit
 
-#### Propriété `VEH_TYPES`
+#### Types de véhicules - Propriété `VEH_TYPES`
 
 > *Description : Types de véhicules. Séparer les valeurs par le caractère '|'<br/>Ex : Poids lourds|Véhicules utilitaires légers*
 - Valeur optionnelle
@@ -139,14 +139,14 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 - Type : nombre réel
 - Valeur entre 0 et 30
 
-#### Largeur du Largeur - Propriété `VEH_LARG`
+#### Largeur du véhicule - Propriété `VEH_LARG`
 
 > *Description : Longueur maximale exprimée en mètres.<br/>Ex : 3.5*
 - Valeur optionnelle
 - Type : nombre réel
 - Valeur entre 0 et 6
 
-#### Largeur du Largeur - Propriété `VEH_HAUT`
+#### Hauteur du véhicule - Propriété `VEH_HAUT`
 
 > *Description : Longueur maximale exprimée en mètres.<br/>Ex : 2.5*
 - Valeur optionnelle
@@ -188,14 +188,14 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 
 #### Nom de la voie - Propriété `EMPRISE_DESIGNATION`
 
-> *Description : Nom de la voie, ou de la zone associée à la section règlementée. La zone peut être une aire piétonne, un quartier, une zone ZFE ([voir le schéma des ZFE](https://schema.data.gouv.fr/etalab/schema-zfe/latest.html)<br/>Ex : Avenue Philippe Solari, Commune d'Aix-en-Provence, Quartier Mazarin, 200046977-ZFE-001*
+> *Description : Nom de la voie, ou de la zone associée à la section règlementée. La zone peut être une aire piétonne, un quartier, une zone ZFE ([voir le schéma des ZFE](https://schema.data.gouv.fr/etalab/schema-zfe/latest.html))<br/>Ex : Avenue Philippe Solari, Commune d'Aix-en-Provence, Quartier Mazarin, 200046977-ZFE-001*
 - Valeur obligatoire
 - Type : chaîne de caractères
 - Motif : `^[a-zA-Z0-9\-\–\'\’\s\d\u00C0-\u00FF\(\)]+$`
 
 #### Direction ou sens de circulation - Propriété `EMPRISE_SENS`
 
-> *Description : Direction ou sens de circulation associé à la règlementation. Pair : concerne la circulation le long des adresses à chiffre pair. `Nord` signifie vers le Nord, soit "vers le haut".<br/>Ex : Deux côtés*
+> *Description : Direction ou sens de circulation associé à la règlementation. Pair : concerne la circulation le long des adresses à chiffre pair. `Nord` signifie vers le Nord, soit "vers le haut".<br/>Ex : Deux sens, Impair, Nord*
 - Valeur optionnelle
 - Type : chaîne de caractères
 - Valeurs autorisées : 
@@ -209,13 +209,13 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 
 #### Début de la section - Propriété `EMPRISE_DEBUT`
 
-> *Description : Indication de l'endroit à partir duquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Par exemple, une adresse ou une indication textuelle : 'au croisement de la rue', 'depuis le rond-point'.Ou bien coordonnées du point de l'endroit où commence la règlementation sur la voie. A noter sous la forme 'long, lat', par exemple '43.53591,5.42101' ou '43.53591, 5.42101'. 5 ou 6 décimales sont conseillées.<br/>Ex : 22 avenue Philippe Solari, Croisement de l'avenue Philippe Solari avec la rue Gaston de Saporta*
+> *Description : Indication de l'endroit à partir duquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Ou bien coordonnées GPS de l'endroit, à noter sous la forme 'long, lat' (5 ou 6 décimales sont conseillées).<br/>Ex : 22 avenue Philippe Solari, Croisement de l'avenue Philippe Solari avec la rue Gaston de Saporta, 43.53591,5.42101*
 - Valeur optionnelle
 - Type : chaîne de caractères
 
 #### Fin de la section - Propriété `EMPRISE_FIN`
 
-> *Description : Indication de l'endroit jusqu'auquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Par exemple, une adresse ou une indication textuelle : 'au croisement de la rue', 'depuis le rond-point'.Ou bien coordonnées du point de l'endroit où finit la règlementation sur la voie. A noter sous la forme 'long, lat', par exemple '43.53591,5.42101' ou '43.53591, 5.42101'. 5 ou 6 décimales sont conseillées.<br/>Ex : 22 avenue Philippe Solari, Croisement de l'avenue Philippe Solari avec la rue Gaston de Saporta*
+> *Description : Indication de l'endroit au bout duquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Ou bien coordonnées GPS de l'endroit, à noter sous la forme 'long, lat' (5 ou 6 décimales sont conseillées).<br/>Ex : 22 avenue Philippe Solari, Croisement de l'avenue Philippe Solari avec la rue Gaston de Saporta*
 - Valeur optionnelle
 - Type : chaîne de caractères
 
