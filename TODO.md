@@ -1,6 +1,9 @@
+### 31 Août
+- Format plus simple pour les heures : pas le format time, mais character, type 22:00 au lieu de 22:00:00
+
 ### 10 Août
 - [ ] Mettre EMPRISE_SENS après EMPRISE_FIN
-- [ ] Mettre ARR_DATE en required:false
+- [x] Mettre ARR_DATE en required:false > on reste en true, mais on propose de mettre la valeur NC si pas renseigné
 
 ### 20 Juillet 2021
 - [x] Parler du formatage UTF-8

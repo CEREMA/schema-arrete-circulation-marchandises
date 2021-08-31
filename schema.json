@@ -127,6 +127,30 @@
          }
       },
       {
+         "name":"ARR_INSEE",
+         "title":"Code INSEE",
+         "description":"Code INSEE de la commune sur laquelle s'applique l'arrêté",
+         "type":"string",
+         "example":"13090",
+         "constraints":{
+            "required":true,
+            "pattern":"^([013-9]\\d|2[AB1-9])\\d{3}$",
+            "minLength":5,
+            "maxLength":5
+         }
+      },
+      {
+         "name":"ARR_DATE",
+         "title":"Date de l'arrêté",
+         "description":"Date de création ou de mise à jour de l'arrêté, au format ISO 8601 AAAA-MM-DD. Mettre `NC` si pas d'indication dans l'arrêté",
+         "example":"2021-04-30",
+         "type":"date",
+         "format":"%Y-%m-%d",
+         "constraints":{
+            "required":true
+         }
+      },
+      {
          "name":"ARR_REF",
          "title":"Référence de l'arrêté",
          "description":"Référence ou numéro de l'arrêté auquel se réfère la règlementation. Si l'arrêté a été mis à jour, la référence doit être celle de l'arrêté mis à jour et non celle de l'arrêté originel. Si l'arrêté ne possède pas de référence, mettre la valeur `NC`",
@@ -154,30 +178,6 @@
          "example":"Considérant la dangerosité que représente le trafic des PL aux abords des groupes scolaires",
          "constraints":{
             "required":false
-         }
-      },
-      {
-         "name":"ARR_DATE",
-         "title":"Date de l'arrêté",
-         "description":"Date de création ou de mise à jour de l'arrêté, au format ISO 8601 AAAA-MM-DD.",
-         "example":"2021-04-30",
-         "type":"date",
-         "format":"%Y-%m-%d",
-         "constraints":{
-            "required":true
-         }
-      },
-      {
-         "name":"ARR_INSEE",
-         "title":"Code INSEE",
-         "description":"Code INSEE de la commune sur laquelle s'applique l'arrêté",
-         "type":"string",
-         "example":"13090",
-         "constraints":{
-            "required":true,
-            "pattern":"^([013-9]\\d|2[AB1-9])\\d{3}$",
-            "minLength":5,
-            "maxLength":5
          }
       },
       {
@@ -350,25 +350,6 @@
          }
       },
       {
-         "name":"EMPRISE_SENS",
-         "title":"Direction ou sens de circulation",
-         "description":"Direction ou sens de circulation associé à la règlementation. Pair : concerne la circulation le long des adresses à chiffre pair. `Nord` signifie vers le Nord, soit \"vers le haut\".",
-         "type":"string",
-         "example":"Deux sens, Impair, Nord",
-         "constraints":{
-            "required":false,
-            "enum":[
-               "Pair",
-               "Impair",
-               "Nord",
-               "Sud",
-               "Est",
-               "Ouest",
-               "Deux sens"
-            ]
-         }
-      },
-      {
          "name":"EMPRISE_DEBUT",
          "title":"Début de la section",
          "description":"Indication de l'endroit à partir duquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Ou bien coordonnées GPS de l'endroit, à noter sous la forme 'long, lat' (5 ou 6 décimales sont conseillées).",
@@ -386,6 +367,25 @@
          "example":"22 avenue Philippe Solari, Croisement de l'avenue Philippe Solari avec la rue Gaston de Saporta",
          "constraints":{
             "required":false
+         }
+      },
+      {
+         "name":"EMPRISE_SENS",
+         "title":"Direction ou sens de circulation",
+         "description":"Direction ou sens de circulation associé à la règlementation. Pair : concerne la circulation le long des adresses à chiffre pair. `Nord` signifie vers le Nord, soit \"vers le haut\".",
+         "type":"string",
+         "example":"Deux sens, Impair, Nord",
+         "constraints":{
+            "required":false,
+            "enum":[
+               "Pair",
+               "Impair",
+               "Nord",
+               "Sud",
+               "Est",
+               "Ouest",
+               "Deux sens"
+            ]
          }
       },
       {
