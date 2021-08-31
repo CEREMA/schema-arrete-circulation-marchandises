@@ -111,7 +111,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 
 #### Propriété `REGL_MODALITE`
 
-> *Description : Modalité<br/>Ex : Autorise*
+> *Description : Indique si l'arrêté interdit ou autorise<br/>Ex : Autorise*
 - Valeur obligatoire
 - Type : chaîne de caractères
 - Valeurs autorisées : 
@@ -120,7 +120,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 
 #### Propriété `VEH_TYPES`
 
-> *Description : Types de véhicules. Séparer les valeurs par le caractère '|'  [Aidez-vous de groom-groom pour remplir ce champ](https://cerema-med.shinyapps.io/groom-groom?action=champs_multiples)<br/>Ex : Poids lourds|Véhicules utilitaires légers*
+> *Description : Types de véhicules. Séparer les valeurs par le caractère '|'<br/>Ex : Poids lourds|Véhicules utilitaires légers*
 - Valeur optionnelle
 - Type : chaîne de caractères
 - Motif : `(?:(?:^|\|)(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules))+$`
@@ -155,27 +155,27 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 
 #### Types d'usage - Propriété `VEH_USAGES`
 
-> *Description : Types d'usage de véhicule. Séparer les valeurs par le caractère '|' [Aidez-vous de groom-groom pour remplir ce champ](https://cerema-med.shinyapps.io/groom-groom?action=champs_multiples)<br/>Ex : Bennes à ordures ménagères|Véhicules de police*
+> *Description : Types d'usage de véhicule. Séparer les valeurs par le caractère '|'<br/>Ex : Bennes à ordures ménagères|Véhicules de police*
 - Valeur optionnelle
 - Type : chaîne de caractères
 
 #### Types de motorisation - Propriété `VEH_MOTORS`
 
-> *Description : Types de motorisation. Séparer les valeurs par le caractère '|' [Aidez-vous de groom-groom pour remplir ce champ](https://cerema-med.shinyapps.io/groom-groom?action=champs_multiples)<br/>Ex : Électrique|Hydrogène*
+> *Description : Types de motorisation. Séparer les valeurs par le caractère '|'<br/>Ex : Électrique|Hydrogène*
 - Valeur optionnelle
 - Type : chaîne de caractères
 - Motif : `(?:(?:^|\|)(Electrique|Gaz Naturel pour Véhicules|Hydrogène))+$`
 
 #### Vignettes crit'air - Propriété `VEH_CQAS`
 
-> *Description : Vignettes crit'air. Voir la [classification des vignettes Crit'Air](https://www.certificat-air.gouv.fr/docs/tableaux_classement.pdf) sur le site [certificat-air.gouv.fr](https://www.certificat-air.gouv.fr). Séparer les étiquettes CQA par le caractère '|' [Aidez-vous de groom-groom pour remplir ce champ](https://cerema-med.shinyapps.io/groom-groom?action=champs_multiples)<br/>Ex : 1|2|3*
+> *Description : Vignettes crit'air. Voir la [classification des vignettes Crit'Air](https://www.certificat-air.gouv.fr/docs/tableaux_classement.pdf) sur le site [certificat-air.gouv.fr](https://www.certificat-air.gouv.fr). Séparer les étiquettes CQA par le caractère '|'<br/>Ex : 1|2|3*
 - Valeur optionnelle
 - Type : chaîne de caractères
 - Motif : `(?:(?:^|\|)(100% électrique et Véhicules à hydrogène|1|2|3|4|5|Véhicule non classé))+$`
 
 #### Date d'entrée en vigueur des restrictions - Propriété `PERIODE_DEBUT`
 
-> *Description : Date d'entrée en vigueur des restrictions (en particulier pour les Zones à Faible Émission),, au format ISO 8601 AAAA-MM-DD.<br/>Ex : 2021-04-30*
+> *Description : Date d'entrée en vigueur des restrictions (en particulier pour les Zones à Faible Émission), au format ISO 8601 AAAA-MM-DD.<br/>Ex : 2021-04-30*
 - Valeur optionnelle
 - Type : date (format `%Y-%m-%d`)
 
@@ -233,13 +233,13 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 
 #### Géométrie au format WKT - Propriété `GEOM_WKT`
 
-> *Description : Géométrie de la ligne exprimée au format [WKT (Well Know Text](https://fr.wikipedia.org/wiki/Well-known_text) sous le système de projection WGS84 (EPSG:4326) [Utiliser groom-groom pour trouver la géométrie d'une rue](https://cerema-med.shinyapps.io/groom-groom?action=trouver_rue)<br/>Ex : LineString (5.39340184 45.56538751, 5.41017215 45.56722934, 5.42510063 45.5679079)*
+> *Description : Géométrie de la ligne exprimée au format [WKT (Well Know Text](https://fr.wikipedia.org/wiki/Well-known_text) sous le système de projection WGS84 (EPSG:4326)<br/>Ex : LineString (5.39340184 45.56538751, 5.41017215 45.56722934, 5.42510063 45.5679079)*
 - Valeur optionnelle
 - Type : chaîne de caractères
 - Motif : `(MULTI|multi)?(LINESTRING|linestring)\(((|,\s?)\(((|,\s?)(-?[0-9](\.[0-9]+)?\s-?[0-9](\.[0-9]+)?))+\))+\)`
 
 #### Source de la géométrie - Propriété `GEOM_SOURCE`
 
-> *Description : Source de la géométrie<br/>Ex : BDTOPO IGN 2021*
+> *Description : Source de la donnée depuis laquelle la donnée a été extraite (OpenStreetMap, IGN,...).<br/>Ex : BDTOPO IGN 2021*
 - Valeur optionnelle
 - Type : chaîne de caractères
