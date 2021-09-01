@@ -30,9 +30,12 @@ Ce schéma a été construit en partenariat avec la Région Sud et l'association
 
 ## Autres
 [Appel à contributions](https://forms.gle/vUALzEDQqRsY2NgG9)  
+
 [Référentiel de valeurs pour le champ `VEH_USAGES`](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/referentiels/VEH_USAGES.csv)  
+
 [Proposition sur le github d'Etalab](https://github.com/etalab/schema.data.gouv.fr/issues/157)  
 [Proposition sur le gitbook d'OpenDataFrance](https://opendatafrance.gitbook.io/fablog/territoires/chantiers/partage-des-donnees/standardisation/arretes-de-circulation)  
+
 [Projet BAC IDF (Base d'Arrêtés de Circulation Île-de-France)](https://bac-idf.fr/) 
 
  
