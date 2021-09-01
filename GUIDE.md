@@ -13,7 +13,7 @@ Voici un exemple :
 
 Nous créons deux lignes (une d'interdiction et une d'autorisation pour les exceptions) :
 
-REGL_MODALITE | VEH_TYPES | VEH_PTAC | VEH_USAGES |
+REGL_MODALITE | VEH_TYPES | VEH_TONNAGE | VEH_USAGES |
  -- | -- | -- | -- |
  Interdit | Poids lourds | 3.5 |  |
  Autorise | Poids lourds | 3.5 | Livraison\|Poids lourds d'urgence |
@@ -75,21 +75,21 @@ Les champs `EMPRISE_DEBUT` et `EMPRISE_FIN` permettent de signaler les début et
 ### Libellés de voies et d'intersections
 > La circulation des véhicules de plus de 7,5T est interdite sur l'avenue Nelson Mandela (RD59c) de l'intersection de la RD8n (Avenue du 8 mai 1945) jusqu'à l'intersection de la route de Calas (RD 543)
 
-REGL_MODALITE | VEH_TYPE | PTAC | EMPRISE_DESIGNATION | EMPRISE_DEBUT | EMPRISE_FIN |
+REGL_MODALITE | VEH_TYPE | VEH_TONNAGE | EMPRISE_DESIGNATION | EMPRISE_DEBUT | EMPRISE_FIN |
  -- | -- | -- | -- | -- | -- |
  Interdit | Poids lourds | 7.5 | avenue Nelson Mandela (RD59c) | intersection de la RD8n (Avenue du 8 mai 1945) | intersection de la route de Calas (RD 543) |
 
 ### Coordonnées de début et de fin
 Si vous avez les coordonnées GPS de débutet de fin, c'est encore mieux. 5 décimales suffisent.
 
-REGL_MODALITE | VEH_TYPE | PTAC | EMPRISE_DESIGNATION | EMPRISE_DEBUT | EMPRISE_FIN |
+REGL_MODALITE | VEH_TYPE | VEH_TONNAGE | EMPRISE_DESIGNATION | EMPRISE_DEBUT | EMPRISE_FIN |
  -- | -- | -- | -- | -- | -- |
  Interdit | Poids lourds | 7.5 | avenue Nelson Mandela (RD59c) | 5.37229, 43.41060 | 5.36585, 43.40828 |
  
 ## Géométrie de la rue
 Donner la géométrie de la rue règlementée est sans doute le plus utile. Si vous avez la géométrie de la portion de voie règlementée, alors vous pouvez l'intégrer dans le champ `GEOM_WKT`
  
- REGL_MODALITE | VEH_TYPE | PTAC | GEOM_WKT |
+ REGL_MODALITE | VEH_TYPE | VEH_TONNAGE | GEOM_WKT |
  -- | -- | -- | -- |
  Interdit | Poids lourds | 7.5 |  LINESTRING(5.364190559467414 43.40726403502167,5.365317087253669 43.40776287238391,5.365896444400886 43.40825391140007,5.366218309482673 43.40833964796295,5.367977838596443 43.409150242196034,5.368761043628791 43.40969582836029,5.372162084659675 43.41060772569154) |
  
