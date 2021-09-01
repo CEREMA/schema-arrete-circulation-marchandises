@@ -25,7 +25,7 @@ Ce schéma a été construit en partenariat avec la Région Sud et l'association
 [Tutoriels et exemples](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/EXEMPLES.md)  
 [Guide de saisie](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/GUIDE.md)  
 ### En complément
-[Assistant à la production des données (expérimental)](https://cerema-med.shinyapps.io/groom-groom/)  
+[groom-groom, assistant à la production des données (expérimental)](https://cerema-med.shinyapps.io/groom-groom/)  
 [Recommandations pour le format des fichiers et leur nommage](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/FORMAT.md)  
 
 ## Autres
