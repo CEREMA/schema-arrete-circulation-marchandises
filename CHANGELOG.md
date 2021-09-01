@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.6.1
+- Renomme `ARR_INSEE` en `COLL_INSEE`
+- Renomme `VEH_PTAC` en `VEH_TONNAGE`
+- Champs mis dans un autre ordre (ex, `COLL_INSEE` après `COLL_NOM`, `EMPRISE_SENS` après `EMPRISE_FIN`)
+
 ## v0.6.0
 - Suppression du champ `COLL_SIRET`
 - Ajout de lien vers l'assistant pour le champ `PERIODE_JH` vers https://cerema-med.shinyapps.io/groom-groom
