@@ -1,17 +1,17 @@
 # Arrêté de Saint-Victoret
 <img src=https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/master/exemples/st-victoret.png width='60%'>
 
-### `ARR_INSEE`
+### `COLL_NOM`, `COLL_INSEE`
 Le code INSEE de la commune est 13102
 
-| COLL_NOM | ARR_INSEE
+| COLL_NOM | COLL_INSEE
 | -- | --
 | Commune de Saint-Victoret | 13102
 
 ### `ARR_REF`
 Nous trouvons dessus la référence de l'arrêté
 
-![](st-victoret/arr_ref.png)
+![](https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/master/exemples/st-victoret/arr_ref.png)
 
 | ARR_REF |
 | -- |
@@ -20,7 +20,7 @@ Nous trouvons dessus la référence de l'arrêté
 ### `ARR_OBJET`
 Nous trouvons l'objet
 
-![](st-victoret/arr_objet.png)
+![](https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/master/exemples/st-victoret/arr_objet.png)
 
 | ARR_OBJET |
 | -- |
@@ -29,7 +29,7 @@ Nous trouvons l'objet
 ### `ARR_CONSIDERANT`
 Ainsi que le considérant
 
-![](st-victoret/arr_considerant.png)
+![](https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/master/exemples/st-victoretarr_considerant.png)
 
 | ARR_CONSIDERANT |
 | -- |
@@ -38,24 +38,24 @@ Ainsi que le considérant
 ### `ARR_DATE`
 Ainsi que la date. Attention, il ne faut pas prendre la date de l'arrêté initial, à savoir celui que cet arrêté remplace.
 
-![](st-victoret/arr_date.png)
+![](https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/master/exemples/st-victoret/arr_date.png)
 
 | ARR_DATE |
 | -- |
 | 2009-02-20
 
-### `REGL_ARTICLE`, `REGL_MODALITE`, `VEH_TYPES`, `VEH_PTAC`, `VEH_USAGES`, `EMPRISE_DESIGNATION`
+### `REGL_ARTICLE`, `REGL_MODALITE`, `VEH_TYPES`, `VEH_TONNAGE`, `VEH_USAGES`, `EMPRISE_DESIGNATION`
 C'est l'article 2 qu'il faut prendre en compte :
 
-![](st-victoret/article2.png)
+![](https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/master/exemples/st-victoret/article2.png)
 
 On le traduit de la sorte :
 
-| REGL_ARTICLE | REGL_MODALITE | VEH_TYPES | VEH_PTAC | VEH_USAGES | EMPRISE_DESIGNATION |
+| REGL_ARTICLE | REGL_MODALITE | VEH_TYPES | VEH_TONNAGE | VEH_USAGES | EMPRISE_DESIGNATION |
 | -- | -- | -- | -- | -- | -- |
 | 2 | Interdit | Poids lourds | 3.5 || Commune de Saint-Victoret
 | 2 | Autorise | Poids lourds | 3.5 |Livraison\|Poids lourds d'urgence\|Véhicules de travaux| Commune de Saint-Victoret
 
 ----
-[Voir l'arrêté final de la commune de Saint Victoret en CSV](st-victoret.csv)
+[Voir l'arrêté final de la commune de Saint Victoret en CSV](https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/master/exemples/st-victoret.csv)
 

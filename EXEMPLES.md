@@ -3,47 +3,47 @@ Les arrêtés proposés ci-dessous sont pris à titre d'exemples. Nous ne garant
 ### Tutoriels
 Nous avons créé des tutoriels expliquant, pas à pas, comment saisir certains arrêtés. Vous pourrez vous en inspirer.
 
-[Voir une "radiographie" de l'arrêté du Rove](exemples/le-rove-radio.md)  
+[Voir une "radiographie" de l'arrêté du Rove](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/exemples/le-rove-radio.md)  
 
-[Création du fichier de données relatif à l'arrêté du Rove](exemples/le-rove.md)  
-[Création du fichier de données relatif à l'arrêté de Saint-Victoret](exemples/st-victoret.md)
+[Création du fichier de données relatif à l'arrêté du Rove](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/exemples/le-rove.md)  
+[Création du fichier de données relatif à l'arrêté de Saint-Victoret](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/exemples/st-victoret.md)
 
 ### Commune du Rove
 > Voie règlementée avec spécifications des rues de début et de fin  
 
-[Voir une "radiographie" de l'arrêté du Rove](exemples/le-rove-radio.md)  
-[Voir le tutoriel de création de l'arrêté du Rove](exemples/le-rove.md)
+[Voir une "radiographie" de l'arrêté du Rove](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/exemples/le-rove-radio.md)  
+[Voir le tutoriel de création de l'arrêté du Rove](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/exemples/le-rove.md)
 
-[📜 Arrêté](examples/le-rove.jpg) | [Donnée CSV](exemples/le-rove.csv)
+[📜 Arrêté](examples/le-rove.jpg) | [Donnée CSV](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/exemples/le-rove.csv)
 
 
 ### Commune de Saint-Victoret
 > Sur toute la commune, pour les poids lourds > 3.5 T sauf les véhicules de livraison, de travaux et d'urgence  
 
-[Voir le tutoriel de création de l'arrêté de Saint-Victoret](exemples/le-rove.md)
+[Voir le tutoriel de création de l'arrêté de Saint-Victoret](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/exemples/le-rove.md)
 
-[📜 Arrêté](examples/st-victoret.png) | [Donnée CSV](exemples/st-victoret.csv)
+[📜 Arrêté](examples/st-victoret.png) | [Donnée CSV](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/exemples/st-victoret.csv)
 
 ### Commune de Gignac-La-Nerthe
 > Règlementation sur toute l'agglomération de 6h30 à 11h30  
 
-[📜 Arrêté](exemples/gignac-la-nerthe.png) | [Donnée CSV](exemples/gignac.csv)
+[📜 Arrêté](exemples/gignac-la-nerthe.png) | [Donnée CSV](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/exemples/gignac.csv)
 
 
 ### Commune de Vence
 > Cas de plusieurs arrêtés pour une commune  
 
-[📜 Arrêté 1](exemples/vence1.png) | [📜 Arrêté 2](exemples/vence2.png) | [Donnée CSV](exemples/vence.csv)
+[📜 Arrêté 1](exemples/vence1.png) | [📜 Arrêté 2](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/exemples/vence2.png) | [Donnée CSV](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/exemples/vence.csv)
 
 ### Commune de Septèmes-Les-Vallons
 > Poids lourds, tonnage, voie règlementée et points de début et de fin (intersections de rues)   
 
-[📜 Arrêté](exemples/septemes-les-vallons.png) | [Donnée CSV](exemples/septemes-les-vallons.csv)
+[📜 Arrêté](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/exemples/septemes-les-vallons.png) | [Donnée CSV](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/exemples/septemes-les-vallons.csv)
 
 ### Commune de Carros
 > Arrêté avec règlement associé à un certain nombre de rues (toutes les rues n'ont pas été transcrites dans le fichier CSV) 
 
-[📜 Arrêté](exemples/carros.png) | [Donnée CSV](exemples/carros.csv)
+[📜 Arrêté](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/exemples/carros.png) | [Donnée CSV](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/exemples/carros.csv)
 
 <!--
 ### Commune de Fuveau

@@ -25,7 +25,7 @@ Les fichiers doivent, sauf exception et autant que possible, respecter les règl
 * chaque ligne doit avoir **le même nombre de champs**,
 * le type **MIME** ou Content-Type est **text/csv**.
 
-> Vous pouvez vous inspirer du fichier exemple [exemple-valide.csv](exemple-valide.csv)
+> Vous pouvez vous inspirer du fichier exemple [https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/exemple-valide.csv](exemple-valide.csv)
 
 ## Mise en conformité
 
