@@ -14,7 +14,7 @@ Ce schéma a été construit en partenariat avec la Région Sud et l'association
 
 ## Prenez connaissance du schéma
 [Représentation simplifiée des champs](mindmaps/arrete-permanent-circulation.png)  
-[Documentation lisible du schéma](documentation/schema-page.md)  
+[Documentation des champs](documentation/schema-page.md)  
 [schema.json](schema.json)  
 
 ### À propos du schéma
