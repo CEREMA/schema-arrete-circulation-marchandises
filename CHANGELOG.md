@@ -4,6 +4,7 @@
 - Renomme `ARR_INSEE` en `COLL_INSEE`
 - Renomme `VEH_PTAC` en `VEH_TONNAGE`
 - Champs mis dans un autre ordre (ex, `COLL_INSEE` après `COLL_NOM`, `EMPRISE_SENS` après `EMPRISE_FIN`)
+- Support de `POLYGON` pour `GEOM_WKT` (Cas de communes entières ou de quartiers sur lesquels s'appliquerait la règlementation)
 
 ## v0.6.0
 - Suppression du champ `COLL_SIRET`
