@@ -1,3 +1,6 @@
+### 2 Septembre
+- [ ] Mettre plusieurs exemples entre crochets : [exemple1, exemple2]
+
 ### 31 Août
 - Format plus simple pour les heures : pas le format time, mais character, type 22:00 au lieu de 22:00:00
 

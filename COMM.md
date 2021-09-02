@@ -2,9 +2,6 @@
 - page contexte et readme
 - faire des essais sur publier avant production et publication
 - quelle communication ?
-- article : mcd, mpd théorique
-- création du schéma : required, NC, ordre des champs, S pour les champs multiples, majuscules, expressions régulières, séparateurs
-- Majuscules
 - Mettre en opensource groom-groom
 
 ### Avis saisie de données publier.etalab.studio
