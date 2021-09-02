@@ -13,11 +13,11 @@ Ce schéma a été construit en partenariat avec la Région Sud et l'association
 </p>
 
 ## Prenez connaissance du schéma
-[Représentation simplifiée des champs](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/mindmaps/arrete-permanent-circulation.png)  
+![](https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/master/mindmaps/arrete-permanent-circulation.png)
+
 [Documentation des champs](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/documentation/schema-page.md)  
 [Schéma](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/schema.json)  
 
-### À propos du schéma
 [Contexte](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/CONTEXTE.md)  
 [Conventions utilisées pour créer le schéma](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/A-PROPOS.md)  
 
