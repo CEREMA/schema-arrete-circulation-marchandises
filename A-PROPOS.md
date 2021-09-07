@@ -40,4 +40,4 @@ Ci-dessous, le règlement 1 s'applique à deux voies : les voies 1 et 2. Cela pe
 
 Ainsi, il se peut que vous deviez dupliquer certaines informations dans votre tableau lorsque vous saisirez des données. 
 
-Cela est notamment dû au fait que nous avons souhaité que tout un chacun puisse produire les données d'arrêtés sous la forme d'un seul fichier. L'adoption d'un modèle de données relationnel, avec plusieurs tableaux de saisie ou bien d'un format de fichiers arborescent type JSON aurait permis d'éviter cette duplication, mais aurait d'un autre côté rendu la saisie plus difficile.
+Cela est notamment dû au fait que nous avons souhaité que tout un chacun puisse produire les données d'arrêtés sous la forme d'un seul fichier. L'adoption d'un modèle de données relationnel, avec plusieurs tableaux de saisie ou bien d'un format de fichiers arborescent type JSON aurait permis d'éviter cette duplication, mais aurait d'un autre côté rendu la saisie plus complexe et moins accessible.
