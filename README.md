@@ -36,4 +36,8 @@ En voici une représentation simplifiée, sous forme de diagramme :
 [Tutoriels et exemples](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/EXEMPLES.md)   
 [Guide de saisie](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/GUIDE.md)  
 
-[Assistez-vous de groom-groom, outil en ligne expérimental pour le remplissage de certains champs](https://cerema-med.shinyapps.io/groom-groom/)  
+[Assistez-vous de groom-groom, outil en ligne expérimental pour le remplissage de certains champs](https://cerema-med.shinyapps.io/groom-groom/) 
+
+## Présentations
+[8 Juin 2021 (Cerema, La Région Sud & Etalab)](https://docs.google.com/presentation/d/1bEUZsB0HSjZ4NnFQi50sbwd17YuOOjq_rz5jB_0RbkQ/edit?usp=sharing)  
+[2 Septembre 2021 (Cerema & La Région Sud)](https://docs.google.com/presentation/d/1bEUZsB0HSjZ4NnFQi50sbwd17YuOOjq_rz5jB_0RbkQ/edit?usp=sharing)  
