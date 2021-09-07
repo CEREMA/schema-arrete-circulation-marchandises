@@ -5,7 +5,7 @@ Le premier modèle de schéma peut être élaboré par le biais d'un framacalc, 
 ## Un seul fichier
 De prime abord, il nous semblait crucial de concentrer les informations relatives à l'arrêté dans un seul fichier
 
-## CamelCase, pascalCase, ou champs en majuscules ?
+## camelCase, PascalCase, snake_case ?
 Pour l'écriture des champs, un choix peut être réalisé entre le pascalCase, le CamelCase, utilisées dans le monde informatique, ou bien des écritures un peu plus conventionnelles.
 
 Dans notre cas, nous avons choisi d'utiliser les majuscules, et un séparateur underscore _, et de ne pas mélanger majuscules et minuscules.
