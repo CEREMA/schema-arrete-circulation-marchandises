@@ -1,9 +1,9 @@
 Ce guide est là pour vous aider à renseigner les bases de données des arrêtés permanents de circulation.
 
 ## Autorisation, Interdiction et Interdiction sauf
-Dans certains cas, un arrêté peut autoriser la circulation de véhicules d'un certain type. Dans d'autres cas, il peut linterdire.
+Dans certains cas, un arrêté peut autoriser la circulation de véhicules d'un certain type. Dans d'autres cas, il peut l'interdire.
 
-Aussi, un arrêté peut interdire le passage d'un certain type de véhicules à l'exception de certains types. 
+Aussi, un arrêté peut interdire le passage d'un certain type de véhicules _à l'exception_ de certains types. 
 
 Afin de résoudre cette problématique autorisation/interdiction, le schéma propose un champ [`REGL_MODALITE`](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/schema-page.md#propri%C3%A9t%C3%A9-regl_modalite) prenant comme valeurs `Autorise` ou `Interdit`
 
@@ -28,7 +28,9 @@ Voici un exemple :
 
 REGL_MODALITE | EMPRISE_DESIGNATION |
  -- | -- |
- Interdit | Commune d'Aix-en-Provence 
+ Interdit | Commune d'Aix-en-Provence (13001)
+ 
+ Il est préférable (mais non obligatoire) d'indiquer le code INSEE de la commune dans [`EMPRISE_DESIGNATION`](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/documentation/schema-page.md#nom-de-la-voie---propri%C3%A9t%C3%A9-emprise_designation).
  
  ## Règlement appliqué à une ZFE
  Quand le règlement s'applique à une ZFE, il est préférable de la référencer par son nom et son identifiant quand il existe.
@@ -69,8 +71,10 @@ REGL_MODALITE | VEH_USAGES | PERIODE_JH |
 \> [Voir l'exemple de Gignac-la-Nerthe
 ](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/EXEMPLES.md#commune-de-gignac-la-nerthe)
 
+[Vous pouvez vous aider de l'assistant groom-groom pour remplir le champ PERIODE_JH](https://cerema-med.shinyapps.io/groom-groom/)
+
 ## Une portion de la rue est règlementée, pas toute la rue
-Les champs `EMPRISE_DEBUT` et `EMPRISE_FIN` permettent de signaler les début et fin de chaque section règlementée car dans certains cas, ce n'est pas toute la rue qui est règlementée, mais une partie.
+Les champs [`EMPRISE_DEBUT`](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/documentation/schema-page.md#d%C3%A9but-de-la-section---propri%C3%A9t%C3%A9-emprise_debut) et [`EMPRISE_FIN`](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/documentation/schema-page.md#fin-de-la-section---propri%C3%A9t%C3%A9-emprise_fin) permettent de signaler les début et fin de chaque section règlementée car dans certains cas, ce n'est pas toute la rue qui est règlementée, mais une partie.
 
 ### Libellés de voies et d'intersections
 > La circulation des véhicules de plus de 7,5T est interdite sur l'avenue Nelson Mandela (RD59c) de l'intersection de la RD8n (Avenue du 8 mai 1945) jusqu'à l'intersection de la route de Calas (RD 543)
@@ -84,19 +88,18 @@ Si vous avez les coordonnées GPS de débutet de fin, c'est encore mieux. 5 déc
 
 REGL_MODALITE | VEH_TYPE | VEH_TONNAGE | EMPRISE_DESIGNATION | EMPRISE_DEBUT | EMPRISE_FIN |
  -- | -- | -- | -- | -- | -- |
- Interdit | Poids lourds | 7.5 | avenue Nelson Mandela (RD59c) | 5.37229, 43.41060 | 5.36585, 43.40828 |
+ Interdit | Poids lourds | 7.5 | avenue Nelson Mandela (RD59c) | 5.37229,43.41060 | 5.36585,43.40828 |
  
 ## Géométrie de la rue
-Donner la géométrie de la rue règlementée est sans doute le plus utile. Si vous avez la géométrie de la portion de voie règlementée, alors vous pouvez l'intégrer dans le champ `GEOM_WKT`
+Donner la géométrie de la rue règlementée est sans doute le plus utile. Si vous avez la géométrie de la portion de voie règlementée, alors vous pouvez l'intégrer dans le champ [`GEOM_WKT`](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/documentation/schema-page.md#g%C3%A9om%C3%A9trie-au-format-wkt---propri%C3%A9t%C3%A9-geom_wkt)
  
  REGL_MODALITE | VEH_TYPE | VEH_TONNAGE | GEOM_WKT |
  -- | -- | -- | -- |
  Interdit | Poids lourds | 7.5 |  LINESTRING(5.364190559467414 43.40726403502167,5.365317087253669 43.40776287238391,5.365896444400886 43.40825391140007,5.366218309482673 43.40833964796295,5.367977838596443 43.409150242196034,5.368761043628791 43.40969582836029,5.372162084659675 43.41060772569154) |
  
-
 ## Recommandations pour le format des fichiers et leur nommage
-[Ce document explique comment nommer et formater les fichiers de données avant leur export](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/FORMAT.md)  
+[Enfin, ce document explique comment nommer et formater les fichiers de données](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/FORMAT.md)  
 
 ----
  
-👉 Vous pouvez voir des exemples de saisies de données [ici](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/EXEMPLES.md)
+👉 [Inspirez-vous des exemples et tutoriels](https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/master/EXEMPLES.md)
