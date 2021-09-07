@@ -36,4 +36,4 @@ En voici une représentation simplifiée, sous forme de diagramme :
 [Tutoriels et exemples](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/EXEMPLES.md)   
 [Guide de saisie](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/GUIDE.md)  
 
-[Assistez-vous de groom-groom, pour le remplissage de certains champs (l'outil est expérimental)](https://cerema-med.shinyapps.io/groom-groom/)  
+[Assistez-vous de groom-groom, outil en ligne expérimental pour le remplissage de certains champs](https://cerema-med.shinyapps.io/groom-groom/)  
