@@ -4,7 +4,7 @@ Les arrêtés de circulation, le plus souvent municipaux, règlementent l'accès
 
 Le schéma sur les arrêtés permanents de circulation en ville pour le transport de marchandises vise à proposer [une structure](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/documentation/schema-page.md) selon laquelle saisir les informations contenues dans ces arrêtés dans un tableau de données.
 
-Le schéma proposé se veut volontairement [assez simple](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/exemple-valide.csv) (un seul tableau de saisie) afin de faciliter la production de données d'arrêtés par un large éventail d'éditeurs et donc ainsi de faciliter leur diffusion.
+Le schéma proposé se veut volontairement [assez simple (un seul tableau de saisie)](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/exemple-valide.csv) afin de faciliter la production de données d'arrêtés par un large éventail d'éditeurs et donc ainsi de faciliter leur diffusion.
 
 <br>
 <p align=center>
