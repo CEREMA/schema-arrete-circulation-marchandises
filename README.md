@@ -24,15 +24,15 @@ En voici une représentation simplifiée, sous forme de diagramme :
 <img src=https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/master/mindmaps/arrete-permanent-circulation.png>
 </p>
 
-[Trouvez la signification de chacun des champs](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/documentation/schema-page.md)  
-[Visualisez le schéma au format JSON](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/schema.json)  
-[Retrouvez l'historique des évolutions du schéma (CHANGELOG)](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/CHANGELOG.md)
+[Signification de chacun des champs](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/documentation/schema-page.md)  
+[Schéma au format JSON](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/schema.json)  
+[Historique des évolutions du schéma (CHANGELOG)](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/CHANGELOG.md)
 
 [Prenez connaissance des conventions utilisées pour créer le schéma](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/A-PROPOS.md)   
 [Référentiel de valeurs pour le champ `VEH_USAGES`](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/referentiels/VEH_USAGES.csv)  
 
 ## Produisez des données selon le schéma
-[Inspirez-vous de tutoriels et d'exemples](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/EXEMPLES.md)   
+[Tutoriels et exemples](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/EXEMPLES.md)   
 [Guide de saisie](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/GUIDE.md)  
 
 [Assistez-vous de groom-groom, pour le remplissage de certains champs (l'outil est expérimental)](https://cerema-med.shinyapps.io/groom-groom/)  
