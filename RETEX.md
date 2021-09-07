@@ -67,7 +67,7 @@ Finalement, le choix a été fait d'introduire le champ REGL_MODALITE, si bien q
 REGL_MODALITE | VEH_TYPES | VEH_USAGES |
  ---- | ---- | ---- |
 Interdit | Poids lourds | 
-Autorise | Poids lourds | Livraison
+Autorise | Poids lourds | Urgennces\\|Livraison
 
 ## Champ requis ou pas
 Une option dans TableSchema permet de dire si un champ est requis (required : true) ou pas (required : false)
