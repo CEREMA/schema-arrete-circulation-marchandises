@@ -4,7 +4,7 @@ Les arrêtés proposés ci-dessous sont pris à titre d'exemples. Nous ne garant
 Nous avons créé des tutoriels expliquant, pas à pas, comment saisir certains arrêtés. Vous pourrez vous en inspirer.
 
 [Voir une "radiographie" de l'arrêté du Rove](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/exemples/le-rove-radio.md)  
-
+<a href=https://github.com/CEREMA/schema-arrete-circulation-marchandises/raw/master/exemples/le-rove-radio.jpg target=_blank><img width='30%' src=https://github.com/CEREMA/schema-arrete-circulation-marchandises/raw/master/exemples/le-rove-radio.jpg></a>  
 [Création du fichier de données relatif à l'arrêté du Rove](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/exemples/le-rove.md)  
 [Création du fichier de données relatif à l'arrêté de Saint-Victoret](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/exemples/st-victoret.md)
 
