@@ -56,7 +56,13 @@ Poids lourds | | Poids lourds | Autorise
 
 Mais le souci est que l'on aurait dû décliner ces modalités le long des autres colonnes : VEH_HAUTEUR, VEH_LARGEUR, VEH_TONNAGE, ce qui aurait considérablement augmenté le nombre de colonnes à remplir, et diminué fortement l'ergonomie de la saisie.
 
-Le choix a donc été fait d'introduire le champ REGL_MODALITE, si bien que l'on a :
+Nous aurions aussi pu adopter un modèle arborescent de type JSON avec deux modalités racines INTERDIT et AUTORISE dans lesquelles encapsuler les caractéristiques des véhicules, les horaires sur lesquelles s'applique l'autorisation ou l'interdiction de circulation, mais cela aurait rendu la saisie assez complexe.
+
+Voici un exemple de saisie selon ce mode arborescent :
+
+    AUTORISE = {'VEH_USAGES' : ['Urgences', 'Livraison'], 'VEH_TYPES':'Poids lourds'}
+
+Finalement, le choix a été fait d'introduire le champ REGL_MODALITE, si bien que l'on a :
 
 REGL_MODALITE | VEH_TYPES | VEH_USAGES |
  ---- | ---- | ---- |
