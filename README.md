@@ -24,12 +24,13 @@ En voici une représentation simplifiée, sous forme de diagramme :
 <img src=https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/master/mindmaps/arrete-permanent-circulation.png>
 </p>
 
-[Signification de chacun des champs](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/documentation/schema-page.md)  
+[Documentation : liste des champs et signification de ceux-ci](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/documentation/schema-page.md)  
 [Schéma au format JSON](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/schema.json)  
 
 [Historique des évolutions du schéma (CHANGELOG)](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/CHANGELOG.md)
 
 [Conventions ayant été utilisées pour concevoir le schéma](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/A-PROPOS.md)   
+
 [Référentiel de valeurs pour le champ `VEH_USAGES`](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/referentiels/VEH_USAGES.csv)  
 
 ## Produisez des données selon le schéma
