@@ -15,7 +15,7 @@ Ce schéma a été construit en partenariat avec [la Région Sud](https://www.ma
 
 Un [appel à contributions](https://forms.gle/vUALzEDQqRsY2NgG9) a aussi été réalisé afin de collecter des retours sur le schéma. Ce dernier est toujours actif si vous souhaitez faire un retour.
 
-Ce travail rejoint une initiative assez similaire conduite en Île-de-France, appelée [BAC IDF](https://bac-idf.fr/) (pour Base d'Arrêtés de Circulation Île-de-France), visant à dématérialiser, concentrer, mettre à disposition les arrêtés de circulation des communes d'Île-de-France sous forme numérique et de données.
+Ce travail rejoint une initiative similaire conduite en Île-de-France, appelée [BAC IDF](https://bac-idf.fr/) (pour Base d'Arrêtés de Circulation Île-de-France), visant à dématérialiser, concentrer, mettre à disposition les arrêtés de circulation des communes d'Île-de-France sous forme numérique.
 
 ## Prenez connaissance du schéma
 En voici une représentation simplifiée, sous forme de diagramme :
