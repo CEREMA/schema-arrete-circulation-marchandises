@@ -21,7 +21,7 @@ Ce travail rejoint une initiative similaire conduite en Île-de-France, appelée
 En voici une représentation simplifiée, sous forme de diagramme :
 
 <p align=center>
-<img src=https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/master/mindmaps/arrete-permanent-circulation.png>
+<img src=https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/master/mindmaps/arrete-circulation-marchandises.jpg>
 </p>
 
 [Documentation : liste des champs et signification de ceux-ci](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/documentation/schema-page.md)  

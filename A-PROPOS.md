@@ -1,7 +1,7 @@
 ## Conventions de nommage
 Dans ce schéma, les champs sont écrits en majuscules. Le préfixe indique la famille du champ. Ces familles sont visualisables sur le diagramme des champs ci-dessous : 
 
-![](https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation/master/mindmaps/arrete-permanent-circulation.png)
+![](https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation/master/mindmaps/arrete-circulation-marchandises.jpg)
 
 ## Arrêtés, règlements et articles
 Un arrêté comprend plusieurs articles. Voire il arrive que des sous-articles soient compris dans un article. On peut ainsi voir l'article 4 et le sous-article 4 bis. Le règlement est contenu, soit dans l'article, soit dans le sous-article si ce dernier existe.
