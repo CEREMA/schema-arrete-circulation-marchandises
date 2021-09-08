@@ -18,14 +18,15 @@ Un [appel à contributions](https://forms.gle/vUALzEDQqRsY2NgG9) a aussi été r
 Ce travail rejoint une initiative similaire conduite en Île-de-France, appelée [BAC IDF](https://bac-idf.fr/) (pour Base d'Arrêtés de Circulation Île-de-France), visant à dématérialiser, concentrer, mettre à disposition les arrêtés de circulation des communes d'Île-de-France sous forme numérique.
 
 ## Prenez connaissance du schéma
+[Documentation : liste des champs et signification de ceux-ci](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/documentation/schema-page.md)  
+[Schéma au format JSON](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/schema.json)  
+
 En voici une représentation simplifiée, sous forme de diagramme :
 
 <p align=center>
 <img src=https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/master/mindmaps/arrete-circulation-marchandises.jpeg>
 </p>
 
-[Documentation : liste des champs et signification de ceux-ci](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/documentation/schema-page.md)  
-[Schéma au format JSON](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/schema.json)  
 
 ## À propos du schéma
 [Historique des évolutions du schéma (CHANGELOG)](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/CHANGELOG.md)  
