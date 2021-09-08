@@ -233,7 +233,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 
 #### Géométrie au format WKT - Propriété `GEOM_WKT`
 
-> *Description : Géométrie de la ligne exprimée au format [WKT (Well Know Text](https://fr.wikipedia.org/wiki/Well-known_text) sous le système de projection WGS84 (EPSG:4326)<br/>Ex : LineString (5.39340184 45.56538751, 5.41017215 45.56722934, 5.42510063 45.5679079)*
+> *Description : Géométrie de la rue (ligne), ou de l'emprise (polygone) exprimée au format [WKT (Well Know Text](https://fr.wikipedia.org/wiki/Well-known_text) sous le système de projection WGS84 (EPSG:4326)<br/>Ex : LineString (5.39340184 45.56538751, 5.41017215 45.56722934, 5.42510063 45.5679079)*
 - Valeur optionnelle
 - Type : chaîne de caractères
 - Motif : `(MULTI|multi)?(LINESTRING|linestring|POLYGON|polygon)\(((|,\s?)\(((|,\s?)(-?[0-9](\.[0-9]+)?\s-?[0-9](\.[0-9]+)?))+\))+\)`
