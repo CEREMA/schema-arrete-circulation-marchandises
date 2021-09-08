@@ -31,13 +31,12 @@ En voici une représentation simplifiée, sous forme de diagramme :
 
 [À propos de la conception du schéma](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/A-PROPOS.md)   
 
-[Référentiel de valeurs pour le champ `VEH_USAGES`](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/referentiels/VEH_USAGES.csv)  
-
 ## Produisez des données selon le schéma
 [Tutoriels et exemples](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/EXEMPLES.md)   
 [Guide de saisie](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/GUIDE.md)  
 
-[Assistez-vous de groom-groom, outil en ligne expérimental pour le remplissage de certains champs](https://cerema-med.shinyapps.io/groom-groom/) 
+[Assistez-vous de groom-groom, outil en ligne expérimental pour le remplissage de certains champs](https://cerema-med.shinyapps.io/groom-groom/)  
+[Référentiel de valeurs pour le champ `VEH_USAGES`](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/referentiels/VEH_USAGES.csv)  
 
 ## Présentations
 [2 Septembre 2021 (Cerema & La Région Sud)](https://docs.google.com/presentation/d/1xXVS5TgF8FJknyRHQW3SxCZFS4M-1_jaUQs1H9hXZRU/edit?usp=sharing)  
