@@ -6,7 +6,7 @@ Le schéma sur les arrêtés permanents de circulation en ville pour le transpor
 
 Le schéma proposé se veut volontairement [assez simple (un seul tableau de saisie)](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/exemple-valide.csv) afin de faciliter la production de données d'arrêtés par le plus grand nombre et donc de faciliter leur diffusion.
 
-Ce schéma a été construit en partenariat avec [la Région Sud](https://www.maregionsud.fr/) et l'association [OpenDataFrance](https://www.opendatafrance.net/) dans le cadre de la Fabrique de la Logistique. Le schéma a été [initié sur le site d'OpenDataFrance.](https://opendatafrance.gitbook.io/fablog/territoires/chantiers/partage-des-donnees/arretes-de-circulation) avant d'être [proposé sur le site d'Etalab](https://github.com/etalab/schema.data.gouv.fr/issues/157).
+Ce schéma a été construit en partenariat avec [la Région Sud](https://www.maregionsud.fr/) et l'association [OpenDataFrance](https://www.opendatafrance.net/) dans le cadre de la Fabrique de la Logistique. Le schéma a été [initié sur le site d'OpenDataFrance.](https://opendatafrance.gitbook.io/fablog/territoires/chantiers/partage-des-donnees/arretes-de-circulation). Il est maintenant [publié sur le site d'Etalab](https://schema.data.gouv.fr/CEREMA/schema-arrete-circulation-marchandises/latest.html).
 
 Un [appel à contributions](https://forms.gle/vUALzEDQqRsY2NgG9) a aussi été réalisé afin de collecter des retours sur le schéma. Ce dernier est toujours actif si vous souhaitez faire un retour.
 
