@@ -19,7 +19,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 | -- | -- | -- |
 | [ID](#identifiant-de-l'entité---propriété-id) | chaîne de caractères  | Oui |
 | [COLL_NOM](#nom-de-la-collectivité-à-l'origine-de-l'arrêté---propriété-coll_nom) | chaîne de caractères  | Oui |
-| [ARR_INSEE](#code-insee---propriété-arr_insee) | chaîne de caractères  | Oui |
+| [COLL_INSEE](#code-insee---propriété-coll_insee) | chaîne de caractères  | Oui |
 | [ARR_DATE](#date-de-l'arrêté---propriété-arr_date) | date (format `%Y-%m-%d`) | Oui |
 | [ARR_REF](#référence-de-l'arrêté---propriété-arr_ref) | chaîne de caractères  | Oui |
 | [ARR_OBJET](#objet-de-l'arrêté---propriété-arr_objet) | chaîne de caractères  | Oui |
@@ -29,7 +29,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 | [REGL_SOUS_ARTICLE](#sous-article-du-règlement---propriété-regl_sous_article) | chaîne de caractères  | Non |
 | [REGL_MODALITE](#modalité-du-règlement---propriété-regl_modalite) | chaîne de caractères  | Oui |
 | [VEH_TYPES](#types-de-véhicules---propriété-veh_types) | chaîne de caractères  | Non |
-| [VEH_PTAC](#poids-total-autorisé-en-charge---propriété-veh_ptac) | nombre réel  | Non |
+| [VEH_TONNAGE](#tonnage-ou-poids-total-autorisé-en-charge---propriété-veh_tonnage) | nombre réel  | Non |
 | [VEH_LONG](#longueur-du-véhicule---propriété-veh_long) | nombre réel  | Non |
 | [VEH_LARG](#largeur-du-véhicule---propriété-veh_larg) | nombre réel  | Non |
 | [VEH_HAUT](#hauteur-du-véhicule---propriété-veh_haut) | nombre réel  | Non |
@@ -59,7 +59,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 - Valeur obligatoire
 - Type : chaîne de caractères
 
-#### Code INSEE - Propriété `ARR_INSEE`
+#### Code INSEE - Propriété `COLL_INSEE`
 
 > *Description : Code INSEE de la commune sur laquelle s'applique l'arrêté<br/>Ex : 13090*
 - Valeur obligatoire
@@ -125,9 +125,9 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 - Type : chaîne de caractères
 - Motif : `(?:(?:^|\|)(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules))+$`
 
-#### Poids total autorisé en charge - Propriété `VEH_PTAC`
+#### Tonnage ou poids total autorisé en charge - Propriété `VEH_TONNAGE`
 
-> *Description : Poids total autorisé en charge, exprimé en tonnes.<br/>Ex : 7.5*
+> *Description : Tonnage ou poids total autorisé en charge, exprimé en tonnes.<br/>Ex : 7.5*
 - Valeur optionnelle
 - Type : nombre réel
 - Valeur entre 0 et 45
@@ -236,7 +236,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 > *Description : Géométrie de la ligne exprimée au format [WKT (Well Know Text](https://fr.wikipedia.org/wiki/Well-known_text) sous le système de projection WGS84 (EPSG:4326)<br/>Ex : LineString (5.39340184 45.56538751, 5.41017215 45.56722934, 5.42510063 45.5679079)*
 - Valeur optionnelle
 - Type : chaîne de caractères
-- Motif : `(MULTI|multi)?(LINESTRING|linestring)\(((|,\s?)\(((|,\s?)(-?[0-9](\.[0-9]+)?\s-?[0-9](\.[0-9]+)?))+\))+\)`
+- Motif : `(MULTI|multi)?(LINESTRING|linestring|POLYGON|polygon)\(((|,\s?)\(((|,\s?)(-?[0-9](\.[0-9]+)?\s-?[0-9](\.[0-9]+)?))+\))+\)`
 
 #### Source de la géométrie - Propriété `GEOM_SOURCE`
 
