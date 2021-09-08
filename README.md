@@ -27,8 +27,8 @@ En voici une représentation simplifiée, sous forme de diagramme :
 [Documentation : liste des champs et signification de ceux-ci](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/documentation/schema-page.md)  
 [Schéma au format JSON](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/schema.json)  
 
-[Historique des évolutions du schéma (CHANGELOG)](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/CHANGELOG.md)
-
+## À propos du schéma
+[Historique des évolutions du schéma (CHANGELOG)](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/CHANGELOG.md)  
 [À propos de la conception du schéma](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/A-PROPOS.md)   
 
 ## Produisez des données selon le schéma
