@@ -43,5 +43,5 @@ En voici une représentation simplifiée, sous forme de diagramme :
 [2 Septembre 2021 (Cerema & La Région Sud)](https://docs.google.com/presentation/d/1xXVS5TgF8FJknyRHQW3SxCZFS4M-1_jaUQs1H9hXZRU/edit?usp=sharing)  
 [8 Juin 2021 (Cerema, La Région Sud & Etalab)](https://docs.google.com/presentation/d/1bEUZsB0HSjZ4NnFQi50sbwd17YuOOjq_rz5jB_0RbkQ/edit?usp=sharing)  
 
-----
-Contact : data-med@cerema.fr
+## Contact
+Un avis, des questions ? Contactez-nous sur data-med@cerema.fr
