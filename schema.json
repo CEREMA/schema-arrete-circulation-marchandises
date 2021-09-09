@@ -354,7 +354,7 @@
          "title":"Début de la section",
          "description":"Indication de l'endroit à partir duquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Ou bien coordonnées GPS de l'endroit, à noter sous la forme 'long, lat' (5 ou 6 décimales sont conseillées).",
          "type":"string",
-         "example":"22 avenue Philippe Solari, Croisement de l'avenue Philippe Solari avec la rue Gaston de Saporta, 43.53591,5.42101",
+         "example":"22 avenue Philippe Solari, Croisement de l'avenue Philippe Solari avec la rue Gaston de Saporta, 5.42101,43.53591",
          "constraints":{
             "required":false
          }
