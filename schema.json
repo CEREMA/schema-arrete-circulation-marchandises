@@ -413,7 +413,7 @@
          "title":"Géométrie au format WKT",
          "description":"Géométrie de la rue (ligne), ou de l'emprise (polygone) exprimée au format [WKT (Well Know Text](https://fr.wikipedia.org/wiki/Well-known_text) sous le système de projection WGS84 (EPSG:4326)",
          "type":"string",
-         "example":"LineString (5.39340184 45.56538751, 5.41017215 45.56722934, 5.42510063 45.5679079)",
+         "example":"LineString(5.39340184 45.56538751, 5.41017215 45.56722934, 5.42510063 45.5679079)",
          "constraints":{
             "required":false,
             "pattern":"(MULTI|multi)?(LINESTRING|linestring|POLYGON|polygon)\\(((|,\\s?)\\(((|,\\s?)(-?[0-9](\\.[0-9]+)?\\s-?[0-9](\\.[0-9]+)?))+\\))+\\)"
