@@ -57,5 +57,5 @@ On le traduit de la sorte :
 | 2 | Autorise | Poids lourds | 3.5 |Livraison\|Poids lourds d'urgence\|Véhicules de travaux| Commune de Saint-Victoret
 
 ----
-[Voir l'arrêté final de la commune de Saint Victoret en CSV](https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/master/exemples/st-victoret.csv)
+[Voir l'arrêté final de la commune de Saint Victoret en CSV](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/exemples/st-victoret.csv)
 
