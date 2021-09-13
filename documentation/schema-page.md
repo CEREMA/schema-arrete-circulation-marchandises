@@ -6,7 +6,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 
 - Schéma créé le : 04/30/21
 - Site web : https://github.com/CEREMA/schema-arrete-circulation
-- Version : 0.1.1
+- Version : 0.6.3
 - Valeurs manquantes : `""`, `"NA"`, `"NaN"`, `"N/A"`
 - Clé primaire : `ID`
 
