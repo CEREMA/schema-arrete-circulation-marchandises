@@ -1,3 +1,6 @@
+### 13 Septembre
+- [ ] v0.7.0 : champs EMPRISE_DEBUT_POINT, EMPRISE_FIN_POINT, champs ID en format UUID, utilisation du GeoJSON ?
+
 ### 2 Septembre
 - [ ] Mettre plusieurs exemples entre crochets : [exemple1, exemple2]
 
