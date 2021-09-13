@@ -13,7 +13,7 @@
    ],
    "countryCode":"FR",
    "homepage":"https://github.com/CEREMA/schema-arrete-circulation",
-   "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation/master/schema.json",
+   "path":"https://github.com/CEREMA/schema-arrete-circulation-marchandises/raw/v0.6.3/schema.json",
    "image":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/master/files/image.png",
    "licenses":[
       {
