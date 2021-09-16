@@ -15,7 +15,7 @@ Ce travail rejoint une initiative similaire conduite en Île-de-France, appelée
 ## Prenez connaissance du schéma
 [Documentation : liste des champs et signification de ceux-ci](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/documentation/schema-page.md)  
 [Schéma au format JSON](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/schema.json)  
-[Voir une représentation simplifiée du schéma, sous forme de diagramme](https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/master/mindmaps/arrete-circulation-marchandises.jpeg)
+[Représentation simplifiée du schéma en diagramme](https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/master/mindmaps/arrete-circulation-marchandises.jpeg)
 
 
 ## À propos du schéma
