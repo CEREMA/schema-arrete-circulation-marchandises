@@ -29,9 +29,10 @@ Ce travail rejoint une initiative similaire conduite en Île-de-France, appelée
 [Assistez-vous de groom-groom, outil en ligne expérimental pour le remplissage de certains champs](https://cerema-med.shinyapps.io/groom-groom/)  
 [Référentiel de valeurs pour le champ `VEH_USAGES`](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/referentiels/VEH_USAGES.csv)  
 
-## Présentations
-[2 Septembre 2021 (Cerema & La Région Sud)](https://docs.google.com/presentation/d/1xXVS5TgF8FJknyRHQW3SxCZFS4M-1_jaUQs1H9hXZRU/edit?usp=sharing)  
-[8 Juin 2021 (Cerema, La Région Sud & Etalab)](https://docs.google.com/presentation/d/1bEUZsB0HSjZ4NnFQi50sbwd17YuOOjq_rz5jB_0RbkQ/edit?usp=sharing)  
+## Articles & présentations
+["Le Cerema publie un standard de données pour dématérialiser les arrêtés de circulation pour le transport de marchandises en ville" (Article du 20 Septembre 2021)](https://www.cerema.fr/fr/projets/cerema-publie-standard-donnees-dematerialiser-arretes)  
+[Présentation du 2 Septembre 2021 (Cerema & La Région Sud)](https://docs.google.com/presentation/d/1xXVS5TgF8FJknyRHQW3SxCZFS4M-1_jaUQs1H9hXZRU/edit?usp=sharing)  
+[Présentation du 8 Juin 2021 (Cerema, La Région Sud & Etalab)](https://docs.google.com/presentation/d/1bEUZsB0HSjZ4NnFQi50sbwd17YuOOjq_rz5jB_0RbkQ/edit?usp=sharing)  
 
 ## Contact
 Un avis, des questions ? Contactez-nous sur data-med@cerema.fr
