@@ -115,6 +115,10 @@ StandingOrParkingRestrictionTypeEnum
 
 ## VehicleCharacteristics
 
+### GrossWeightCharacteristic 
+- * grossVehicleWeight (Tonnes) : VEH_TONNAGE
+- * typeOfWeight : * actual, * maximumPermitted : VEH_TONNAGE
+
 ### HeightCharacteristics
 vehicleHeight : VEH_HAUTEUR
 
@@ -209,7 +213,12 @@ vehicleLength : VEH_LONGUEUR
 	- taxi
 - yearOfFirstRegistration
 
-## Validity
+## Source
+- * sourceName : COLL_NOM
+- sourceType
+
+## Url
+- * urlLink : urlLinkAddress : ARR_URL
 
 ## Autres
 - * DayEnum : PERIODE_JH
