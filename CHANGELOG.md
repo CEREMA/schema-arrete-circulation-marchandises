@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.7.0
+- Valeurs multiples possibles pour `ARR_CONSIDERANT` (ex. de Martigues 06.2018)
+- Ajoute le champ `GEOM_DEBUT`
+- Ajoute le champ `GEOM_FIN`
+
 ## v0.6.1
 - Renomme `ARR_INSEE` en `COLL_INSEE`
 - Renomme `VEH_PTAC` en `VEH_TONNAGE`

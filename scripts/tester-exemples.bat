@@ -10,7 +10,7 @@ call setenv.bat
 
 :: exemples
 %frictionless%  validate --schema ../schema.json ../exemples/carros.csv
-%frictionless%  validate --schema ../schema.json ../exemples/fuveau.csv
+::%frictionless%  validate --schema ../schema.json ../exemples/fuveau.csv
 %frictionless%  validate --schema ../schema.json ../exemples/gignac.csv
 %frictionless%  validate --schema ../schema.json ../exemples/le-rove.csv
 %frictionless%  validate --schema ../schema.json ../exemples/st-victoret.csv
