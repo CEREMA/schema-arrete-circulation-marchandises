@@ -82,20 +82,22 @@ Les champs [`EMPRISE_DEBUT`](https://github.com/CEREMA/schema-arrete-circulation
 REGL_MODALITE | VEH_TYPE | VEH_TONNAGE | EMPRISE_DESIGNATION | EMPRISE_DEBUT | EMPRISE_FIN |
  -- | -- | -- | -- | -- | -- |
  Interdit | Poids lourds | 7.5 | avenue Nelson Mandela (RD59c) | intersection de la RD8n (Avenue du 8 mai 1945) | intersection de la route de Calas (RD 543) |
+ 
+ En remplissant les champs `EMPRISE_DEBUT` et `EMPRISE_FIN`, des opérateurs pourront par la suite affiner la donnée en rajoutant les coordonnées exactes de ces intersections.
 
 ### Coordonnées de début et de fin
-Si vous avez les coordonnées GPS de débutet de fin, c'est encore mieux. 5 décimales suffisent.
+Si vous avez les coordonnées GPS de débutet de fin, vous pouvez ajouter ces infos dans les champs `GEOM_DEBUT` et `GEOM_FIN`. 5 décimales suffisent.
 
-REGL_MODALITE | VEH_TYPE | VEH_TONNAGE | EMPRISE_DESIGNATION | EMPRISE_DEBUT | EMPRISE_FIN |
- -- | -- | -- | -- | -- | -- |
- Interdit | Poids lourds | 7.5 | avenue Nelson Mandela (RD59c) | 5.37229,43.41060 | 5.36585,43.40828 |
+REGL_MODALITE | VEH_TYPE | VEH_TONNAGE | EMPRISE_DESIGNATION | EMPRISE_DEBUT | GEOM_DEBUT | EMPRISE_FIN | GEOM_FIN |
+ -- | -- | -- | -- | -- | -- | -- | -- |
+ Interdit | Poids lourds | 7.5 | avenue Nelson Mandela (RD59c) | intersection de la RD8n (Avenue du 8 mai 1945) | 5.37229,43.41060 | intersection de la route de Calas (RD 543) | 5.36585,43.40828 |
  
 ## Géométrie de la rue
 Donner la géométrie de la rue règlementée est sans doute le plus utile. Si vous avez la géométrie de la portion de voie règlementée, alors vous pouvez l'intégrer dans le champ [`GEOM_WKT`](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/documentation/schema-page.md#g%C3%A9om%C3%A9trie-au-format-wkt---propri%C3%A9t%C3%A9-geom_wkt)
  
  REGL_MODALITE | VEH_TYPE | VEH_TONNAGE | GEOM_WKT |
  -- | -- | -- | -- |
- Interdit | Poids lourds | 7.5 |  LINESTRING(5.364190559467414 43.40726403502167,5.365317087253669 43.40776287238391,5.365896444400886 43.40825391140007,5.366218309482673 43.40833964796295,5.367977838596443 43.409150242196034,5.368761043628791 43.40969582836029,5.372162084659675 43.41060772569154) |
+ Interdit | Poids lourds | 7.5 |  `LINESTRING(5.364190559467414 43.40726403502167,5.365317087253669 43.40776287238391,5.365896444400886 43.40825391140007,5.366218309482673 43.40833964796295,5.367977838596443 43.409150242196034,5.368761043628791 43.40969582836029,5.372162084659675 43.41060772569154)` |
  
 ## Recommandations pour le format des fichiers et leur nommage
 [Enfin, ce document explique comment nommer et formater les fichiers de données](https://github.com/CEREMA/schema-arrete-circulation-marchandises/blob/master/FORMAT.md)  
