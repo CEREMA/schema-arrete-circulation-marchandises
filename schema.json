@@ -13,8 +13,8 @@
    ],
    "countryCode":"FR",
    "homepage":"https://github.com/CEREMA/schema-arrete-circulation",
-   "path":"https://github.com/CEREMA/schema-arrete-circulation-marchandises/raw/v0.6.3/schema.json",
-   "image":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.6.3/files/image.png",
+   "path":"https://github.com/CEREMA/schema-arrete-circulation-marchandises/raw/v0.7.0/schema.json",
+   "image":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.0/files/image.png",
    "licenses":[
       {
          "title":"Etalab Licence Ouverte 2.0",
@@ -26,48 +26,43 @@
       {
          "title":"Fichier valide",
          "name":"exemple-valide-csv",
-         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.6.3/exemple-valide.csv"
+         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.0/exemple-valide.csv"
       },
       {
          "title":"Fichier valide pour la commune de Carros (CSV)",
          "name":"carros-csv",
-         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.6.3/exemples/carros.csv"
-      },
-      {
-         "title":"Fichier valide pour la commune de Fuveau (CSV)",
-         "name":"fuveau-csv",
-         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.6.3/exemples/fuveau.csv"
+         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.0/exemples/carros.csv"
       },
       {
          "title":"Fichier valide pour la commune de Gignac-La-Nerthe (CSV)",
          "name":"gignac-csv",
-         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.6.3/exemples/gignac.csv"
+         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.0/exemples/gignac.csv"
       },
       {
          "title":"Fichier valide pour la commune du Rove (CSV)",
          "name":"le-rove-csv",
-         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.6.3/exemples/le-rove.csv"
+         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.0/exemples/le-rove.csv"
       },
       {
          "title":"Fichier valide pour la commune de St-Victoret (CSV)",
          "name":"st-victoret-csv",
-         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.6.3/exemples/st-victoret.csv"
+         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.0/exemples/st-victoret.csv"
       },
       {
          "title":"Fichier valide pour la commune de Septèmes-Les-Vallons (CSV)",
          "name":"septemes-les-vallons-csv",
-         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.6.3/exemples/septemes-les-vallons.csv"
+         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.0/exemples/septemes-les-vallons.csv"
       },     
       {
          "title":"Fichier valide pour la commune de Vence (CSV)",
          "name":"vence-csv",
-         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.6.3/exemples/vence.csv"
+         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.0/exemples/vence.csv"
       }
    ],
    "sources":[
       {
          "title":"Fiche technique de rédaction d'arrêté de circulation",
-         "path":"https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/v0.6.3/ressources/fiche_technique_arrete_de_circulation_cle27195e-1.pdf"
+         "path":"https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/v0.7.0/ressources/fiche_technique_arrete_de_circulation_cle27195e-1.pdf"
       },
       {
          "title":"Démarche \"Harmoniser les règlementations de transport de marchandises\"",
@@ -75,12 +70,12 @@
       },
       {
          "title":"Guide d'harmonisation des règlementations des livraisons co-rédigé par la Région Sud et la DREAL PACA",
-         "path":"https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/v0.6.3/ressources/Guide%20Harmonisation%20des%20arr%C3%AAt%C3%A9s%20R%C3%A9gion%20PACA%202019.pdf"
+         "path":"https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/v0.7.0/ressources/Guide%20Harmonisation%20des%20arr%C3%AAt%C3%A9s%20R%C3%A9gion%20PACA%202019.pdf"
       }
    ],
    "created":"2021-04-30",
    "lastModified":"2021-03-13",
-   "version":"0.6.3",
+   "version":"0.7.0",
    "contributors":[
       {
          "title":"Mathieu Rajerison",
@@ -116,6 +111,12 @@
          "title":"Nicolas Berthelot",
          "email":"nicolas.berthelot@beta.gouv.fr",
          "organisation":"betaGouv",
+         "role":"contributor"
+      },    
+      {
+         "title":"Laurent Ginoux",
+         "email":"laurent.ginoux@ville-martigues.fr",
+         "organisation":"Ville de Martigues",
          "role":"contributor"
       }
    ],
@@ -188,7 +189,7 @@
       {
          "name":"ARR_CONSIDERANT",
          "title":"Considérant de l'arrêté",
-         "description":"Considérant est le justificatif de la mise en place de la règlementation",
+         "description":"Considérant est le justificatif de la mise en place de la règlementation. S'il y a plusieurs considérations, les séparer par le caractère '|'",
          "type":"string",
          "example":"Considérant la dangerosité que représente le trafic des PL aux abords des groupes scolaires",
          "constraints":{
@@ -243,7 +244,7 @@
       {
          "name":"VEH_TYPES",
          "title":"Types de véhicules",
-         "description":"Types de véhicules. Séparer les valeurs par le caractère '|'",
+         "description":"Types de véhicules. S'il y a plusieurs types, les séparer les valeurs par le caractère '|'",
          "type":"string",
          "example":"Poids lourds|Véhicules utilitaires légers",
          "constraints":{
@@ -302,7 +303,7 @@
       {
          "name":"VEH_USAGES",
          "title":"Types d'usage",
-         "description":"Types d'usage de véhicule. Séparer les valeurs par le caractère '|'",
+         "description":"Types d'usage de véhicule. S'il y a plusieurs usages, séparer les valeurs par le caractère '|'",
          "example":"Bennes à ordures ménagères|Véhicules de police",
          "type":"string",
          "constraints":{
@@ -312,7 +313,7 @@
       {
          "name":"VEH_MOTORS",
          "title":"Types de motorisation",
-         "description":"Types de motorisation. Séparer les valeurs par le caractère '|'",
+         "description":"Types de motorisation. S'il y a plusieurs motorisations, les séparer par le caractère '|'",
          "example":"Électrique|Hydrogène",
          "type":"string",
          "constraints":{
@@ -366,20 +367,40 @@
       },
       {
          "name":"EMPRISE_DEBUT",
-         "title":"Début de la section",
-         "description":"Indication de l'endroit à partir duquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Ou bien coordonnées GPS de l'endroit, à noter sous la forme 'long,lat' (5 ou 6 décimales sont conseillées).",
+         "title":"Début de la section (libellé)",
+         "description":"Indication textuelle de l'endroit à partir duquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Pour indiquer les coordonnées GPS, se référer au champ `GEOM_DEBUT`.",
          "type":"string",
-         "example":"22 avenue Philippe Solari, Croisement de l'avenue Philippe Solari avec la rue Gaston de Saporta, 5.42101,43.53591",
+         "example":"22 avenue Philippe Solari, Croisement de l'avenue Philippe Solari avec la rue Gaston de Saporta",
+         "constraints":{
+            "required":false
+         }
+      },
+      {
+         "name":"GEOM_DEBUT",
+         "title":"Début de la section (coordonnées)",
+         "description":"Coordonnées GPS du début de la section. Se réfère à `EMPRISE_DEBUT`. S'écrit sous la forme 'long,lat' (5 ou 6 décimales sont conseillées).",
+         "type":"geopoint",
+         "example":"5.42101,43.53591",
          "constraints":{
             "required":false
          }
       },
       {
          "name":"EMPRISE_FIN",
-         "title":"Fin de la section",
-         "description":"Indication de l'endroit au bout duquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Ou bien coordonnées GPS de l'endroit, à noter sous la forme 'long, lat' (5 ou 6 décimales sont conseillées).",
+         "title":"Fin de la section (libellé)",
+         "description":"Indication textuelle de l'endroit au bout duquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Pour indiquer les coordonnées GPS, se référer au champ `GEOM_FIN`.",
          "type":"string",
-         "example":"34 bis avenue Philippe Solari, Intersection de l'avenue Philippe Solari avec le boulevard des Charmettes, 5.43345,43.64789",
+         "example":"34 bis avenue Philippe Solari, Intersection de l'avenue Philippe Solari avec le boulevard des Charmettes",
+         "constraints":{
+            "required":false
+         }
+      },
+      {
+         "name":"GEOM_FIN",
+         "title":"Fin de la section (coordonnées)",
+         "description":"Coordonnées GPS de la fin de la section. Se réfère à `EMPRISE_DEBUT`. S'écrit sous la forme 'long,lat' (5 ou 6 décimales sont conseillées).",
+         "type":"geopoint",
+         "example":"5.42101,43.53591",
          "constraints":{
             "required":false
          }
