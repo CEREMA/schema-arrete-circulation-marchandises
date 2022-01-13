@@ -118,7 +118,13 @@
          "email":"laurent.ginoux@ville-martigues.fr",
          "organisation":"Ville de Martigues",
          "role":"contributor"
-      }
+      },
+      {
+         "title":"Christian Quest",
+         "email":"cquest@cquest.org",
+         "organisation":"Christian Quest",
+         "role":"contributor"
+      }        
    ],
    "fields":[
       {
