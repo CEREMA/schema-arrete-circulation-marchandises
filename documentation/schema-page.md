@@ -6,7 +6,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 
 - Schéma créé le : 04/30/21
 - Site web : https://github.com/CEREMA/schema-arrete-circulation
-- Version : 0.7.0
+- Version : 0.7.2
 - Valeurs manquantes : `""`, `"NA"`, `"NaN"`, `"N/A"`
 - Clé primaire : `ID`
 
@@ -25,19 +25,21 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 | [ARR_OBJET](#objet-de-l'arrêté---propriété-arr_objet) | chaîne de caractères  | Oui |
 | [ARR_CONSIDERANT](#considérant-de-l'arrêté---propriété-arr_considerant) | chaîne de caractères  | Non |
 | [ARR_URL](#adresse-internet-de-l'arrêté---propriété-arr_url) | chaîne de caractères (format `uri`) | Non |
-| [REGL_ARTICLE](#article-du-règlement---propriété-regl_article) | nombre entier  | Non |
+| [REGL_ARTICLE](#article-du-règlement---propriété-regl_article) | chaîne de caractères  | Non |
 | [REGL_SOUS_ARTICLE](#sous-article-du-règlement---propriété-regl_sous_article) | chaîne de caractères  | Non |
+| [REGL_MOTIF](#motif---propriété-regl_motif) | chaîne de caractères  | Non |
 | [REGL_MODALITE](#modalité-du-règlement---propriété-regl_modalite) | chaîne de caractères  | Oui |
 | [VEH_TYPES](#types-de-véhicules---propriété-veh_types) | chaîne de caractères  | Non |
 | [VEH_TONNAGE](#tonnage-ou-poids-total-autorisé-en-charge---propriété-veh_tonnage) | nombre réel  | Non |
+| [VEH_USAGES](#types-d'usage---propriété-veh_usages) | chaîne de caractères  | Non |
 | [VEH_LONG](#longueur-du-véhicule---propriété-veh_long) | nombre réel  | Non |
 | [VEH_LARG](#largeur-du-véhicule---propriété-veh_larg) | nombre réel  | Non |
 | [VEH_HAUT](#hauteur-du-véhicule---propriété-veh_haut) | nombre réel  | Non |
-| [VEH_USAGES](#types-d'usage---propriété-veh_usages) | chaîne de caractères  | Non |
 | [VEH_MOTORS](#types-de-motorisation---propriété-veh_motors) | chaîne de caractères  | Non |
 | [VEH_CQAS](#vignettes-crit'air---propriété-veh_cqas) | chaîne de caractères  | Non |
-| [PERIODE_DEBUT](#date-d'entrée-en-vigueur-des-restrictions---propriété-periode_debut) | date (format `%Y-%m-%d`) | Non |
 | [PERIODE_JH](#jours-et-heures-de-circulation---propriété-periode_jh) | chaîne de caractères  | Non |
+| [PERIODE_DEBUT](#entrée-en-vigueur-des-restrictions---propriété-periode_debut) | chaîne de caractères  | Non |
+| [PERIODE_FIN](#fin-des-restrictions---propriété-periode_fin) | chaîne de caractères  | Non |
 | [EMPRISE_DESIGNATION](#nom-de-la-voie---propriété-emprise_designation) | chaîne de caractères  | Oui |
 | [EMPRISE_DEBUT](#début-de-la-section-(libellé)---propriété-emprise_debut) | chaîne de caractères  | Non |
 | [GEOM_DEBUT](#début-de-la-section-(coordonnées)---propriété-geom_debut) | point géographique  | Non |
@@ -51,7 +53,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 
 #### Identifiant de l'entité - Propriété `ID`
 
-> *Description : Il s'agit de l'identifiant de l'entité (ou ligne du tableau). Ce dernier doit être unique. L'identifiant peut tout simplement être auto-incrémenté (1, 2 ou 3,...). Il peut correspondre à la valeur `osm_id` de la voie règlementée (par exemple, `133`). Il peut également être un identifiant propre à une structure ou à une autre base de données (identifiant issu de la BDTOPO IGN, par exemple). [Vous pouvez créer des identifiants grâce à l'application Heidi d'Etalab](https://heidi.app.etalab.studio/).<br/>Ex : 133-3*
+> *Description : Il s'agit de l'identifiant, unique, de la ligne du tableau.. [Vous pouvez créer des identifiants grâce à l'application Heidi d'Etalab](https://heidi.app.etalab.studio/).<br/>Ex : 133-3*
 - Valeur obligatoire
 - Type : chaîne de caractères
 
@@ -101,13 +103,19 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 
 #### Article du règlement - Propriété `REGL_ARTICLE`
 
-> *Description : N° de l'article associé au règlement lorsqu'il existe<br/>Ex : 4*
+> *Description : N° de l'article associé au règlement lorsqu'il existe<br/>Ex : 'Article 4' ou 'Titre 2'*
 - Valeur optionnelle
-- Type : nombre entier
+- Type : chaîne de caractères
 
 #### Sous-article du règlement - Propriété `REGL_SOUS_ARTICLE`
 
-> *Description : Un article peut se décomposer en plusieurs sous-articles, contenant chacun une règlementation particulière. Ces sous-articles ont des numérotations.<br/>Ex : 4 bis*
+> *Description : Un article peut se décomposer en plusieurs sous-articles, contenant chacun une règlementation particulière. Ces sous-articles ont des numérotations.<br/>Ex : Sous-article 4 bis*
+- Valeur optionnelle
+- Type : chaîne de caractères
+
+#### Motif - Propriété `REGL_MOTIF`
+
+> *Description : Motif justifiant de la mise en place de la règle de circulation<br/>Ex : Forte affluence*
 - Valeur optionnelle
 - Type : chaîne de caractères
 
@@ -122,7 +130,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 
 #### Types de véhicules - Propriété `VEH_TYPES`
 
-> *Description : Types de véhicules. S'il y a plusieurs types, les séparer les valeurs par le caractère '|'<br/>Ex : Poids lourds|Véhicules utilitaires légers*
+> *Description : Types de véhicules. S'il y a plusieurs types, les séparer les valeurs par le caractère '|'. Les valeurs possibles sont : 'Poids lourds', 'Véhicules utilitaires légers', 'Vélo-cargos' et 'Tous véhicules'.<br/>Ex : Poids lourds|Véhicules utilitaires légers*
 - Valeur optionnelle
 - Type : chaîne de caractères
 - Motif : `(?:(?:^|\|)(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules))+$`
@@ -133,6 +141,12 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 - Valeur optionnelle
 - Type : nombre réel
 - Valeur entre 0 et 45
+
+#### Types d'usage - Propriété `VEH_USAGES`
+
+> *Description : Types d'usage de véhicule. S'il y a plusieurs usages, séparer les valeurs par le caractère '|'<br/>Ex : Bennes à ordures ménagères|Véhicules de police*
+- Valeur optionnelle
+- Type : chaîne de caractères
 
 #### Longueur du véhicule - Propriété `VEH_LONG`
 
@@ -155,15 +169,9 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 - Type : nombre réel
 - Valeur entre 0 et 6
 
-#### Types d'usage - Propriété `VEH_USAGES`
-
-> *Description : Types d'usage de véhicule. S'il y a plusieurs usages, séparer les valeurs par le caractère '|'<br/>Ex : Bennes à ordures ménagères|Véhicules de police*
-- Valeur optionnelle
-- Type : chaîne de caractères
-
 #### Types de motorisation - Propriété `VEH_MOTORS`
 
-> *Description : Types de motorisation. S'il y a plusieurs motorisations, les séparer par le caractère '|'<br/>Ex : Électrique|Hydrogène*
+> *Description : Types de motorisation. S'il y a plusieurs motorisations, les séparer par le caractère '|'. Les valeurs possibles sont : Electrique, Gaz Naturel pour Véhicules et Hydrogène.<br/>Ex : Électrique|Hydrogène*
 - Valeur optionnelle
 - Type : chaîne de caractères
 - Motif : `(?:(?:^|\|)(Electrique|Gaz Naturel pour Véhicules|Hydrogène))+$`
@@ -175,18 +183,23 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 - Type : chaîne de caractères
 - Motif : `(?:(?:^|\|)(100% électrique et Véhicules à hydrogène|1|2|3|4|5|Véhicule non classé))+$`
 
-#### Date d'entrée en vigueur des restrictions - Propriété `PERIODE_DEBUT`
-
-> *Description : Date d'entrée en vigueur des restrictions (en particulier pour les Zones à Faible Émission), au format ISO 8601 AAAA-MM-DD.<br/>Ex : 2021-04-30*
-- Valeur optionnelle
-- Type : date (format `%Y-%m-%d`)
-
 #### Jours et heures de circulation - Propriété `PERIODE_JH`
 
 > *Description : Jours et heures de circulation autorisés pour la circulation exprimés selon le format OpeningHours d'OpenStreetMap ([https://wiki.openstreetmap.org/wiki/Key:opening_hours](https://wiki.openstreetmap.org/wiki/Key:opening_hours)). Ce format permet d'indiquer les week-ends (we), les jours fériés (PH) et les vacances scolaires (SH). Par exemple `Mo-Fr 09:00-17:00; PH 10:00-12:00; PH Su off` signifie : 'Du lundi au vendredi de 9h à 17h sauf les jours fériés où l'ouverture est de 10h à 12h, à l'exception des jours fériés tombant un dimanche'. `24/7` indique `Tous les jours`. [Utiliser groom-groom pour récupérer les jours et heures de circulation](https://cerema-med.shinyapps.io/groom-groom?action=opening_hours)<br/>Ex : Mo-Fr 08:00-12:00,13:00-17:30; Sa 08:00-12:00; PH off*
 - Valeur optionnelle
 - Type : chaîne de caractères
-- Motif : `((?:(?:^|;\s?)(((((Mo|Tu|We|Th|Fr|Sa|Su|PH|SH)|(?:(?:|,)(Mo|Tu|We|Th|Fr|Sa|Su))+|((Mo|Tu|We|Th|Fr|Sa|Su)-(Mo|Tu|We|Th|Fr|Sa|Su))))\s((([0-1][0-9]|2[0-4]):([0-5][0-9]))-(([0-1][0-9]|2[0-4]):([0-5][0-9]))(,(([0-1][0-9]|2[0-4]):([0-5][0-9]))-(([0-1][0-9]|2[0-4]):([0-5][0-9])))?))|((Mo|Tu|We|Th|Fr|Sa|Su|PH|SH) off)|(sunrise-sunset)))+$|(24/7))`
+
+#### Entrée en vigueur des restrictions - Propriété `PERIODE_DEBUT`
+
+> *Description : Entrée en vigueur des restrictions (par exemple pour les Zones à Faible Émission).<br/>Ex : 'Début des vacances de la Toussaint' '23 Octobre'*
+- Valeur optionnelle
+- Type : chaîne de caractères
+
+#### Fin des restrictions - Propriété `PERIODE_FIN`
+
+> *Description : Fin des restrictions. Si elle existe, cela indique le caractère cyclique et non temporaire de la période de régulation.<br/>Ex : 'Fin des vacances de la Toussaint' ou '8 Novembre'*
+- Valeur optionnelle
+- Type : chaîne de caractères
 
 #### Nom de la voie - Propriété `EMPRISE_DESIGNATION`
 
@@ -250,7 +263,6 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 > *Description : Géométrie de la rue (ligne), ou de l'emprise (polygone) exprimée au format [WKT (Well Know Text](https://fr.wikipedia.org/wiki/Well-known_text) sous le système de projection WGS84 (EPSG:4326)<br/>Ex : LineString(5.39340184 45.56538751, 5.41017215 45.56722934, 5.42510063 45.5679079)*
 - Valeur optionnelle
 - Type : chaîne de caractères
-- Motif : `(MULTI|multi)?(LINESTRING|linestring|POLYGON|polygon)\(((|,\s?)\(((|,\s?)(-?[0-9](\.[0-9]+)?\s-?[0-9](\.[0-9]+)?))+\))+\)`
 
 #### Source de la géométrie - Propriété `GEOM_SOURCE`
 

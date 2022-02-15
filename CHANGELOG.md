@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.7.2
+- Ajoute le champ `REGL_MOTIF`
+- Ajoute le champ `PERIODE_FIN`
+- Met les champs `PERIODE_DEBUT` et `PERIODE_FIN` en string
+- Change l'ordre des champs
+
 ## v0.7.1
 - Supprime le pattern pour `GEOM_WKT`
 - Supprime le pattern pour `PERIODE_JH`

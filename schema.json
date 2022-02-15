@@ -13,8 +13,8 @@
    ],
    "countryCode":"FR",
    "homepage":"https://github.com/CEREMA/schema-arrete-circulation",
-   "path":"https://github.com/CEREMA/schema-arrete-circulation-marchandises/raw/v0.7.1/schema.json",
-   "image":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.1/files/image.png",
+   "path":"https://github.com/CEREMA/schema-arrete-circulation-marchandises/raw/v0.7.2/schema.json",
+   "image":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.2/files/image.png",
    "licenses":[
       {
          "title":"Etalab Licence Ouverte 2.0",
@@ -26,43 +26,43 @@
       {
          "title":"Fichier valide",
          "name":"exemple-valide-csv",
-         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.1/exemple-valide.csv"
+         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.2/exemple-valide.csv"
       },
       {
          "title":"Fichier valide pour la commune de Carros (CSV)",
          "name":"carros-csv",
-         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.1/exemples/carros.csv"
+         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.2/exemples/carros.csv"
       },
       {
          "title":"Fichier valide pour la commune de Gignac-La-Nerthe (CSV)",
          "name":"gignac-csv",
-         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.1/exemples/gignac.csv"
+         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.2/exemples/gignac.csv"
       },
       {
          "title":"Fichier valide pour la commune du Rove (CSV)",
          "name":"le-rove-csv",
-         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.1/exemples/le-rove.csv"
+         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.2/exemples/le-rove.csv"
       },
       {
          "title":"Fichier valide pour la commune de St-Victoret (CSV)",
          "name":"st-victoret-csv",
-         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.1/exemples/st-victoret.csv"
+         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.2/exemples/st-victoret.csv"
       },
       {
          "title":"Fichier valide pour la commune de Septèmes-Les-Vallons (CSV)",
          "name":"septemes-les-vallons-csv",
-         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.1/exemples/septemes-les-vallons.csv"
-      },     
+         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.2/exemples/septemes-les-vallons.csv"
+      },
       {
          "title":"Fichier valide pour la commune de Vence (CSV)",
          "name":"vence-csv",
-         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.1/exemples/vence.csv"
+         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.2/exemples/vence.csv"
       }
    ],
    "sources":[
       {
          "title":"Fiche technique de rédaction d'arrêté de circulation",
-         "path":"https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/v0.7.1/ressources/fiche_technique_arrete_de_circulation_cle27195e-1.pdf"
+         "path":"https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/v0.7.2/ressources/fiche_technique_arrete_de_circulation_cle27195e-1.pdf"
       },
       {
          "title":"Démarche \"Harmoniser les règlementations de transport de marchandises\"",
@@ -70,12 +70,12 @@
       },
       {
          "title":"Guide d'harmonisation des règlementations des livraisons co-rédigé par la Région Sud et la DREAL PACA",
-         "path":"https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/v0.7.1/ressources/Guide%20Harmonisation%20des%20arr%C3%AAt%C3%A9s%20R%C3%A9gion%20PACA%202019.pdf"
+         "path":"https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/v0.7.2/ressources/Guide%20Harmonisation%20des%20arr%C3%AAt%C3%A9s%20R%C3%A9gion%20PACA%202019.pdf"
       }
    ],
    "created":"2021-04-30",
-   "lastModified":"2021-03-13",
-   "version":"0.7.0",
+   "lastModified":"2022-02-15",
+   "version":"0.7.2",
    "contributors":[
       {
          "title":"Mathieu Rajerison",
@@ -112,7 +112,7 @@
          "email":"nicolas.berthelot@beta.gouv.fr",
          "organisation":"betaGouv",
          "role":"contributor"
-      },    
+      },
       {
          "title":"Laurent Ginoux",
          "email":"laurent.ginoux@ville-martigues.fr",
@@ -124,7 +124,7 @@
          "email":"cquest@cquest.org",
          "organisation":"Christian Quest",
          "role":"contributor"
-      }        
+      }
    ],
    "fields":[
       {
@@ -218,7 +218,7 @@
          "title":"Article du règlement",
          "description":"N° de l'article associé au règlement lorsqu'il existe",
          "type":"string",
-         "example":"4",
+         "example":"'Article 4' ou 'Titre 2'",
          "constraints":{
             "required":false
          }
@@ -228,7 +228,17 @@
          "title":"Sous-article du règlement",
          "description":"Un article peut se décomposer en plusieurs sous-articles, contenant chacun une règlementation particulière. Ces sous-articles ont des numérotations.",
          "type":"string",
-         "example":"4 bis",
+         "example":"Sous-article 4 bis",
+         "constraints":{
+            "required":false
+         }
+      },
+      {
+         "name":"REGL_MOTIF",
+         "title":"Motif",
+         "description":"Motif justifiant de la mise en place de la règle de circulation",
+         "type":"string",
+         "example":"Forte affluence",
          "constraints":{
             "required":false
          }
@@ -271,6 +281,16 @@
          }
       },
       {
+         "name":"VEH_USAGES",
+         "title":"Types d'usage",
+         "description":"Types d'usage de véhicule. S'il y a plusieurs usages, séparer les valeurs par le caractère '|'",
+         "example":"Bennes à ordures ménagères|Véhicules de police",
+         "type":"string",
+         "constraints":{
+            "required":false
+         }
+      },
+      {
          "name":"VEH_LONG",
          "title":"Longueur du véhicule",
          "description":"Longueur maximale exprimée en mètres.",
@@ -307,16 +327,6 @@
          }
       },
       {
-         "name":"VEH_USAGES",
-         "title":"Types d'usage",
-         "description":"Types d'usage de véhicule. S'il y a plusieurs usages, séparer les valeurs par le caractère '|'",
-         "example":"Bennes à ordures ménagères|Véhicules de police",
-         "type":"string",
-         "constraints":{
-            "required":false
-         }
-      },
-      {
          "name":"VEH_MOTORS",
          "title":"Types de motorisation",
          "description":"Types de motorisation. S'il y a plusieurs motorisations, les séparer par le caractère '|'. Les valeurs possibles sont : Electrique, Gaz Naturel pour Véhicules et Hydrogène.",
@@ -339,21 +349,30 @@
          }
       },
       {
-         "name":"PERIODE_DEBUT",
-         "title":"Date d'entrée en vigueur des restrictions",
-         "description":"Date d'entrée en vigueur des restrictions (en particulier pour les Zones à Faible Émission), au format ISO 8601 AAAA-MM-DD.",
-         "example":"2021-04-30",
-         "type":"date",
-         "format":"%Y-%m-%d",
+         "name":"PERIODE_JH",
+         "title":"Jours et heures de circulation",
+         "description":"Jours et heures de circulation autorisés pour la circulation exprimés selon le format OpeningHours d'OpenStreetMap ([https://wiki.openstreetmap.org/wiki/Key:opening_hours](https://wiki.openstreetmap.org/wiki/Key:opening_hours)). Ce format permet d'indiquer les week-ends (we), les jours fériés (PH) et les vacances scolaires (SH). Par exemple `Mo-Fr 09:00-17:00; PH 10:00-12:00; PH Su off` signifie : 'Du lundi au vendredi de 9h à 17h sauf les jours fériés où l'ouverture est de 10h à 12h, à l'exception des jours fériés tombant un dimanche'. `24/7` indique `Tous les jours`. [Utiliser groom-groom pour récupérer les jours et heures de circulation](https://cerema-med.shinyapps.io/groom-groom?action=opening_hours)",
+         "example":"Mo-Fr 08:00-12:00,13:00-17:30; Sa 08:00-12:00; PH off",
+         "type":"string",
          "constraints":{
             "required":false
          }
       },
       {
-         "name":"PERIODE_JH",
-         "title":"Jours et heures de circulation",
-         "description":"Jours et heures de circulation autorisés pour la circulation exprimés selon le format OpeningHours d'OpenStreetMap ([https://wiki.openstreetmap.org/wiki/Key:opening_hours](https://wiki.openstreetmap.org/wiki/Key:opening_hours)). Ce format permet d'indiquer les week-ends (we), les jours fériés (PH) et les vacances scolaires (SH). Par exemple `Mo-Fr 09:00-17:00; PH 10:00-12:00; PH Su off` signifie : 'Du lundi au vendredi de 9h à 17h sauf les jours fériés où l'ouverture est de 10h à 12h, à l'exception des jours fériés tombant un dimanche'. `24/7` indique `Tous les jours`. [Utiliser groom-groom pour récupérer les jours et heures de circulation](https://cerema-med.shinyapps.io/groom-groom?action=opening_hours)",
-         "example":"Mo-Fr 08:00-12:00,13:00-17:30; Sa 08:00-12:00; PH off",
+         "name":"PERIODE_DEBUT",
+         "title":"Entrée en vigueur des restrictions",
+         "description":"Entrée en vigueur des restrictions (par exemple pour les Zones à Faible Émission).",
+         "example":"'Début des vacances de la Toussaint' '23 Octobre'",
+         "type":"string",
+         "constraints":{
+            "required":false
+         }
+      },
+      {
+         "name":"PERIODE_FIN",
+         "title":"Fin des restrictions",
+         "description":"Fin des restrictions. Si elle existe, cela indique le caractère cyclique et non temporaire de la période de régulation.",
+         "example":"'Fin des vacances de la Toussaint' ou '8 Novembre'",
          "type":"string",
          "constraints":{
             "required":false
