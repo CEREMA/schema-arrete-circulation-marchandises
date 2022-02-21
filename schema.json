@@ -269,11 +269,23 @@
          }
       },
       {
-         "name":"VEH_TONNAGE",
-         "title":"Tonnage ou poids total autorisé en charge",
-         "description":"Tonnage ou poids total autorisé en charge, exprimé en tonnes.",
+         "name":"VEH_TONNAGE_MIN",
+         "title":"Tonnage minimal",
+         "description":"Tonnage à partir duquel s'applique la règlementation.",
          "type":"number",
-         "example":"7.5",
+         "example":"9",
+         "constraints":{
+            "required":false,
+            "minimum":0,
+            "maximum":45
+         }
+      },
+      {
+         "name":"VEH_TONNAGE_MAX",
+         "title":"Tonnage maximal",
+         "description":"Tonnage maximal ou poids total autorisé en charge.",
+         "type":"number",
+         "example":"3.5",
          "constraints":{
             "required":false,
             "minimum":0,

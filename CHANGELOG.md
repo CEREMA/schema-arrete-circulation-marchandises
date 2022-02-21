@@ -5,6 +5,8 @@
 - Ajoute le champ `PERIODE_FIN`
 - Met les champs `PERIODE_DEBUT` et `PERIODE_FIN` en string
 - Change l'ordre des champs
+- Supprime le champ `VEH_TONNAGE`
+- Ajoute les champs `VEH_TONNAGE_MIN` et `VEH_TONNAGE_MAX`
 
 ## v0.7.1
 - Supprime le pattern pour `GEOM_WKT`
