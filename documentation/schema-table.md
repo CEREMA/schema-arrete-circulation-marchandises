@@ -27,7 +27,8 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 |REGL_MOTIF (Motif)|chaîne de caractères|Motif justifiant de la mise en place de la règle de circulation|Forte affluence|Valeur optionnelle|
 |REGL_MODALITE (Modalité du règlement)|chaîne de caractères|Indique si l'arrêté interdit ou autorise|Autorise|Valeur obligatoire, Valeurs autorisées : Autorise, Interdit|
 |VEH_TYPES (Types de véhicules)|chaîne de caractères|Types de véhicules. S'il y a plusieurs types, les séparer les valeurs par le caractère '|'. Les valeurs possibles sont : 'Poids lourds', 'Véhicules utilitaires légers', 'Vélo-cargos' et 'Tous véhicules'.|Poids lourds|Véhicules utilitaires légers|Valeur optionnelle, Motif : `(?:(?:^|\|)(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules))+$`|
-|VEH_TONNAGE (Tonnage ou poids total autorisé en charge)|nombre réel|Tonnage ou poids total autorisé en charge, exprimé en tonnes.|7.5|Valeur optionnelle, Valeur minimale : 0, Valeur maximale : 45|
+|VEH_TONNAGE_MIN (Tonnage minimal)|nombre réel|Tonnage à partir duquel s'applique la règlementation.|9|Valeur optionnelle, Valeur minimale : 0, Valeur maximale : 45|
+|VEH_TONNAGE_MAX (Tonnage maximal)|nombre réel|Tonnage maximal ou poids total autorisé en charge.|3.5|Valeur optionnelle, Valeur minimale : 0, Valeur maximale : 45|
 |VEH_USAGES (Types d'usage)|chaîne de caractères|Types d'usage de véhicule. S'il y a plusieurs usages, séparer les valeurs par le caractère '|'|Bennes à ordures ménagères|Véhicules de police|Valeur optionnelle|
 |VEH_LONG (Longueur du véhicule)|nombre réel|Longueur maximale exprimée en mètres.|6.5|Valeur optionnelle, Valeur minimale : 0, Valeur maximale : 30|
 |VEH_LARG (Largeur du véhicule)|nombre réel|Longueur maximale exprimée en mètres.|3.5|Valeur optionnelle, Valeur minimale : 0, Valeur maximale : 6|

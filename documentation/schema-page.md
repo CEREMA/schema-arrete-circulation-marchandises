@@ -30,7 +30,8 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 | [REGL_MOTIF](#motif---propriété-regl_motif) | chaîne de caractères  | Non |
 | [REGL_MODALITE](#modalité-du-règlement---propriété-regl_modalite) | chaîne de caractères  | Oui |
 | [VEH_TYPES](#types-de-véhicules---propriété-veh_types) | chaîne de caractères  | Non |
-| [VEH_TONNAGE](#tonnage-ou-poids-total-autorisé-en-charge---propriété-veh_tonnage) | nombre réel  | Non |
+| [VEH_TONNAGE_MIN](#tonnage-minimal---propriété-veh_tonnage_min) | nombre réel  | Non |
+| [VEH_TONNAGE_MAX](#tonnage-maximal---propriété-veh_tonnage_max) | nombre réel  | Non |
 | [VEH_USAGES](#types-d'usage---propriété-veh_usages) | chaîne de caractères  | Non |
 | [VEH_LONG](#longueur-du-véhicule---propriété-veh_long) | nombre réel  | Non |
 | [VEH_LARG](#largeur-du-véhicule---propriété-veh_larg) | nombre réel  | Non |
@@ -135,9 +136,16 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 - Type : chaîne de caractères
 - Motif : `(?:(?:^|\|)(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules))+$`
 
-#### Tonnage ou poids total autorisé en charge - Propriété `VEH_TONNAGE`
+#### Tonnage minimal - Propriété `VEH_TONNAGE_MIN`
 
-> *Description : Tonnage ou poids total autorisé en charge, exprimé en tonnes.<br/>Ex : 7.5*
+> *Description : Tonnage à partir duquel s'applique la règlementation.<br/>Ex : 9*
+- Valeur optionnelle
+- Type : nombre réel
+- Valeur entre 0 et 45
+
+#### Tonnage maximal - Propriété `VEH_TONNAGE_MAX`
+
+> *Description : Tonnage maximal ou poids total autorisé en charge.<br/>Ex : 3.5*
 - Valeur optionnelle
 - Type : nombre réel
 - Valeur entre 0 et 45
