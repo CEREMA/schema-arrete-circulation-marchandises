@@ -1,5 +1,8 @@
 # Changelog
 
+## v0.7.1.1
+- Met la documentation sur le wiki
+
 ## v0.7.1
 - Supprime le pattern pour `GEOM_WKT`
 - Supprime le pattern pour `PERIODE_JH`
