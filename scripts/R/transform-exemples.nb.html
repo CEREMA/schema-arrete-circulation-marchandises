@@ -217,18 +217,52 @@ pre code {
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5saWJyYXJ5KGpzb25saXRlKVxubGlicmFyeShnbHVlKVxuYGBgIn0= -->
-<pre class="r"><code>library(tidyverse)
-library(jsonlite)
-library(glue)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5gYGAifQ== -->
+<pre class="r"><code>library(tidyverse)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoibGUgcGFja2FnZSCRdGlkeXZlcnNlkiBhIOl06SBjb21waWzpIGF2ZWMgbGEgdmVyc2lvbiBSIDQuMC41UmVnaXN0ZXJlZCBTMyBtZXRob2RzIG92ZXJ3cml0dGVuIGJ5ICdkYnBseXInOlxuICBtZXRob2QgICAgICAgICBmcm9tXG4gIHByaW50LnRibF9sYXp5ICAgICBcbiAgcHJpbnQudGJsX3NxbCAgICAgIFxuLS0gQXR0YWNoaW5nIHBhY2thZ2VzIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIHRpZHl2ZXJzZSAxLjMuMSAtLVxudiBnZ3Bsb3QyIDMuMy41ICAgICB2IHB1cnJyICAgMC4zLjRcbnYgdGliYmxlICAzLjEuMyAgICAgdiBkcGx5ciAgIDEuMC43XG52IHRpZHlyICAgMS4xLjMgICAgIHYgc3RyaW5nciAxLjQuMFxudiByZWFkciAgIDIuMC4wICAgICB2IGZvcmNhdHMgMC41LjFcbmxlIHBhY2thZ2UgkWdncGxvdDKSIGEg6XTpIGNvbXBpbOkgYXZlYyBsYSB2ZXJzaW9uIFIgNC4wLjVsZSBwYWNrYWdlIJF0aWJibGWSIGEg6XTpIGNvbXBpbOkgYXZlYyBsYSB2ZXJzaW9uIFIgNC4wLjVsZSBwYWNrYWdlIJF0aWR5cpIgYSDpdOkgY29tcGls6SBhdmVjIGxhIHZlcnNpb24gUiA0LjAuNWxlIHBhY2thZ2UgkXJlYWRykiBhIOl06SBjb21waWzpIGF2ZWMgbGEgdmVyc2lvbiBSIDQuMC41bGUgcGFja2FnZSCRcHVycnKSIGEg6XTpIGNvbXBpbOkgYXZlYyBsYSB2ZXJzaW9uIFIgNC4wLjVsZSBwYWNrYWdlIJFkcGx5cpIgYSDpdOkgY29tcGls6SBhdmVjIGxhIHZlcnNpb24gUiA0LjAuNWxlIHBhY2thZ2UgkXN0cmluZ3KSIGEg6XTpIGNvbXBpbOkgYXZlYyBsYSB2ZXJzaW9uIFIgNC4wLjVsZSBwYWNrYWdlIJFmb3JjYXRzkiBhIOl06SBjb21waWzpIGF2ZWMgbGEgdmVyc2lvbiBSIDQuMC41LS0gQ29uZmxpY3RzIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIHRpZHl2ZXJzZV9jb25mbGljdHMoKSAtLVxueCBkcGx5cjo6ZmlsdGVyKCkgbWFza3Mgc3RhdHM6OmZpbHRlcigpXG54IGRwbHlyOjpsYWcoKSAgICBtYXNrcyBzdGF0czo6bGFnKClcbiJ9 -->
+<pre><code>le package 㤼㸱tidyverse㤼㸲 a 攼㸹t攼㸹 compil攼㸹 avec la version R 4.0.5Registered S3 methods overwritten by &#39;dbplyr&#39;:
+  method         from
+  print.tbl_lazy     
+  print.tbl_sql      
+-- Attaching packages -------------------------------------------------- tidyverse 1.3.1 --
+v ggplot2 3.3.5     v purrr   0.3.4
+v tibble  3.1.3     v dplyr   1.0.7
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   2.0.0     v forcats 0.5.1
+le package 㤼㸱ggplot2㤼㸲 a 攼㸹t攼㸹 compil攼㸹 avec la version R 4.0.5le package 㤼㸱tibble㤼㸲 a 攼㸹t攼㸹 compil攼㸹 avec la version R 4.0.5le package 㤼㸱tidyr㤼㸲 a 攼㸹t攼㸹 compil攼㸹 avec la version R 4.0.5le package 㤼㸱readr㤼㸲 a 攼㸹t攼㸹 compil攼㸹 avec la version R 4.0.5le package 㤼㸱purrr㤼㸲 a 攼㸹t攼㸹 compil攼㸹 avec la version R 4.0.5le package 㤼㸱dplyr㤼㸲 a 攼㸹t攼㸹 compil攼㸹 avec la version R 4.0.5le package 㤼㸱stringr㤼㸲 a 攼㸹t攼㸹 compil攼㸹 avec la version R 4.0.5le package 㤼㸱forcats㤼㸲 a 攼㸹t攼㸹 compil攼㸹 avec la version R 4.0.5-- Conflicts ----------------------------------------------------- tidyverse_conflicts() --
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShqc29ubGl0ZSlcbmBgYCJ9 -->
+<pre class="r"><code>library(jsonlite)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hlbWVudCBkdSBwYWNrYWdlIDog46S847ixanNvbmxpdGXjpLzjuLJcblxuVGhlIGZvbGxvd2luZyBvYmplY3QgaXMgbWFza2VkIGZyb20g46S847ixcGFja2FnZTpwdXJycuOkvOO4sjpcblxuICAgIGZsYXR0ZW5cbiJ9 -->
+<pre><code>
+Attachement du package : 㤼㸱jsonlite㤼㸲
+
+The following object is masked from 㤼㸱package:purrr㤼㸲:
+
+    flatten</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShnbHVlKVxuYGBgIn0= -->
+<pre class="r"><code>library(glue)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hlbWVudCBkdSBwYWNrYWdlIDog46S847ixZ2x1ZeOkvOO4slxuXG5UaGUgZm9sbG93aW5nIG9iamVjdCBpcyBtYXNrZWQgZnJvbSDjpLzjuLFwYWNrYWdlOmRwbHly46S847iyOlxuXG4gICAgY29sbGFwc2VcbiJ9 -->
+<pre><code>
+Attachement du package : 㤼㸱glue㤼㸲
+
+The following object is masked from 㤼㸱package:dplyr㤼㸲:
+
+    collapse</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>On lit le schéma :</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucyA8LSByZWFkX2pzb24oXCIuLi9zY2hlbWEuanNvblwiKVxuZmllbGRzIDwtIHNhcHBseShzJGZpZWxkcywgZnVuY3Rpb24oZWx0KSBlbHQkbmFtZSlcbmBgYCJ9 -->
-<pre class="r"><code>s &lt;- read_json(&quot;../schema.json&quot;)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucyA8LSByZWFkX2pzb24oXCIuLi8uLi9zY2hlbWEuanNvblwiKVxuZmllbGRzIDwtIHNhcHBseShzJGZpZWxkcywgZnVuY3Rpb24oZWx0KSBlbHQkbmFtZSlcbmBgYCJ9 -->
+<pre class="r"><code>s &lt;- read_json(&quot;../../schema.json&quot;)
 fields &lt;- sapply(s$fields, function(elt) elt$name)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
@@ -236,10 +270,8 @@ fields &lt;- sapply(s$fields, function(elt) elt$name)</code></pre>
 <p>Fonction de correction des fichiers :</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29ycmVjdEZpbGUgPC0gZnVuY3Rpb24oaW5wdXRGaWxlLCBmaWVsZHMpIHtcbiAgZiA8LSByZWFkLmNzdihpbnB1dEZpbGUsIGVuY29kaW5nID0gXCJVVEYtOFwiKVxuICBcbiAgZGZfbCA8LSBsaXN0KClcbiAgIyBPbiBwYXJjb3VydCBjaGFxdWUgY2hhbXAgZHUgc2Now6ltYSBwb3VyIHZvaXIgcydpbCBleGlzdGUgb3Ugbm9uIGRhbnMgbGEgZG9ubsOpZVxuICAjIFMnaWwgbidleGlzdGUgcGFzLCBvbiBsZSByYWpvdXRlXG4gIGZvcihmaWVsZCBpbiBmaWVsZHMpIHtcbiAgICBpZighKGZpZWxkICVpbiUgbmFtZXMoZikpKSB7XG4gICAgICBtZXNzYWdlKFwiPj4gXCIsIGZpZWxkLCBcIiBuJ2V4aXN0ZSBwYXMuIE9uIG5lIHJlbXBsaXQgw6AgTkFcIilcbiAgICAgICMgQWpvdXQgZGUgbGEgY29sb25uZSBhdmVjIHZhbGV1ciBOQVxuICAgICAgZGZfbFtbZmllbGRdXSA8LSBOQVxuICAgIH0gZWxzZSB7XG4gICAgICAjIE9uIHByZW5kIGxhIGNvbG9ubmUgcHLDqWPDqWRlbnRlXG4gICAgICBkZl9sW1tmaWVsZF1dIDwtIGZbW2ZpZWxkXV1cbiAgICB9XG4gICAgXG4gICAgIyBSYWpvdXRlIGxlcyAwIGxlIGNhcyDDqWNow6lhbnQgw6AgQ09MTF9JTlNFRVxuICAgIGlmKGZpZWxkID09IFwiQ09MTF9JTlNFRVwiKSB7XG4gICAgICBkZl9sW1tmaWVsZF1dIDwtIGZbW2ZpZWxkXV0gJT4lIHN0cl9wYWQoNSwgc2lkZSA9IFwibGVmdFwiLCBwYWQgPSBcIjBcIilcbiAgICB9XG4gIH1cbiAgXG4gICMgT24gY29udmVydGl0IGxhIGxpc3RlIGVuIGRhdGEgZnJhbWVcbiAgZGYgPC0gZGF0YS5mcmFtZShkZl9sKVxuICBcbiAgcmV0dXJuKGRmKVxufVxuYGBgIn0= -->
-<pre class="r"><code>correctFile &lt;- function(inputFile, fields) {
-  f &lt;- read.csv(inputFile, encoding = &quot;UTF-8&quot;)
-  
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29ycmVjdEZpbGUgPC0gZnVuY3Rpb24oZiwgZmllbGRzKSB7XG4gIGRmX2wgPC0gbGlzdCgpXG4gICMgT24gcGFyY291cnQgY2hhcXVlIGNoYW1wIGR1IHNjaMOpbWEgcG91ciB2b2lyIHMnaWwgZXhpc3RlIG91IG5vbiBkYW5zIGxhIGRvbm7DqWVcbiAgIyBTJ2lsIG4nZXhpc3RlIHBhcywgb24gbGUgcmFqb3V0ZVxuICBmb3IoZmllbGQgaW4gZmllbGRzKSB7XG4gICAgaWYoIShmaWVsZCAlaW4lIG5hbWVzKGYpKSkge1xuICAgICAgbWVzc2FnZShcIj4+IFwiLCBmaWVsZCwgXCIgbidleGlzdGUgcGFzLiBPbiBuZSByZW1wbGl0IMOgIE5BXCIpXG4gICAgICAjIEFqb3V0IGRlIGxhIGNvbG9ubmUgYXZlYyB2YWxldXIgTkFcbiAgICAgIGRmX2xbW2ZpZWxkXV0gPC0gTkFcbiAgICB9IGVsc2Uge1xuICAgICAgIyBPbiBwcmVuZCBsYSBjb2xvbm5lIHByw6ljw6lkZW50ZVxuICAgICAgZGZfbFtbZmllbGRdXSA8LSBmW1tmaWVsZF1dXG4gICAgfVxuICAgIFxuICAgICMgUmFqb3V0ZSBsZXMgMCBsZSBjYXMgw6ljaMOpYW50IMOgIENPTExfSU5TRUVcbiAgICBpZihmaWVsZCA9PSBcIkNPTExfSU5TRUVcIikge1xuICAgICAgZGZfbFtbZmllbGRdXSA8LSBmW1tmaWVsZF1dICU+JSBzdHJfcGFkKDUsIHNpZGUgPSBcImxlZnRcIiwgcGFkID0gXCIwXCIpXG4gICAgfVxuICB9XG4gIFxuICAjIE9uIGNvbnZlcnRpdCBsYSBsaXN0ZSBlbiBkYXRhIGZyYW1lXG4gIGRmIDwtIGRhdGEuZnJhbWUoZGZfbClcbiAgXG4gIHJldHVybihkZilcbn1cbmBgYCJ9 -->
+<pre class="r"><code>correctFile &lt;- function(f, fields) {
   df_l &lt;- list()
   # On parcourt chaque champ du schéma pour voir s&#39;il existe ou non dans la donnée
   # S&#39;il n&#39;existe pas, on le rajoute
@@ -270,38 +302,113 @@ fields &lt;- sapply(s$fields, function(elt) elt$name)</code></pre>
 <p>Correction de l’exemple principal :</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGYgPC0gY29ycmVjdEZpbGUoXCIuLi9leGVtcGxlLXZhbGlkZS5jc3ZcIiwgZmllbGRzKVxuIyB3cml0ZS5jc3YoZGYsIFwiLi4vZXhlbXBsZS12YWxpZGUtbmV3LmNzdlwiLCBmaWxlRW5jb2RpbmcgPSBcIlVURi04XCIsIHJvdy5uYW1lcyA9IEYsIG5hID0gXCJcIilcbndyaXRlLmNzdihkZiwgXCIuLi9leGVtcGxlLXZhbGlkZS5jc3ZcIiwgZmlsZUVuY29kaW5nID0gXCJVVEYtOFwiLCByb3cubmFtZXMgPSBGLCBuYSA9IFwiXCIpXG5gYGAifQ== -->
-<pre class="r"><code>df &lt;- correctFile(&quot;../exemple-valide.csv&quot;, fields)
-# write.csv(df, &quot;../exemple-valide-new.csv&quot;, fileEncoding = &quot;UTF-8&quot;, row.names = F, na = &quot;&quot;)
-write.csv(df, &quot;../exemple-valide.csv&quot;, fileEncoding = &quot;UTF-8&quot;, row.names = F, na = &quot;&quot;)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGYxIDwtIHJlYWQuY3N2KFwiLi4vLi4vZXhlbXBsZS12YWxpZGUuY3N2XCIsIGVuY29kaW5nID0gXCJVVEYtOFwiKVxuZGYyIDwtIGNvcnJlY3RGaWxlKGRmMSwgZmllbGRzKVxuYGBgIn0= -->
+<pre class="r"><code>df1 &lt;- read.csv(&quot;../../exemple-valide.csv&quot;, encoding = &quot;UTF-8&quot;)
+df2 &lt;- correctFile(df1, fields)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiPj4gUkVHTF9DT05URVhURSBuJ2V4aXN0ZSBwYXMuIE9uIG5lIHJlbXBsaXQg4CBOQVxuPj4gVkVIX1RPTk5BR0VfTU9EQUxJVEUgbidleGlzdGUgcGFzLiBPbiBuZSByZW1wbGl0IOAgTkFcbj4+IFBFUklPREVfRklOIG4nZXhpc3RlIHBhcy4gT24gbmUgcmVtcGxpdCDgIE5BXG4+PiBFTVBSSVNFX1pPTkUgbidleGlzdGUgcGFzLiBPbiBuZSByZW1wbGl0IOAgTkFcbiJ9 -->
+<pre><code>&gt;&gt; REGL_CONTEXTE n&#39;existe pas. On ne remplit 攼㸰 NA
+&gt;&gt; VEH_TONNAGE_MODALITE n&#39;existe pas. On ne remplit 攼㸰 NA
+&gt;&gt; PERIODE_FIN n&#39;existe pas. On ne remplit 攼㸰 NA
+&gt;&gt; EMPRISE_ZONE n&#39;existe pas. On ne remplit 攼㸰 NA</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Pour restaurer le précédent exemple-valide.csv, on fait <code>git checkout master exemple-valide.csv</code></p>
+<p>Tests</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubnJvdyhkZjEpID09IG5yb3coZGYyKVxuYGBgIn0= -->
+<pre class="r"><code>nrow(df1) == nrow(df2)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFRSVUVcbiJ9 -->
+<pre><code>[1] TRUE</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Export du CSV exemple :</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxud3JpdGUuY3N2KGRmMiwgXCIuLi8uLi9leGVtcGxlLXZhbGlkZS5jc3ZcIiwgZmlsZUVuY29kaW5nID0gXCJVVEYtOFwiLCByb3cubmFtZXMgPSBGLCBuYSA9IFwiXCIpXG5gYGAifQ== -->
+<pre class="r"><code>write.csv(df2, &quot;../../exemple-valide.csv&quot;, fileEncoding = &quot;UTF-8&quot;, row.names = F, na = &quot;&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>On lit les fichiers du répertoire :</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubCA8LSBsaXN0LmZpbGVzKFwiLi4vZXhlbXBsZXNcIiwgXCIqLmNzdlwiLCBmdWxsLm5hbWVzID0gVClcbmBgYCJ9 -->
-<pre class="r"><code>l &lt;- list.files(&quot;../exemples&quot;, &quot;*.csv&quot;, full.names = T)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubCA8LSBsaXN0LmZpbGVzKFwiLi4vLi4vZXhlbXBsZXNcIiwgXCIqLmNzdlwiLCBmdWxsLm5hbWVzID0gVClcblxucHJpbnQobClcbmBgYCJ9 -->
+<pre class="r"><code>l &lt;- list.files(&quot;../../exemples&quot;, &quot;*.csv&quot;, full.names = T)
+
+print(l)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiLi4vLi4vZXhlbXBsZXMvY2Fycm9zLmNzdlwiICAgICAgICAgICAgICAgXCIuLi8uLi9leGVtcGxlcy9mdXZlYXUuY3N2XCIgICAgICAgICAgICAgIFxuWzNdIFwiLi4vLi4vZXhlbXBsZXMvZ2lnbmFjLmNzdlwiICAgICAgICAgICAgICAgXCIuLi8uLi9leGVtcGxlcy9sZS1yb3ZlLmNzdlwiICAgICAgICAgICAgIFxuWzVdIFwiLi4vLi4vZXhlbXBsZXMvc2VwdGVtZXMtbGVzLXZhbGxvbnMuY3N2XCIgXCIuLi8uLi9leGVtcGxlcy9zdC12aWN0b3JldC5jc3ZcIiAgICAgICAgIFxuWzddIFwiLi4vLi4vZXhlbXBsZXMvdmVuY2UuY3N2XCIgICAgICAgICAgICAgICBcbiJ9 -->
+<pre><code>[1] &quot;../../exemples/carros.csv&quot;               &quot;../../exemples/fuveau.csv&quot;              
+[3] &quot;../../exemples/gignac.csv&quot;               &quot;../../exemples/le-rove.csv&quot;             
+[5] &quot;../../exemples/septemes-les-vallons.csv&quot; &quot;../../exemples/st-victoret.csv&quot;         
+[7] &quot;../../exemples/vence.csv&quot;               </code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZm9yKGlucHV0RmlsZSBpbiBsKSB7XG4gIG1lc3NhZ2UoXCI+PiBmaWxlIDogXCIsIGlucHV0RmlsZSlcbiAgZGYgPC0gY29ycmVjdEZpbGUoaW5wdXRGaWxlLCBmaWVsZHMpXG4gIG5hbWVzKGRmKVxuICAjIHdyaXRlLmNzdihkZiwgZ2x1ZShcIntlbHR9LW5ldy5jc3ZcIiksIGZpbGVFbmNvZGluZyA9IFwiVVRGLThcIiwgcm93Lm5hbWVzID0gRiwgbmEgPSBcIlwiKVxuICAjIHdyaXRlLmNzdihkZiwgZWx0LCBmaWxlRW5jb2RpbmcgPSBcIlVURi04XCIsIHJvdy5uYW1lcyA9IEYsIG5hID0gXCJcIilcbn1cblxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZm9yKGlucHV0RmlsZSBpbiBsKSB7XG4gIG1lc3NhZ2UoXCI+PiBmaWxlIDogXCIsIGlucHV0RmlsZSlcbiAgZGYxIDwtIHJlYWQuY3N2KGlucHV0RmlsZSwgZW5jb2RpbmcgPSBcIlVURi04XCIpXG4gIGRmMiA8LSBjb3JyZWN0RmlsZShkZjEsIGZpZWxkcylcbiAgcHJpbnQobnJvdyhkZjEpID09IG5yb3coZGYyKSlcbiAgd3JpdGUuY3N2KGRmMiwgaW5wdXRGaWxlLCBmaWxlRW5jb2RpbmcgPSBcIlVURi04XCIsIHJvdy5uYW1lcyA9IEYsIG5hID0gXCJcIilcbn1cbmBgYCJ9 -->
 <pre class="r"><code>for(inputFile in l) {
   message(&quot;&gt;&gt; file : &quot;, inputFile)
-  df &lt;- correctFile(inputFile, fields)
-  names(df)
-  # write.csv(df, glue(&quot;{elt}-new.csv&quot;), fileEncoding = &quot;UTF-8&quot;, row.names = F, na = &quot;&quot;)
-  # write.csv(df, elt, fileEncoding = &quot;UTF-8&quot;, row.names = F, na = &quot;&quot;)
-}
-</code></pre>
+  df1 &lt;- read.csv(inputFile, encoding = &quot;UTF-8&quot;)
+  df2 &lt;- correctFile(df1, fields)
+  print(nrow(df1) == nrow(df2))
+  write.csv(df2, inputFile, fileEncoding = &quot;UTF-8&quot;, row.names = F, na = &quot;&quot;)
+}</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiPj4gZmlsZSA6IC4uLy4uL2V4ZW1wbGVzL2NhcnJvcy5jc3ZcbiJ9 -->
+<pre><code>&gt;&gt; file : ../../exemples/carros.csv</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFRSVUVcbiJ9 -->
+<pre><code>[1] TRUE</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiPj4gZmlsZSA6IC4uLy4uL2V4ZW1wbGVzL2Z1dmVhdS5jc3ZcbiJ9 -->
+<pre><code>&gt;&gt; file : ../../exemples/fuveau.csv</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFRSVUVcbiJ9 -->
+<pre><code>[1] TRUE</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiPj4gZmlsZSA6IC4uLy4uL2V4ZW1wbGVzL2dpZ25hYy5jc3ZcbiJ9 -->
+<pre><code>&gt;&gt; file : ../../exemples/gignac.csv</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFRSVUVcbiJ9 -->
+<pre><code>[1] TRUE</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiPj4gZmlsZSA6IC4uLy4uL2V4ZW1wbGVzL2xlLXJvdmUuY3N2XG4ifQ== -->
+<pre><code>&gt;&gt; file : ../../exemples/le-rove.csv</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFRSVUVcbiJ9 -->
+<pre><code>[1] TRUE</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiPj4gZmlsZSA6IC4uLy4uL2V4ZW1wbGVzL3NlcHRlbWVzLWxlcy12YWxsb25zLmNzdlxuIn0= -->
+<pre><code>&gt;&gt; file : ../../exemples/septemes-les-vallons.csv</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFRSVUVcbiJ9 -->
+<pre><code>[1] TRUE</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiPj4gZmlsZSA6IC4uLy4uL2V4ZW1wbGVzL3N0LXZpY3RvcmV0LmNzdlxuIn0= -->
+<pre><code>&gt;&gt; file : ../../exemples/st-victoret.csv</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFRSVUVcbiJ9 -->
+<pre><code>[1] TRUE</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiPj4gZmlsZSA6IC4uLy4uL2V4ZW1wbGVzL3ZlbmNlLmNzdlxuIn0= -->
+<pre><code>&gt;&gt; file : ../../exemples/vence.csv</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFRSVUVcbiJ9 -->
+<pre><code>[1] TRUE</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p>Ensuite, on fait le test des CSV selon le schéma pour voir si tout va bien : <a href="../tester-exemples.bat"></a></p>
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIk1ldCBsZXMgZXhlbXBsZXMgZW4gY29uZm9ybWl0w6kgYXZlYyBsZSBzY2jDqW1hIg0Kb3V0cHV0OiBodG1sX25vdGVib29rDQotLS0NCg0KYGBge3J9DQpsaWJyYXJ5KHRpZHl2ZXJzZSkNCmxpYnJhcnkoanNvbmxpdGUpDQpsaWJyYXJ5KGdsdWUpDQpgYGANCk9uIGxpdCBsZSBzY2jDqW1hIDoNCmBgYHtyfQ0KcyA8LSByZWFkX2pzb24oIi4uL3NjaGVtYS5qc29uIikNCmZpZWxkcyA8LSBzYXBwbHkocyRmaWVsZHMsIGZ1bmN0aW9uKGVsdCkgZWx0JG5hbWUpDQpgYGANCg0KRm9uY3Rpb24gZGUgY29ycmVjdGlvbiBkZXMgZmljaGllcnMgOg0KYGBge3J9DQpjb3JyZWN0RmlsZSA8LSBmdW5jdGlvbihpbnB1dEZpbGUsIGZpZWxkcykgew0KICBmIDwtIHJlYWQuY3N2KGlucHV0RmlsZSwgZW5jb2RpbmcgPSAiVVRGLTgiKQ0KICANCiAgZGZfbCA8LSBsaXN0KCkNCiAgIyBPbiBwYXJjb3VydCBjaGFxdWUgY2hhbXAgZHUgc2Now6ltYSBwb3VyIHZvaXIgcydpbCBleGlzdGUgb3Ugbm9uIGRhbnMgbGEgZG9ubsOpZQ0KICAjIFMnaWwgbidleGlzdGUgcGFzLCBvbiBsZSByYWpvdXRlDQogIGZvcihmaWVsZCBpbiBmaWVsZHMpIHsNCiAgICBpZighKGZpZWxkICVpbiUgbmFtZXMoZikpKSB7DQogICAgICBtZXNzYWdlKCI+PiAiLCBmaWVsZCwgIiBuJ2V4aXN0ZSBwYXMuIE9uIG5lIHJlbXBsaXQgw6AgTkEiKQ0KICAgICAgIyBBam91dCBkZSBsYSBjb2xvbm5lIGF2ZWMgdmFsZXVyIE5BDQogICAgICBkZl9sW1tmaWVsZF1dIDwtIE5BDQogICAgfSBlbHNlIHsNCiAgICAgICMgT24gcHJlbmQgbGEgY29sb25uZSBwcsOpY8OpZGVudGUNCiAgICAgIGRmX2xbW2ZpZWxkXV0gPC0gZltbZmllbGRdXQ0KICAgIH0NCiAgICANCiAgICAjIFJham91dGUgbGVzIDAgbGUgY2FzIMOpY2jDqWFudCDDoCBDT0xMX0lOU0VFDQogICAgaWYoZmllbGQgPT0gIkNPTExfSU5TRUUiKSB7DQogICAgICBkZl9sW1tmaWVsZF1dIDwtIGZbW2ZpZWxkXV0gJT4lIHN0cl9wYWQoNSwgc2lkZSA9ICJsZWZ0IiwgcGFkID0gIjAiKQ0KICAgIH0NCiAgfQ0KICANCiAgIyBPbiBjb252ZXJ0aXQgbGEgbGlzdGUgZW4gZGF0YSBmcmFtZQ0KICBkZiA8LSBkYXRhLmZyYW1lKGRmX2wpDQogIA0KICByZXR1cm4oZGYpDQp9DQpgYGANCg0KQ29ycmVjdGlvbiBkZSBsJ2V4ZW1wbGUgcHJpbmNpcGFsIDoNCmBgYHtyfQ0KZGYgPC0gY29ycmVjdEZpbGUoIi4uL2V4ZW1wbGUtdmFsaWRlLmNzdiIsIGZpZWxkcykNCiMgd3JpdGUuY3N2KGRmLCAiLi4vZXhlbXBsZS12YWxpZGUtbmV3LmNzdiIsIGZpbGVFbmNvZGluZyA9ICJVVEYtOCIsIHJvdy5uYW1lcyA9IEYsIG5hID0gIiIpDQp3cml0ZS5jc3YoZGYsICIuLi9leGVtcGxlLXZhbGlkZS5jc3YiLCBmaWxlRW5jb2RpbmcgPSAiVVRGLTgiLCByb3cubmFtZXMgPSBGLCBuYSA9ICIiKQ0KYGBgDQoNCk9uIGxpdCBsZXMgZmljaGllcnMgZHUgcsOpcGVydG9pcmUgOg0KYGBge3J9DQpsIDwtIGxpc3QuZmlsZXMoIi4uL2V4ZW1wbGVzIiwgIiouY3N2IiwgZnVsbC5uYW1lcyA9IFQpDQpgYGANCg0KDQoNCmBgYHtyfQ0KZm9yKGlucHV0RmlsZSBpbiBsKSB7DQogIG1lc3NhZ2UoIj4+IGZpbGUgOiAiLCBpbnB1dEZpbGUpDQogIGRmIDwtIGNvcnJlY3RGaWxlKGlucHV0RmlsZSwgZmllbGRzKQ0KICBuYW1lcyhkZikNCiAgIyB3cml0ZS5jc3YoZGYsIGdsdWUoIntlbHR9LW5ldy5jc3YiKSwgZmlsZUVuY29kaW5nID0gIlVURi04Iiwgcm93Lm5hbWVzID0gRiwgbmEgPSAiIikNCiAgIyB3cml0ZS5jc3YoZGYsIGVsdCwgZmlsZUVuY29kaW5nID0gIlVURi04Iiwgcm93Lm5hbWVzID0gRiwgbmEgPSAiIikNCn0NCg0KYGBgDQoNCg==</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIk1ldCBsZXMgZXhlbXBsZXMgZW4gY29uZm9ybWl0w6kgYXZlYyBsZSBzY2jDqW1hIg0Kb3V0cHV0OiBodG1sX25vdGVib29rDQotLS0NCg0KYGBge3J9DQpsaWJyYXJ5KHRpZHl2ZXJzZSkNCmxpYnJhcnkoanNvbmxpdGUpDQpsaWJyYXJ5KGdsdWUpDQpgYGANCk9uIGxpdCBsZSBzY2jDqW1hIDoNCmBgYHtyfQ0KcyA8LSByZWFkX2pzb24oIi4uLy4uL3NjaGVtYS5qc29uIikNCmZpZWxkcyA8LSBzYXBwbHkocyRmaWVsZHMsIGZ1bmN0aW9uKGVsdCkgZWx0JG5hbWUpDQpgYGANCg0KRm9uY3Rpb24gZGUgY29ycmVjdGlvbiBkZXMgZmljaGllcnMgOg0KYGBge3J9DQpjb3JyZWN0RmlsZSA8LSBmdW5jdGlvbihmLCBmaWVsZHMpIHsNCiAgZGZfbCA8LSBsaXN0KCkNCiAgIyBPbiBwYXJjb3VydCBjaGFxdWUgY2hhbXAgZHUgc2Now6ltYSBwb3VyIHZvaXIgcydpbCBleGlzdGUgb3Ugbm9uIGRhbnMgbGEgZG9ubsOpZQ0KICAjIFMnaWwgbidleGlzdGUgcGFzLCBvbiBsZSByYWpvdXRlDQogIGZvcihmaWVsZCBpbiBmaWVsZHMpIHsNCiAgICBpZighKGZpZWxkICVpbiUgbmFtZXMoZikpKSB7DQogICAgICBtZXNzYWdlKCI+PiAiLCBmaWVsZCwgIiBuJ2V4aXN0ZSBwYXMuIE9uIG5lIHJlbXBsaXQgw6AgTkEiKQ0KICAgICAgIyBBam91dCBkZSBsYSBjb2xvbm5lIGF2ZWMgdmFsZXVyIE5BDQogICAgICBkZl9sW1tmaWVsZF1dIDwtIE5BDQogICAgfSBlbHNlIHsNCiAgICAgICMgT24gcHJlbmQgbGEgY29sb25uZSBwcsOpY8OpZGVudGUNCiAgICAgIGRmX2xbW2ZpZWxkXV0gPC0gZltbZmllbGRdXQ0KICAgIH0NCiAgICANCiAgICAjIFJham91dGUgbGVzIDAgbGUgY2FzIMOpY2jDqWFudCDDoCBDT0xMX0lOU0VFDQogICAgaWYoZmllbGQgPT0gIkNPTExfSU5TRUUiKSB7DQogICAgICBkZl9sW1tmaWVsZF1dIDwtIGZbW2ZpZWxkXV0gJT4lIHN0cl9wYWQoNSwgc2lkZSA9ICJsZWZ0IiwgcGFkID0gIjAiKQ0KICAgIH0NCiAgfQ0KICANCiAgIyBPbiBjb252ZXJ0aXQgbGEgbGlzdGUgZW4gZGF0YSBmcmFtZQ0KICBkZiA8LSBkYXRhLmZyYW1lKGRmX2wpDQogIA0KICByZXR1cm4oZGYpDQp9DQpgYGANCg0KQ29ycmVjdGlvbiBkZSBsJ2V4ZW1wbGUgcHJpbmNpcGFsIDoNCmBgYHtyfQ0KZGYxIDwtIHJlYWQuY3N2KCIuLi8uLi9leGVtcGxlLXZhbGlkZS5jc3YiLCBlbmNvZGluZyA9ICJVVEYtOCIpDQpkZjIgPC0gY29ycmVjdEZpbGUoZGYxLCBmaWVsZHMpDQpgYGANCg0KUG91ciByZXN0YXVyZXIgbGUgcHLDqWPDqWRlbnQgZXhlbXBsZS12YWxpZGUuY3N2LCBvbiBmYWl0IGBnaXQgY2hlY2tvdXQgbWFzdGVyIGV4ZW1wbGUtdmFsaWRlLmNzdmANCg0KVGVzdHMNCmBgYHtyfQ0KbnJvdyhkZjEpID09IG5yb3coZGYyKQ0KYGBgDQoNCkV4cG9ydCBkdSBDU1YgZXhlbXBsZSA6DQpgYGB7cn0NCndyaXRlLmNzdihkZjIsICIuLi8uLi9leGVtcGxlLXZhbGlkZS5jc3YiLCBmaWxlRW5jb2RpbmcgPSAiVVRGLTgiLCByb3cubmFtZXMgPSBGLCBuYSA9ICIiKQ0KYGBgDQoNCg0KT24gbGl0IGxlcyBmaWNoaWVycyBkdSByw6lwZXJ0b2lyZSA6DQpgYGB7cn0NCmwgPC0gbGlzdC5maWxlcygiLi4vLi4vZXhlbXBsZXMiLCAiKi5jc3YiLCBmdWxsLm5hbWVzID0gVCkNCg0KcHJpbnQobCkNCmBgYA0KDQoNCg0KYGBge3J9DQpmb3IoaW5wdXRGaWxlIGluIGwpIHsNCiAgbWVzc2FnZSgiPj4gZmlsZSA6ICIsIGlucHV0RmlsZSkNCiAgZGYxIDwtIHJlYWQuY3N2KGlucHV0RmlsZSwgZW5jb2RpbmcgPSAiVVRGLTgiKQ0KICBkZjIgPC0gY29ycmVjdEZpbGUoZGYxLCBmaWVsZHMpDQogIHByaW50KG5yb3coZGYxKSA9PSBucm93KGRmMikpDQogIHdyaXRlLmNzdihkZjIsIGlucHV0RmlsZSwgZmlsZUVuY29kaW5nID0gIlVURi04Iiwgcm93Lm5hbWVzID0gRiwgbmEgPSAiIikNCn0NCmBgYA0KDQpFbnN1aXRlLCBvbiBmYWl0IGxlIHRlc3QgZGVzIENTViBzZWxvbiBsZSBzY2jDqW1hIHBvdXIgdm9pciBzaSB0b3V0IHZhIGJpZW4gOg0KW10oLi4vdGVzdGVyLWV4ZW1wbGVzLmJhdCkNCg0K</div>
 
 
 
