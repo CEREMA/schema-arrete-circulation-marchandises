@@ -234,11 +234,11 @@
          }
       },
       {
-         "name":"REGL_MOTIF",
-         "title":"Motif",
-         "description":"Motif justifiant de la mise en place de la règle de circulation",
+         "name":"REGL_CONTEXTE",
+         "title":"Contexte",
+         "description":"Contexte, motif, commentaire libre entourant la mise en place de la règle de circulation",
          "type":"string",
-         "example":"Forte affluence",
+         "example":"Forte affluence, marché",
          "constraints":{
             "required":false
          }
@@ -269,23 +269,26 @@
          }
       },
       {
-         "name":"VEH_TONNAGE_MIN",
-         "title":"Tonnage minimal",
-         "description":"Tonnage à partir duquel s'applique la règlementation.",
-         "type":"number",
-         "example":"9",
+         "name":"VEH_TONNAGE_MODALITE",
+         "title":"Indication sur le tonnage",
+         "description":"Indication sur le tonnage minimal ou maximal. 'Jusqu'à 9T' équivaut à '<= 9T' (inclusif). 'Depuis 9T' équivaut à '>= 9T' (inclusif). 'De plus de 9T' équivaut à > 9T (exclusif)",
+         "type":"string",
+         "example":"Depuis",
          "constraints":{
             "required":false,
-            "minimum":0,
-            "maximum":45
+            "enum":[
+               "jusqu'à",
+               "depuis",
+               "à partir de"
+            ]
          }
       },
       {
-         "name":"VEH_TONNAGE_MAX",
-         "title":"Tonnage maximal",
-         "description":"Tonnage maximal ou poids total autorisé en charge.",
+         "name":"VEH_TONNAGE",
+         "title":"Tonnage",
+         "description":"Tonnage du véhicule. Remplir le champ `VEH_TONNAGE_MODALITE` pour dire s'il s'agit du tonnage à partir duquel ou jusqu'auquel s'applique la règle.",
          "type":"number",
-         "example":"3.5",
+         "example":"9",
          "constraints":{
             "required":false,
             "minimum":0,
@@ -391,6 +394,16 @@
          }
       },
       {
+         "name":"EMPRISE_ZONE",
+         "title":"Zone associée à l'emprise",
+         "description":"Zone associée à l'emprise. Il s'agit généralement de la dénomination du quartier ou de l'aire piétonne associée règlementée",
+         "example":"Secteur du Centre-Ville",
+         "type":"string",
+         "constraints":{
+            "required":false
+         }
+      },
+      {
          "name":"EMPRISE_DESIGNATION",
          "title":"Nom de la voie",
          "description":"Nom de la voie, ou de la zone associée à la section règlementée. La zone peut être une aire piétonne, un quartier, une zone ZFE ([voir le schéma des ZFE](https://schema.data.gouv.fr/etalab/schema-zfe/latest.html))",
@@ -412,31 +425,11 @@
          }
       },
       {
-         "name":"GEOM_DEBUT",
-         "title":"Début de la section (coordonnées)",
-         "description":"Coordonnées GPS du début de la section. Se réfère à `EMPRISE_DEBUT`. S'écrit sous la forme 'long,lat' (5 ou 6 décimales sont conseillées).",
-         "type":"geopoint",
-         "example":"5.42101,43.53591",
-         "constraints":{
-            "required":false
-         }
-      },
-      {
          "name":"EMPRISE_FIN",
          "title":"Fin de la section (libellé)",
          "description":"Indication textuelle de l'endroit au bout duquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Pour indiquer les coordonnées GPS, se référer au champ `GEOM_FIN`.",
          "type":"string",
          "example":"34 bis avenue Philippe Solari, Intersection de l'avenue Philippe Solari avec le boulevard des Charmettes",
-         "constraints":{
-            "required":false
-         }
-      },
-      {
-         "name":"GEOM_FIN",
-         "title":"Fin de la section (coordonnées)",
-         "description":"Coordonnées GPS de la fin de la section. Se réfère à `EMPRISE_DEBUT`. S'écrit sous la forme 'long,lat' (5 ou 6 décimales sont conseillées).",
-         "type":"geopoint",
-         "example":"5.42101,43.53591",
          "constraints":{
             "required":false
          }
@@ -486,6 +479,26 @@
          "description":"Géométrie de la rue (ligne), ou de l'emprise (polygone) exprimée au format [WKT (Well Know Text](https://fr.wikipedia.org/wiki/Well-known_text) sous le système de projection WGS84 (EPSG:4326)",
          "type":"string",
          "example":"LineString(5.39340184 45.56538751, 5.41017215 45.56722934, 5.42510063 45.5679079)",
+         "constraints":{
+            "required":false
+         }
+      },
+      {
+         "name":"GEOM_DEBUT",
+         "title":"Début de la section (coordonnées)",
+         "description":"Coordonnées GPS du début de la section. Se réfère à `EMPRISE_DEBUT`. S'écrit sous la forme 'long,lat' (5 ou 6 décimales sont conseillées).",
+         "type":"geopoint",
+         "example":"5.42101,43.53591",
+         "constraints":{
+            "required":false
+         }
+      },
+      {
+         "name":"GEOM_FIN",
+         "title":"Fin de la section (coordonnées)",
+         "description":"Coordonnées GPS de la fin de la section. Se réfère à `EMPRISE_DEBUT`. S'écrit sous la forme 'long,lat' (5 ou 6 décimales sont conseillées).",
+         "type":"geopoint",
+         "example":"5.42101,43.53591",
          "constraints":{
             "required":false
          }

@@ -27,11 +27,11 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 | [ARR_URL](#adresse-internet-de-l'arrêté---propriété-arr_url) | chaîne de caractères (format `uri`) | Non |
 | [REGL_ARTICLE](#article-du-règlement---propriété-regl_article) | chaîne de caractères  | Non |
 | [REGL_SOUS_ARTICLE](#sous-article-du-règlement---propriété-regl_sous_article) | chaîne de caractères  | Non |
-| [REGL_MOTIF](#motif---propriété-regl_motif) | chaîne de caractères  | Non |
+| [REGL_CONTEXTE](#contexte---propriété-regl_contexte) | chaîne de caractères  | Non |
 | [REGL_MODALITE](#modalité-du-règlement---propriété-regl_modalite) | chaîne de caractères  | Oui |
 | [VEH_TYPES](#types-de-véhicules---propriété-veh_types) | chaîne de caractères  | Non |
-| [VEH_TONNAGE_MIN](#tonnage-minimal---propriété-veh_tonnage_min) | nombre réel  | Non |
-| [VEH_TONNAGE_MAX](#tonnage-maximal---propriété-veh_tonnage_max) | nombre réel  | Non |
+| [VEH_TONNAGE_MODALITE](#indication-sur-le-tonnage---propriété-veh_tonnage_modalite) | chaîne de caractères  | Non |
+| [VEH_TONNAGE](#tonnage---propriété-veh_tonnage) | nombre réel  | Non |
 | [VEH_USAGES](#types-d'usage---propriété-veh_usages) | chaîne de caractères  | Non |
 | [VEH_LONG](#longueur-du-véhicule---propriété-veh_long) | nombre réel  | Non |
 | [VEH_LARG](#largeur-du-véhicule---propriété-veh_larg) | nombre réel  | Non |
@@ -41,15 +41,16 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 | [PERIODE_JH](#jours-et-heures-de-circulation---propriété-periode_jh) | chaîne de caractères  | Non |
 | [PERIODE_DEBUT](#entrée-en-vigueur-des-restrictions---propriété-periode_debut) | chaîne de caractères  | Non |
 | [PERIODE_FIN](#fin-des-restrictions---propriété-periode_fin) | chaîne de caractères  | Non |
+| [EMPRISE_ZONE](#zone-associée-à-l'emprise---propriété-emprise_zone) | chaîne de caractères  | Non |
 | [EMPRISE_DESIGNATION](#nom-de-la-voie---propriété-emprise_designation) | chaîne de caractères  | Oui |
 | [EMPRISE_DEBUT](#début-de-la-section-(libellé)---propriété-emprise_debut) | chaîne de caractères  | Non |
-| [GEOM_DEBUT](#début-de-la-section-(coordonnées)---propriété-geom_debut) | point géographique  | Non |
 | [EMPRISE_FIN](#fin-de-la-section-(libellé)---propriété-emprise_fin) | chaîne de caractères  | Non |
-| [GEOM_FIN](#fin-de-la-section-(coordonnées)---propriété-geom_fin) | point géographique  | Non |
 | [EMPRISE_SENS](#direction-ou-sens-de-circulation---propriété-emprise_sens) | chaîne de caractères  | Non |
 | [INTERV_DUREE](#durée-maximale-d'intervention---propriété-interv_duree) | heure  | Non |
 | [INTERV_HMAX](#heure-maximale-d'intervention---propriété-interv_hmax) | heure  | Non |
 | [GEOM_WKT](#géométrie-au-format-wkt---propriété-geom_wkt) | chaîne de caractères  | Non |
+| [GEOM_DEBUT](#début-de-la-section-(coordonnées)---propriété-geom_debut) | point géographique  | Non |
+| [GEOM_FIN](#fin-de-la-section-(coordonnées)---propriété-geom_fin) | point géographique  | Non |
 | [GEOM_SOURCE](#source-de-la-géométrie---propriété-geom_source) | chaîne de caractères  | Non |
 
 #### Identifiant de l'entité - Propriété `ID`
@@ -114,9 +115,9 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 - Valeur optionnelle
 - Type : chaîne de caractères
 
-#### Motif - Propriété `REGL_MOTIF`
+#### Contexte - Propriété `REGL_CONTEXTE`
 
-> *Description : Motif justifiant de la mise en place de la règle de circulation<br/>Ex : Forte affluence*
+> *Description : Contexte, motif, commentaire libre entourant la mise en place de la règle de circulation<br/>Ex : Forte affluence, marché*
 - Valeur optionnelle
 - Type : chaîne de caractères
 
@@ -136,16 +137,19 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 - Type : chaîne de caractères
 - Motif : `(?:(?:^|\|)(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules))+$`
 
-#### Tonnage minimal - Propriété `VEH_TONNAGE_MIN`
+#### Indication sur le tonnage - Propriété `VEH_TONNAGE_MODALITE`
 
-> *Description : Tonnage à partir duquel s'applique la règlementation.<br/>Ex : 9*
+> *Description : Indication sur le tonnage minimal ou maximal. 'Jusqu'à 9T' équivaut à '<= 9T' (inclusif). 'Depuis 9T' équivaut à '>= 9T' (inclusif). 'De plus de 9T' équivaut à > 9T (exclusif)<br/>Ex : Depuis*
 - Valeur optionnelle
-- Type : nombre réel
-- Valeur entre 0 et 45
+- Type : chaîne de caractères
+- Valeurs autorisées : 
+    - jusqu'à
+    - depuis
+    - à partir de
 
-#### Tonnage maximal - Propriété `VEH_TONNAGE_MAX`
+#### Tonnage - Propriété `VEH_TONNAGE`
 
-> *Description : Tonnage maximal ou poids total autorisé en charge.<br/>Ex : 3.5*
+> *Description : Tonnage du véhicule. Remplir le champ `VEH_TONNAGE_MODALITE` pour dire s'il s'agit du tonnage à partir duquel ou jusqu'auquel s'applique la règle.<br/>Ex : 9*
 - Valeur optionnelle
 - Type : nombre réel
 - Valeur entre 0 et 45
@@ -209,6 +213,12 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 - Valeur optionnelle
 - Type : chaîne de caractères
 
+#### Zone associée à l'emprise - Propriété `EMPRISE_ZONE`
+
+> *Description : Zone associée à l'emprise. Il s'agit généralement de la dénomination du quartier ou de l'aire piétonne associée règlementée<br/>Ex : Secteur du Centre-Ville*
+- Valeur optionnelle
+- Type : chaîne de caractères
+
 #### Nom de la voie - Propriété `EMPRISE_DESIGNATION`
 
 > *Description : Nom de la voie, ou de la zone associée à la section règlementée. La zone peut être une aire piétonne, un quartier, une zone ZFE ([voir le schéma des ZFE](https://schema.data.gouv.fr/etalab/schema-zfe/latest.html))<br/>Ex : Avenue Philippe Solari, Commune d'Aix-en-Provence, Quartier Mazarin, 200046977-ZFE-001*
@@ -222,23 +232,11 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 - Valeur optionnelle
 - Type : chaîne de caractères
 
-#### Début de la section (coordonnées) - Propriété `GEOM_DEBUT`
-
-> *Description : Coordonnées GPS du début de la section. Se réfère à `EMPRISE_DEBUT`. S'écrit sous la forme 'long,lat' (5 ou 6 décimales sont conseillées).<br/>Ex : 5.42101,43.53591*
-- Valeur optionnelle
-- Type : point géographique
-
 #### Fin de la section (libellé) - Propriété `EMPRISE_FIN`
 
 > *Description : Indication textuelle de l'endroit au bout duquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Pour indiquer les coordonnées GPS, se référer au champ `GEOM_FIN`.<br/>Ex : 34 bis avenue Philippe Solari, Intersection de l'avenue Philippe Solari avec le boulevard des Charmettes*
 - Valeur optionnelle
 - Type : chaîne de caractères
-
-#### Fin de la section (coordonnées) - Propriété `GEOM_FIN`
-
-> *Description : Coordonnées GPS de la fin de la section. Se réfère à `EMPRISE_DEBUT`. S'écrit sous la forme 'long,lat' (5 ou 6 décimales sont conseillées).<br/>Ex : 5.42101,43.53591*
-- Valeur optionnelle
-- Type : point géographique
 
 #### Direction ou sens de circulation - Propriété `EMPRISE_SENS`
 
@@ -271,6 +269,18 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 > *Description : Géométrie de la rue (ligne), ou de l'emprise (polygone) exprimée au format [WKT (Well Know Text](https://fr.wikipedia.org/wiki/Well-known_text) sous le système de projection WGS84 (EPSG:4326)<br/>Ex : LineString(5.39340184 45.56538751, 5.41017215 45.56722934, 5.42510063 45.5679079)*
 - Valeur optionnelle
 - Type : chaîne de caractères
+
+#### Début de la section (coordonnées) - Propriété `GEOM_DEBUT`
+
+> *Description : Coordonnées GPS du début de la section. Se réfère à `EMPRISE_DEBUT`. S'écrit sous la forme 'long,lat' (5 ou 6 décimales sont conseillées).<br/>Ex : 5.42101,43.53591*
+- Valeur optionnelle
+- Type : point géographique
+
+#### Fin de la section (coordonnées) - Propriété `GEOM_FIN`
+
+> *Description : Coordonnées GPS de la fin de la section. Se réfère à `EMPRISE_DEBUT`. S'écrit sous la forme 'long,lat' (5 ou 6 décimales sont conseillées).<br/>Ex : 5.42101,43.53591*
+- Valeur optionnelle
+- Type : point géographique
 
 #### Source de la géométrie - Propriété `GEOM_SOURCE`
 
