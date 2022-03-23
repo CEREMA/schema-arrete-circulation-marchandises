@@ -13,8 +13,8 @@
    ],
    "countryCode":"FR",
    "homepage":"https://github.com/CEREMA/schema-arrete-circulation",
-   "path":"https://github.com/CEREMA/schema-arrete-circulation-marchandises/raw/v0.7.2/schema.json",
-   "image":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.2/files/image.png",
+   "path":"https://github.com/CEREMA/schema-arrete-circulation-marchandises/raw/v0.8.0/schema.json",
+   "image":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.8.0/files/image.png",
    "licenses":[
       {
          "title":"Etalab Licence Ouverte 2.0",
@@ -26,43 +26,43 @@
       {
          "title":"Fichier valide",
          "name":"exemple-valide-csv",
-         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.2/exemple-valide.csv"
+         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.8.0/exemple-valide.csv"
       },
       {
          "title":"Fichier valide pour la commune de Carros (CSV)",
          "name":"carros-csv",
-         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.2/exemples/carros.csv"
+         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.8.0/exemples/carros.csv"
       },
       {
          "title":"Fichier valide pour la commune de Gignac-La-Nerthe (CSV)",
          "name":"gignac-csv",
-         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.2/exemples/gignac.csv"
+         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.8.0/exemples/gignac.csv"
       },
       {
          "title":"Fichier valide pour la commune du Rove (CSV)",
          "name":"le-rove-csv",
-         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.2/exemples/le-rove.csv"
+         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.8.0/exemples/le-rove.csv"
       },
       {
          "title":"Fichier valide pour la commune de St-Victoret (CSV)",
          "name":"st-victoret-csv",
-         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.2/exemples/st-victoret.csv"
+         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.8.0/exemples/st-victoret.csv"
       },
       {
          "title":"Fichier valide pour la commune de Septèmes-Les-Vallons (CSV)",
          "name":"septemes-les-vallons-csv",
-         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.2/exemples/septemes-les-vallons.csv"
+         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.8.0/exemples/septemes-les-vallons.csv"
       },
       {
          "title":"Fichier valide pour la commune de Vence (CSV)",
          "name":"vence-csv",
-         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.7.2/exemples/vence.csv"
+         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.8.0/exemples/vence.csv"
       }
    ],
    "sources":[
       {
          "title":"Fiche technique de rédaction d'arrêté de circulation",
-         "path":"https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/v0.7.2/ressources/fiche_technique_arrete_de_circulation_cle27195e-1.pdf"
+         "path":"https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/v0.8.0/ressources/fiche_technique_arrete_de_circulation_cle27195e-1.pdf"
       },
       {
          "title":"Démarche \"Harmoniser les règlementations de transport de marchandises\"",
@@ -70,12 +70,12 @@
       },
       {
          "title":"Guide d'harmonisation des règlementations des livraisons co-rédigé par la Région Sud et la DREAL PACA",
-         "path":"https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/v0.7.2/ressources/Guide%20Harmonisation%20des%20arr%C3%AAt%C3%A9s%20R%C3%A9gion%20PACA%202019.pdf"
+         "path":"https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/v0.8.0/ressources/Guide%20Harmonisation%20des%20arr%C3%AAt%C3%A9s%20R%C3%A9gion%20PACA%202019.pdf"
       }
    ],
    "created":"2021-04-30",
-   "lastModified":"2022-02-15",
-   "version":"0.7.2",
+   "lastModified":"2022-03-23",
+   "version":"0.8.0",
    "contributors":[
       {
          "title":"Mathieu Rajerison",
