@@ -411,7 +411,7 @@
          "type":"string",
          "constraints":{
             "required":true,
-            "pattern":"^[a-zA-Z0-9\\-\\–\\'\\’\\s\\d\\u00C0-\\u00FF\\(\\)]+$"
+            "pattern":"^[a-zA-Z0-9\\-\\–\\'\\’\\s\\d\\u00C0-\\u00FF\\(\\)\\,\\.]+$"
          }
       },
       {
