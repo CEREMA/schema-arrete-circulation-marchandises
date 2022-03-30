@@ -234,8 +234,8 @@
          }
       },
       {
-         "name":"REGL_MOTIF",
-         "title":"Motif",
+         "name":"REGL_CONTEXTE",
+         "title":"Contexte",
          "description":"Contexte, motif, commentaire libre entourant la mise en place de la règle de circulation",
          "type":"string",
          "example":"Forte affluence, marché",
