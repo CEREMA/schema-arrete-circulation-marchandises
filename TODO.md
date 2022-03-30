@@ -1,3 +1,6 @@
+### 10 Février
+- `VEH_TONNAGE_MAX` et `VEH_TONNAGE_MIN`
+
 ### 13 Septembre
 - [ ] v0.7.0 : champs EMPRISE_DEBUT_POINT, EMPRISE_FIN_POINT, champs ID en format UUID, utilisation du GeoJSON ?
 

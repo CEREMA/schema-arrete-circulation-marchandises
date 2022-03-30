@@ -1,7 +1,18 @@
 # Changelog
 
-## v0.7.1.1
-- Met la documentation sur le wiki
+## v0.8
+- Ajoute le champ `VEH_TONNAGE_MODALITE`
+- Ajoute le champ `REGL_MOTIF`
+- Supprime les champs `VEH_TONNAGE_MIN` et `VEH_TONNAGE_MAX`
+- Ajout le champ `EMPRISE_ZONE`
+
+## v0.7.2
+- Ajoute le champ `REGL_MOTIF`
+- Ajoute le champ `PERIODE_FIN`
+- Met les champs `PERIODE_DEBUT` et `PERIODE_FIN` en string
+- Change l'ordre des champs
+- Supprime le champ `VEH_TONNAGE`
+- Ajoute les champs `VEH_TONNAGE_MIN` et `VEH_TONNAGE_MAX`
 
 ## v0.7.1
 - Supprime le pattern pour `GEOM_WKT`
