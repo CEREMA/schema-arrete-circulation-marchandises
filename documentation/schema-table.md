@@ -6,7 +6,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 
 - Schéma créé le : 04/30/21
 - Site web : https://github.com/CEREMA/schema-arrete-circulation
-- Version : 0.7.2
+- Version : 0.8.0
 - Valeurs manquantes : `""`, `"NA"`, `"NaN"`, `"N/A"`
 - Clé primaire : `ID`
 
@@ -27,7 +27,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 |REGL_CONTEXTE (Contexte)|chaîne de caractères|Contexte, motif, commentaire libre entourant la mise en place de la règle de circulation|Forte affluence, marché|Valeur optionnelle|
 |REGL_MODALITE (Modalité du règlement)|chaîne de caractères|Indique si l'arrêté interdit ou autorise|Autorise|Valeur obligatoire, Valeurs autorisées : Autorise, Interdit|
 |VEH_TYPES (Types de véhicules)|chaîne de caractères|Types de véhicules. S'il y a plusieurs types, les séparer les valeurs par le caractère '|'. Les valeurs possibles sont : 'Poids lourds', 'Véhicules utilitaires légers', 'Vélo-cargos' et 'Tous véhicules'.|Poids lourds|Véhicules utilitaires légers|Valeur optionnelle, Motif : `(?:(?:^|\|)(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules))+$`|
-|VEH_TONNAGE_MODALITE (Indication sur le tonnage)|chaîne de caractères|Indication sur le tonnage minimal ou maximal. 'Jusqu'à 9T' équivaut à '<= 9T' (inclusif). 'Depuis 9T' équivaut à '>= 9T' (inclusif). 'De plus de 9T' équivaut à > 9T (exclusif)|Depuis|Valeur optionnelle, Valeurs autorisées : jusqu'à, depuis, à partir de|
+|VEH_TONNAGE_MODALITE (Indication sur le tonnage)|chaîne de caractères|Indication sur le tonnage minimal ou maximal. 'jusqu'à 9T' équivaut à '<= 9T' (inclusif). 'à partir de 9T' équivaut à '>= 9T' (inclusif). 'de plus de 9T' équivaut à > 9T (exclusif)|Depuis|Valeur optionnelle, Valeurs autorisées : jusqu'à, à partir de, de plus de|
 |VEH_TONNAGE (Tonnage)|nombre réel|Tonnage du véhicule. Remplir le champ `VEH_TONNAGE_MODALITE` pour dire s'il s'agit du tonnage à partir duquel ou jusqu'auquel s'applique la règle.|9|Valeur optionnelle, Valeur minimale : 0, Valeur maximale : 45|
 |VEH_USAGES (Types d'usage)|chaîne de caractères|Types d'usage de véhicule. S'il y a plusieurs usages, séparer les valeurs par le caractère '|'|Bennes à ordures ménagères|Véhicules de police|Valeur optionnelle|
 |VEH_LONG (Longueur du véhicule)|nombre réel|Longueur maximale exprimée en mètres.|6.5|Valeur optionnelle, Valeur minimale : 0, Valeur maximale : 30|
@@ -39,7 +39,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 |PERIODE_DEBUT (Entrée en vigueur des restrictions)|chaîne de caractères|Entrée en vigueur des restrictions (par exemple pour les Zones à Faible Émission).|'Début des vacances de la Toussaint' '23 Octobre'|Valeur optionnelle|
 |PERIODE_FIN (Fin des restrictions)|chaîne de caractères|Fin des restrictions. Si elle existe, cela indique le caractère cyclique et non temporaire de la période de régulation.|'Fin des vacances de la Toussaint' ou '8 Novembre'|Valeur optionnelle|
 |EMPRISE_ZONE (Zone associée à l'emprise)|chaîne de caractères|Zone associée à l'emprise. Il s'agit généralement de la dénomination du quartier ou de l'aire piétonne associée règlementée|Secteur du Centre-Ville|Valeur optionnelle|
-|EMPRISE_DESIGNATION (Nom de la voie)|chaîne de caractères|Nom de la voie, ou de la zone associée à la section règlementée. La zone peut être une aire piétonne, un quartier, une zone ZFE ([voir le schéma des ZFE](https://schema.data.gouv.fr/etalab/schema-zfe/latest.html))|Avenue Philippe Solari, Commune d'Aix-en-Provence, Quartier Mazarin, 200046977-ZFE-001|Valeur obligatoire, Motif : `^[a-zA-Z0-9\-\–\'\’\s\d\u00C0-\u00FF\(\)]+$`|
+|EMPRISE_DESIGNATION (Nom de la voie)|chaîne de caractères|Nom de la voie, ou de la zone associée à la section règlementée. La zone peut être une aire piétonne, un quartier, une zone ZFE ([voir le schéma des ZFE](https://schema.data.gouv.fr/etalab/schema-zfe/latest.html))|Avenue Philippe Solari, Commune d'Aix-en-Provence, Quartier Mazarin, 200046977-ZFE-001|Valeur obligatoire, Motif : `^[a-zA-Z0-9\-\–\'\’\s\d\u00C0-\u00FF\(\)\,\.]+$`|
 |EMPRISE_DEBUT (Début de la section (libellé))|chaîne de caractères|Indication textuelle de l'endroit à partir duquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Pour indiquer les coordonnées GPS, se référer au champ `GEOM_DEBUT`.|22 avenue Philippe Solari, Croisement de l'avenue Philippe Solari avec la rue Gaston de Saporta|Valeur optionnelle|
 |EMPRISE_FIN (Fin de la section (libellé))|chaîne de caractères|Indication textuelle de l'endroit au bout duquel la règlementation s'applique, telle qu'écrite dans l'arrêté. Pour indiquer les coordonnées GPS, se référer au champ `GEOM_FIN`.|34 bis avenue Philippe Solari, Intersection de l'avenue Philippe Solari avec le boulevard des Charmettes|Valeur optionnelle|
 |EMPRISE_SENS (Direction ou sens de circulation)|chaîne de caractères|Direction ou sens de circulation associé à la règlementation. Pair : concerne la circulation le long des adresses à chiffre pair. `Nord` signifie vers le Nord, soit "vers le haut".|Deux sens, Impair, Nord|Valeur optionnelle, Valeurs autorisées : Pair, Impair, Nord, Sud, Est, Ouest, Deux sens|

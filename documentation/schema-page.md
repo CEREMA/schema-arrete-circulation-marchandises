@@ -6,7 +6,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 
 - Schéma créé le : 04/30/21
 - Site web : https://github.com/CEREMA/schema-arrete-circulation
-- Version : 0.7.2
+- Version : 0.8.0
 - Valeurs manquantes : `""`, `"NA"`, `"NaN"`, `"N/A"`
 - Clé primaire : `ID`
 
@@ -139,13 +139,13 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 
 #### Indication sur le tonnage - Propriété `VEH_TONNAGE_MODALITE`
 
-> *Description : Indication sur le tonnage minimal ou maximal. 'Jusqu'à 9T' équivaut à '<= 9T' (inclusif). 'Depuis 9T' équivaut à '>= 9T' (inclusif). 'De plus de 9T' équivaut à > 9T (exclusif)<br/>Ex : Depuis*
+> *Description : Indication sur le tonnage minimal ou maximal. 'jusqu'à 9T' équivaut à '<= 9T' (inclusif). 'à partir de 9T' équivaut à '>= 9T' (inclusif). 'de plus de 9T' équivaut à > 9T (exclusif)<br/>Ex : Depuis*
 - Valeur optionnelle
 - Type : chaîne de caractères
 - Valeurs autorisées : 
     - jusqu'à
-    - depuis
     - à partir de
+    - de plus de
 
 #### Tonnage - Propriété `VEH_TONNAGE`
 
@@ -224,7 +224,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 > *Description : Nom de la voie, ou de la zone associée à la section règlementée. La zone peut être une aire piétonne, un quartier, une zone ZFE ([voir le schéma des ZFE](https://schema.data.gouv.fr/etalab/schema-zfe/latest.html))<br/>Ex : Avenue Philippe Solari, Commune d'Aix-en-Provence, Quartier Mazarin, 200046977-ZFE-001*
 - Valeur obligatoire
 - Type : chaîne de caractères
-- Motif : `^[a-zA-Z0-9\-\–\'\’\s\d\u00C0-\u00FF\(\)]+$`
+- Motif : `^[a-zA-Z0-9\-\–\'\’\s\d\u00C0-\u00FF\(\)\,\.]+$`
 
 #### Début de la section (libellé) - Propriété `EMPRISE_DEBUT`
 
