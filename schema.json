@@ -96,6 +96,12 @@
          "role":"contributor"
       },
       {
+         "title":"Pauline Asselin",
+         "email":"passelin@maregionsud.fr",
+         "organisation":"Région Sud",
+         "role":"contributor"
+      },
+      {
          "title":"Jean-Marie Bourgogne",
          "email":"jmbourgogne@opendatafrance.email",
          "organisation":"OpenDataFrance",
@@ -119,6 +125,12 @@
          "organisation":"Ville de Martigues",
          "role":"contributor"
       },
+      {
+         "title":"Anthony Claverie",
+         "organisation":"Ville d'Antibes",
+         "role":"contributor"
+      },
+      
       {
          "title":"Christian Quest",
          "email":"cquest@cquest.org",
