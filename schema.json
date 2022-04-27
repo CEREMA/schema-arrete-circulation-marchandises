@@ -316,6 +316,16 @@
          }
       },
       {
+         "name":"SAUF_VEH_USAGES",
+         "title":"Exceptions sur les usages acceptés ou interdits",
+         "description":"Exceptions sur les usages acceptés ou interdits. Par exemple, notion 'Rue interdite à la circulation, à l'exception des usages suivants : livraison' S'il y a plusieurs usages, séparer les valeurs par le caractère '|'",
+         "example":"Véhicules de livraison|Services de la Mairie",
+         "type":"string",
+         "constraints":{
+            "required":false
+         }
+      },
+      {
          "name":"VEH_LONG",
          "title":"Longueur du véhicule",
          "description":"Longueur maximale exprimée en mètres.",
