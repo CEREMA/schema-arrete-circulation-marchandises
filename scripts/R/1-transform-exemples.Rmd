@@ -1,5 +1,5 @@
 ---
-title: "Met les exemples en conformité avec le schéma"
+title: "Met les exemples en conformité avec le schéma v0.8.0"
 output: html_notebook
 ---
 
