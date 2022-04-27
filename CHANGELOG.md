@@ -1,8 +1,17 @@
 # Changelog
 
-## v0.8
+## v0.9.0
+### Ajout majeur
+- `SAUF_VEH_USAGES` : ajoute champ
+
+### Autres
+- `VEH_TYPES` : laissé libre
+- `EMPRISE_SENS` : laisser libre, modifie la description
+- `VEH_TONNAGE_MODALITE` : supprime 'de plus de'
+
+## v0.8.0
 - Ajoute le champ `VEH_TONNAGE_MODALITE`
-- Ajoute le champ `REGL_MOTIF`
+- Ajoute le champ `REGL_CONTEXTE`
 - Supprime les champs `VEH_TONNAGE_MIN` et `VEH_TONNAGE_MAX`
 - Ajout le champ `EMPRISE_ZONE`
 
