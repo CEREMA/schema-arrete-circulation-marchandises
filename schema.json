@@ -283,15 +283,14 @@
       {
          "name":"VEH_TONNAGE_MODALITE",
          "title":"Indication sur le tonnage",
-         "description":"Indication sur le tonnage minimal ou maximal. 'jusqu'à 9T' équivaut à '<= 9T' (inclusif). 'à partir de 9T' équivaut à '>= 9T' (inclusif). 'de plus de 9T' équivaut à > 9T (exclusif)",
+         "description":"Indication sur le tonnage minimal ou maximal. 'jusqu'à 9T' équivaut à '<= 9T' (inclusif). 'à partir de 9T' équivaut à '>= 9T' (inclusif)",
          "type":"string",
          "example":"Depuis",
          "constraints":{
             "required":false,
             "enum":[
                "jusqu'à",
-               "à partir de",
-               "de plus de"
+               "à partir de"
             ]
          }
       },
