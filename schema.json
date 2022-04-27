@@ -274,10 +274,9 @@
          "title":"Types de véhicules",
          "description":"Types de véhicules. S'il y a plusieurs types, les séparer les valeurs par le caractère '|'. Les valeurs possibles sont : 'Poids lourds', 'Véhicules utilitaires légers', 'Vélo-cargos' et 'Tous véhicules'.",
          "type":"string",
-         "example":"Poids lourds|Véhicules utilitaires légers",
+         "example":"'Poids lourds|Véhicules utilitaires légers', 'Véhicules articulés|Trains doubles|Ensemble de véhicules'",
          "constraints":{
-            "required":false,
-            "pattern":"(?:(?:^|\\|)(Poids lourds|Véhicules utilitaires légers|Vélo-cargos|Tous véhicules))+$"
+            "required":false
          }
       },
       {
