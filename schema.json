@@ -447,9 +447,9 @@
       {
          "name":"EMPRISE_SENS",
          "title":"Direction ou sens de circulation",
-         "description":"Direction ou sens de circulation associé à la règlementation. Pair : concerne la circulation le long des adresses à chiffre pair. `Nord` signifie vers le Nord, soit \"vers le haut\".",
+         "description":"Direction ou sens de circulation associé à la règlementation. On peut indiquer le sens de la circulation par le côté : 'Pair' ou 'Impair', ou bien par la direction : 'Nord-Sud', 'Est-Ouest', par exemple",
          "type":"string",
-         "example":"Deux sens, Impair, Nord",
+         "example":"Dans le sens boulevard Maréchal Foch vers l’avenue de la Rostagne (Sens Nord-Sud)",
          "constraints":{
             "required":false,
             "enum":[
