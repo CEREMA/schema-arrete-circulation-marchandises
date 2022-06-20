@@ -274,7 +274,7 @@
          "title":"Types de véhicules",
          "description":"Types de véhicules. S'il y a plusieurs types, les séparer les valeurs par le caractère '|'. Les valeurs possibles sont : 'Poids lourds', 'Véhicules utilitaires légers', 'Vélo-cargos' et 'Tous véhicules'.",
          "type":"string",
-         "example":"'Poids lourds|Véhicules utilitaires légers', 'Véhicules articulés|Trains doubles|Ensemble de véhicules'",
+         "example":"Véhicules articulés|Trains doubles|Ensemble de véhicules",
          "constraints":{
             "required":false
          }
@@ -284,7 +284,7 @@
          "title":"Indication sur le tonnage",
          "description":"Indication sur le tonnage minimal ou maximal. 'jusqu'à 9T' équivaut à '<= 9T' (inclusif). 'à partir de 9T' équivaut à '>= 9T' (inclusif)",
          "type":"string",
-         "example":"Depuis",
+         "example":"jusqu'à",
          "constraints":{
             "required":false,
             "enum":[
@@ -369,7 +369,7 @@
          "type":"string",
          "constraints":{
             "required":false,
-            "pattern":"(?:(?:^|\\|)(Electrique|Gaz Naturel pour Véhicules|Hydrogène))+$"
+            "pattern":"(?:(?:^|\\|)(Électrique|Gaz Naturel pour Véhicules|Hydrogène))+$"
          }
       },
       {
@@ -397,7 +397,7 @@
          "name":"PERIODE_DEBUT",
          "title":"Entrée en vigueur des restrictions",
          "description":"Entrée en vigueur des restrictions (par exemple pour les Zones à Faible Émission).",
-         "example":"'Début des vacances de la Toussaint' '23 Octobre'",
+         "example":"'Début des vacances de la Toussaint' ou '23 Octobre'",
          "type":"string",
          "constraints":{
             "required":false
@@ -461,16 +461,7 @@
          "type":"string",
          "example":"Dans le sens boulevard Maréchal Foch vers l’avenue de la Rostagne (Sens Nord-Sud)",
          "constraints":{
-            "required":false,
-            "enum":[
-               "Pair",
-               "Impair",
-               "Nord",
-               "Sud",
-               "Est",
-               "Ouest",
-               "Deux sens"
-            ]
+            "required":false
          }
       },
       {
