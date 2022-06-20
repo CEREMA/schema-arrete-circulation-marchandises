@@ -133,13 +133,13 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 
 #### Types de véhicules - Propriété `VEH_TYPES`
 
-> *Description : Types de véhicules. S'il y a plusieurs types, les séparer les valeurs par le caractère '|'. Les valeurs possibles sont : 'Poids lourds', 'Véhicules utilitaires légers', 'Vélo-cargos' et 'Tous véhicules'.<br/>Ex : 'Poids lourds|Véhicules utilitaires légers', 'Véhicules articulés|Trains doubles|Ensemble de véhicules'*
+> *Description : Types de véhicules. S'il y a plusieurs types, les séparer les valeurs par le caractère '|'. Les valeurs possibles sont : 'Poids lourds', 'Véhicules utilitaires légers', 'Vélo-cargos' et 'Tous véhicules'.<br/>Ex : Véhicules articulés|Trains doubles|Ensemble de véhicules*
 - Valeur optionnelle
 - Type : chaîne de caractères
 
 #### Indication sur le tonnage - Propriété `VEH_TONNAGE_MODALITE`
 
-> *Description : Indication sur le tonnage minimal ou maximal. 'jusqu'à 9T' équivaut à '<= 9T' (inclusif). 'à partir de 9T' équivaut à '>= 9T' (inclusif)<br/>Ex : Depuis*
+> *Description : Indication sur le tonnage minimal ou maximal. 'jusqu'à 9T' équivaut à '<= 9T' (inclusif). 'à partir de 9T' équivaut à '>= 9T' (inclusif)<br/>Ex : jusqu'à*
 - Valeur optionnelle
 - Type : chaîne de caractères
 - Valeurs autorisées : 
@@ -191,7 +191,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 > *Description : Types de motorisation. S'il y a plusieurs motorisations, les séparer par le caractère '|'. Les valeurs possibles sont : Electrique, Gaz Naturel pour Véhicules et Hydrogène.<br/>Ex : Électrique|Hydrogène*
 - Valeur optionnelle
 - Type : chaîne de caractères
-- Motif : `(?:(?:^|\|)(Electrique|Gaz Naturel pour Véhicules|Hydrogène))+$`
+- Motif : `(?:(?:^|\|)(Électrique|Gaz Naturel pour Véhicules|Hydrogène))+$`
 
 #### Vignettes crit'air - Propriété `VEH_CQAS`
 
@@ -208,7 +208,7 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 
 #### Entrée en vigueur des restrictions - Propriété `PERIODE_DEBUT`
 
-> *Description : Entrée en vigueur des restrictions (par exemple pour les Zones à Faible Émission).<br/>Ex : 'Début des vacances de la Toussaint' '23 Octobre'*
+> *Description : Entrée en vigueur des restrictions (par exemple pour les Zones à Faible Émission).<br/>Ex : 'Début des vacances de la Toussaint' ou '23 Octobre'*
 - Valeur optionnelle
 - Type : chaîne de caractères
 
@@ -248,14 +248,6 @@ Spécification du fichier d'échange relatif aux arrêtés permanents de circulation
 > *Description : Direction ou sens de circulation associé à la règlementation. On peut indiquer le sens de la circulation par le côté : 'Pair' ou 'Impair', ou bien par la direction : 'Nord-Sud', 'Est-Ouest', par exemple<br/>Ex : Dans le sens boulevard Maréchal Foch vers l’avenue de la Rostagne (Sens Nord-Sud)*
 - Valeur optionnelle
 - Type : chaîne de caractères
-- Valeurs autorisées : 
-    - Pair
-    - Impair
-    - Nord
-    - Sud
-    - Est
-    - Ouest
-    - Deux sens
 
 #### Durée maximale d'intervention - Propriété `INTERV_DUREE`
 
