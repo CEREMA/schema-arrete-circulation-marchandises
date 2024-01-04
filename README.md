@@ -12,7 +12,12 @@ Un [appel à contributions](https://forms.gle/vUALzEDQqRsY2NgG9) a aussi été r
 
 Ce travail rejoint une initiative similaire conduite en Île-de-France, appelée [BAC IDF](https://bac-idf.fr/) (pour Base d'Arrêtés de Circulation Île-de-France), visant à dématérialiser, concentrer, mettre à disposition les arrêtés de circulation des communes d'Île-de-France sous forme numérique.
 
-## Wiki
+## Jeux de données publiés selon le schéma
+
+[Cassis](https://trouver.datasud.fr/dataset/regles-de-circulation-pour-la-ville-de-cassis)  
+[Antibes](https://www.data.gouv.fr/fr/datasets/arretes-permanents-de-circulation-pour-le-transport-de-marchandises-a-antibes/)
+
+## Wiki (comment numériser la règlementation de circulation)
 📘 [Accéder à l'espace arrêtés sur le site FabLog d'OpenDataFrance : foire aux questions, tutoriels, guides de référence,...](https://opendatafrance.gitbook.io/fablog/espace-arretes/accueil)
 
 ## Contact
